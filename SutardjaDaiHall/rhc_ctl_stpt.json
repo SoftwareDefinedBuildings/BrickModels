@@ -1,0 +1,603 @@
+{
+  "Metadata": {
+    "Location": {
+      "Building": "Sutardja Dai Hall",
+      "Campus": "UCB"
+    },
+    "SourceName": "Sutardja Dai Hall BACnet"
+  },
+  "Path": "/Siemens/SDH.PXCM-01/SDH/AH1/RHC-1:DAY.NGT",
+  "Properties": {
+    "ReadingType": "double",
+    "Timezone": "America/Los_Angeles",
+    "UnitofMeasure": "55784456"
+  },
+  "uuid": "f48ad3c6-4bf4-55be-8c49-82b9328f0650"
+}
+{
+  "Metadata": {
+    "Location": {
+      "Building": "Sutardja Dai Hall",
+      "Campus": "UCB"
+    },
+    "SourceName": "Sutardja Dai Hall BACnet"
+  },
+  "Path": "/Siemens/SDH.PXCM-01/SDH/AH1/RHC-2:DAY.NGT",
+  "Properties": {
+    "ReadingType": "double",
+    "Timezone": "America/Los_Angeles",
+    "UnitofMeasure": "55784456"
+  },
+  "uuid": "4be7bd09-a283-503f-9810-6fd92a4b05df"
+}
+{
+  "Metadata": {
+    "Location": {
+      "Building": "Sutardja Dai Hall",
+      "Campus": "UCB"
+    },
+    "SourceName": "Sutardja Dai Hall BACnet"
+  },
+  "Path": "/Siemens/SDH.PXCM-01/SDH/AH1/RHC-3:DAY.NGT",
+  "Properties": {
+    "ReadingType": "double",
+    "Timezone": "America/Los_Angeles",
+    "UnitofMeasure": "1953671140"
+  },
+  "uuid": "21d6ed8e-22d7-523e-aee4-e67cebe94b11"
+}
+{
+  "Metadata": {
+    "Location": {
+      "Building": "Sutardja Dai Hall",
+      "Campus": "UCB"
+    },
+    "SourceName": "Sutardja Dai Hall BACnet"
+  },
+  "Path": "/Siemens/SDH.PXCM-01/SDH/AH1/RHC-4:DAY.NGT",
+  "Properties": {
+    "ReadingType": "double",
+    "Timezone": "America/Los_Angeles",
+    "UnitofMeasure": "1953671140"
+  },
+  "uuid": "3b27789b-d5a7-58f1-9cd4-271496f4aec7"
+}
+{
+  "Metadata": {
+    "Location": {
+      "Building": "Sutardja Dai Hall",
+      "Campus": "UCB"
+    },
+    "SourceName": "Sutardja Dai Hall BACnet"
+  },
+  "Path": "/Siemens/SDH.PXCM-01/SDH/AH1/RHC-5:DAY.NGT",
+  "Properties": {
+    "ReadingType": "double",
+    "Timezone": "America/Los_Angeles",
+    "UnitofMeasure": "55797376"
+  },
+  "uuid": "506a5f9d-1295-5f4b-b8ec-e7de9116cde0"
+}
+{
+  "Metadata": {
+    "Location": {
+      "Building": "Sutardja Dai Hall",
+      "Campus": "UCB"
+    },
+    "SourceName": "Sutardja Dai Hall BACnet"
+  },
+  "Path": "/Siemens/SDH.PXCM-01/SDH/AH1/RHC-6:DAY.NGT",
+  "Properties": {
+    "ReadingType": "double",
+    "Timezone": "America/Los_Angeles",
+    "UnitofMeasure": "1953671140"
+  },
+  "uuid": "64dd8657-f91f-56d1-a2de-881f2f6d297f"
+}
+{
+  "Metadata": {
+    "Location": {
+      "Building": "Sutardja Dai Hall",
+      "Campus": "UCB"
+    },
+    "SourceName": "Sutardja Dai Hall BACnet"
+  },
+  "Path": "/Siemens/SDH.PXCM-01/SDH/AH1/RHC-7:DAY.NGT",
+  "Properties": {
+    "ReadingType": "double",
+    "Timezone": "America/Los_Angeles",
+    "UnitofMeasure": "110248536"
+  },
+  "uuid": "362ae87e-adc9-5be2-b14f-ee469b8db07a"
+}
+{
+  "Metadata": {
+    "Location": {
+      "Building": "Sutardja Dai Hall",
+      "Campus": "UCB"
+    },
+    "SourceName": "Sutardja Dai Hall BACnet"
+  },
+  "Path": "/Siemens/SDH.PXCM-01/SDH/AH1/RHC-8:DAY.NGT",
+  "Properties": {
+    "ReadingType": "double",
+    "Timezone": "America/Los_Angeles",
+    "UnitofMeasure": "1953671140"
+  },
+  "uuid": "b9402567-72bd-55e8-8dd7-874f5f0b4ef1"
+}
+{
+  "Metadata": {
+    "Location": {
+      "Building": "Sutardja Dai Hall",
+      "Campus": "UCB"
+    },
+    "SourceName": "Sutardja Dai Hall BACnet"
+  },
+  "Path": "/Siemens/SDH.PXCM-01/SDH/AH1/RHC-9:DAY.NGT",
+  "Properties": {
+    "ReadingType": "double",
+    "Timezone": "America/Los_Angeles",
+    "UnitofMeasure": "1953671140"
+  },
+  "uuid": "7b57e01f-db4c-567a-b237-cdec025d343b"
+}
+{
+  "Metadata": {
+    "Location": {
+      "Building": "Sutardja Dai Hall",
+      "Campus": "UCB"
+    },
+    "PointName": "SDH.AH1_RHC-1:CTL STPT",
+    "SourceName": "Sutardja Dai Hall BACnet"
+  },
+  "Path": "/Siemens/SDH.PXCM-01/SDH/AH1/RHC-1:CTL_STPT",
+  "Properties": {
+    "ReadingType": "double",
+    "Timezone": "America/Los_Angeles",
+    "UnitofMeasure": "F"
+  },
+  "uuid": "2b092471-3a18-5190-95f4-660cee55b2d7"
+}
+{
+  "Metadata": {
+    "Location": {
+      "Building": "Sutardja Dai Hall",
+      "Campus": "UCB"
+    },
+    "PointName": "SDH.AH1_RHC-1:HEAT.COOL",
+    "SourceName": "Sutardja Dai Hall BACnet"
+  },
+  "Path": "/Siemens/SDH.PXCM-01/SDH/AH1/RHC-1:HEAT.COOL",
+  "Properties": {
+    "ReadingType": "double",
+    "Timezone": "America/Los_Angeles",
+    "UnitofMeasure": "1953671140"
+  },
+  "uuid": "c123c8db-ee1d-5d45-a97e-49ea915c59c9"
+}
+{
+  "Metadata": {
+    "Location": {
+      "Building": "Sutardja Dai Hall",
+      "Campus": "UCB"
+    },
+    "PointName": "SDH.AH1_RHC-1:ROOM TEMP",
+    "SourceName": "Sutardja Dai Hall BACnet"
+  },
+  "Path": "/Siemens/SDH.PXCM-01/SDH/AH1/RHC-1:ROOM_TEMP",
+  "Properties": {
+    "ReadingType": "double",
+    "Timezone": "America/Los_Angeles",
+    "UnitofMeasure": "F"
+  },
+  "uuid": "7c78b877-ecec-583f-8bd4-0f70f86cbf43"
+}
+{
+  "Metadata": {
+    "Location": {
+      "Building": "Sutardja Dai Hall",
+      "Campus": "UCB"
+    },
+    "PointName": "SDH.AH1_RHC-2:CTL STPT",
+    "SourceName": "Sutardja Dai Hall BACnet"
+  },
+  "Path": "/Siemens/SDH.PXCM-01/SDH/AH1/RHC-2:CTL_STPT",
+  "Properties": {
+    "ReadingType": "double",
+    "Timezone": "America/Los_Angeles",
+    "UnitofMeasure": "F"
+  },
+  "uuid": "a182f449-3683-5b79-a031-ef6f71b6974a"
+}
+{
+  "Metadata": {
+    "Location": {
+      "Building": "Sutardja Dai Hall",
+      "Campus": "UCB"
+    },
+    "PointName": "SDH.AH1_RHC-2:HEAT.COOL",
+    "SourceName": "Sutardja Dai Hall BACnet"
+  },
+  "Path": "/Siemens/SDH.PXCM-01/SDH/AH1/RHC-2:HEAT.COOL",
+  "Properties": {
+    "ReadingType": "double",
+    "Timezone": "America/Los_Angeles",
+    "UnitofMeasure": "55784456"
+  },
+  "uuid": "a80e64bd-fe99-596b-9125-80142ade7941"
+}
+{
+  "Metadata": {
+    "Location": {
+      "Building": "Sutardja Dai Hall",
+      "Campus": "UCB"
+    },
+    "PointName": "SDH.AH1_RHC-2:ROOM TEMP",
+    "SourceName": "Sutardja Dai Hall BACnet"
+  },
+  "Path": "/Siemens/SDH.PXCM-01/SDH/AH1/RHC-2:ROOM_TEMP",
+  "Properties": {
+    "ReadingType": "double",
+    "Timezone": "America/Los_Angeles",
+    "UnitofMeasure": "F"
+  },
+  "uuid": "66003294-ff46-5c21-80dc-9d5cf8b97fdf"
+}
+{
+  "Metadata": {
+    "Location": {
+      "Building": "Sutardja Dai Hall",
+      "Campus": "UCB"
+    },
+    "PointName": "SDH.AH1_RHC-3:CTL STPT",
+    "SourceName": "Sutardja Dai Hall BACnet"
+  },
+  "Path": "/Siemens/SDH.PXCM-01/SDH/AH1/RHC-3:CTL_STPT",
+  "Properties": {
+    "ReadingType": "double",
+    "Timezone": "America/Los_Angeles",
+    "UnitofMeasure": "F"
+  },
+  "uuid": "f26430f3-f74e-545f-84f0-7bdf0a945f79"
+}
+{
+  "Metadata": {
+    "Location": {
+      "Building": "Sutardja Dai Hall",
+      "Campus": "UCB"
+    },
+    "PointName": "SDH.AH1_RHC-3:HEAT.COOL",
+    "SourceName": "Sutardja Dai Hall BACnet"
+  },
+  "Path": "/Siemens/SDH.PXCM-01/SDH/AH1/RHC-3:HEAT.COOL",
+  "Properties": {
+    "ReadingType": "double",
+    "Timezone": "America/Los_Angeles",
+    "UnitofMeasure": "1953671140"
+  },
+  "uuid": "db6cca0b-fd23-55ec-a2be-6e5f341f2618"
+}
+{
+  "Metadata": {
+    "Location": {
+      "Building": "Sutardja Dai Hall",
+      "Campus": "UCB"
+    },
+    "PointName": "SDH.AH1_RHC-3:ROOM TEMP",
+    "SourceName": "Sutardja Dai Hall BACnet"
+  },
+  "Path": "/Siemens/SDH.PXCM-01/SDH/AH1/RHC-3:ROOM_TEMP",
+  "Properties": {
+    "ReadingType": "double",
+    "Timezone": "America/Los_Angeles",
+    "UnitofMeasure": "F"
+  },
+  "uuid": "956aad84-c2a7-5c70-ac7c-2e7dd439c113"
+}
+{
+  "Metadata": {
+    "Location": {
+      "Building": "Sutardja Dai Hall",
+      "Campus": "UCB"
+    },
+    "PointName": "SDH.AH1_RHC-4:CTL STPT",
+    "SourceName": "Sutardja Dai Hall BACnet"
+  },
+  "Path": "/Siemens/SDH.PXCM-01/SDH/AH1/RHC-4:CTL_STPT",
+  "Properties": {
+    "ReadingType": "double",
+    "Timezone": "America/Los_Angeles",
+    "UnitofMeasure": "F"
+  },
+  "uuid": "2bd7e35c-67b2-5ab6-a6b4-f498ea04c0cf"
+}
+{
+  "Metadata": {
+    "Location": {
+      "Building": "Sutardja Dai Hall",
+      "Campus": "UCB"
+    },
+    "PointName": "SDH.AH1_RHC-4:HEAT.COOL",
+    "SourceName": "Sutardja Dai Hall BACnet"
+  },
+  "Path": "/Siemens/SDH.PXCM-01/SDH/AH1/RHC-4:HEAT.COOL",
+  "Properties": {
+    "ReadingType": "double",
+    "Timezone": "America/Los_Angeles",
+    "UnitofMeasure": "110323432"
+  },
+  "uuid": "7a5d1511-59d3-5dae-a225-2f05bff1542c"
+}
+{
+  "Metadata": {
+    "Location": {
+      "Building": "Sutardja Dai Hall",
+      "Campus": "UCB"
+    },
+    "PointName": "SDH.AH1_RHC-4:ROOM TEMP",
+    "SourceName": "Sutardja Dai Hall BACnet"
+  },
+  "Path": "/Siemens/SDH.PXCM-01/SDH/AH1/RHC-4:ROOM_TEMP",
+  "Properties": {
+    "ReadingType": "double",
+    "Timezone": "America/Los_Angeles",
+    "UnitofMeasure": "F"
+  },
+  "uuid": "b1dc160d-cf8a-57c9-b509-183cea59cb83"
+}
+{
+  "Metadata": {
+    "Location": {
+      "Building": "Sutardja Dai Hall",
+      "Campus": "UCB"
+    },
+    "PointName": "SDH.AH1_RHC-5:CTL STPT",
+    "SourceName": "Sutardja Dai Hall BACnet"
+  },
+  "Path": "/Siemens/SDH.PXCM-01/SDH/AH1/RHC-5:CTL_STPT",
+  "Properties": {
+    "ReadingType": "double",
+    "Timezone": "America/Los_Angeles",
+    "UnitofMeasure": "F"
+  },
+  "uuid": "b5c7a6b6-1796-595c-8982-41f512f62824"
+}
+{
+  "Metadata": {
+    "Location": {
+      "Building": "Sutardja Dai Hall",
+      "Campus": "UCB"
+    },
+    "PointName": "SDH.AH1_RHC-5:HEAT.COOL",
+    "SourceName": "Sutardja Dai Hall BACnet"
+  },
+  "Path": "/Siemens/SDH.PXCM-01/SDH/AH1/RHC-5:HEAT.COOL",
+  "Properties": {
+    "ReadingType": "double",
+    "Timezone": "America/Los_Angeles",
+    "UnitofMeasure": "1953671140"
+  },
+  "uuid": "62e0904d-57b7-55f1-9bc1-57d2b9ce4898"
+}
+{
+  "Metadata": {
+    "Location": {
+      "Building": "Sutardja Dai Hall",
+      "Campus": "UCB"
+    },
+    "PointName": "SDH.AH1_RHC-5:ROOM TEMP",
+    "SourceName": "Sutardja Dai Hall BACnet"
+  },
+  "Path": "/Siemens/SDH.PXCM-01/SDH/AH1/RHC-5:ROOM_TEMP",
+  "Properties": {
+    "ReadingType": "double",
+    "Timezone": "America/Los_Angeles",
+    "UnitofMeasure": "F"
+  },
+  "uuid": "723a9b42-2809-56f1-99bc-fd004343508e"
+}
+{
+  "Metadata": {
+    "Location": {
+      "Building": "Sutardja Dai Hall",
+      "Campus": "UCB"
+    },
+    "PointName": "SDH.AH1_RHC-6:CTL STPT",
+    "SourceName": "Sutardja Dai Hall BACnet"
+  },
+  "Path": "/Siemens/SDH.PXCM-01/SDH/AH1/RHC-6:CTL_STPT",
+  "Properties": {
+    "ReadingType": "double",
+    "Timezone": "America/Los_Angeles",
+    "UnitofMeasure": "F"
+  },
+  "uuid": "3291300a-b3eb-59cb-aec2-04312a52a20e"
+}
+{
+  "Metadata": {
+    "Location": {
+      "Building": "Sutardja Dai Hall",
+      "Campus": "UCB"
+    },
+    "PointName": "SDH.AH1_RHC-6:HEAT.COOL",
+    "SourceName": "Sutardja Dai Hall BACnet"
+  },
+  "Path": "/Siemens/SDH.PXCM-01/SDH/AH1/RHC-6:HEAT.COOL",
+  "Properties": {
+    "ReadingType": "double",
+    "Timezone": "America/Los_Angeles",
+    "UnitofMeasure": "55784536"
+  },
+  "uuid": "98efa42c-7bef-5da0-b662-5b8d37a45f58"
+}
+{
+  "Metadata": {
+    "Location": {
+      "Building": "Sutardja Dai Hall",
+      "Campus": "UCB"
+    },
+    "PointName": "SDH.AH1_RHC-6:ROOM TEMP",
+    "SourceName": "Sutardja Dai Hall BACnet"
+  },
+  "Path": "/Siemens/SDH.PXCM-01/SDH/AH1/RHC-6:ROOM_TEMP",
+  "Properties": {
+    "ReadingType": "double",
+    "Timezone": "America/Los_Angeles",
+    "UnitofMeasure": "F"
+  },
+  "uuid": "814b3148-9a6b-5906-8331-4b10df702d37"
+}
+{
+  "Metadata": {
+    "Location": {
+      "Building": "Sutardja Dai Hall",
+      "Campus": "UCB"
+    },
+    "PointName": "SDH.AH1_RHC-7:CTL STPT",
+    "SourceName": "Sutardja Dai Hall BACnet"
+  },
+  "Path": "/Siemens/SDH.PXCM-01/SDH/AH1/RHC-7:CTL_STPT",
+  "Properties": {
+    "ReadingType": "double",
+    "Timezone": "America/Los_Angeles",
+    "UnitofMeasure": "F"
+  },
+  "uuid": "c026e380-ad62-5b6a-a39a-a41c5dbfa67e"
+}
+{
+  "Metadata": {
+    "Location": {
+      "Building": "Sutardja Dai Hall",
+      "Campus": "UCB"
+    },
+    "PointName": "SDH.AH1_RHC-7:HEAT.COOL",
+    "SourceName": "Sutardja Dai Hall BACnet"
+  },
+  "Path": "/Siemens/SDH.PXCM-01/SDH/AH1/RHC-7:HEAT.COOL",
+  "Properties": {
+    "ReadingType": "double",
+    "Timezone": "America/Los_Angeles",
+    "UnitofMeasure": "1953671140"
+  },
+  "uuid": "dfb8879b-063c-54bc-b26e-f673badee02a"
+}
+{
+  "Metadata": {
+    "Location": {
+      "Building": "Sutardja Dai Hall",
+      "Campus": "UCB"
+    },
+    "PointName": "SDH.AH1_RHC-7:ROOM TEMP",
+    "SourceName": "Sutardja Dai Hall BACnet"
+  },
+  "Path": "/Siemens/SDH.PXCM-01/SDH/AH1/RHC-7:ROOM_TEMP",
+  "Properties": {
+    "ReadingType": "double",
+    "Timezone": "America/Los_Angeles",
+    "UnitofMeasure": "F"
+  },
+  "uuid": "7e8fe849-bff7-5a48-af42-158bc89fff37"
+}
+{
+  "Metadata": {
+    "Location": {
+      "Building": "Sutardja Dai Hall",
+      "Campus": "UCB"
+    },
+    "PointName": "SDH.AH1_RHC-8:CTL STPT",
+    "SourceName": "Sutardja Dai Hall BACnet"
+  },
+  "Path": "/Siemens/SDH.PXCM-01/SDH/AH1/RHC-8:CTL_STPT",
+  "Properties": {
+    "ReadingType": "double",
+    "Timezone": "America/Los_Angeles",
+    "UnitofMeasure": "F"
+  },
+  "uuid": "e900786a-38c6-5b8d-b9fb-f6e77ccce745"
+}
+{
+  "Metadata": {
+    "Location": {
+      "Building": "Sutardja Dai Hall",
+      "Campus": "UCB"
+    },
+    "PointName": "SDH.AH1_RHC-8:HEAT.COOL",
+    "SourceName": "Sutardja Dai Hall BACnet"
+  },
+  "Path": "/Siemens/SDH.PXCM-01/SDH/AH1/RHC-8:HEAT.COOL",
+  "Properties": {
+    "ReadingType": "double",
+    "Timezone": "America/Los_Angeles",
+    "UnitofMeasure": "1953671140"
+  },
+  "uuid": "d2aa9949-0e3b-5cc0-9ac6-98c6b252b8a9"
+}
+{
+  "Metadata": {
+    "Location": {
+      "Building": "Sutardja Dai Hall",
+      "Campus": "UCB"
+    },
+    "PointName": "SDH.AH1_RHC-8:ROOM TEMP",
+    "SourceName": "Sutardja Dai Hall BACnet"
+  },
+  "Path": "/Siemens/SDH.PXCM-01/SDH/AH1/RHC-8:ROOM_TEMP",
+  "Properties": {
+    "ReadingType": "double",
+    "Timezone": "America/Los_Angeles",
+    "UnitofMeasure": "F"
+  },
+  "uuid": "223c3965-44b6-533f-8559-58f084b92f8c"
+}
+{
+  "Metadata": {
+    "Location": {
+      "Building": "Sutardja Dai Hall",
+      "Campus": "UCB"
+    },
+    "PointName": "SDH.AH1_RHC-9:CTL STPT",
+    "SourceName": "Sutardja Dai Hall BACnet"
+  },
+  "Path": "/Siemens/SDH.PXCM-01/SDH/AH1/RHC-9:CTL_STPT",
+  "Properties": {
+    "ReadingType": "double",
+    "Timezone": "America/Los_Angeles",
+    "UnitofMeasure": "F"
+  },
+  "uuid": "03c38a15-64d9-5c7f-a043-2ccd9c6557ec"
+}
+{
+  "Metadata": {
+    "Location": {
+      "Building": "Sutardja Dai Hall",
+      "Campus": "UCB"
+    },
+    "PointName": "SDH.AH1_RHC-9:HEAT.COOL",
+    "SourceName": "Sutardja Dai Hall BACnet"
+  },
+  "Path": "/Siemens/SDH.PXCM-01/SDH/AH1/RHC-9:HEAT.COOL",
+  "Properties": {
+    "ReadingType": "double",
+    "Timezone": "America/Los_Angeles",
+    "UnitofMeasure": "55784536"
+  },
+  "uuid": "cca08c2e-150d-5694-866e-baac7b51fa0c"
+}
+{
+  "Metadata": {
+    "Location": {
+      "Building": "Sutardja Dai Hall",
+      "Campus": "UCB"
+    },
+    "PointName": "SDH.AH1_RHC-9:ROOM TEMP",
+    "SourceName": "Sutardja Dai Hall BACnet"
+  },
+  "Path": "/Siemens/SDH.PXCM-01/SDH/AH1/RHC-9:ROOM_TEMP",
+  "Properties": {
+    "ReadingType": "double",
+    "Timezone": "America/Los_Angeles",
+    "UnitofMeasure": "F"
+  },
+  "uuid": "f379df5d-299f-5761-b934-8593fbec1e84"
+}
