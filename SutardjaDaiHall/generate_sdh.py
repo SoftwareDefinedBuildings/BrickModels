@@ -17,11 +17,13 @@ g.bind('btag', BRICKTAG)
 g.bind('sdh', SDH)
 
 # Air handling units
+g.add((BRICK.VAV_With_Reheat, RDFS.subClassOf, BRICK.VAV))
 g.add((SDH['AH1'], RDF.type, BRICK.Air_Handler_Unit))
 for i in range(1,10):
     rhc = 'RHC-{0}'.format(i)
     g.add((SDH[rhc], RDF.type, BRICK.Reheat_Coil))
     g.add((SDH['AH1'], BF.hasPart, SDH[rhc]))
+
 rhc_points = json.load(open('rhc_point.json'))
 for pname, uuid in rhc_points.items():
     rhc = re.match(r'.*(RHC-[0-9]).*', pname).groups()[0]
@@ -38,7 +40,38 @@ for pname, uuid in rhc_points.items():
     name = (rhc+point).replace(' ','_')
     g.add((SDH[name], RDF.type, klass))
     g.add((SDH[rhc], BF.hasPoint, SDH[name]))
-    g.add((SDH[rhc], BF.uuid, Literal(uuid)))
+    g.add((SDH[name], BF.uuid, Literal(uuid)))
+
+rah_points = json.load(open('rah_points.json'))
+for doc in rah_points:
+    description = doc.pop('Description')
+    pointname = doc.keys()[0]
+    uuid = doc[pointname]
+    rah = re.match(r'.*(RAH-[0-9]+).*', pointname)
+    g.add((SDH[rah], RDF.type, BRICK.VAV_With_Reheat))
+    if rah is None: continue
+    rah = rah.groups()[0]
+    if description == "CFM":
+        klass = BRICK.Air_Flow_Sensor
+    elif description == "CFM SETPOINT":
+        klass = BRICK.Air_Flow_Setpoint
+    elif description == "COOLING COIL VLV":
+        klass = BRICK.Cooling_Valve_Command
+    elif description == "OCCUPIED":
+        klass = BRICK.Occupancy_Sensor
+    elif description == "SAT SETPOINT":
+        klass = BRICK.Supply_Air_Temperature_Setpoint
+    elif description == "SF SPEED":
+        klass = BRICK.Supply_Fan_VFD_Speed
+    elif description == "SUPPLY AIR TEMP":
+        klass = BRICK.Supply_Air_Temperature_Sensor
+    elif description == "TEMP STPT":
+        klass = BRICK.Temperature_Setpoint
+    else:
+        continue
+    g.add((SDH[pointname], RDF.type, klass))
+    g.add((SDH[rah], BF.hasPoint, SDH[pointname]))
+    g.add((SDH[pointname], BF.uuid, Literal(uuid)))
 
 g.add((SDH['AH2A'], RDF.type, BRICK.Air_Handler_Unit))
 
@@ -61,6 +94,24 @@ g.add((SDH['AH2B_SF_VFD'], RDF.type, BRICK.Variable_Frequency_Drive))
 g.add((SDH['AH2B'], BF.hasPart, SDH['AH2B_SF_VFD']))
 g.add((SDH['AH2B_SF_VFD_Percent'], RDF.type, BRICK.Frequency_Sensor))
 g.add((SDH['AH2B_SF_VFD'], BF.uuid, Literal("88764253-d926-5a27-8b8e-767382e765f8")))
+
+# map AHU to VAV (this is made up!!)
+ahu2vav = {
+    'AH1': [],
+    'AH2A': [],
+    'AH2B': [],
+}
+ahu2vav['AH1'].extend(['S1-{:02d}'.format(i) for i in range(1,21)])
+ahu2vav['AH1'].extend(['S2-{:02d}'.format(i) for i in range(1,22)])
+ahu2vav['AH2A'].extend(['S3-{:02d}'.format(i) for i in range(1,22)])
+ahu2vav['AH2A'].extend(['S4-{:02d}'.format(i) for i in range(1,22)])
+ahu2vav['AH2A'].extend(['S5-{:02d}'.format(i) for i in range(1,22)])
+ahu2vav['AH2B'].extend(['S6-{:02d}'.format(i) for i in range(1,21)])
+ahu2vav['AH2B'].extend(['S7-{:02d}'.format(i) for i in range(1,17)])
+
+for ahu, vavlist in ahu2vav.items():
+    for vav in vavlist:
+        g.add((SDH[ahu], BF.feeds, SDH[vav]))
 
 # add floors + rooms
 flr2rm = {
@@ -444,7 +495,6 @@ for sensor in vavsensors:
     g.add((SDH[pointname], RDF.type, klass))
     g.add((SDH[vav], BF.hasPoint, SDH[pointname]))
     g.add((SDH[pointname], BF.uuid, Literal(uuid)))
-
 #
 #room2tempsensor = {
 #        "413": ["6e2fb8ba-ad9c-5ca8-b441-e113d57c1a35"],
@@ -473,6 +523,103 @@ for sensor in vavsensors:
 #    for tmpsensor in tempsensorlist:
 #        name = tempsensornames[tmpsensor]
 #        g.add((SDH[name], BF.isLocatedIn, SDH[room]))
+
+adjacencies = {
+    "511" :["510","513"],
+    "513" :["511","515"],
+    "515" :["513"],
+    "510" :["511","530"],
+    "530" :["510"],
+    "520" :["520A","520B," "520C," "520D", "532"],
+    "520A":["520","520B"],
+    "520B":["520","520A"],
+    "520C":["520"],
+    "520D":["520"],
+    "532" :["520","538"],
+    "538" :["532"],
+    "548" :["520C"],
+    "552" :["548","554"],
+    "554" :["552","556"],
+    "556" :["554","558"],
+    "558" :["556","562"],
+    "562" :["558","564"],
+    "564" :["562","566"],
+    "566" :["564"],
+    "571" :["573"],
+    "573" :["571","575"],
+    "575" :["573","577"],
+    "577" :["575","579"],
+    "579" :["577"],
+    "580" :["581","582A"],
+    "581" :["580","582A", "582"],
+    "582" :["581","583", "582A"],
+    "582A":["582","581", "580", "591"],
+    "583" :["582","582A", "584", "593"],
+    "584" :["583","585"],
+    "585" :["584","586", "595"],
+    "586" :["585","599", "597"],
+    "599" :["597","586"],
+    "597" :["599","586"],
+    "595" :["585","586", "584"],
+    "593" :["583"],
+    "591" :["582A","580"],
+    "630A":["630B","621E","630"],
+    "630":["630A"],
+    "621E":["630B","630A","621D"],
+    "630B":["621E","630A"],
+    "621D":["621E","621C","621"],
+    "621C":["621D","621B","621"],
+    "621B":["621C","621A","621"],
+    "621A":["621B","621"],
+    "621":["621A","621B","621C","621D","621E"],
+    "671":["673"],
+    "673":["671","675"],
+    "675":["673","677"],
+    "677":["675","679"],
+    "679":["677"],
+    "640":["642"],
+    "642":["640","644"],
+    "644":["642","646"],
+    "646":["644","648"],
+    "648":["646","652A"],
+    "652A":["652","652B"],
+    "652":["652A","652B"],
+    "652B":["652A","652","656A"],
+    "656A":["652B","656","656B"],
+    "656":["652","656A","656B","664"],
+    "656B":["656A","656","666"],
+    "664":["656","666"],
+    "666":["656B","664"],
+    "730":["732","717"],
+    "732":["730","736"],
+    "717":["730","719"],
+    "719":["717","721","718"],
+    "721":["719","723","722"],
+    "723":["721","725","724"],
+    "725":["723","726"],
+    "718":["722","719"],
+    "722":["718","724","721"],
+    "724":["722","726","723"],
+    "726":["724","725"],
+    "736":["732","738"],
+    "738":["736","748","746"],
+    "746":["738","748","754"],
+    "748":["752","746","738"],
+    "752":["748","754","750"],
+    "754":["752","746","750"],
+    "750":["752","754","771","773","775","768"],
+    "771":["773","750"],
+    "773":["771","775","750"],
+    "775":["773","750","777"],
+    "777":["775","779","768"],
+    "779":["777","768"],
+    "768":["750","777","779"],
+}
+for room, adjlist in adjacencies.items():
+    room = 'R'+room
+    for neighbor in adjlist:
+        neighbor = 'R'+neighbor
+        g.add((SDH[room], BF.adjacentTo, SDH[neighbor]))
 
 adjacencies = {
     '413': {
