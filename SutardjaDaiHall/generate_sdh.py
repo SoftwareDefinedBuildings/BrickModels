@@ -490,7 +490,7 @@ for sensor in vavsensors:
     elif name == "room setpoint":
         klass = BRICK.Zone_Temperature_Setpoint
     elif name == "room valve position":
-        klass = BRICK.Heating_Valve_Sensor
+        klass = BRICK.Heating_Valve_Command
     else:
         print(name)
         continue
