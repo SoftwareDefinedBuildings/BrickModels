@@ -9,7 +9,8 @@
 
 sdh: a brick:VAV_With_Reheat .
 
-sdh:AH1 a brick:Air_Handler_Unit ;
+sdh:AH1 a brick:AHU,
+        brick:Air_Handler_Unit ;
     bf:feeds sdh:S1-01,
         sdh:S1-02,
         sdh:S1-03,
@@ -61,7 +62,8 @@ sdh:AH1 a brick:Air_Handler_Unit ;
         sdh:RHC-8,
         sdh:RHC-9 .
 
-sdh:AH2A a brick:Air_Handler_Unit ;
+sdh:AH2A a brick:AHU,
+        brick:Air_Handler_Unit ;
     bf:feeds sdh:S3-01,
         sdh:S3-02,
         sdh:S3-03,
@@ -130,7 +132,8 @@ sdh:AH2A a brick:Air_Handler_Unit ;
 
 sdh:AH2A_SF_VFD_Percent a brick:Frequency_Sensor .
 
-sdh:AH2B a brick:Air_Handler_Unit ;
+sdh:AH2B a brick:AHU,
+        brick:Air_Handler_Unit ;
     bf:feeds sdh:S6-01,
         sdh:S6-02,
         sdh:S6-03,
@@ -192,44 +195,16 @@ sdh:AH2B_SF_CFM a brick:Supply_Air_Temperature_Sensor ;
 sdh:AH2B_SF_VFD a brick:Variable_Frequency_Drive ;
     bf:uuid "88764253-d926-5a27-8b8e-767382e765f8" .
 
-sdh:R132 a brick:Room ;
-    rdfs:label "Mech Steam" ;
-    bf:isPartOf sdh:Floor1 .
-
-sdh:R149 a brick:Room ;
-    rdfs:label "MDC Mech" ;
-    bf:isPartOf sdh:Floor1 .
-
-sdh:R160 a brick:Room ;
-    rdfs:label "Corridor" ;
-    bf:isPartOf sdh:Floor1 .
-
-sdh:R168 a brick:Room ;
-    rdfs:label "Plumbing" ;
-    bf:isPartOf sdh:Floor1 .
-
 sdh:R170 a brick:Room ;
     rdfs:label "Elevator Lobby" ;
-    bf:isPartOf sdh:Floor1 .
-
-sdh:R171 a brick:Room ;
-    rdfs:label "Riser Closet" ;
     bf:isPartOf sdh:Floor1 .
 
 sdh:R175 a brick:Room ;
     rdfs:label "Electrical" ;
     bf:isPartOf sdh:Floor1 .
 
-sdh:R177 a brick:Room ;
-    rdfs:label "Womens Bath" ;
-    bf:isPartOf sdh:Floor1 .
-
 sdh:R214 a brick:Room ;
     rdfs:label "Kitchen" ;
-    bf:isPartOf sdh:Floor2 .
-
-sdh:R222 a brick:Room ;
-    rdfs:label "Womens Bath" ;
     bf:isPartOf sdh:Floor2 .
 
 sdh:R238 a brick:Room ;
@@ -240,61 +215,13 @@ sdh:R240 a brick:Room ;
     rdfs:label "Classroom" ;
     bf:isPartOf sdh:Floor2 .
 
-sdh:R250 a brick:Room ;
-    rdfs:label "Classroom" ;
-    bf:isPartOf sdh:Floor2 .
-
-sdh:R260 a brick:Room ;
-    rdfs:label "Hallway" ;
-    bf:isPartOf sdh:Floor2 .
-
-sdh:R266 a brick:Room ;
-    rdfs:label "Receiving" ;
-    bf:isPartOf sdh:Floor2 .
-
 sdh:R266C a brick:Room ;
     rdfs:label "Office" ;
-    bf:isPartOf sdh:Floor2 .
-
-sdh:R270 a brick:Room ;
-    rdfs:label "Elevator Lobby" ;
-    bf:isPartOf sdh:Floor2 .
-
-sdh:R271 a brick:Room ;
-    rdfs:label "Riser Closet" ;
     bf:isPartOf sdh:Floor2 .
 
 sdh:R275 a brick:Room ;
     rdfs:label "Electrical" ;
     bf:isPartOf sdh:Floor2 .
-
-sdh:R277 a brick:Room ;
-    rdfs:label "Mens Bath" ;
-    bf:isPartOf sdh:Floor2 .
-
-sdh:R330 a brick:Room ;
-    rdfs:label "Learning" ;
-    bf:isPartOf sdh:Floor3 .
-
-sdh:R330B a brick:Room ;
-    rdfs:label "Office" ;
-    bf:isPartOf sdh:Floor3 .
-
-sdh:R330C a brick:Room ;
-    rdfs:label "Office" ;
-    bf:isPartOf sdh:Floor3 .
-
-sdh:R330E a brick:Room ;
-    rdfs:label "Office" ;
-    bf:isPartOf sdh:Floor3 .
-
-sdh:R330F a brick:Room ;
-    rdfs:label "Office" ;
-    bf:isPartOf sdh:Floor3 .
-
-sdh:R340 a brick:Room ;
-    rdfs:label "Lobby" ;
-    bf:isPartOf sdh:Floor3 .
 
 sdh:R345 a brick:Room ;
     rdfs:label "Display" ;
@@ -302,10 +229,6 @@ sdh:R345 a brick:Room ;
 
 sdh:R356D a brick:Room ;
     rdfs:label "Open Office" ;
-    bf:isPartOf sdh:Floor3 .
-
-sdh:R356F a brick:Room ;
-    rdfs:label "Office" ;
     bf:isPartOf sdh:Floor3 .
 
 sdh:R361 a brick:Room ;
@@ -316,41 +239,17 @@ sdh:R368 a brick:Room ;
     rdfs:label "Conference" ;
     bf:isPartOf sdh:Floor3 .
 
-sdh:R370 a brick:Room ;
-    rdfs:label "Elevator Lobby" ;
-    bf:isPartOf sdh:Floor3 .
-
-sdh:R371 a brick:Room ;
-    rdfs:label "IDF Closet" ;
-    bf:isPartOf sdh:Floor3 .
-
 sdh:R375 a brick:Room ;
     rdfs:label "Electrical" ;
     bf:isPartOf sdh:Floor3 .
-
-sdh:R377 a brick:Room ;
-    rdfs:label "Womens Bath" ;
-    bf:isPartOf sdh:Floor3 .
-
-sdh:R500 a brick:Room ;
-    rdfs:label "Hallway" ;
-    bf:isPartOf sdh:Floor5 .
 
 sdh:R520B bf:adjacentTo sdh:R520,
         sdh:R520A .
 
 sdh:R530 bf:adjacentTo sdh:R510 .
 
-sdh:R550 a brick:Room ;
-    rdfs:label "Open Office" ;
-    bf:isPartOf sdh:Floor5 .
-
 sdh:R552 bf:adjacentTo sdh:R548,
         sdh:R554 .
-
-sdh:R570 a brick:Room ;
-    rdfs:label "Elevator Lobby" ;
-    bf:isPartOf sdh:Floor5 .
 
 sdh:R579 bf:adjacentTo sdh:R577 .
 
@@ -363,23 +262,11 @@ sdh:R595 bf:adjacentTo sdh:R584,
         sdh:R585,
         sdh:R586 .
 
-sdh:R629 a brick:Room ;
-    rdfs:label "Emergency Electrical" ;
-    bf:isPartOf sdh:Floor6 .
-
 sdh:R648 bf:adjacentTo sdh:R646,
         sdh:R652A .
 
-sdh:R650 a brick:Room ;
-    rdfs:label "Hallway" ;
-    bf:isPartOf sdh:Floor6 .
-
 sdh:R668 a brick:Room ;
     rdfs:label "Research" ;
-    bf:isPartOf sdh:Floor6 .
-
-sdh:R670 a brick:Room ;
-    rdfs:label "Elevator Lobby" ;
     bf:isPartOf sdh:Floor6 .
 
 sdh:R679 bf:adjacentTo sdh:R677 .
@@ -408,6 +295,7 @@ sdh:RHC-1HEAT.COOL a brick:Heating_Command ;
     bf:uuid "c123c8db-ee1d-5d45-a97e-49ea915c59c9" .
 
 sdh:RHC-1ROOM_TEMP a brick:Zone_Air_Temperature_Sensor ;
+    bf:isLocatedIn sdh:R464 ;
     bf:uuid "7c78b877-ecec-583f-8bd4-0f70f86cbf43" .
 
 sdh:RHC-2 a brick:Reheat_Coil ;
@@ -422,6 +310,7 @@ sdh:RHC-2HEAT.COOL a brick:Heating_Command ;
     bf:uuid "a80e64bd-fe99-596b-9125-80142ade7941" .
 
 sdh:RHC-2ROOM_TEMP a brick:Zone_Air_Temperature_Sensor ;
+    bf:isLocatedIn sdh:R270 ;
     bf:uuid "66003294-ff46-5c21-80dc-9d5cf8b97fdf" .
 
 sdh:RHC-3 a brick:Reheat_Coil ;
@@ -436,6 +325,7 @@ sdh:RHC-3HEAT.COOL a brick:Heating_Command ;
     bf:uuid "db6cca0b-fd23-55ec-a2be-6e5f341f2618" .
 
 sdh:RHC-3ROOM_TEMP a brick:Zone_Air_Temperature_Sensor ;
+    bf:isLocatedIn sdh:R330 ;
     bf:uuid "956aad84-c2a7-5c70-ac7c-2e7dd439c113" .
 
 sdh:RHC-4 a brick:Reheat_Coil ;
@@ -450,6 +340,7 @@ sdh:RHC-4HEAT.COOL a brick:Heating_Command ;
     bf:uuid "7a5d1511-59d3-5dae-a225-2f05bff1542c" .
 
 sdh:RHC-4ROOM_TEMP a brick:Zone_Air_Temperature_Sensor ;
+    bf:isLocatedIn sdh:R730 ;
     bf:uuid "b1dc160d-cf8a-57c9-b509-183cea59cb83" .
 
 sdh:RHC-5 a brick:Reheat_Coil ;
@@ -464,6 +355,7 @@ sdh:RHC-5HEAT.COOL a brick:Heating_Command ;
     bf:uuid "62e0904d-57b7-55f1-9bc1-57d2b9ce4898" .
 
 sdh:RHC-5ROOM_TEMP a brick:Zone_Air_Temperature_Sensor ;
+    bf:isLocatedIn sdh:R520 ;
     bf:uuid "723a9b42-2809-56f1-99bc-fd004343508e" .
 
 sdh:RHC-6 a brick:Reheat_Coil ;
@@ -478,6 +370,7 @@ sdh:RHC-6HEAT.COOL a brick:Heating_Command ;
     bf:uuid "98efa42c-7bef-5da0-b662-5b8d37a45f58" .
 
 sdh:RHC-6ROOM_TEMP a brick:Zone_Air_Temperature_Sensor ;
+    bf:isLocatedIn sdh:R430 ;
     bf:uuid "814b3148-9a6b-5906-8331-4b10df702d37" .
 
 sdh:RHC-7 a brick:Reheat_Coil ;
@@ -492,6 +385,7 @@ sdh:RHC-7HEAT.COOL a brick:Heating_Command ;
     bf:uuid "dfb8879b-063c-54bc-b26e-f673badee02a" .
 
 sdh:RHC-7ROOM_TEMP a brick:Zone_Air_Temperature_Sensor ;
+    bf:isLocatedIn sdh:R771 ;
     bf:uuid "7e8fe849-bff7-5a48-af42-158bc89fff37" .
 
 sdh:RHC-8 a brick:Reheat_Coil ;
@@ -506,6 +400,7 @@ sdh:RHC-8HEAT.COOL a brick:Heating_Command ;
     bf:uuid "d2aa9949-0e3b-5cc0-9ac6-98c6b252b8a9" .
 
 sdh:RHC-8ROOM_TEMP a brick:Zone_Air_Temperature_Sensor ;
+    bf:isLocatedIn sdh:R330E ;
     bf:uuid "223c3965-44b6-533f-8559-58f084b92f8c" .
 
 sdh:RHC-9 a brick:Reheat_Coil ;
@@ -520,6 +415,7 @@ sdh:RHC-9HEAT.COOL a brick:Heating_Command ;
     bf:uuid "cca08c2e-150d-5694-866e-baac7b51fa0c" .
 
 sdh:RHC-9ROOM_TEMP a brick:Zone_Air_Temperature_Sensor ;
+    bf:isLocatedIn sdh:R738 ;
     bf:uuid "f379df5d-299f-5761-b934-8593fbec1e84" .
 
 sdh:S1-01 a brick:VAV ;
@@ -553,6 +449,7 @@ sdh:S1-01room_setpoint a brick:Zone_Temperature_Setpoint ;
     bf:uuid "68e02624-b01d-537e-82b7-409d2d8ed42e" .
 
 sdh:S1-01room_temperature a brick:Zone_Air_Temperature_Sensor ;
+    bf:isLocatedIn sdh:R768 ;
     bf:uuid "a40eb849-a484-5f2e-8d9a-9388a2e24026" .
 
 sdh:S1-01room_valve_position a brick:Heating_Valve_Sensor ;
@@ -589,6 +486,7 @@ sdh:S1-02room_setpoint a brick:Zone_Temperature_Setpoint ;
     bf:uuid "785175b2-05e7-56a3-9960-9b9887f6f300" .
 
 sdh:S1-02room_temperature a brick:Zone_Air_Temperature_Sensor ;
+    bf:isLocatedIn sdh:R630 ;
     bf:uuid "0edc67d8-8b2b-5f6c-b7d5-0a44db68dcdc" .
 
 sdh:S1-02room_valve_position a brick:Heating_Valve_Sensor ;
@@ -625,6 +523,7 @@ sdh:S1-03room_setpoint a brick:Zone_Temperature_Setpoint ;
     bf:uuid "981cbcaf-9904-5db5-b238-47bf9963d27f" .
 
 sdh:S1-03room_temperature a brick:Zone_Air_Temperature_Sensor ;
+    bf:isLocatedIn sdh:R171 ;
     bf:uuid "fd87920d-339e-5063-bb66-792e252e901c" .
 
 sdh:S1-03room_valve_position a brick:Heating_Valve_Sensor ;
@@ -661,6 +560,7 @@ sdh:S1-04room_setpoint a brick:Zone_Temperature_Setpoint ;
     bf:uuid "53e190f6-2e14-57a5-9514-abeb759d60bb" .
 
 sdh:S1-04room_temperature a brick:Zone_Air_Temperature_Sensor ;
+    bf:isLocatedIn sdh:R566 ;
     bf:uuid "2e674fe7-183e-528e-a5d7-2ca04838bc3d" .
 
 sdh:S1-04room_valve_position a brick:Heating_Valve_Sensor ;
@@ -692,6 +592,7 @@ sdh:S1-05room_setpoint a brick:Zone_Temperature_Setpoint ;
     bf:uuid "036f8b33-713d-5c32-b76d-cfe84329a18f" .
 
 sdh:S1-05room_temperature a brick:Zone_Air_Temperature_Sensor ;
+    bf:isLocatedIn sdh:R575 ;
     bf:uuid "695575f1-bbb6-5359-99ed-e5e5e8ef735d" .
 
 sdh:S1-06 a brick:VAV ;
@@ -720,6 +621,7 @@ sdh:S1-06room_setpoint a brick:Zone_Temperature_Setpoint ;
     bf:uuid "c0768c10-b93e-5674-ae34-ac9b453ab339" .
 
 sdh:S1-06room_temperature a brick:Zone_Air_Temperature_Sensor ;
+    bf:isLocatedIn sdh:R418 ;
     bf:uuid "8e5b0e47-a08c-561a-957b-3b7aebd4b17f" .
 
 sdh:S1-07 a brick:VAV ;
@@ -753,6 +655,7 @@ sdh:S1-07room_setpoint a brick:Zone_Temperature_Setpoint ;
     bf:uuid "e191f8bc-3fca-51ad-b094-efdb835a2835" .
 
 sdh:S1-07room_temperature a brick:Zone_Air_Temperature_Sensor ;
+    bf:isLocatedIn sdh:R444 ;
     bf:uuid "9c1873d0-9733-5b17-9bfb-f2329bf8bce8" .
 
 sdh:S1-07room_valve_position a brick:Heating_Valve_Sensor ;
@@ -789,6 +692,7 @@ sdh:S1-08room_setpoint a brick:Zone_Temperature_Setpoint ;
     bf:uuid "0016352d-5f19-5f12-a80e-781491870412" .
 
 sdh:S1-08room_temperature a brick:Zone_Air_Temperature_Sensor ;
+    bf:isLocatedIn sdh:R725 ;
     bf:uuid "b933e478-6011-5fc7-9406-add7ca2a6bd1" .
 
 sdh:S1-08room_valve_position a brick:Heating_Valve_Sensor ;
@@ -825,6 +729,7 @@ sdh:S1-09room_setpoint a brick:Zone_Temperature_Setpoint ;
     bf:uuid "00ad06b8-92fe-5ccd-9db3-fdfc6aa23e79" .
 
 sdh:S1-09room_temperature a brick:Zone_Air_Temperature_Sensor ;
+    bf:isLocatedIn sdh:R479 ;
     bf:uuid "a87fc85b-17fa-5c0b-8201-88d16b015607" .
 
 sdh:S1-09room_valve_position a brick:Heating_Valve_Sensor ;
@@ -861,6 +766,7 @@ sdh:S1-10room_setpoint a brick:Zone_Temperature_Setpoint ;
     bf:uuid "370ba962-687c-5230-a9a6-c82168b7dd72" .
 
 sdh:S1-10room_temperature a brick:Zone_Air_Temperature_Sensor ;
+    bf:isLocatedIn sdh:R768 ;
     bf:uuid "60d320e6-c137-50b7-b08a-caafcaca60e2" .
 
 sdh:S1-10room_valve_position a brick:Heating_Valve_Sensor ;
@@ -903,6 +809,7 @@ sdh:S1-13room_setpoint a brick:Zone_Temperature_Setpoint ;
     bf:uuid "f0211d3c-a4af-569d-b31d-7de2752c501e" .
 
 sdh:S1-13room_temperature a brick:Zone_Air_Temperature_Sensor ;
+    bf:isLocatedIn sdh:R510 ;
     bf:uuid "f44b927c-2fb2-59fd-887c-a513beca8e49" .
 
 sdh:S1-13room_valve_position a brick:Heating_Valve_Sensor ;
@@ -934,6 +841,7 @@ sdh:S1-14room_setpoint a brick:Zone_Temperature_Setpoint ;
     bf:uuid "edcc4f08-8bd5-53aa-a4d2-265a771b4ac6" .
 
 sdh:S1-14room_temperature a brick:Zone_Air_Temperature_Sensor ;
+    bf:isLocatedIn sdh:R446 ;
     bf:uuid "5422c6d3-c157-5223-baa3-6c688743c93d" .
 
 sdh:S1-15 a brick:VAV ;
@@ -967,6 +875,7 @@ sdh:S1-15room_setpoint a brick:Zone_Temperature_Setpoint ;
     bf:uuid "0f2f477a-90c2-5f91-aa60-70102b620f14" .
 
 sdh:S1-15room_temperature a brick:Zone_Air_Temperature_Sensor ;
+    bf:isLocatedIn sdh:R570 ;
     bf:uuid "a59bbdfa-bb33-5d39-827a-17cfc03f4ec6" .
 
 sdh:S1-15room_valve_position a brick:Heating_Valve_Sensor ;
@@ -1003,6 +912,7 @@ sdh:S1-16room_setpoint a brick:Zone_Temperature_Setpoint ;
     bf:uuid "18eaa312-9dc6-5022-ba4b-99007c7ba2c2" .
 
 sdh:S1-16room_temperature a brick:Zone_Air_Temperature_Sensor ;
+    bf:isLocatedIn sdh:R371 ;
     bf:uuid "76acc8ec-c0a3-5ea6-9e51-abb4e361820f" .
 
 sdh:S1-16room_valve_position a brick:Heating_Valve_Sensor ;
@@ -1039,6 +949,7 @@ sdh:S1-17room_setpoint a brick:Zone_Temperature_Setpoint ;
     bf:uuid "897ce6e1-0ad1-5f99-94c5-f7b72df7cc1a" .
 
 sdh:S1-17room_temperature a brick:Zone_Air_Temperature_Sensor ;
+    bf:isLocatedIn sdh:R427 ;
     bf:uuid "2055143f-be8c-5267-a0da-863337b584ff" .
 
 sdh:S1-17room_valve_position a brick:Heating_Valve_Sensor ;
@@ -1075,6 +986,7 @@ sdh:S1-18room_setpoint a brick:Zone_Temperature_Setpoint ;
     bf:uuid "7581fdc8-25ae-5fc4-afcf-cc62c4d10dc8" .
 
 sdh:S1-18room_temperature a brick:Zone_Air_Temperature_Sensor ;
+    bf:isLocatedIn sdh:R630B ;
     bf:uuid "691b1142-4009-5ca2-8271-b846118d5741" .
 
 sdh:S1-18room_valve_position a brick:Heating_Valve_Sensor ;
@@ -1111,6 +1023,7 @@ sdh:S1-19room_setpoint a brick:Zone_Temperature_Setpoint ;
     bf:uuid "deb1424e-8226-53f3-8165-01e94c934b1e" .
 
 sdh:S1-19room_temperature a brick:Zone_Air_Temperature_Sensor ;
+    bf:isLocatedIn sdh:R432 ;
     bf:uuid "b2eb7943-f54a-532f-a03b-4a1e69649757" .
 
 sdh:S1-19room_valve_position a brick:Heating_Valve_Sensor ;
@@ -1147,6 +1060,7 @@ sdh:S1-20room_setpoint a brick:Zone_Temperature_Setpoint ;
     bf:uuid "d37351e1-f2f3-5d8e-a79a-9c2d518752e2" .
 
 sdh:S1-20room_temperature a brick:Zone_Air_Temperature_Sensor ;
+    bf:isLocatedIn sdh:R444 ;
     bf:uuid "6394dea9-f31d-5cb1-8f5f-548d0b38d222" .
 
 sdh:S1-20room_valve_position a brick:Heating_Valve_Sensor ;
@@ -1183,6 +1097,7 @@ sdh:S2-01room_setpoint a brick:Zone_Temperature_Setpoint ;
     bf:uuid "920b701d-4004-5966-a1d2-66343733334d" .
 
 sdh:S2-01room_temperature a brick:Zone_Air_Temperature_Sensor ;
+    bf:isLocatedIn sdh:R558 ;
     bf:uuid "bbb3afe3-a21e-5c2f-ac0e-527252fe81b7" .
 
 sdh:S2-01room_valve_position a brick:Heating_Valve_Sensor ;
@@ -1219,6 +1134,7 @@ sdh:S2-02room_setpoint a brick:Zone_Temperature_Setpoint ;
     bf:uuid "4cec08e8-3b04-510f-af37-9ccf12290695" .
 
 sdh:S2-02room_temperature a brick:Zone_Air_Temperature_Sensor ;
+    bf:isLocatedIn sdh:R462 ;
     bf:uuid "ae58f0b1-4a14-5b66-8c9d-f4116c98a077" .
 
 sdh:S2-02room_valve_position a brick:Heating_Valve_Sensor ;
@@ -1255,6 +1171,7 @@ sdh:S2-03room_setpoint a brick:Zone_Temperature_Setpoint ;
     bf:uuid "013837d5-fd0a-5eec-aee7-fb66bbdc6d29" .
 
 sdh:S2-03room_temperature a brick:Zone_Air_Temperature_Sensor ;
+    bf:isLocatedIn sdh:R629 ;
     bf:uuid "18a9d74f-c008-5bc9-b547-15543f5f4b7c" .
 
 sdh:S2-03room_valve_position a brick:Heating_Valve_Sensor ;
@@ -1291,6 +1208,7 @@ sdh:S2-04room_setpoint a brick:Zone_Temperature_Setpoint ;
     bf:uuid "db0ed19f-26da-5637-8065-edd8de97e501" .
 
 sdh:S2-04room_temperature a brick:Zone_Air_Temperature_Sensor ;
+    bf:isLocatedIn sdh:R300 ;
     bf:uuid "da1709c0-a581-52de-b235-bd947f66c82e" .
 
 sdh:S2-04room_valve_position a brick:Heating_Valve_Sensor ;
@@ -1327,6 +1245,7 @@ sdh:S2-05room_setpoint a brick:Zone_Temperature_Setpoint ;
     bf:uuid "256c8df0-8caa-5c27-be82-7659ecf4a2c6" .
 
 sdh:S2-05room_temperature a brick:Zone_Air_Temperature_Sensor ;
+    bf:isLocatedIn sdh:R548 ;
     bf:uuid "2b04a9f6-70f5-52e3-b855-951c107026ac" .
 
 sdh:S2-05room_valve_position a brick:Heating_Valve_Sensor ;
@@ -1363,6 +1282,7 @@ sdh:S2-06room_setpoint a brick:Zone_Temperature_Setpoint ;
     bf:uuid "790059bc-a4a0-52ab-848a-fef70455f9fc" .
 
 sdh:S2-06room_temperature a brick:Zone_Air_Temperature_Sensor ;
+    bf:isLocatedIn sdh:R250 ;
     bf:uuid "160bb976-d744-58cb-a566-fb456f8b0b02" .
 
 sdh:S2-06room_valve_position a brick:Heating_Valve_Sensor ;
@@ -1399,6 +1319,7 @@ sdh:S2-07room_setpoint a brick:Zone_Temperature_Setpoint ;
     bf:uuid "b76a1f4e-bc79-5dab-a28e-c4e89526ce0f" .
 
 sdh:S2-07room_temperature a brick:Zone_Air_Temperature_Sensor ;
+    bf:isLocatedIn sdh:R479 ;
     bf:uuid "03c4edee-9dc9-57bb-b607-595f9bf22b71" .
 
 sdh:S2-07room_valve_position a brick:Heating_Valve_Sensor ;
@@ -1430,6 +1351,7 @@ sdh:S2-08room_setpoint a brick:Zone_Temperature_Setpoint ;
     bf:uuid "83737c2f-8492-5f43-9426-7a162ff00d20" .
 
 sdh:S2-08room_temperature a brick:Zone_Air_Temperature_Sensor ;
+    bf:isLocatedIn sdh:R424 ;
     bf:uuid "8758e461-3cd3-5c75-a048-3a3c430f7838" .
 
 sdh:S2-09 a brick:VAV ;
@@ -1458,6 +1380,7 @@ sdh:S2-09room_setpoint a brick:Zone_Temperature_Setpoint ;
     bf:uuid "d632fb7f-fd99-5d7d-9a25-b8e73ee449d7" .
 
 sdh:S2-09room_temperature a brick:Zone_Air_Temperature_Sensor ;
+    bf:isLocatedIn sdh:R472 ;
     bf:uuid "9b70e9d8-45fb-5e3d-8372-c7253f0d9ac9" .
 
 sdh:S2-10 a brick:VAV ;
@@ -1491,6 +1414,7 @@ sdh:S2-10room_setpoint a brick:Zone_Temperature_Setpoint ;
     bf:uuid "e1b8d8d1-4e3a-5db7-ad4b-adf81551abce" .
 
 sdh:S2-10room_temperature a brick:Zone_Air_Temperature_Sensor ;
+    bf:isLocatedIn sdh:R330F ;
     bf:uuid "09fb2efe-8733-59f8-8622-2bc41332a3df" .
 
 sdh:S2-10room_valve_position a brick:Heating_Valve_Sensor ;
@@ -1527,6 +1451,7 @@ sdh:S2-11room_setpoint a brick:Zone_Temperature_Setpoint ;
     bf:uuid "2fec0f81-b6c6-5d6d-8137-5ca7efb9f4fe" .
 
 sdh:S2-11room_temperature a brick:Zone_Air_Temperature_Sensor ;
+    bf:isLocatedIn sdh:R650 ;
     bf:uuid "99deb306-4431-50b0-968b-29471fdafed4" .
 
 sdh:S2-11room_valve_position a brick:Heating_Valve_Sensor ;
@@ -1563,6 +1488,7 @@ sdh:S2-12room_setpoint a brick:Zone_Temperature_Setpoint ;
     bf:uuid "1c518daa-6e50-5ee5-a281-2ee3780ad00f" .
 
 sdh:S2-12room_temperature a brick:Zone_Air_Temperature_Sensor ;
+    bf:isLocatedIn sdh:R423 ;
     bf:uuid "af4ea611-251c-5d06-95ca-d357c41b5c08" .
 
 sdh:S2-12room_valve_position a brick:Heating_Valve_Sensor ;
@@ -1599,6 +1525,7 @@ sdh:S2-13room_setpoint a brick:Zone_Temperature_Setpoint ;
     bf:uuid "2cb41df9-c76f-5614-9c36-ec14cb70e13b" .
 
 sdh:S2-13room_temperature a brick:Zone_Air_Temperature_Sensor ;
+    bf:isLocatedIn sdh:R448 ;
     bf:uuid "e1f3d175-519f-51a8-81e1-bcbedb9c9c4c" .
 
 sdh:S2-13room_valve_position a brick:Heating_Valve_Sensor ;
@@ -1635,6 +1562,7 @@ sdh:S2-14room_setpoint a brick:Zone_Temperature_Setpoint ;
     bf:uuid "0d1d8542-d63b-5393-b381-257cb64a26de" .
 
 sdh:S2-14room_temperature a brick:Zone_Air_Temperature_Sensor ;
+    bf:isLocatedIn sdh:R621 ;
     bf:uuid "c2844221-fd65-533c-9f62-cc5b69fd70b1" .
 
 sdh:S2-14room_valve_position a brick:Heating_Valve_Sensor ;
@@ -1671,6 +1599,7 @@ sdh:S2-15room_setpoint a brick:Zone_Temperature_Setpoint ;
     bf:uuid "b1a37815-d838-5e9a-9335-eb91d9547496" .
 
 sdh:S2-15room_temperature a brick:Zone_Air_Temperature_Sensor ;
+    bf:isLocatedIn sdh:R721 ;
     bf:uuid "771c2f0d-f468-57de-80ba-c944cbd26048" .
 
 sdh:S2-15room_valve_position a brick:Heating_Valve_Sensor ;
@@ -1707,6 +1636,7 @@ sdh:S2-16room_setpoint a brick:Zone_Temperature_Setpoint ;
     bf:uuid "fc1ddf2d-0141-5cd5-a7e3-5f740f2ed39f" .
 
 sdh:S2-16room_temperature a brick:Zone_Air_Temperature_Sensor ;
+    bf:isLocatedIn sdh:R652A ;
     bf:uuid "a75a1a78-aa30-51d2-9b58-ecb6e18bc73a" .
 
 sdh:S2-16room_valve_position a brick:Heating_Valve_Sensor ;
@@ -1743,6 +1673,7 @@ sdh:S2-17room_setpoint a brick:Zone_Temperature_Setpoint ;
     bf:uuid "973ad21b-d5d3-58ff-bf25-56d640cb1e6f" .
 
 sdh:S2-17room_temperature a brick:Zone_Air_Temperature_Sensor ;
+    bf:isLocatedIn sdh:R413 ;
     bf:uuid "42df24c5-3b86-5511-8c73-edf62f4a21b4" .
 
 sdh:S2-17room_valve_position a brick:Heating_Valve_Sensor ;
@@ -1779,6 +1710,7 @@ sdh:S2-18room_setpoint a brick:Zone_Temperature_Setpoint ;
     bf:uuid "5a28ad8e-5410-50c4-b5c0-3c15ddb6db8b" .
 
 sdh:S2-18room_temperature a brick:Zone_Air_Temperature_Sensor ;
+    bf:isLocatedIn sdh:R650 ;
     bf:uuid "d78563d1-ae6c-5b3c-8d80-2210d0ef845d" .
 
 sdh:S2-18room_valve_position a brick:Heating_Valve_Sensor ;
@@ -1815,6 +1747,7 @@ sdh:S2-19room_setpoint a brick:Zone_Temperature_Setpoint ;
     bf:uuid "3abb83bf-11fa-55b3-8920-fe9d2e57d5a1" .
 
 sdh:S2-19room_temperature a brick:Zone_Air_Temperature_Sensor ;
+    bf:isLocatedIn sdh:R446 ;
     bf:uuid "f710234c-61d6-52d5-95e8-4237b8c09ffc" .
 
 sdh:S2-19room_valve_position a brick:Heating_Valve_Sensor ;
@@ -1851,6 +1784,7 @@ sdh:S2-20room_setpoint a brick:Zone_Temperature_Setpoint ;
     bf:uuid "35bc0dbe-53b4-58a4-b454-b58d95aac3ef" .
 
 sdh:S2-20room_temperature a brick:Zone_Air_Temperature_Sensor ;
+    bf:isLocatedIn sdh:R149 ;
     bf:uuid "b5117829-14c5-5dd5-81f9-6da562e21e16" .
 
 sdh:S2-20room_valve_position a brick:Heating_Valve_Sensor ;
@@ -1887,6 +1821,7 @@ sdh:S2-21room_setpoint a brick:Zone_Temperature_Setpoint ;
     bf:uuid "2ea3f8e3-7870-513e-a757-bdb106caa1de" .
 
 sdh:S2-21room_temperature a brick:Zone_Air_Temperature_Sensor ;
+    bf:isLocatedIn sdh:R456 ;
     bf:uuid "e490aec3-4bd7-57f9-ab6e-d86783a07f9c" .
 
 sdh:S2-21room_valve_position a brick:Heating_Valve_Sensor ;
@@ -1923,6 +1858,7 @@ sdh:S3-01room_setpoint a brick:Zone_Temperature_Setpoint ;
     bf:uuid "c71dd466-543f-51c4-b2da-0780e5facc69" .
 
 sdh:S3-01room_temperature a brick:Zone_Air_Temperature_Sensor ;
+    bf:isLocatedIn sdh:R515 ;
     bf:uuid "b3fede44-5811-5a93-b573-de01f2b9e922" .
 
 sdh:S3-01room_valve_position a brick:Heating_Valve_Sensor ;
@@ -1959,6 +1895,7 @@ sdh:S3-02room_setpoint a brick:Zone_Temperature_Setpoint ;
     bf:uuid "2bd49377-7d32-51c9-9613-bb7f2c4028a4" .
 
 sdh:S3-02room_temperature a brick:Zone_Air_Temperature_Sensor ;
+    bf:isLocatedIn sdh:R442 ;
     bf:uuid "10a6df89-fe88-5456-b31a-61ae244fbc87" .
 
 sdh:S3-02room_valve_position a brick:Heating_Valve_Sensor ;
@@ -1995,6 +1932,7 @@ sdh:S3-03room_setpoint a brick:Zone_Temperature_Setpoint ;
     bf:uuid "38bb20b6-1acd-5a38-b120-01e2cc67abb8" .
 
 sdh:S3-03room_temperature a brick:Zone_Air_Temperature_Sensor ;
+    bf:isLocatedIn sdh:R160 ;
     bf:uuid "716ee160-fb4d-581c-a5eb-b1a40c93d964" .
 
 sdh:S3-03room_valve_position a brick:Heating_Valve_Sensor ;
@@ -2031,6 +1969,7 @@ sdh:S3-04room_setpoint a brick:Zone_Temperature_Setpoint ;
     bf:uuid "f6a2cb34-ad7c-5bf7-9243-b3603c6c6e41" .
 
 sdh:S3-04room_temperature a brick:Zone_Air_Temperature_Sensor ;
+    bf:isLocatedIn sdh:R725 ;
     bf:uuid "b9b594dc-94f7-5d27-9d35-6c37cd8adce3" .
 
 sdh:S3-04room_valve_position a brick:Heating_Valve_Sensor ;
@@ -2067,6 +2006,7 @@ sdh:S3-05room_setpoint a brick:Zone_Temperature_Setpoint ;
     bf:uuid "1a36b2ff-018d-5bb4-8082-7c2cb237e67a" .
 
 sdh:S3-05room_temperature a brick:Zone_Air_Temperature_Sensor ;
+    bf:isLocatedIn sdh:R442 ;
     bf:uuid "78e07878-3c62-5ee7-8627-5d59d471effa" .
 
 sdh:S3-05room_valve_position a brick:Heating_Valve_Sensor ;
@@ -2103,6 +2043,7 @@ sdh:S3-06room_setpoint a brick:Zone_Temperature_Setpoint ;
     bf:uuid "83351499-6297-5aa4-8c1e-dd814d81df54" .
 
 sdh:S3-06room_temperature a brick:Zone_Air_Temperature_Sensor ;
+    bf:isLocatedIn sdh:R356F ;
     bf:uuid "adde7364-8de4-5d76-95a9-cd5ea7118b79" .
 
 sdh:S3-06room_valve_position a brick:Heating_Valve_Sensor ;
@@ -2139,6 +2080,7 @@ sdh:S3-07room_setpoint a brick:Zone_Temperature_Setpoint ;
     bf:uuid "90a2e9dd-6b02-54bf-a905-6cea333adb30" .
 
 sdh:S3-07room_temperature a brick:Zone_Air_Temperature_Sensor ;
+    bf:isLocatedIn sdh:R413 ;
     bf:uuid "d3b304e3-d521-550d-b94b-403086dca7b6" .
 
 sdh:S3-07room_valve_position a brick:Heating_Valve_Sensor ;
@@ -2175,6 +2117,7 @@ sdh:S3-08room_setpoint a brick:Zone_Temperature_Setpoint ;
     bf:uuid "fd6d64c5-d6e6-58e4-8edd-c0a884fe907c" .
 
 sdh:S3-08room_temperature a brick:Zone_Air_Temperature_Sensor ;
+    bf:isLocatedIn sdh:R454 ;
     bf:uuid "12f232ed-d5f7-5466-903e-c6af11ac8155" .
 
 sdh:S3-08room_valve_position a brick:Heating_Valve_Sensor ;
@@ -2211,6 +2154,7 @@ sdh:S3-09room_setpoint a brick:Zone_Temperature_Setpoint ;
     bf:uuid "2b652aec-d858-5c56-8743-6a76ac770d96" .
 
 sdh:S3-09room_temperature a brick:Zone_Air_Temperature_Sensor ;
+    bf:isLocatedIn sdh:R466 ;
     bf:uuid "2dfcd9bb-34c2-59e7-ba7f-06424f131d45" .
 
 sdh:S3-09room_valve_position a brick:Heating_Valve_Sensor ;
@@ -2247,6 +2191,7 @@ sdh:S3-10room_setpoint a brick:Zone_Temperature_Setpoint ;
     bf:uuid "a19b60d9-2282-5ed3-a414-97e5658c86a1" .
 
 sdh:S3-10room_temperature a brick:Zone_Air_Temperature_Sensor ;
+    bf:isLocatedIn sdh:R300 ;
     bf:uuid "282eb8fc-c16f-5919-a2c3-27091e84ab1f" .
 
 sdh:S3-10room_valve_position a brick:Heating_Valve_Sensor ;
@@ -2283,6 +2228,7 @@ sdh:S3-11room_setpoint a brick:Zone_Temperature_Setpoint ;
     bf:uuid "2d2e61b4-6cad-5e3d-97cb-3183a569799a" .
 
 sdh:S3-11room_temperature a brick:Zone_Air_Temperature_Sensor ;
+    bf:isLocatedIn sdh:R330F ;
     bf:uuid "11681b52-6349-5685-af54-63cb6d40f313" .
 
 sdh:S3-11room_valve_position a brick:Heating_Valve_Sensor ;
@@ -2319,6 +2265,7 @@ sdh:S3-12room_setpoint a brick:Zone_Temperature_Setpoint ;
     bf:uuid "90a18414-1084-5c39-b7c7-9e73917cc981" .
 
 sdh:S3-12room_temperature a brick:Zone_Air_Temperature_Sensor ;
+    bf:isLocatedIn sdh:R477 ;
     bf:uuid "c6fb301b-a5f9-5683-a9cf-d4c2e41f0935" .
 
 sdh:S3-12room_valve_position a brick:Heating_Valve_Sensor ;
@@ -2350,6 +2297,7 @@ sdh:S3-13room_setpoint a brick:Zone_Temperature_Setpoint ;
     bf:uuid "93144139-931b-5536-a641-858beed70330" .
 
 sdh:S3-13room_temperature a brick:Zone_Air_Temperature_Sensor ;
+    bf:isLocatedIn sdh:R418 ;
     bf:uuid "acc1e7cb-a408-57ab-9327-04e5e349bde7" .
 
 sdh:S3-14 a brick:VAV ;
@@ -2378,6 +2326,7 @@ sdh:S3-14room_setpoint a brick:Zone_Temperature_Setpoint ;
     bf:uuid "965d1da6-2b6c-5026-9c43-fe896ef10ed1" .
 
 sdh:S3-14room_temperature a brick:Zone_Air_Temperature_Sensor ;
+    bf:isLocatedIn sdh:R577 ;
     bf:uuid "2d0d5b23-c3f9-513b-abf2-ae391105cbe7" .
 
 sdh:S3-15 a brick:VAV ;
@@ -2411,6 +2360,7 @@ sdh:S3-15room_setpoint a brick:Zone_Temperature_Setpoint ;
     bf:uuid "7952a53e-59dc-5226-981d-48dd659bce93" .
 
 sdh:S3-15room_temperature a brick:Zone_Air_Temperature_Sensor ;
+    bf:isLocatedIn sdh:R160 ;
     bf:uuid "416ce64e-a816-5031-a701-a2aa7e743170" .
 
 sdh:S3-15room_valve_position a brick:Heating_Valve_Sensor ;
@@ -2447,6 +2397,7 @@ sdh:S3-16room_setpoint a brick:Zone_Temperature_Setpoint ;
     bf:uuid "8b9e69db-1291-584e-b043-93f10242c0a3" .
 
 sdh:S3-16room_temperature a brick:Zone_Air_Temperature_Sensor ;
+    bf:isLocatedIn sdh:R200 ;
     bf:uuid "a8318c3a-580b-5491-a8e3-6754000e5e2e" .
 
 sdh:S3-16room_valve_position a brick:Heating_Valve_Sensor ;
@@ -2483,6 +2434,7 @@ sdh:S3-17room_setpoint a brick:Zone_Temperature_Setpoint ;
     bf:uuid "5f0bd40e-07ab-56e3-8c1f-8494f14bc3ff" .
 
 sdh:S3-17room_temperature a brick:Zone_Air_Temperature_Sensor ;
+    bf:isLocatedIn sdh:R413 ;
     bf:uuid "0355f419-ad03-50e2-8c03-c25075f62ed0" .
 
 sdh:S3-17room_valve_position a brick:Heating_Valve_Sensor ;
@@ -2519,6 +2471,7 @@ sdh:S3-18room_setpoint a brick:Zone_Temperature_Setpoint ;
     bf:uuid "53fefe01-ddce-53c7-b2d5-a0d4c49a7b3d" .
 
 sdh:S3-18room_temperature a brick:Zone_Air_Temperature_Sensor ;
+    bf:isLocatedIn sdh:R271 ;
     bf:uuid "402acfee-ed1b-5fff-955d-41985048ff82" .
 
 sdh:S3-18room_valve_position a brick:Heating_Valve_Sensor ;
@@ -2555,6 +2508,7 @@ sdh:S3-19room_setpoint a brick:Zone_Temperature_Setpoint ;
     bf:uuid "31e8da9c-f276-51d8-acba-0b16607badf7" .
 
 sdh:S3-19room_temperature a brick:Zone_Air_Temperature_Sensor ;
+    bf:isLocatedIn sdh:R330 ;
     bf:uuid "d8c6be87-acdc-53b5-a526-df9e7a3faff4" .
 
 sdh:S3-19room_valve_position a brick:Heating_Valve_Sensor ;
@@ -2591,6 +2545,7 @@ sdh:S3-20room_setpoint a brick:Zone_Temperature_Setpoint ;
     bf:uuid "2c1e619c-642e-58a0-9996-6c3b89598238" .
 
 sdh:S3-20room_temperature a brick:Zone_Air_Temperature_Sensor ;
+    bf:isLocatedIn sdh:R371 ;
     bf:uuid "c360f543-325f-5f36-8664-42d3ab12e3ab" .
 
 sdh:S3-20room_valve_position a brick:Heating_Valve_Sensor ;
@@ -2627,6 +2582,7 @@ sdh:S3-21room_setpoint a brick:Zone_Temperature_Setpoint ;
     bf:uuid "27d4088d-bcd1-51a9-baf4-862a52938ceb" .
 
 sdh:S3-21room_temperature a brick:Zone_Air_Temperature_Sensor ;
+    bf:isLocatedIn sdh:R677 ;
     bf:uuid "a8a43c36-1b4d-548a-ad8a-1607065e3f12" .
 
 sdh:S3-21room_valve_position a brick:Heating_Valve_Sensor ;
@@ -2663,6 +2619,7 @@ sdh:S4-01room_setpoint a brick:Zone_Temperature_Setpoint ;
     bf:uuid "3f9c81bc-16eb-5065-a630-1a288c60c466" .
 
 sdh:S4-01room_temperature a brick:Zone_Air_Temperature_Sensor ;
+    bf:isLocatedIn sdh:R160 ;
     bf:uuid "6e2fb8ba-ad9c-5ca8-b441-e113d57c1a35" .
 
 sdh:S4-01room_valve_position a brick:Heating_Valve_Sensor ;
@@ -2699,6 +2656,7 @@ sdh:S4-02room_setpoint a brick:Zone_Temperature_Setpoint ;
     bf:uuid "53c387fb-27a3-59e9-8f08-4ce38c7a9c0d" .
 
 sdh:S4-02room_temperature a brick:Zone_Air_Temperature_Sensor ;
+    bf:isLocatedIn sdh:R652 ;
     bf:uuid "222206a5-2a85-55d4-8118-10d07f1a4e65" .
 
 sdh:S4-02room_valve_position a brick:Heating_Valve_Sensor ;
@@ -2735,6 +2693,7 @@ sdh:S4-03room_setpoint a brick:Zone_Temperature_Setpoint ;
     bf:uuid "fdab851a-038e-57ca-8a19-768be83cb311" .
 
 sdh:S4-03room_temperature a brick:Zone_Air_Temperature_Sensor ;
+    bf:isLocatedIn sdh:R550 ;
     bf:uuid "fab22d33-d171-5499-bf74-44cb4a1aac5b" .
 
 sdh:S4-03room_valve_position a brick:Heating_Valve_Sensor ;
@@ -2771,6 +2730,7 @@ sdh:S4-04room_setpoint a brick:Zone_Temperature_Setpoint ;
     bf:uuid "0739ff65-715e-5fc9-9cf0-f3ba3e188a7e" .
 
 sdh:S4-04room_temperature a brick:Zone_Air_Temperature_Sensor ;
+    bf:isLocatedIn sdh:R515 ;
     bf:uuid "35badc5a-4f58-5234-997b-d744605177dc" .
 
 sdh:S4-04room_valve_position a brick:Heating_Valve_Sensor ;
@@ -2807,6 +2767,7 @@ sdh:S4-05room_setpoint a brick:Zone_Temperature_Setpoint ;
     bf:uuid "5ec278b2-d5c6-5a56-b9bc-224960a6d4d8" .
 
 sdh:S4-05room_temperature a brick:Zone_Air_Temperature_Sensor ;
+    bf:isLocatedIn sdh:R646 ;
     bf:uuid "f993c81a-bfb4-53ca-8e12-7af1a32b9bdb" .
 
 sdh:S4-05room_valve_position a brick:Heating_Valve_Sensor ;
@@ -2843,6 +2804,7 @@ sdh:S4-06room_setpoint a brick:Zone_Temperature_Setpoint ;
     bf:uuid "b30f1e46-6aa4-5e12-b959-5dcf8580a36c" .
 
 sdh:S4-06room_temperature a brick:Zone_Air_Temperature_Sensor ;
+    bf:isLocatedIn sdh:R415 ;
     bf:uuid "3c2b8d4b-6c0a-5239-9a89-c773ab35ecef" .
 
 sdh:S4-06room_valve_position a brick:Heating_Valve_Sensor ;
@@ -2879,6 +2841,7 @@ sdh:S4-07room_setpoint a brick:Zone_Temperature_Setpoint ;
     bf:uuid "2cfad52a-7659-5e5b-b59d-7e9fa5e274bf" .
 
 sdh:S4-07room_temperature a brick:Zone_Air_Temperature_Sensor ;
+    bf:isLocatedIn sdh:R444 ;
     bf:uuid "db558b29-78d1-5d7d-9c07-578547745203" .
 
 sdh:S4-07room_valve_position a brick:Heating_Valve_Sensor ;
@@ -2915,6 +2878,7 @@ sdh:S4-08room_setpoint a brick:Zone_Temperature_Setpoint ;
     bf:uuid "6ea2940f-cc87-5d68-8513-3657c997466b" .
 
 sdh:S4-08room_temperature a brick:Zone_Air_Temperature_Sensor ;
+    bf:isLocatedIn sdh:R771 ;
     bf:uuid "594c15c5-a7fa-5ec9-98ef-7c412bc23cd7" .
 
 sdh:S4-08room_valve_position a brick:Heating_Valve_Sensor ;
@@ -2951,6 +2915,7 @@ sdh:S4-09room_setpoint a brick:Zone_Temperature_Setpoint ;
     bf:uuid "8bdef099-cfd7-55d3-96c7-ec203b31742e" .
 
 sdh:S4-09room_temperature a brick:Zone_Air_Temperature_Sensor ;
+    bf:isLocatedIn sdh:R456 ;
     bf:uuid "04bf85a1-41d6-5ecf-95c0-09464fdc5925" .
 
 sdh:S4-09room_valve_position a brick:Heating_Valve_Sensor ;
@@ -2982,6 +2947,7 @@ sdh:S4-10room_setpoint a brick:Zone_Temperature_Setpoint ;
     bf:uuid "c56eeb9f-3fa3-50a6-939a-18449b4fdc1e" .
 
 sdh:S4-10room_temperature a brick:Zone_Air_Temperature_Sensor ;
+    bf:isLocatedIn sdh:R575 ;
     bf:uuid "c1f69a00-db44-5458-a373-f38b2997f0d3" .
 
 sdh:S4-11 a brick:VAV ;
@@ -3015,6 +2981,7 @@ sdh:S4-11room_setpoint a brick:Zone_Temperature_Setpoint ;
     bf:uuid "acc4f993-669c-5000-a5ff-04dc897c6c66" .
 
 sdh:S4-11room_temperature a brick:Zone_Air_Temperature_Sensor ;
+    bf:isLocatedIn sdh:R452 ;
     bf:uuid "9f7b8d48-6279-5aae-8464-69f38e590b2b" .
 
 sdh:S4-11room_valve_position a brick:Heating_Valve_Sensor ;
@@ -3051,6 +3018,7 @@ sdh:S4-12room_setpoint a brick:Zone_Temperature_Setpoint ;
     bf:uuid "2e3ebaf3-c45a-5b56-9e75-666eba2c547f" .
 
 sdh:S4-12room_temperature a brick:Zone_Air_Temperature_Sensor ;
+    bf:isLocatedIn sdh:R171 ;
     bf:uuid "b88ad9fb-f1a8-5470-83a1-0b707d3a33b4" .
 
 sdh:S4-12room_valve_position a brick:Heating_Valve_Sensor ;
@@ -3087,6 +3055,7 @@ sdh:S4-13room_setpoint a brick:Zone_Temperature_Setpoint ;
     bf:uuid "81cf0974-51fe-500d-b24a-04185b970f4f" .
 
 sdh:S4-13room_temperature a brick:Zone_Air_Temperature_Sensor ;
+    bf:isLocatedIn sdh:R177 ;
     bf:uuid "9b506d3e-7e4c-5896-871f-a061a98a2a10" .
 
 sdh:S4-13room_valve_position a brick:Heating_Valve_Sensor ;
@@ -3118,6 +3087,7 @@ sdh:S4-14room_setpoint a brick:Zone_Temperature_Setpoint ;
     bf:uuid "0f28f419-d10b-5cb6-b58a-4ccd4a951ffd" .
 
 sdh:S4-14room_temperature a brick:Zone_Air_Temperature_Sensor ;
+    bf:isLocatedIn sdh:R652 ;
     bf:uuid "3f113f77-c8ca-5aa7-bab9-a677e840df67" .
 
 sdh:S4-15 a brick:VAV ;
@@ -3151,6 +3121,7 @@ sdh:S4-15room_setpoint a brick:Zone_Temperature_Setpoint ;
     bf:uuid "113d0082-9892-557e-9754-66f91a570a1e" .
 
 sdh:S4-15room_temperature a brick:Zone_Air_Temperature_Sensor ;
+    bf:isLocatedIn sdh:R444 ;
     bf:uuid "287171b1-81c5-535b-a92a-a254fec5ba2b" .
 
 sdh:S4-15room_valve_position a brick:Heating_Valve_Sensor ;
@@ -3187,6 +3158,7 @@ sdh:S4-16room_setpoint a brick:Zone_Temperature_Setpoint ;
     bf:uuid "da90c353-8f41-582e-ba3f-44331a320881" .
 
 sdh:S4-16room_temperature a brick:Zone_Air_Temperature_Sensor ;
+    bf:isLocatedIn sdh:R468 ;
     bf:uuid "a71dc6d1-420d-56f9-9b02-f63a5d165fcc" .
 
 sdh:S4-16room_valve_position a brick:Heating_Valve_Sensor ;
@@ -3218,6 +3190,7 @@ sdh:S4-17room_setpoint a brick:Zone_Temperature_Setpoint ;
     bf:uuid "ef2c9a45-3788-5a09-8bec-6101e45b9425" .
 
 sdh:S4-17room_temperature a brick:Zone_Air_Temperature_Sensor ;
+    bf:isLocatedIn sdh:R771 ;
     bf:uuid "7483ed25-cae3-5a73-8523-e25183c2748d" .
 
 sdh:S4-18 a brick:VAV ;
@@ -3251,6 +3224,7 @@ sdh:S4-18room_setpoint a brick:Zone_Temperature_Setpoint ;
     bf:uuid "ec5b29e1-2391-56e5-8d45-78db7db10dbc" .
 
 sdh:S4-18room_temperature a brick:Zone_Air_Temperature_Sensor ;
+    bf:isLocatedIn sdh:R471 ;
     bf:uuid "ab896e4c-a54b-5136-80f2-63aa5b6b5993" .
 
 sdh:S4-18room_valve_position a brick:Heating_Valve_Sensor ;
@@ -3287,6 +3261,7 @@ sdh:S4-19room_setpoint a brick:Zone_Temperature_Setpoint ;
     bf:uuid "96d4be52-bb4d-5963-8d33-cdb562a7e1fd" .
 
 sdh:S4-19room_temperature a brick:Zone_Air_Temperature_Sensor ;
+    bf:isLocatedIn sdh:R640 ;
     bf:uuid "a7aad37c-6dd8-5252-8443-65471582f8e9" .
 
 sdh:S4-19room_valve_position a brick:Heating_Valve_Sensor ;
@@ -3323,6 +3298,7 @@ sdh:S4-20room_setpoint a brick:Zone_Temperature_Setpoint ;
     bf:uuid "485e26e4-1113-5ad4-b75c-254e2e475ef5" .
 
 sdh:S4-20room_temperature a brick:Zone_Air_Temperature_Sensor ;
+    bf:isLocatedIn sdh:R646 ;
     bf:uuid "51db63bf-5aa4-5e5b-ad0e-8f63abcead48" .
 
 sdh:S4-20room_valve_position a brick:Heating_Valve_Sensor ;
@@ -3359,6 +3335,7 @@ sdh:S4-21room_setpoint a brick:Zone_Temperature_Setpoint ;
     bf:uuid "25f277d9-94ee-5217-a4d1-b4d9fce5fafc" .
 
 sdh:S4-21room_temperature a brick:Zone_Air_Temperature_Sensor ;
+    bf:isLocatedIn sdh:R621 ;
     bf:uuid "7e6e8fde-f84c-53c5-bd9d-c58456314a62" .
 
 sdh:S4-21room_valve_position a brick:Heating_Valve_Sensor ;
@@ -3395,6 +3372,7 @@ sdh:S5-01room_setpoint a brick:Zone_Temperature_Setpoint ;
     bf:uuid "a9ee6b31-0813-507a-b069-5cc855241a24" .
 
 sdh:S5-01room_temperature a brick:Zone_Air_Temperature_Sensor ;
+    bf:isLocatedIn sdh:R168 ;
     bf:uuid "b744aaac-d375-5b0b-a6a3-8abc94add23b" .
 
 sdh:S5-01room_valve_position a brick:Heating_Valve_Sensor ;
@@ -3431,6 +3409,7 @@ sdh:S5-02room_setpoint a brick:Zone_Temperature_Setpoint ;
     bf:uuid "c60d4eae-c0e1-5185-8428-0ce35d46066d" .
 
 sdh:S5-02room_temperature a brick:Zone_Air_Temperature_Sensor ;
+    bf:isLocatedIn sdh:R466 ;
     bf:uuid "f646a8b8-8e09-5224-88a7-8ddd4c90ee90" .
 
 sdh:S5-02room_valve_position a brick:Heating_Valve_Sensor ;
@@ -3467,6 +3446,7 @@ sdh:S5-03room_setpoint a brick:Zone_Temperature_Setpoint ;
     bf:uuid "099c8f51-e358-59c2-95d5-5a5e370fa86c" .
 
 sdh:S5-03room_temperature a brick:Zone_Air_Temperature_Sensor ;
+    bf:isLocatedIn sdh:R472 ;
     bf:uuid "966881a3-426b-58fb-a63a-89b46980fc61" .
 
 sdh:S5-03room_valve_position a brick:Heating_Valve_Sensor ;
@@ -3503,6 +3483,7 @@ sdh:S5-04room_setpoint a brick:Zone_Temperature_Setpoint ;
     bf:uuid "c6126f32-88a7-5943-aa66-6b0f19c91827" .
 
 sdh:S5-04room_temperature a brick:Zone_Air_Temperature_Sensor ;
+    bf:isLocatedIn sdh:R427 ;
     bf:uuid "04d36032-ff91-5212-b690-eec2593ece31" .
 
 sdh:S5-04room_valve_position a brick:Heating_Valve_Sensor ;
@@ -3539,6 +3520,7 @@ sdh:S5-05room_setpoint a brick:Zone_Temperature_Setpoint ;
     bf:uuid "16706d0d-ccb6-5991-9e14-c87a12d8a7b2" .
 
 sdh:S5-05room_temperature a brick:Zone_Air_Temperature_Sensor ;
+    bf:isLocatedIn sdh:R410 ;
     bf:uuid "ce794e7e-9efe-533d-8ea9-f85053e9058c" .
 
 sdh:S5-05room_valve_position a brick:Heating_Valve_Sensor ;
@@ -3575,6 +3557,7 @@ sdh:S5-06room_setpoint a brick:Zone_Temperature_Setpoint ;
     bf:uuid "62456cbd-ec7b-53c4-9302-ec18fd7c94a9" .
 
 sdh:S5-06room_temperature a brick:Zone_Air_Temperature_Sensor ;
+    bf:isLocatedIn sdh:R736 ;
     bf:uuid "70127be5-aa21-5821-b736-2407045d6585" .
 
 sdh:S5-06room_valve_position a brick:Heating_Valve_Sensor ;
@@ -3611,6 +3594,7 @@ sdh:S5-07room_setpoint a brick:Zone_Temperature_Setpoint ;
     bf:uuid "4aeb048a-3669-5c40-9148-b3ff78ceff6e" .
 
 sdh:S5-07room_temperature a brick:Zone_Air_Temperature_Sensor ;
+    bf:isLocatedIn sdh:R250 ;
     bf:uuid "669ad0f2-37d9-584c-9e18-6f00e57c6278" .
 
 sdh:S5-07room_valve_position a brick:Heating_Valve_Sensor ;
@@ -3647,6 +3631,7 @@ sdh:S5-08room_setpoint a brick:Zone_Temperature_Setpoint ;
     bf:uuid "3c325ff3-ffde-5fc1-b658-c4e476dfc2f6" .
 
 sdh:S5-08room_temperature a brick:Zone_Air_Temperature_Sensor ;
+    bf:isLocatedIn sdh:R554 ;
     bf:uuid "ba24c977-a5ff-5622-adaa-311af963dce2" .
 
 sdh:S5-08room_valve_position a brick:Heating_Valve_Sensor ;
@@ -3683,6 +3668,7 @@ sdh:S5-09room_setpoint a brick:Zone_Temperature_Setpoint ;
     bf:uuid "34062c79-b4a4-5103-a66a-3403572cc53f" .
 
 sdh:S5-09room_temperature a brick:Zone_Air_Temperature_Sensor ;
+    bf:isLocatedIn sdh:R646 ;
     bf:uuid "d67199e2-b5d7-5bf9-99a3-340ffd02fc23" .
 
 sdh:S5-09room_valve_position a brick:Heating_Valve_Sensor ;
@@ -3719,6 +3705,7 @@ sdh:S5-10room_setpoint a brick:Zone_Temperature_Setpoint ;
     bf:uuid "20886cf3-9538-5999-82e6-a179a0c3e04b" .
 
 sdh:S5-10room_temperature a brick:Zone_Air_Temperature_Sensor ;
+    bf:isLocatedIn sdh:R340 ;
     bf:uuid "4bc9d894-27d8-5d43-b14a-72afb12f7489" .
 
 sdh:S5-10room_valve_position a brick:Heating_Valve_Sensor ;
@@ -3755,6 +3742,7 @@ sdh:S5-11room_setpoint a brick:Zone_Temperature_Setpoint ;
     bf:uuid "baa974b4-2caa-5315-9af3-ed08e200d742" .
 
 sdh:S5-11room_temperature a brick:Zone_Air_Temperature_Sensor ;
+    bf:isLocatedIn sdh:R462 ;
     bf:uuid "b2b87457-bf74-5a8b-b027-e09bad6042f0" .
 
 sdh:S5-11room_valve_position a brick:Heating_Valve_Sensor ;
@@ -3791,6 +3779,7 @@ sdh:S5-12room_setpoint a brick:Zone_Temperature_Setpoint ;
     bf:uuid "18ee1d6b-5306-5560-860f-5eaef2fb8c16" .
 
 sdh:S5-12room_temperature a brick:Zone_Air_Temperature_Sensor ;
+    bf:isLocatedIn sdh:R413 ;
     bf:uuid "4aea6ecd-ca3b-5871-a75f-e694968d8c4f" .
 
 sdh:S5-12room_valve_position a brick:Heating_Valve_Sensor ;
@@ -3827,6 +3816,7 @@ sdh:S5-13room_setpoint a brick:Zone_Temperature_Setpoint ;
     bf:uuid "f02f50f9-fc41-555a-8276-befd58a3754f" .
 
 sdh:S5-13room_temperature a brick:Zone_Air_Temperature_Sensor ;
+    bf:isLocatedIn sdh:R477 ;
     bf:uuid "37dc8b7c-3839-50db-904c-758164b64954" .
 
 sdh:S5-13room_valve_position a brick:Heating_Valve_Sensor ;
@@ -3863,6 +3853,7 @@ sdh:S5-14room_setpoint a brick:Zone_Temperature_Setpoint ;
     bf:uuid "fca1a4e3-0ea1-5d4a-b782-5f210b30369e" .
 
 sdh:S5-14room_temperature a brick:Zone_Air_Temperature_Sensor ;
+    bf:isLocatedIn sdh:R260 ;
     bf:uuid "71005b36-4682-593b-8ede-e59d47f09899" .
 
 sdh:S5-14room_valve_position a brick:Heating_Valve_Sensor ;
@@ -3894,6 +3885,7 @@ sdh:S5-15room_setpoint a brick:Zone_Temperature_Setpoint ;
     bf:uuid "aac67e36-5827-50cb-9ed4-ae0d5fe55355" .
 
 sdh:S5-15room_temperature a brick:Zone_Air_Temperature_Sensor ;
+    bf:isLocatedIn sdh:R677 ;
     bf:uuid "73e1ff5d-07e7-52a9-a6c0-0a57f4c62355" .
 
 sdh:S5-16 a brick:VAV ;
@@ -3927,6 +3919,7 @@ sdh:S5-16room_setpoint a brick:Zone_Temperature_Setpoint ;
     bf:uuid "c05dc094-88cb-5b16-a682-61cedcda00e8" .
 
 sdh:S5-16room_temperature a brick:Zone_Air_Temperature_Sensor ;
+    bf:isLocatedIn sdh:R450 ;
     bf:uuid "c1a03217-2a52-50b7-94fd-0d06f19ca59c" .
 
 sdh:S5-16room_valve_position a brick:Heating_Valve_Sensor ;
@@ -3958,6 +3951,7 @@ sdh:S5-17room_setpoint a brick:Zone_Temperature_Setpoint ;
     bf:uuid "f882d7ec-4a2f-50f5-9096-bc3144e39c83" .
 
 sdh:S5-17room_temperature a brick:Zone_Air_Temperature_Sensor ;
+    bf:isLocatedIn sdh:R630B ;
     bf:uuid "b7b56d68-f1a5-55c5-aa79-a06aed4f3a06" .
 
 sdh:S5-18 a brick:VAV ;
@@ -3991,6 +3985,7 @@ sdh:S5-18room_setpoint a brick:Zone_Temperature_Setpoint ;
     bf:uuid "caf77a7d-8780-52af-b453-22ecf4b6b82c" .
 
 sdh:S5-18room_temperature a brick:Zone_Air_Temperature_Sensor ;
+    bf:isLocatedIn sdh:R670 ;
     bf:uuid "5da93b87-42fc-55a9-a1ab-3eab4d93bfe8" .
 
 sdh:S5-18room_valve_position a brick:Heating_Valve_Sensor ;
@@ -4027,6 +4022,7 @@ sdh:S5-19room_setpoint a brick:Zone_Temperature_Setpoint ;
     bf:uuid "84dc972d-65d0-532e-82af-eb41b93f3532" .
 
 sdh:S5-19room_temperature a brick:Zone_Air_Temperature_Sensor ;
+    bf:isLocatedIn sdh:R250 ;
     bf:uuid "dc784b39-642f-5af8-b7e7-47a1213b8587" .
 
 sdh:S5-19room_valve_position a brick:Heating_Valve_Sensor ;
@@ -4063,6 +4059,7 @@ sdh:S5-20room_setpoint a brick:Zone_Temperature_Setpoint ;
     bf:uuid "219e75b2-017a-5928-adad-6294a3310af0" .
 
 sdh:S5-20room_temperature a brick:Zone_Air_Temperature_Sensor ;
+    bf:isLocatedIn sdh:R670 ;
     bf:uuid "635b5cfb-5093-5c6a-951a-413957a1e64f" .
 
 sdh:S5-20room_valve_position a brick:Heating_Valve_Sensor ;
@@ -4099,6 +4096,7 @@ sdh:S5-21room_setpoint a brick:Zone_Temperature_Setpoint ;
     bf:uuid "8739407f-194c-5d23-92b9-18a4a85c3b66" .
 
 sdh:S5-21room_temperature a brick:Zone_Air_Temperature_Sensor ;
+    bf:isLocatedIn sdh:R721 ;
     bf:uuid "2f53382c-41ff-54a3-a6b2-32def71a1cd5" .
 
 sdh:S5-21room_valve_position a brick:Heating_Valve_Sensor ;
@@ -4135,6 +4133,7 @@ sdh:S6-01room_setpoint a brick:Zone_Temperature_Setpoint ;
     bf:uuid "3f9f54aa-45fb-5257-a829-b13998ba5008" .
 
 sdh:S6-01room_temperature a brick:Zone_Air_Temperature_Sensor ;
+    bf:isLocatedIn sdh:R377 ;
     bf:uuid "8e642699-aecc-5de6-9ee9-f2016a3e70d7" .
 
 sdh:S6-01room_valve_position a brick:Heating_Valve_Sensor ;
@@ -4171,6 +4170,7 @@ sdh:S6-02room_setpoint a brick:Zone_Temperature_Setpoint ;
     bf:uuid "8dc26ec9-f92f-50ce-a2f3-bde121f78d17" .
 
 sdh:S6-02room_temperature a brick:Zone_Air_Temperature_Sensor ;
+    bf:isLocatedIn sdh:R532 ;
     bf:uuid "ac13946f-fd2f-5ad9-be28-61971fe06b9a" .
 
 sdh:S6-02room_valve_position a brick:Heating_Valve_Sensor ;
@@ -4207,6 +4207,7 @@ sdh:S6-03room_setpoint a brick:Zone_Temperature_Setpoint ;
     bf:uuid "80e36c36-8692-5d15-943d-a1c01593f283" .
 
 sdh:S6-03room_temperature a brick:Zone_Air_Temperature_Sensor ;
+    bf:isLocatedIn sdh:R222 ;
     bf:uuid "14145694-b179-527c-8fd8-f0c11715fe7c" .
 
 sdh:S6-03room_valve_position a brick:Heating_Valve_Sensor ;
@@ -4243,6 +4244,7 @@ sdh:S6-04room_setpoint a brick:Zone_Temperature_Setpoint ;
     bf:uuid "2879294f-1bb1-5523-881b-868d03af8f6d" .
 
 sdh:S6-04room_temperature a brick:Zone_Air_Temperature_Sensor ;
+    bf:isLocatedIn sdh:R160 ;
     bf:uuid "82ff2a62-5abd-58ea-bb4e-657e792548f4" .
 
 sdh:S6-04room_valve_position a brick:Heating_Valve_Sensor ;
@@ -4279,6 +4281,7 @@ sdh:S6-05room_setpoint a brick:Zone_Temperature_Setpoint ;
     bf:uuid "a54833f9-c060-53f5-834e-a96b454002da" .
 
 sdh:S6-05room_temperature a brick:Zone_Air_Temperature_Sensor ;
+    bf:isLocatedIn sdh:R266 ;
     bf:uuid "3b505e1a-3ad9-5eae-bad0-f1b78c8c8b8c" .
 
 sdh:S6-05room_valve_position a brick:Heating_Valve_Sensor ;
@@ -4315,6 +4318,7 @@ sdh:S6-06room_setpoint a brick:Zone_Temperature_Setpoint ;
     bf:uuid "8673d524-3777-55c0-9281-12a0f2181857" .
 
 sdh:S6-06room_temperature a brick:Zone_Air_Temperature_Sensor ;
+    bf:isLocatedIn sdh:R750 ;
     bf:uuid "bf3ca8be-a9fa-54f5-8319-6c3e5d6e76ad" .
 
 sdh:S6-06room_valve_position a brick:Heating_Valve_Sensor ;
@@ -4351,6 +4355,7 @@ sdh:S6-07room_setpoint a brick:Zone_Temperature_Setpoint ;
     bf:uuid "6850b4ef-75e4-540e-8674-89a75f3403d6" .
 
 sdh:S6-07room_temperature a brick:Zone_Air_Temperature_Sensor ;
+    bf:isLocatedIn sdh:R410 ;
     bf:uuid "028fefaf-31c2-57ea-b3a9-2ab363fe76d6" .
 
 sdh:S6-07room_valve_position a brick:Heating_Valve_Sensor ;
@@ -4387,6 +4392,7 @@ sdh:S6-08room_setpoint a brick:Zone_Temperature_Setpoint ;
     bf:uuid "d68ef7e0-5404-5743-9999-20499476da83" .
 
 sdh:S6-08room_temperature a brick:Zone_Air_Temperature_Sensor ;
+    bf:isLocatedIn sdh:R370 ;
     bf:uuid "45f5a8ce-e028-558d-a56b-1988c81a4ea7" .
 
 sdh:S6-08room_valve_position a brick:Heating_Valve_Sensor ;
@@ -4418,6 +4424,7 @@ sdh:S6-09room_setpoint a brick:Zone_Temperature_Setpoint ;
     bf:uuid "89d6d887-df8f-5c7a-8b51-677d3b92c13f" .
 
 sdh:S6-09room_temperature a brick:Zone_Air_Temperature_Sensor ;
+    bf:isLocatedIn sdh:R629 ;
     bf:uuid "d2709c2c-5c3f-5a3c-bb34-920c8905d474" .
 
 sdh:S6-10 a brick:VAV ;
@@ -4451,6 +4458,7 @@ sdh:S6-10room_setpoint a brick:Zone_Temperature_Setpoint ;
     bf:uuid "f5dd0a3e-ab44-54ff-9f0d-5533938b0307" .
 
 sdh:S6-10room_temperature a brick:Zone_Air_Temperature_Sensor ;
+    bf:isLocatedIn sdh:R500 ;
     bf:uuid "e1089ee5-f191-5d13-9ee7-080af7dcbfc3" .
 
 sdh:S6-10room_valve_position a brick:Heating_Valve_Sensor ;
@@ -4487,6 +4495,7 @@ sdh:S6-11room_setpoint a brick:Zone_Temperature_Setpoint ;
     bf:uuid "2664903f-8d7c-57a6-891d-c195b3c7fb2d" .
 
 sdh:S6-11room_temperature a brick:Zone_Air_Temperature_Sensor ;
+    bf:isLocatedIn sdh:R212 ;
     bf:uuid "dc8c3a53-bb67-50dc-9916-2c654a3ac97f" .
 
 sdh:S6-11room_valve_position a brick:Heating_Valve_Sensor ;
@@ -4523,6 +4532,7 @@ sdh:S6-12room_setpoint a brick:Zone_Temperature_Setpoint ;
     bf:uuid "194a62a6-0781-57a3-815f-25a3a0956d1c" .
 
 sdh:S6-12room_temperature a brick:Zone_Air_Temperature_Sensor ;
+    bf:isLocatedIn sdh:R340 ;
     bf:uuid "dc399259-5f62-592a-8665-64eded33ae14" .
 
 sdh:S6-12room_valve_position a brick:Heating_Valve_Sensor ;
@@ -4559,6 +4569,7 @@ sdh:S6-13room_setpoint a brick:Zone_Temperature_Setpoint ;
     bf:uuid "51c718bf-e1bb-5dcd-8c6f-02b862205e37" .
 
 sdh:S6-13room_temperature a brick:Zone_Air_Temperature_Sensor ;
+    bf:isLocatedIn sdh:R160 ;
     bf:uuid "d48d055f-1168-5a94-928b-7033940e4a58" .
 
 sdh:S6-13room_valve_position a brick:Heating_Valve_Sensor ;
@@ -4590,6 +4601,7 @@ sdh:S6-14room_setpoint a brick:Zone_Temperature_Setpoint ;
     bf:uuid "d8e5d367-2083-53a0-94b8-d6f1286a76b2" .
 
 sdh:S6-14room_temperature a brick:Zone_Air_Temperature_Sensor ;
+    bf:isLocatedIn sdh:R448 ;
     bf:uuid "077eed9d-aae7-5466-bfc3-6e18030af8f1" .
 
 sdh:S6-15 a brick:VAV ;
@@ -4623,6 +4635,7 @@ sdh:S6-15room_setpoint a brick:Zone_Temperature_Setpoint ;
     bf:uuid "299120c4-a823-5925-a23e-e9166ddb71a4" .
 
 sdh:S6-15room_temperature a brick:Zone_Air_Temperature_Sensor ;
+    bf:isLocatedIn sdh:R422 ;
     bf:uuid "14f4a6e4-61af-5ef9-a975-7eb476efe2af" .
 
 sdh:S6-15room_valve_position a brick:Heating_Valve_Sensor ;
@@ -4654,6 +4667,7 @@ sdh:S6-16room_setpoint a brick:Zone_Temperature_Setpoint ;
     bf:uuid "2f5232b9-588f-5aa8-8bad-94302835a581" .
 
 sdh:S6-16room_temperature a brick:Zone_Air_Temperature_Sensor ;
+    bf:isLocatedIn sdh:R520 ;
     bf:uuid "84f34300-e3bf-5502-99d0-4f0fd7fcb22e" .
 
 sdh:S6-17 a brick:VAV ;
@@ -4687,6 +4701,7 @@ sdh:S6-17room_setpoint a brick:Zone_Temperature_Setpoint ;
     bf:uuid "9e3f0f12-dc46-5388-85ef-1d41eba0daa1" .
 
 sdh:S6-17room_temperature a brick:Zone_Air_Temperature_Sensor ;
+    bf:isLocatedIn sdh:R460 ;
     bf:uuid "a0bd6502-97e6-5561-82ef-2347716148f3" .
 
 sdh:S6-17room_valve_position a brick:Heating_Valve_Sensor ;
@@ -4723,6 +4738,7 @@ sdh:S6-18room_setpoint a brick:Zone_Temperature_Setpoint ;
     bf:uuid "e7c44901-f7d1-5357-9347-fa9b820e3e83" .
 
 sdh:S6-18room_temperature a brick:Zone_Air_Temperature_Sensor ;
+    bf:isLocatedIn sdh:R132 ;
     bf:uuid "3a8583af-5f5e-5df1-bc5b-bee699bc8107" .
 
 sdh:S6-18room_valve_position a brick:Heating_Valve_Sensor ;
@@ -4759,6 +4775,7 @@ sdh:S6-19room_setpoint a brick:Zone_Temperature_Setpoint ;
     bf:uuid "30c3d3d9-6280-592c-b5f0-dcf86c202bad" .
 
 sdh:S6-19room_temperature a brick:Zone_Air_Temperature_Sensor ;
+    bf:isLocatedIn sdh:R442 ;
     bf:uuid "f9a4127d-1192-5bd8-96b4-f914024f8a60" .
 
 sdh:S6-19room_valve_position a brick:Heating_Valve_Sensor ;
@@ -4795,6 +4812,7 @@ sdh:S6-20room_setpoint a brick:Zone_Temperature_Setpoint ;
     bf:uuid "0d8cc72b-6c69-5651-9866-fb2a8cc0b414" .
 
 sdh:S6-20room_temperature a brick:Zone_Air_Temperature_Sensor ;
+    bf:isLocatedIn sdh:R568 ;
     bf:uuid "6b8eee49-d729-5a15-97b2-3cd6b7b901d4" .
 
 sdh:S6-20room_valve_position a brick:Heating_Valve_Sensor ;
@@ -4831,6 +4849,7 @@ sdh:S7-01room_setpoint a brick:Zone_Temperature_Setpoint ;
     bf:uuid "b8db0d92-27a5-52b5-a652-a42852004410" .
 
 sdh:S7-01room_temperature a brick:Zone_Air_Temperature_Sensor ;
+    bf:isLocatedIn sdh:R277 ;
     bf:uuid "471a0464-3c8e-54cd-a3bd-202599028e24" .
 
 sdh:S7-01room_valve_position a brick:Heating_Valve_Sensor ;
@@ -4867,6 +4886,7 @@ sdh:S7-02room_setpoint a brick:Zone_Temperature_Setpoint ;
     bf:uuid "df92a0f4-fa6d-581c-b9c6-a43ccb08f63a" .
 
 sdh:S7-02room_temperature a brick:Zone_Air_Temperature_Sensor ;
+    bf:isLocatedIn sdh:R475 ;
     bf:uuid "e61d701c-6306-548a-8979-a56606b4551c" .
 
 sdh:S7-02room_valve_position a brick:Heating_Valve_Sensor ;
@@ -4903,6 +4923,7 @@ sdh:S7-03room_setpoint a brick:Zone_Temperature_Setpoint ;
     bf:uuid "b8b7d035-8f2a-5abd-9869-47795ac34235" .
 
 sdh:S7-03room_temperature a brick:Zone_Air_Temperature_Sensor ;
+    bf:isLocatedIn sdh:R520C ;
     bf:uuid "d4c83054-2202-544e-a83c-4b5eea917c5a" .
 
 sdh:S7-03room_valve_position a brick:Heating_Valve_Sensor ;
@@ -4939,6 +4960,7 @@ sdh:S7-04room_setpoint a brick:Zone_Temperature_Setpoint ;
     bf:uuid "6b55a31e-e741-5e88-aa28-75553b54e013" .
 
 sdh:S7-04room_temperature a brick:Zone_Air_Temperature_Sensor ;
+    bf:isLocatedIn sdh:R413 ;
     bf:uuid "3dfc4a95-6ef8-58ed-8fcf-8624e81cf8d9" .
 
 sdh:S7-04room_valve_position a brick:Heating_Valve_Sensor ;
@@ -4975,6 +4997,7 @@ sdh:S7-05room_setpoint a brick:Zone_Temperature_Setpoint ;
     bf:uuid "9fce6dbe-0c3d-5405-a09c-6a7d93ee43eb" .
 
 sdh:S7-05room_temperature a brick:Zone_Air_Temperature_Sensor ;
+    bf:isLocatedIn sdh:R132 ;
     bf:uuid "4a10493a-cc1e-59c5-8986-1024713e147a" .
 
 sdh:S7-05room_valve_position a brick:Heating_Valve_Sensor ;
@@ -5011,6 +5034,7 @@ sdh:S7-06room_setpoint a brick:Zone_Temperature_Setpoint ;
     bf:uuid "a1c30d46-b369-57e1-8d19-3fe469a93825" .
 
 sdh:S7-06room_temperature a brick:Zone_Air_Temperature_Sensor ;
+    bf:isLocatedIn sdh:R330B ;
     bf:uuid "1224af7e-1c48-5ba7-a5f2-9ad3e544b75c" .
 
 sdh:S7-06room_valve_position a brick:Heating_Valve_Sensor ;
@@ -5047,6 +5071,7 @@ sdh:S7-07room_setpoint a brick:Zone_Temperature_Setpoint ;
     bf:uuid "a0fca664-18a2-535a-9e2f-3df07b951820" .
 
 sdh:S7-07room_temperature a brick:Zone_Air_Temperature_Sensor ;
+    bf:isLocatedIn sdh:R418 ;
     bf:uuid "5a89eb6a-dc72-5a71-bd8e-6bf8f7c42e82" .
 
 sdh:S7-07room_valve_position a brick:Heating_Valve_Sensor ;
@@ -5083,6 +5108,7 @@ sdh:S7-08room_setpoint a brick:Zone_Temperature_Setpoint ;
     bf:uuid "322f8e2e-92a9-537f-a64c-8ddd1c5cde43" .
 
 sdh:S7-08room_temperature a brick:Zone_Air_Temperature_Sensor ;
+    bf:isLocatedIn sdh:R520C ;
     bf:uuid "a480a9c2-c883-5b5f-b13c-a790bb2aa8b6" .
 
 sdh:S7-08room_valve_position a brick:Heating_Valve_Sensor ;
@@ -5119,6 +5145,7 @@ sdh:S7-09room_setpoint a brick:Zone_Temperature_Setpoint ;
     bf:uuid "363d6fc9-2b79-5e57-8cdf-8ba4234c238f" .
 
 sdh:S7-09room_temperature a brick:Zone_Air_Temperature_Sensor ;
+    bf:isLocatedIn sdh:R775 ;
     bf:uuid "769d7242-3581-502d-bcc5-d026105f6a96" .
 
 sdh:S7-09room_valve_position a brick:Heating_Valve_Sensor ;
@@ -5155,6 +5182,7 @@ sdh:S7-10room_setpoint a brick:Zone_Temperature_Setpoint ;
     bf:uuid "acebe9cf-fb92-5721-84d1-d497263e1af1" .
 
 sdh:S7-10room_temperature a brick:Zone_Air_Temperature_Sensor ;
+    bf:isLocatedIn sdh:R722 ;
     bf:uuid "9a66e220-52ac-5d18-84e7-1e287a8ef1a9" .
 
 sdh:S7-10room_valve_position a brick:Heating_Valve_Sensor ;
@@ -5186,6 +5214,7 @@ sdh:S7-11room_setpoint a brick:Zone_Temperature_Setpoint ;
     bf:uuid "f8b96300-eed3-559b-90da-59967339bb98" .
 
 sdh:S7-11room_temperature a brick:Zone_Air_Temperature_Sensor ;
+    bf:isLocatedIn sdh:R777 ;
     bf:uuid "3eb81aef-2e05-5e63-bae2-8c2ca8301ced" .
 
 sdh:S7-12 a brick:VAV ;
@@ -5214,6 +5243,7 @@ sdh:S7-12room_setpoint a brick:Zone_Temperature_Setpoint ;
     bf:uuid "45b032f1-d5d6-5106-a39d-6c54160bb51c" .
 
 sdh:S7-12room_temperature a brick:Zone_Air_Temperature_Sensor ;
+    bf:isLocatedIn sdh:R330C ;
     bf:uuid "b6096e01-3a14-5b4e-a113-ab9b32ec0a0d" .
 
 sdh:S7-13 a brick:VAV ;
@@ -5247,6 +5277,7 @@ sdh:S7-13room_setpoint a brick:Zone_Temperature_Setpoint ;
     bf:uuid "24a2f5ec-8322-541f-b995-69e4e558b254" .
 
 sdh:S7-13room_temperature a brick:Zone_Air_Temperature_Sensor ;
+    bf:isLocatedIn sdh:R177 ;
     bf:uuid "1038012d-fb96-5c86-a423-565821016b8e" .
 
 sdh:S7-13room_valve_position a brick:Heating_Valve_Sensor ;
@@ -5283,6 +5314,7 @@ sdh:S7-14room_setpoint a brick:Zone_Temperature_Setpoint ;
     bf:uuid "9d0a9d0d-c77e-5308-97d9-5ad529a93907" .
 
 sdh:S7-14room_temperature a brick:Zone_Air_Temperature_Sensor ;
+    bf:isLocatedIn sdh:R458 ;
     bf:uuid "e34ef0fa-6f55-5bd7-a186-6bfe6e5979c7" .
 
 sdh:S7-14room_valve_position a brick:Heating_Valve_Sensor ;
@@ -5319,6 +5351,7 @@ sdh:S7-15room_setpoint a brick:Zone_Temperature_Setpoint ;
     bf:uuid "41bc1caf-9ecd-5d6d-a62d-6af951e0048d" .
 
 sdh:S7-15room_temperature a brick:Zone_Air_Temperature_Sensor ;
+    bf:isLocatedIn sdh:R250 ;
     bf:uuid "d4cf2a5c-8434-5d0c-b85d-854c9e4ab19d" .
 
 sdh:S7-15room_valve_position a brick:Heating_Valve_Sensor ;
@@ -5355,6 +5388,7 @@ sdh:S7-16room_setpoint a brick:Zone_Temperature_Setpoint ;
     bf:uuid "26f42776-4245-5e2e-9f9b-55034ff22490" .
 
 sdh:S7-16room_temperature a brick:Zone_Air_Temperature_Sensor ;
+    bf:isLocatedIn sdh:R448 ;
     bf:uuid "98f26bc1-0f29-5627-bd7b-1b0edef8ee86" .
 
 sdh:S7-16room_valve_position a brick:Heating_Valve_Sensor ;
@@ -5793,47 +5827,83 @@ sdh:R148 a brick:Room ;
     rdfs:label "Laser Lab" ;
     bf:isPartOf sdh:Floor1 .
 
-sdh:R212 a brick:Room ;
-    rdfs:label "Vestibule" ;
+sdh:R149 a brick:Room ;
+    rdfs:label "MDC Mech" ;
+    bf:isPartOf sdh:Floor1 .
+
+sdh:R168 a brick:Room ;
+    rdfs:label "Plumbing" ;
+    bf:isPartOf sdh:Floor1 .
+
+sdh:R222 a brick:Room ;
+    rdfs:label "Womens Bath" ;
     bf:isPartOf sdh:Floor2 .
 
-sdh:R300 a brick:Room ;
-    rdfs:label "Prelobby" ;
-    bf:isPartOf sdh:Floor3 .
+sdh:R260 a brick:Room ;
+    rdfs:label "Hallway" ;
+    bf:isPartOf sdh:Floor2 .
+
+sdh:R266 a brick:Room ;
+    rdfs:label "Receiving" ;
+    bf:isPartOf sdh:Floor2 .
+
+sdh:R270 a brick:Room ;
+    rdfs:label "Elevator Lobby" ;
+    bf:isPartOf sdh:Floor2 .
+
+sdh:R271 a brick:Room ;
+    rdfs:label "Riser Closet" ;
+    bf:isPartOf sdh:Floor2 .
+
+sdh:R277 a brick:Room ;
+    rdfs:label "Mens Bath" ;
+    bf:isPartOf sdh:Floor2 .
 
 sdh:R310 a brick:Room ;
     rdfs:label "Auditorium" ;
     bf:isPartOf sdh:Floor3 .
 
-sdh:R427 a brick:Room ;
-    rdfs:label "Emergency Elec" ;
-    bf:adjacentTo sdh:R470 ;
-    bf:isPartOf sdh:Floor4 .
+sdh:R330B a brick:Room ;
+    rdfs:label "Office" ;
+    bf:isPartOf sdh:Floor3 .
 
-sdh:R472 a brick:Room ;
-    rdfs:label "Lobby" ;
-    bf:adjacentTo sdh:R468 ;
-    bf:isPartOf sdh:Floor4 .
+sdh:R330C a brick:Room ;
+    rdfs:label "Office" ;
+    bf:isPartOf sdh:Floor3 .
+
+sdh:R330E a brick:Room ;
+    rdfs:label "Office" ;
+    bf:isPartOf sdh:Floor3 .
+
+sdh:R356F a brick:Room ;
+    rdfs:label "Office" ;
+    bf:isPartOf sdh:Floor3 .
+
+sdh:R370 a brick:Room ;
+    rdfs:label "Elevator Lobby" ;
+    bf:isPartOf sdh:Floor3 .
+
+sdh:R377 a brick:Room ;
+    rdfs:label "Womens Bath" ;
+    bf:isPartOf sdh:Floor3 .
+
+sdh:R500 a brick:Room ;
+    rdfs:label "Hallway" ;
+    bf:isPartOf sdh:Floor5 .
 
 sdh:R513 bf:adjacentTo sdh:R511,
         sdh:R515 .
 
-sdh:R515 a brick:Room ;
-    rdfs:label "Office" ;
-    bf:adjacentTo sdh:R513 ;
-    bf:isPartOf sdh:Floor5 .
-
 sdh:R520A bf:adjacentTo sdh:R520,
         sdh:R520B .
-
-sdh:R520C a brick:Room ;
-    rdfs:label "Microfab Office" ;
-    bf:adjacentTo sdh:R520 ;
-    bf:isPartOf sdh:Floor5 .
 
 sdh:R538 a brick:Room ;
     rdfs:label "Open Office" ;
     bf:adjacentTo sdh:R532 ;
+    bf:isPartOf sdh:Floor5 .
+
+sdh:R550 a brick:Room ;
+    rdfs:label "Open Office" ;
     bf:isPartOf sdh:Floor5 .
 
 sdh:R556 bf:adjacentTo sdh:R554,
@@ -5845,13 +5915,8 @@ sdh:R562 bf:adjacentTo sdh:R558,
 sdh:R564 bf:adjacentTo sdh:R562,
         sdh:R566 .
 
-sdh:R566 a brick:Room ;
-    rdfs:label "Open Office" ;
-    bf:adjacentTo sdh:R564 ;
-    bf:isPartOf sdh:Floor5 .
-
-sdh:R568 a brick:Room ;
-    rdfs:label "Open Office" ;
+sdh:R570 a brick:Room ;
+    rdfs:label "Elevator Lobby" ;
     bf:isPartOf sdh:Floor5 .
 
 sdh:R571 a brick:Room ;
@@ -5867,16 +5932,6 @@ sdh:R597 bf:adjacentTo sdh:R586,
 
 sdh:R599 bf:adjacentTo sdh:R586,
         sdh:R597 .
-
-sdh:R630 a brick:Room ;
-    rdfs:label "Conference" ;
-    bf:adjacentTo sdh:R630A ;
-    bf:isPartOf sdh:Floor6 .
-
-sdh:R640 a brick:Room ;
-    rdfs:label "Office" ;
-    bf:adjacentTo sdh:R642 ;
-    bf:isPartOf sdh:Floor6 .
 
 sdh:R642 bf:adjacentTo sdh:R640,
         sdh:R644 .
@@ -6327,47 +6382,45 @@ sdh:S7-15room_damper_position a brick:Damper_Position_Sensor ;
 sdh:S7-16room_damper_position a brick:Damper_Position_Sensor ;
     bf:uuid "0bd31506-7ebe-5b57-80fb-c1c6fd70a72e" .
 
-sdh:R200 a brick:Room ;
-    rdfs:label "Computer Lab" ;
-    bf:isPartOf sdh:Floor2 .
+sdh:R132 a brick:Room ;
+    rdfs:label "Mech Steam" ;
+    bf:isPartOf sdh:Floor1 .
+
+sdh:R171 a brick:Room ;
+    rdfs:label "Riser Closet" ;
+    bf:isPartOf sdh:Floor1 .
+
+sdh:R177 a brick:Room ;
+    rdfs:label "Womens Bath" ;
+    bf:isPartOf sdh:Floor1 .
 
 sdh:R210 a brick:Room ;
     rdfs:label "Cybercafe" ;
     bf:isPartOf sdh:Floor2 .
 
-sdh:R413 a brick:Room ;
+sdh:R212 a brick:Room ;
+    rdfs:label "Vestibule" ;
+    bf:isPartOf sdh:Floor2 .
+
+sdh:R330 a brick:Room ;
+    rdfs:label "Learning" ;
+    bf:isPartOf sdh:Floor3 .
+
+sdh:R330F a brick:Room ;
     rdfs:label "Office" ;
-    bf:adjacentTo sdh:R410,
-        sdh:R415 ;
-    bf:isPartOf sdh:Floor4 .
+    bf:isPartOf sdh:Floor3 .
 
-sdh:R430 a brick:Room ;
-    rdfs:label "Pantry" ;
-    bf:adjacentTo sdh:R410,
-        sdh:R432 ;
-    bf:isPartOf sdh:Floor4 .
+sdh:R340 a brick:Room ;
+    rdfs:label "Lobby" ;
+    bf:isPartOf sdh:Floor3 .
 
-sdh:R471 a brick:Room ;
-    rdfs:label "Riser" ;
-    bf:adjacentTo sdh:R450,
-        sdh:R473 ;
-    bf:isPartOf sdh:Floor4 .
+sdh:R371 a brick:Room ;
+    rdfs:label "IDF Closet" ;
+    bf:isPartOf sdh:Floor3 .
 
 sdh:R473 bf:adjacentTo sdh:R450,
         sdh:R471,
         sdh:R475 .
-
-sdh:R477 a brick:Room ;
-    rdfs:label "Women's Bathroom" ;
-    bf:adjacentTo sdh:R460,
-        sdh:R479 ;
-    bf:isPartOf sdh:Floor4 .
-
-sdh:R510 a brick:Room ;
-    rdfs:label "Office" ;
-    bf:adjacentTo sdh:R511,
-        sdh:R530 ;
-    bf:isPartOf sdh:Floor5 .
 
 sdh:R511 a brick:Room ;
     rdfs:label "Office" ;
@@ -6375,33 +6428,13 @@ sdh:R511 a brick:Room ;
         sdh:R513 ;
     bf:isPartOf sdh:Floor5 .
 
-sdh:R548 a brick:Room ;
+sdh:R566 a brick:Room ;
     rdfs:label "Open Office" ;
-    bf:adjacentTo sdh:R520C ;
+    bf:adjacentTo sdh:R564 ;
     bf:isPartOf sdh:Floor5 .
 
-sdh:R554 a brick:Room ;
-    rdfs:label "Conference Room" ;
-    bf:adjacentTo sdh:R552,
-        sdh:R556 ;
-    bf:isPartOf sdh:Floor5 .
-
-sdh:R558 a brick:Room ;
-    rdfs:label "Office" ;
-    bf:adjacentTo sdh:R556,
-        sdh:R562 ;
-    bf:isPartOf sdh:Floor5 .
-
-sdh:R575 a brick:Room ;
-    rdfs:label "Electrical" ;
-    bf:adjacentTo sdh:R573,
-        sdh:R577 ;
-    bf:isPartOf sdh:Floor5 .
-
-sdh:R577 a brick:Room ;
-    rdfs:label "Womens Bath" ;
-    bf:adjacentTo sdh:R575,
-        sdh:R579 ;
+sdh:R568 a brick:Room ;
+    rdfs:label "Open Office" ;
     bf:isPartOf sdh:Floor5 .
 
 sdh:R580 bf:adjacentTo sdh:R581,
@@ -6441,16 +6474,22 @@ sdh:R621D bf:adjacentTo sdh:R621,
         sdh:R621C,
         sdh:R621E .
 
-sdh:R630B a brick:Room ;
-    rdfs:label "Pantry" ;
-    bf:adjacentTo sdh:R621E,
-        sdh:R630A ;
+sdh:R629 a brick:Room ;
+    rdfs:label "Emergency Electrical" ;
     bf:isPartOf sdh:Floor6 .
 
-sdh:R646 a brick:Room ;
+sdh:R630 a brick:Room ;
+    rdfs:label "Conference" ;
+    bf:adjacentTo sdh:R630A ;
+    bf:isPartOf sdh:Floor6 .
+
+sdh:R640 a brick:Room ;
     rdfs:label "Office" ;
-    bf:adjacentTo sdh:R644,
-        sdh:R648 ;
+    bf:adjacentTo sdh:R642 ;
+    bf:isPartOf sdh:Floor6 .
+
+sdh:R650 a brick:Room ;
+    rdfs:label "Hallway" ;
     bf:isPartOf sdh:Floor6 .
 
 sdh:R652B bf:adjacentTo sdh:R652,
@@ -6461,16 +6500,14 @@ sdh:R656A bf:adjacentTo sdh:R652B,
         sdh:R656,
         sdh:R656B .
 
+sdh:R670 a brick:Room ;
+    rdfs:label "Elevator Lobby" ;
+    bf:isPartOf sdh:Floor6 .
+
 sdh:R675 a brick:Room ;
     rdfs:label "Electrical" ;
     bf:adjacentTo sdh:R673,
         sdh:R677 ;
-    bf:isPartOf sdh:Floor6 .
-
-sdh:R677 a brick:Room ;
-    rdfs:label "Womens Bath" ;
-    bf:adjacentTo sdh:R675,
-        sdh:R679 ;
     bf:isPartOf sdh:Floor6 .
 
 sdh:R719 bf:adjacentTo sdh:R717,
@@ -6484,24 +6521,6 @@ sdh:R723 bf:adjacentTo sdh:R721,
 sdh:R724 bf:adjacentTo sdh:R722,
         sdh:R723,
         sdh:R726 .
-
-sdh:R725 a brick:Room ;
-    rdfs:label "Office" ;
-    bf:adjacentTo sdh:R723,
-        sdh:R726 ;
-    bf:isPartOf sdh:Floor7 .
-
-sdh:R730 a brick:Room ;
-    rdfs:label "Conference" ;
-    bf:adjacentTo sdh:R717,
-        sdh:R732 ;
-    bf:isPartOf sdh:Floor7 .
-
-sdh:R736 a brick:Room ;
-    rdfs:label "Open Office" ;
-    bf:adjacentTo sdh:R732,
-        sdh:R738 ;
-    bf:isPartOf sdh:Floor7 .
 
 sdh:R746 bf:adjacentTo sdh:R738,
         sdh:R748,
@@ -6519,22 +6538,17 @@ sdh:R754 bf:adjacentTo sdh:R746,
         sdh:R750,
         sdh:R752 .
 
-sdh:R771 a brick:Room ;
-    rdfs:label "Riser Closet" ;
-    bf:adjacentTo sdh:R750,
-        sdh:R773 ;
-    bf:isPartOf sdh:Floor7 .
-
 sdh:R773 bf:adjacentTo sdh:R750,
         sdh:R771,
         sdh:R775 .
 
-sdh:R415 a brick:Room ;
-    rdfs:label "Office" ;
-    bf:adjacentTo sdh:R410,
-        sdh:R413,
-        sdh:R417 ;
-    bf:isPartOf sdh:Floor4 .
+sdh:R200 a brick:Room ;
+    rdfs:label "Computer Lab" ;
+    bf:isPartOf sdh:Floor2 .
+
+sdh:R300 a brick:Room ;
+    rdfs:label "Prelobby" ;
+    bf:isPartOf sdh:Floor3 .
 
 sdh:R417 a brick:Room ;
     rdfs:label "Office" ;
@@ -6557,18 +6571,22 @@ sdh:R421 a brick:Room ;
         sdh:R423 ;
     bf:isPartOf sdh:Floor4 .
 
-sdh:R423 a brick:Room ;
-    rdfs:label "Office" ;
-    bf:adjacentTo sdh:R410,
-        sdh:R421,
-        sdh:R425 ;
-    bf:isPartOf sdh:Floor4 .
-
 sdh:R425 a brick:Room ;
     rdfs:label "Office" ;
     bf:adjacentTo sdh:R410,
         sdh:R423,
         sdh:R470 ;
+    bf:isPartOf sdh:Floor4 .
+
+sdh:R427 a brick:Room ;
+    rdfs:label "Emergency Elec" ;
+    bf:adjacentTo sdh:R470 ;
+    bf:isPartOf sdh:Floor4 .
+
+sdh:R430 a brick:Room ;
+    rdfs:label "Pantry" ;
+    bf:adjacentTo sdh:R410,
+        sdh:R432 ;
     bf:isPartOf sdh:Floor4 .
 
 sdh:R434 a brick:Room ;
@@ -6578,87 +6596,54 @@ sdh:R434 a brick:Room ;
         sdh:R442 ;
     bf:isPartOf sdh:Floor4 .
 
-sdh:R442 a brick:Room ;
-    rdfs:label "Office" ;
-    bf:adjacentTo sdh:R434,
-        sdh:R440,
-        sdh:R444 ;
-    bf:isPartOf sdh:Floor4 .
-
-sdh:R444 a brick:Room ;
-    rdfs:label "Office" ;
-    bf:adjacentTo sdh:R440,
-        sdh:R442,
-        sdh:R446 ;
-    bf:isPartOf sdh:Floor4 .
-
-sdh:R446 a brick:Room ;
-    rdfs:label "Office" ;
-    bf:adjacentTo sdh:R440,
-        sdh:R444,
-        sdh:R448 ;
-    bf:isPartOf sdh:Floor4 .
-
-sdh:R452 a brick:Room ;
-    rdfs:label "Office" ;
-    bf:adjacentTo sdh:R448,
-        sdh:R450,
-        sdh:R454 ;
-    bf:isPartOf sdh:Floor4 .
-
-sdh:R454 a brick:Room ;
-    rdfs:label "Office" ;
+sdh:R471 a brick:Room ;
+    rdfs:label "Riser" ;
     bf:adjacentTo sdh:R450,
-        sdh:R452,
-        sdh:R456 ;
+        sdh:R473 ;
     bf:isPartOf sdh:Floor4 .
 
-sdh:R456 a brick:Room ;
+sdh:R472 a brick:Room ;
+    rdfs:label "Lobby" ;
+    bf:adjacentTo sdh:R468 ;
+    bf:isPartOf sdh:Floor4 .
+
+sdh:R510 a brick:Room ;
     rdfs:label "Office" ;
-    bf:adjacentTo sdh:R450,
-        sdh:R454,
-        sdh:R458 ;
-    bf:isPartOf sdh:Floor4 .
+    bf:adjacentTo sdh:R511,
+        sdh:R530 ;
+    bf:isPartOf sdh:Floor5 .
 
-sdh:R458 a brick:Room ;
-    rdfs:label "Conference" ;
-    bf:adjacentTo sdh:R450,
-        sdh:R456,
-        sdh:R462 ;
-    bf:isPartOf sdh:Floor4 .
-
-sdh:R464 a brick:Room ;
+sdh:R515 a brick:Room ;
     rdfs:label "Office" ;
-    bf:adjacentTo sdh:R460,
-        sdh:R462,
-        sdh:R466 ;
-    bf:isPartOf sdh:Floor4 .
+    bf:adjacentTo sdh:R513 ;
+    bf:isPartOf sdh:Floor5 .
 
-sdh:R466 a brick:Room ;
+sdh:R520C a brick:Room ;
+    rdfs:label "Microfab Office" ;
+    bf:adjacentTo sdh:R520 ;
+    bf:isPartOf sdh:Floor5 .
+
+sdh:R548 a brick:Room ;
     rdfs:label "Open Office" ;
-    bf:adjacentTo sdh:R460,
-        sdh:R464,
-        sdh:R468 ;
-    bf:isPartOf sdh:Floor4 .
+    bf:adjacentTo sdh:R520C ;
+    bf:isPartOf sdh:Floor5 .
 
-sdh:R475 a brick:Room ;
-    rdfs:label "Elec" ;
-    bf:adjacentTo sdh:R450,
-        sdh:R473,
-        sdh:R479 ;
-    bf:isPartOf sdh:Floor4 .
+sdh:R554 a brick:Room ;
+    rdfs:label "Conference Room" ;
+    bf:adjacentTo sdh:R552,
+        sdh:R556 ;
+    bf:isPartOf sdh:Floor5 .
 
-sdh:R479 a brick:Room ;
-    rdfs:label "Men's Bathroom" ;
-    bf:adjacentTo sdh:R460,
-        sdh:R475,
-        sdh:R477 ;
-    bf:isPartOf sdh:Floor4 .
+sdh:R558 a brick:Room ;
+    rdfs:label "Office" ;
+    bf:adjacentTo sdh:R556,
+        sdh:R562 ;
+    bf:isPartOf sdh:Floor5 .
 
-sdh:R532 a brick:Room ;
-    rdfs:label "Open Office" ;
-    bf:adjacentTo sdh:R520,
-        sdh:R538 ;
+sdh:R577 a brick:Room ;
+    rdfs:label "Womens Bath" ;
+    bf:adjacentTo sdh:R575,
+        sdh:R579 ;
     bf:isPartOf sdh:Floor5 .
 
 sdh:R586 bf:adjacentTo sdh:R585,
@@ -6683,18 +6668,6 @@ sdh:R630A a brick:Room ;
         sdh:R630B ;
     bf:isPartOf sdh:Floor6 .
 
-sdh:R652 a brick:Room ;
-    rdfs:label "Cubicles" ;
-    bf:adjacentTo sdh:R652A,
-        sdh:R652B ;
-    bf:isPartOf sdh:Floor6 .
-
-sdh:R652A a brick:Room ;
-    rdfs:label "Office" ;
-    bf:adjacentTo sdh:R652,
-        sdh:R652B ;
-    bf:isPartOf sdh:Floor6 .
-
 sdh:R656 a brick:Room ;
     rdfs:label "Cubicles" ;
     bf:adjacentTo sdh:R652,
@@ -6710,12 +6683,111 @@ sdh:R656B a brick:Room ;
         sdh:R666 ;
     bf:isPartOf sdh:Floor6 .
 
-sdh:R721 a brick:Room ;
-    rdfs:label "Office" ;
-    bf:adjacentTo sdh:R719,
-        sdh:R722,
-        sdh:R723 ;
+sdh:R730 a brick:Room ;
+    rdfs:label "Conference" ;
+    bf:adjacentTo sdh:R717,
+        sdh:R732 ;
     bf:isPartOf sdh:Floor7 .
+
+sdh:R736 a brick:Room ;
+    rdfs:label "Open Office" ;
+    bf:adjacentTo sdh:R732,
+        sdh:R738 ;
+    bf:isPartOf sdh:Floor7 .
+
+sdh:R250 a brick:Room ;
+    rdfs:label "Classroom" ;
+    bf:isPartOf sdh:Floor2 .
+
+sdh:R415 a brick:Room ;
+    rdfs:label "Office" ;
+    bf:adjacentTo sdh:R410,
+        sdh:R413,
+        sdh:R417 ;
+    bf:isPartOf sdh:Floor4 .
+
+sdh:R423 a brick:Room ;
+    rdfs:label "Office" ;
+    bf:adjacentTo sdh:R410,
+        sdh:R421,
+        sdh:R425 ;
+    bf:isPartOf sdh:Floor4 .
+
+sdh:R452 a brick:Room ;
+    rdfs:label "Office" ;
+    bf:adjacentTo sdh:R448,
+        sdh:R450,
+        sdh:R454 ;
+    bf:isPartOf sdh:Floor4 .
+
+sdh:R454 a brick:Room ;
+    rdfs:label "Office" ;
+    bf:adjacentTo sdh:R450,
+        sdh:R452,
+        sdh:R456 ;
+    bf:isPartOf sdh:Floor4 .
+
+sdh:R458 a brick:Room ;
+    rdfs:label "Conference" ;
+    bf:adjacentTo sdh:R450,
+        sdh:R456,
+        sdh:R462 ;
+    bf:isPartOf sdh:Floor4 .
+
+sdh:R464 a brick:Room ;
+    rdfs:label "Office" ;
+    bf:adjacentTo sdh:R460,
+        sdh:R462,
+        sdh:R466 ;
+    bf:isPartOf sdh:Floor4 .
+
+sdh:R475 a brick:Room ;
+    rdfs:label "Elec" ;
+    bf:adjacentTo sdh:R450,
+        sdh:R473,
+        sdh:R479 ;
+    bf:isPartOf sdh:Floor4 .
+
+sdh:R477 a brick:Room ;
+    rdfs:label "Women's Bathroom" ;
+    bf:adjacentTo sdh:R460,
+        sdh:R479 ;
+    bf:isPartOf sdh:Floor4 .
+
+sdh:R532 a brick:Room ;
+    rdfs:label "Open Office" ;
+    bf:adjacentTo sdh:R520,
+        sdh:R538 ;
+    bf:isPartOf sdh:Floor5 .
+
+sdh:R575 a brick:Room ;
+    rdfs:label "Electrical" ;
+    bf:adjacentTo sdh:R573,
+        sdh:R577 ;
+    bf:isPartOf sdh:Floor5 .
+
+sdh:R582A bf:adjacentTo sdh:R580,
+        sdh:R581,
+        sdh:R582,
+        sdh:R591 .
+
+sdh:R630B a brick:Room ;
+    rdfs:label "Pantry" ;
+    bf:adjacentTo sdh:R621E,
+        sdh:R630A ;
+    bf:isPartOf sdh:Floor6 .
+
+sdh:R652A a brick:Room ;
+    rdfs:label "Office" ;
+    bf:adjacentTo sdh:R652,
+        sdh:R652B ;
+    bf:isPartOf sdh:Floor6 .
+
+sdh:R677 a brick:Room ;
+    rdfs:label "Womens Bath" ;
+    bf:adjacentTo sdh:R675,
+        sdh:R679 ;
+    bf:isPartOf sdh:Floor6 .
 
 sdh:R722 a brick:Room ;
     rdfs:label "Office" ;
@@ -6724,11 +6796,10 @@ sdh:R722 a brick:Room ;
         sdh:R724 ;
     bf:isPartOf sdh:Floor7 .
 
-sdh:R768 a brick:Room ;
-    rdfs:label "Open Office" ;
-    bf:adjacentTo sdh:R750,
-        sdh:R777,
-        sdh:R779 ;
+sdh:R725 a brick:Room ;
+    rdfs:label "Office" ;
+    bf:adjacentTo sdh:R723,
+        sdh:R726 ;
     bf:isPartOf sdh:Floor7 .
 
 sdh:R775 a brick:Room ;
@@ -6745,12 +6816,17 @@ sdh:R777 a brick:Room ;
         sdh:R779 ;
     bf:isPartOf sdh:Floor7 .
 
-sdh:R418 a brick:Room ;
-    rdfs:label "Storage" ;
+sdh:R160 a brick:Room ;
+    rdfs:label "Corridor" ;
+    bf:isPartOf sdh:Floor1 .
+
+sdh:R426 a brick:Room ;
+    rdfs:label "Office" ;
     bf:adjacentTo sdh:R410,
-        sdh:R422,
+        sdh:R424,
         sdh:R440,
-        sdh:R450 ;
+        sdh:R450,
+        sdh:R470 ;
     bf:isPartOf sdh:Floor4 .
 
 sdh:R432 a brick:Room ;
@@ -6760,20 +6836,25 @@ sdh:R432 a brick:Room ;
         sdh:R440 ;
     bf:isPartOf sdh:Floor4 .
 
-sdh:R448 a brick:Room ;
+sdh:R446 a brick:Room ;
     rdfs:label "Office" ;
     bf:adjacentTo sdh:R440,
-        sdh:R446,
-        sdh:R450,
-        sdh:R452 ;
+        sdh:R444,
+        sdh:R448 ;
     bf:isPartOf sdh:Floor4 .
 
-sdh:R462 a brick:Room ;
-    rdfs:label "Copy Room" ;
+sdh:R456 a brick:Room ;
+    rdfs:label "Office" ;
     bf:adjacentTo sdh:R450,
-        sdh:R458,
-        sdh:R460,
-        sdh:R464 ;
+        sdh:R454,
+        sdh:R458 ;
+    bf:isPartOf sdh:Floor4 .
+
+sdh:R466 a brick:Room ;
+    rdfs:label "Open Office" ;
+    bf:adjacentTo sdh:R460,
+        sdh:R464,
+        sdh:R468 ;
     bf:isPartOf sdh:Floor4 .
 
 sdh:R468 a brick:Room ;
@@ -6783,16 +6864,59 @@ sdh:R468 a brick:Room ;
         sdh:R472 ;
     bf:isPartOf sdh:Floor4 .
 
-sdh:R582A bf:adjacentTo sdh:R580,
-        sdh:R581,
-        sdh:R582,
-        sdh:R591 .
+sdh:R470 a brick:Room ;
+    rdfs:label "Elevator Lobby" ;
+    bf:adjacentTo sdh:R410,
+        sdh:R425,
+        sdh:R426,
+        sdh:R427,
+        sdh:R450 ;
+    bf:isPartOf sdh:Floor4 .
+
+sdh:R479 a brick:Room ;
+    rdfs:label "Men's Bathroom" ;
+    bf:adjacentTo sdh:R460,
+        sdh:R475,
+        sdh:R477 ;
+    bf:isPartOf sdh:Floor4 .
+
+sdh:R646 a brick:Room ;
+    rdfs:label "Office" ;
+    bf:adjacentTo sdh:R644,
+        sdh:R648 ;
+    bf:isPartOf sdh:Floor6 .
+
+sdh:R652 a brick:Room ;
+    rdfs:label "Cubicles" ;
+    bf:adjacentTo sdh:R652A,
+        sdh:R652B ;
+    bf:isPartOf sdh:Floor6 .
+
+sdh:R721 a brick:Room ;
+    rdfs:label "Office" ;
+    bf:adjacentTo sdh:R719,
+        sdh:R722,
+        sdh:R723 ;
+    bf:isPartOf sdh:Floor7 .
 
 sdh:R738 a brick:Room ;
     rdfs:label "Open Office" ;
     bf:adjacentTo sdh:R736,
         sdh:R746,
         sdh:R748 ;
+    bf:isPartOf sdh:Floor7 .
+
+sdh:R768 a brick:Room ;
+    rdfs:label "Open Office" ;
+    bf:adjacentTo sdh:R750,
+        sdh:R777,
+        sdh:R779 ;
+    bf:isPartOf sdh:Floor7 .
+
+sdh:R771 a brick:Room ;
+    rdfs:label "Riser Closet" ;
+    bf:adjacentTo sdh:R750,
+        sdh:R773 ;
     bf:isPartOf sdh:Floor7 .
 
 sdh:R422 a brick:Room ;
@@ -6813,22 +6937,48 @@ sdh:R424 a brick:Room ;
         sdh:R450 ;
     bf:isPartOf sdh:Floor4 .
 
-sdh:R426 a brick:Room ;
+sdh:R442 a brick:Room ;
     rdfs:label "Office" ;
-    bf:adjacentTo sdh:R410,
-        sdh:R424,
+    bf:adjacentTo sdh:R434,
         sdh:R440,
-        sdh:R450,
-        sdh:R470 ;
+        sdh:R444 ;
     bf:isPartOf sdh:Floor4 .
 
-sdh:R470 a brick:Room ;
-    rdfs:label "Elevator Lobby" ;
+sdh:R462 a brick:Room ;
+    rdfs:label "Copy Room" ;
+    bf:adjacentTo sdh:R450,
+        sdh:R458,
+        sdh:R460,
+        sdh:R464 ;
+    bf:isPartOf sdh:Floor4 .
+
+sdh:R413 a brick:Room ;
+    rdfs:label "Office" ;
     bf:adjacentTo sdh:R410,
-        sdh:R425,
-        sdh:R426,
-        sdh:R427,
+        sdh:R415 ;
+    bf:isPartOf sdh:Floor4 .
+
+sdh:R418 a brick:Room ;
+    rdfs:label "Storage" ;
+    bf:adjacentTo sdh:R410,
+        sdh:R422,
+        sdh:R440,
         sdh:R450 ;
+    bf:isPartOf sdh:Floor4 .
+
+sdh:R444 a brick:Room ;
+    rdfs:label "Office" ;
+    bf:adjacentTo sdh:R440,
+        sdh:R442,
+        sdh:R446 ;
+    bf:isPartOf sdh:Floor4 .
+
+sdh:R448 a brick:Room ;
+    rdfs:label "Office" ;
+    bf:adjacentTo sdh:R440,
+        sdh:R446,
+        sdh:R450,
+        sdh:R452 ;
     bf:isPartOf sdh:Floor4 .
 
 sdh:R520 a brick:Room ;
@@ -6846,6 +6996,8 @@ sdh:R621 a brick:Room ;
         sdh:R621D,
         sdh:R621E ;
     bf:isPartOf sdh:Floor6 .
+
+sdh:Floor1 a brick:Floor .
 
 sdh:R460 a brick:Room ;
     rdfs:label "Open Office" ;
@@ -6868,8 +7020,6 @@ sdh:R750 a brick:Room ;
         sdh:R775 ;
     bf:isPartOf sdh:Floor7 .
 
-sdh:Floor1 a brick:Floor .
-
 sdh:R440 a brick:Room ;
     rdfs:label "Open Office" ;
     bf:adjacentTo sdh:R418,
@@ -6889,6 +7039,8 @@ sdh:Floor7 a brick:Floor .
 
 sdh:Floor2 a brick:Floor .
 
+sdh:Floor3 a brick:Floor .
+
 sdh:R410 a brick:Room ;
     rdfs:label "Hallway" ;
     bf:adjacentTo sdh:R413,
@@ -6906,9 +7058,9 @@ sdh:R410 a brick:Room ;
         sdh:R470 ;
     bf:isPartOf sdh:Floor4 .
 
-sdh:Floor3 a brick:Floor .
-
 sdh:Floor5 a brick:Floor .
+
+sdh:Floor6 a brick:Floor .
 
 sdh:R450 a brick:Room ;
     rdfs:label "Open Office" ;
@@ -6929,8 +7081,6 @@ sdh:R450 a brick:Room ;
         sdh:R473,
         sdh:R475 ;
     bf:isPartOf sdh:Floor4 .
-
-sdh:Floor6 a brick:Floor .
 
 sdh:Floor4 a brick:Floor .
 

@@ -1,6 +1,7 @@
 from rdflib import Graph, Namespace, URIRef, Literal
 import rdflib
 import json
+import random
 import re
 RDF = Namespace('http://www.w3.org/1999/02/22-rdf-syntax-ns#')
 RDFS = Namespace('http://www.w3.org/2000/01/rdf-schema#')
@@ -110,6 +111,7 @@ ahu2vav['AH2B'].extend(['S6-{:02d}'.format(i) for i in range(1,21)])
 ahu2vav['AH2B'].extend(['S7-{:02d}'.format(i) for i in range(1,17)])
 
 for ahu, vavlist in ahu2vav.items():
+    g.add((SDH[ahu], RDF.type, BRICK.AHU))
     for vav in vavlist:
         g.add((SDH[ahu], BF.feeds, SDH[vav]))
 
@@ -495,6 +497,13 @@ for sensor in vavsensors:
     g.add((SDH[pointname], RDF.type, klass))
     g.add((SDH[vav], BF.hasPoint, SDH[pointname]))
     g.add((SDH[pointname], BF.uuid, Literal(uuid)))
+
+sensors = g.query("SELECT ?s WHERE {?s rdf:type brick:Zone_Air_Temperature_Sensor .}")
+rooms = list(g.query("SELECT ?s WHERE {?s rdf:type brick:Room .}"))
+for sensor in sensors:
+    sensor = str(sensor[0]).split('#')[-1]
+    room = random.choice(rooms)[0].split('#')[-1]
+    g.add((SDH[sensor], BF.isLocatedIn, SDH[room]))
 #
 #room2tempsensor = {
 #        "413": ["6e2fb8ba-ad9c-5ca8-b441-e113d57c1a35"],
