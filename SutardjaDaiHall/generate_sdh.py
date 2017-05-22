@@ -4,9 +4,9 @@ import json
 import re
 RDF = Namespace('http://www.w3.org/1999/02/22-rdf-syntax-ns#')
 RDFS = Namespace('http://www.w3.org/2000/01/rdf-schema#')
-BRICK = Namespace('http://buildsys.org/ontologies/Brick#')
-BF = Namespace('http://buildsys.org/ontologies/BrickFrame#')
-BRICKTAG = Namespace('http://buildsys.org/ontologies/BrickTag#')
+BRICK = Namespace('https://brickschema.org/schema/1.0.1/Brick#')
+BF = Namespace('https://brickschema.org/schema/1.0.1/BrickFrame#')
+BRICKTAG = Namespace('https://brickschema.org/schema/1.0.1/BrickTag#')
 SDH = Namespace('http://buildsys.org/ontologies/sutardja_dai_hall#')
 g = rdflib.Graph()
 g.bind('rdf', RDF)

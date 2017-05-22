@@ -1,6 +1,6 @@
-@prefix bf: <http://buildsys.org/ontologies/BrickFrame#> .
-@prefix brick: <http://buildsys.org/ontologies/Brick#> .
-@prefix btag: <http://buildsys.org/ontologies/BrickTag#> .
+@prefix bf: <https://brickschema.org/schema/1.0.1/BrickFrame#> .
+@prefix brick: <https://brickschema.org/schema/1.0.1/Brick#> .
+@prefix btag: <https://brickschema.org/schema/1.0.1/BrickTag#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix sdh: <http://buildsys.org/ontologies/sutardja_dai_hall#> .
@@ -179,8 +179,6 @@ sdh:ZoneS5-00 bf:hasPart sdh:R520C .
 sdh:ZoneS6-00 bf:hasPart sdh:R621 .
 
 sdh:ZoneS7-00 bf:hasPart sdh:R750 .
-
-brick:VAV_With_Reheat rdfs:subClassOf brick:VAV .
 
 sdh:AH2A_SF_CFM a brick:Supply_Air_Temperature_Sensor ;
     bf:uuid "64aceef3-5034-574b-a803-f04ad1224d39" .
@@ -5788,6 +5786,8 @@ sdh:ZoneS7-15 a brick:HVAC_Zone ;
 
 sdh:ZoneS7-16 a brick:HVAC_Zone ;
     bf:hasPart sdh:R768 .
+
+brick:VAV_With_Reheat rdfs:subClassOf brick:VAV .
 
 sdh:R148 a brick:Room ;
     rdfs:label "Laser Lab" ;

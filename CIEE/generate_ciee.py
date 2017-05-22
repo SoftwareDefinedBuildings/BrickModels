@@ -4,8 +4,8 @@ import re
 
 RDF = Namespace('http://www.w3.org/1999/02/22-rdf-syntax-ns#')
 RDFS = Namespace('http://www.w3.org/2000/01/rdf-schema#')
-BRICK = Namespace('http://buildsys.org/ontologies/Brick#')
-BRICKFRAME = Namespace('http://buildsys.org/ontologies/BrickFrame#')
+BRICK = Namespace('https://brickschema.org/schema/1.0.1/Brick#')
+BRICKFRAME = Namespace('https://brickschema.org/schema/1.0.1/BrickFrame#')
 BF = BRICKFRAME
 OWL = Namespace('http://www.w3.org/2002/07/owl#')
 CIEE = Namespace('http://buildsys.org/ontologies/ciee#')

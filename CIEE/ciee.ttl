@@ -1,6 +1,6 @@
-@prefix bf: <http://buildsys.org/ontologies/BrickFrame#> .
+@prefix bf: <https://brickschema.org/schema/1.0.1/BrickFrame#> .
 @prefix bldg: <http://buildsys.org/ontologies/ciee#> .
-@prefix brick: <http://buildsys.org/ontologies/Brick#> .
+@prefix brick: <https://brickschema.org/schema/1.0.1/Brick#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
@@ -191,9 +191,6 @@ bldg:R216 a brick:Room ;
     bf:hasPoint bldg:hamilton_0022 ;
     bf:isPartOf bldg:floor_2 .
 
-brick:RTU a <http://www.w3.org/2002/07/owl#Class> ;
-    rdfs:subClassOf brick:AHU .
-
 bldg:R207 a brick:Room ;
     rdfs:label "Office" ;
     bf:adjacentTo bldg:R203,
@@ -245,6 +242,9 @@ bldg:R224 a brick:Room ;
         bldg:R225,
         bldg:R226 ;
     bf:isPartOf bldg:floor_2 .
+
+brick:RTU a <http://www.w3.org/2002/07/owl#Class> ;
+    rdfs:subClassOf brick:AHU .
 
 bldg:R221 a brick:Room ;
     rdfs:label "Open Office SouthWest" ;
