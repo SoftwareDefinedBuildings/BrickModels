@@ -5,9 +5,9 @@ import rdflib
 
 RDF = rdflib.Namespace('http://www.w3.org/1999/02/22-rdf-syntax-ns#')
 RDFS = rdflib.Namespace('http://www.w3.org/2000/01/rdf-schema#')
-BRICK = rdflib.Namespace('http://buildsys.org/ontologies/Brick#')
-BRICKFRAME = rdflib.Namespace('http://buildsys.org/ontologies/BrickFrame#')
-BRICKTAG = rdflib.Namespace('http://buildsys.org/ontologies/BrickTag#')
+BRICK = rdflib.Namespace('http://https://brickschema.org/schema/1.0.1/Brick#')
+BRICKFRAME = rdflib.Namespace('https://brickschema.org/schema/1.0.1/BrickFrame#')
+BRICKTAG = rdflib.Namespace('https://brickschema.org/schema/1.0.1/BrickTag#')
 OWL = rdflib.Namespace('http://www.w3.org/2002/07/owl#')
 
 def new_graph():
