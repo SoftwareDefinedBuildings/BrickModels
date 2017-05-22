@@ -1,7 +1,6 @@
 @prefix bf: <https://brickschema.org/schema/1.0.1/BrickFrame#> .
 @prefix bldg: <http://buildsys.org/ontologies/ciee#> .
-@prefix brick: <http://https://brickschema.org/schema/1.0.1/Brick#> .
-@prefix brick1: <https://brickschema.org/schema/1.0.1/Brick#> .
+@prefix brick: <https://brickschema.org/schema/1.0.1/Brick#> .
 @prefix btag: <https://brickschema.org/schema/1.0.1/BrickTag#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
@@ -9,130 +8,130 @@
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-bldg:RTU5 a brick1:RTU .
+bldg:RTU5 a brick:RTU .
 
-bldg:floor_1 a brick1:Floor .
+bldg:floor_1 a brick:Floor .
 
-bldg:hamilton_005C a brick1:Zone_Temperature_Sensor ;
+bldg:hamilton_005C a brick:Zone_Temperature_Sensor ;
     bf:uri "gvnMwdNvhD5ClAuF8SQzrp-Ywcjx9c1m4du9N5MRCXs=/sensors/s.hamilton/00126d070000005C/i.temperature/signal/operative" .
 
-bldg:hamilton_005D a brick1:Zone_Temperature_Sensor ;
+bldg:hamilton_005D a brick:Zone_Temperature_Sensor ;
     bf:uri "gvnMwdNvhD5ClAuF8SQzrp-Ywcjx9c1m4du9N5MRCXs=/sensors/s.hamilton/00126d070000005D/i.temperature/signal/operative" .
 
-bldg:hamilton_005F a brick1:Zone_Temperature_Sensor ;
+bldg:hamilton_005F a brick:Zone_Temperature_Sensor ;
     bf:uri "gvnMwdNvhD5ClAuF8SQzrp-Ywcjx9c1m4du9N5MRCXs=/sensors/s.hamilton/00126d070000005F/i.temperature/signal/operative" .
 
-bldg:RTU4 a brick1:RTU ;
+bldg:RTU4 a brick:RTU ;
     bf:feeds bldg:NorthZone .
 
-bldg:ServerRoom a brick1:Room ;
+bldg:ServerRoom a brick:Room ;
     rdf:label "Server Room" ;
     bf:isPartOf bldg:floor_mezz .
 
 bldg:WestOpen bf:hasPoint bldg:hamilton_0029 .
 
-bldg:carl_tstat a brick1:Thermostat ;
+bldg:carl_tstat a brick:Thermostat ;
     bf:controls bldg:RTU2 ;
     bf:uri "gvnMwdNvhD5ClAuF8SQzrp-Ywcjx9c1m4du9N5MRCXs=/devices/venstar/s.venstar/CarlsOffice/i.xbos.thermostat" .
 
-bldg:conference_tstat a brick1:Thermostat ;
+bldg:conference_tstat a brick:Thermostat ;
     bf:controls bldg:RTU1 ;
     bf:uri "gvnMwdNvhD5ClAuF8SQzrp-Ywcjx9c1m4du9N5MRCXs=/devices/venstar/s.venstar/ConferenceRoom/i.xbos.thermostat" .
 
-bldg:floor_mezz a brick1:Floor ;
+bldg:floor_mezz a brick:Floor ;
     bf:hasPart bldg:ServerRoom .
 
-bldg:hamilton_0022 a brick1:Zone_Temperature_Sensor ;
+bldg:hamilton_0022 a brick:Zone_Temperature_Sensor ;
     bf:isPointOf bldg:R216 ;
     bf:uri "gvnMwdNvhD5ClAuF8SQzrp-Ywcjx9c1m4du9N5MRCXs=/sensors/s.hamilton/00126d0700000022/i.temperature/signal/operative" .
 
-bldg:hamilton_0025 a brick1:Zone_Temperature_Sensor ;
+bldg:hamilton_0025 a brick:Zone_Temperature_Sensor ;
     bf:isPointOf bldg:EastOpen ;
     bf:uri "gvnMwdNvhD5ClAuF8SQzrp-Ywcjx9c1m4du9N5MRCXs=/sensors/s.hamilton/00126d0700000025/i.temperature/signal/operative" .
 
-bldg:hamilton_0027 a brick1:Zone_Temperature_Sensor ;
+bldg:hamilton_0027 a brick:Zone_Temperature_Sensor ;
     bf:isPointOf bldg:R206 ;
     bf:uri "gvnMwdNvhD5ClAuF8SQzrp-Ywcjx9c1m4du9N5MRCXs=/sensors/s.hamilton/00126d0700000027/i.temperature/signal/operative" .
 
-bldg:hamilton_0028 a brick1:Zone_Temperature_Sensor ;
+bldg:hamilton_0028 a brick:Zone_Temperature_Sensor ;
     bf:isPointOf bldg:R214 ;
     bf:uri "gvnMwdNvhD5ClAuF8SQzrp-Ywcjx9c1m4du9N5MRCXs=/sensors/s.hamilton/00126d0700000028/i.temperature/signal/operative" .
 
-bldg:hamilton_0029 a brick1:Zone_Temperature_Sensor ;
+bldg:hamilton_0029 a brick:Zone_Temperature_Sensor ;
     bf:isPointOf bldg:WestOpen ;
     bf:uri "gvnMwdNvhD5ClAuF8SQzrp-Ywcjx9c1m4du9N5MRCXs=/sensors/s.hamilton/00126d0700000029/i.temperature/signal/operative" .
 
-bldg:hamilton_002A a brick1:Zone_Temperature_Sensor ;
+bldg:hamilton_002A a brick:Zone_Temperature_Sensor ;
     bf:isPointOf bldg:R210 ;
     bf:uri "gvnMwdNvhD5ClAuF8SQzrp-Ywcjx9c1m4du9N5MRCXs=/sensors/s.hamilton/00126d070000002A/i.temperature/signal/operative" .
 
-bldg:hamilton_002B a brick1:Zone_Temperature_Sensor ;
+bldg:hamilton_002B a brick:Zone_Temperature_Sensor ;
     bf:isPointOf bldg:R208 ;
     bf:uri "gvnMwdNvhD5ClAuF8SQzrp-Ywcjx9c1m4du9N5MRCXs=/sensors/s.hamilton/00126d070000002B/i.temperature/signal/operative" .
 
-bldg:hamilton_002C a brick1:Zone_Temperature_Sensor ;
+bldg:hamilton_002C a brick:Zone_Temperature_Sensor ;
     bf:isPointOf bldg:R215 ;
     bf:uri "gvnMwdNvhD5ClAuF8SQzrp-Ywcjx9c1m4du9N5MRCXs=/sensors/s.hamilton/00126d070000002C/i.temperature/signal/operative" .
 
-bldg:hamilton_002E a brick1:Zone_Temperature_Sensor ;
+bldg:hamilton_002E a brick:Zone_Temperature_Sensor ;
     bf:isPointOf bldg:R209 ;
     bf:uri "gvnMwdNvhD5ClAuF8SQzrp-Ywcjx9c1m4du9N5MRCXs=/sensors/s.hamilton/00126d070000002E/i.temperature/signal/operative" .
 
-bldg:hamilton_005A a brick1:Zone_Temperature_Sensor ;
+bldg:hamilton_005A a brick:Zone_Temperature_Sensor ;
     bf:isPointOf bldg:R212 ;
     bf:uri "gvnMwdNvhD5ClAuF8SQzrp-Ywcjx9c1m4du9N5MRCXs=/sensors/s.hamilton/00126d070000005A/i.temperature/signal/operative" .
 
-bldg:hamilton_005B a brick1:Zone_Temperature_Sensor ;
+bldg:hamilton_005B a brick:Zone_Temperature_Sensor ;
     bf:isPointOf bldg:R217 ;
     bf:uri "gvnMwdNvhD5ClAuF8SQzrp-Ywcjx9c1m4du9N5MRCXs=/sensors/s.hamilton/00126d070000005B/i.temperature/signal/operative" .
 
-bldg:hamilton_005E a brick1:Zone_Temperature_Sensor ;
+bldg:hamilton_005E a brick:Zone_Temperature_Sensor ;
     bf:isPointOf bldg:R211 ;
     bf:uri "gvnMwdNvhD5ClAuF8SQzrp-Ywcjx9c1m4du9N5MRCXs=/sensors/s.hamilton/00126d070000005E/i.temperature/signal/operative" .
 
-bldg:hamilton_0060 a brick1:Zone_Temperature_Sensor ;
+bldg:hamilton_0060 a brick:Zone_Temperature_Sensor ;
     bf:isPointOf bldg:R213 ;
     bf:uri "gvnMwdNvhD5ClAuF8SQzrp-Ywcjx9c1m4du9N5MRCXs=/sensors/s.hamilton/00126d0700000060/i.temperature/signal/operative" .
 
-bldg:openoffice_tstat a brick1:Thermostat ;
+bldg:openoffice_tstat a brick:Thermostat ;
     bf:controls bldg:RTU3 ;
     bf:uri "gvnMwdNvhD5ClAuF8SQzrp-Ywcjx9c1m4du9N5MRCXs=/devices/venstar/s.venstar/OpenSpace/i.xbos.thermostat" .
 
 bldg:EastOpen bf:hasPoint bldg:hamilton_0025 ;
     bf:isPartOf bldg:NorthZone .
 
-bldg:RTU1 a brick1:RTU ;
+bldg:RTU1 a brick:RTU ;
     bf:feeds bldg:SouthZone ;
     bf:isControlledBy bldg:conference_tstat .
 
-bldg:RTU2 a brick1:RTU ;
+bldg:RTU2 a brick:RTU ;
     bf:feeds bldg:EastZone ;
     bf:isControlledBy bldg:carl_tstat .
 
-bldg:RTU3 a brick1:RTU ;
+bldg:RTU3 a brick:RTU ;
     bf:feeds bldg:CentralZone ;
     bf:isControlledBy bldg:openoffice_tstat .
 
-bldg:R200 a brick1:Room ;
+bldg:R200 a brick:Room ;
     rdfs:label "Women's Bathroom" ;
     bf:adjacentTo bldg:R201,
         bldg:R203 ;
     bf:isPartOf bldg:floor_2 .
 
-bldg:NorthZone a brick1:HVAC_Zone ;
+bldg:NorthZone a brick:HVAC_Zone ;
     bf:hasPart bldg:EastOpen,
         bldg:R224,
         bldg:R226 ;
     bf:isFedBy bldg:RTU4 .
 
-bldg:R201 a brick1:Room ;
+bldg:R201 a brick:Room ;
     rdfs:label "Men's Bathroom" ;
     bf:adjacentTo bldg:R200,
         bldg:R203,
         bldg:R226 ;
     bf:isPartOf bldg:floor_2 .
 
-bldg:R217 a brick1:Room ;
+bldg:R217 a brick:Room ;
     rdfs:label "Office" ;
     bf:adjacentTo bldg:R216,
         bldg:R218 ;
@@ -140,10 +139,10 @@ bldg:R217 a brick1:Room ;
     bf:isPartOf bldg:EastZone,
         bldg:floor_2 .
 
-brick1:RTU a owl:Class ;
-    rdfs:subClassOf brick1:AHU .
+brick:RTU a owl:Class ;
+    rdfs:subClassOf brick:AHU .
 
-bldg:EastZone a brick1:HVAC_Zone ;
+bldg:EastZone a brick:HVAC_Zone ;
     bf:hasPart bldg:R213,
         bldg:R214,
         bldg:R215,
@@ -151,7 +150,7 @@ bldg:EastZone a brick1:HVAC_Zone ;
         bldg:R217 ;
     bf:isFedBy bldg:RTU2 .
 
-bldg:R206 a brick1:Room ;
+bldg:R206 a brick:Room ;
     rdfs:label "Office" ;
     bf:adjacentTo bldg:R203,
         bldg:R205,
@@ -160,7 +159,7 @@ bldg:R206 a brick1:Room ;
     bf:isPartOf bldg:SouthZone,
         bldg:floor_2 .
 
-bldg:R207 a brick1:Room ;
+bldg:R207 a brick:Room ;
     rdfs:label "Office" ;
     bf:adjacentTo bldg:R203,
         bldg:R204,
@@ -169,7 +168,7 @@ bldg:R207 a brick1:Room ;
     bf:isPartOf bldg:SouthZone,
         bldg:floor_2 .
 
-bldg:R208 a brick1:Room ;
+bldg:R208 a brick:Room ;
     rdfs:label "Conference Room" ;
     bf:adjacentTo bldg:R204,
         bldg:R207,
@@ -178,7 +177,7 @@ bldg:R208 a brick1:Room ;
     bf:isPartOf bldg:SouthZone,
         bldg:floor_2 .
 
-bldg:R209 a brick1:Room ;
+bldg:R209 a brick:Room ;
     rdfs:label "Office" ;
     bf:adjacentTo bldg:R205,
         bldg:R208,
@@ -187,7 +186,7 @@ bldg:R209 a brick1:Room ;
     bf:isPartOf bldg:SouthZone,
         bldg:floor_2 .
 
-bldg:R210 a brick1:Room ;
+bldg:R210 a brick:Room ;
     rdfs:label "Office" ;
     bf:adjacentTo bldg:R205,
         bldg:R209,
@@ -196,7 +195,7 @@ bldg:R210 a brick1:Room ;
     bf:isPartOf bldg:SouthZone,
         bldg:floor_2 .
 
-bldg:R214 a brick1:Room ;
+bldg:R214 a brick:Room ;
     rdfs:label "Office" ;
     bf:adjacentTo bldg:R213,
         bldg:R215,
@@ -205,7 +204,7 @@ bldg:R214 a brick1:Room ;
     bf:isPartOf bldg:EastZone,
         bldg:floor_2 .
 
-bldg:R216 a brick1:Room ;
+bldg:R216 a brick:Room ;
     rdfs:label "Office" ;
     bf:adjacentTo bldg:R215,
         bldg:R217,
@@ -214,7 +213,7 @@ bldg:R216 a brick1:Room ;
     bf:isPartOf bldg:EastZone,
         bldg:floor_2 .
 
-bldg:R224 a brick1:Room ;
+bldg:R224 a brick:Room ;
     rdfs:label "Office" ;
     bf:adjacentTo bldg:R220,
         bldg:R222,
@@ -231,7 +230,7 @@ bldg:R204 bf:adjacentTo bldg:R203,
         bldg:R225,
         bldg:R226 .
 
-bldg:R211 a brick1:Room ;
+bldg:R211 a brick:Room ;
     rdfs:label "Office" ;
     bf:adjacentTo bldg:R205,
         bldg:R210,
@@ -241,7 +240,7 @@ bldg:R211 a brick1:Room ;
     bf:isPartOf bldg:SouthZone,
         bldg:floor_2 .
 
-bldg:R212 a brick1:Room ;
+bldg:R212 a brick:Room ;
     rdfs:label "Office" ;
     bf:adjacentTo bldg:R205,
         bldg:R211,
@@ -251,7 +250,7 @@ bldg:R212 a brick1:Room ;
     bf:isPartOf bldg:SouthZone,
         bldg:floor_2 .
 
-bldg:R213 a brick1:Room ;
+bldg:R213 a brick:Room ;
     rdfs:label "Office" ;
     bf:adjacentTo bldg:R205,
         bldg:R212,
@@ -261,7 +260,7 @@ bldg:R213 a brick1:Room ;
     bf:isPartOf bldg:EastZone,
         bldg:floor_2 .
 
-bldg:R215 a brick1:Room ;
+bldg:R215 a brick:Room ;
     rdfs:label "Office" ;
     bf:adjacentTo bldg:R214,
         bldg:R216,
@@ -271,7 +270,7 @@ bldg:R215 a brick1:Room ;
     bf:isPartOf bldg:EastZone,
         bldg:floor_2 .
 
-bldg:R221 a brick1:Room ;
+bldg:R221 a brick:Room ;
     rdfs:label "Open Office SouthWest" ;
     bf:adjacentTo bldg:R218,
         bldg:R219,
@@ -281,7 +280,7 @@ bldg:R221 a brick1:Room ;
     bf:isPartOf bldg:CentralZone,
         bldg:floor_2 .
 
-bldg:R223 a brick1:Room ;
+bldg:R223 a brick:Room ;
     rdfs:label "Office" ;
     bf:adjacentTo bldg:R204,
         bldg:R220,
@@ -291,7 +290,7 @@ bldg:R223 a brick1:Room ;
     bf:isPartOf bldg:CentralZone,
         bldg:floor_2 .
 
-bldg:R225 a brick1:Room ;
+bldg:R225 a brick:Room ;
     rdfs:label "Office" ;
     bf:adjacentTo bldg:R204,
         bldg:R222,
@@ -301,7 +300,7 @@ bldg:R225 a brick1:Room ;
     bf:isPartOf bldg:CentralZone,
         bldg:floor_2 .
 
-bldg:R226 a brick1:Room ;
+bldg:R226 a brick:Room ;
     rdfs:label "Office" ;
     bf:adjacentTo bldg:R201,
         bldg:R203,
@@ -311,7 +310,7 @@ bldg:R226 a brick1:Room ;
     bf:isPartOf bldg:NorthZone,
         bldg:floor_2 .
 
-bldg:CentralZone a brick1:HVAC_Zone ;
+bldg:CentralZone a brick:HVAC_Zone ;
     bf:hasPart bldg:R218,
         bldg:R219,
         bldg:R220,
@@ -321,7 +320,7 @@ bldg:CentralZone a brick1:HVAC_Zone ;
         bldg:R225 ;
     bf:isFedBy bldg:RTU3 .
 
-bldg:R203 a brick1:Room ;
+bldg:R203 a brick:Room ;
     rdfs:label "Office" ;
     bf:adjacentTo bldg:R200,
         bldg:R201,
@@ -332,7 +331,7 @@ bldg:R203 a brick1:Room ;
         bldg:R226 ;
     bf:isPartOf bldg:floor_2 .
 
-bldg:R218 a brick1:Room ;
+bldg:R218 a brick:Room ;
     rdfs:label "Open Office NorthEast" ;
     bf:adjacentTo bldg:R215,
         bldg:R216,
@@ -343,7 +342,7 @@ bldg:R218 a brick1:Room ;
     bf:isPartOf bldg:CentralZone,
         bldg:floor_2 .
 
-bldg:R220 a brick1:Room ;
+bldg:R220 a brick:Room ;
     rdfs:label "Open Office NorthWest" ;
     bf:adjacentTo bldg:R218,
         bldg:R219,
@@ -354,7 +353,7 @@ bldg:R220 a brick1:Room ;
     bf:isPartOf bldg:CentralZone,
         bldg:floor_2 .
 
-bldg:R222 a brick1:Room ;
+bldg:R222 a brick:Room ;
     rdfs:label "Office" ;
     bf:adjacentTo bldg:R220,
         bldg:R221,
@@ -365,7 +364,7 @@ bldg:R222 a brick1:Room ;
     bf:isPartOf bldg:CentralZone,
         bldg:floor_2 .
 
-bldg:SouthZone a brick1:HVAC_Zone ;
+bldg:SouthZone a brick:HVAC_Zone ;
     bf:hasPart bldg:R205,
         bldg:R206,
         bldg:R207,
@@ -376,7 +375,7 @@ bldg:SouthZone a brick1:HVAC_Zone ;
         bldg:R212 ;
     bf:isFedBy bldg:RTU1 .
 
-bldg:R205 a brick1:Room ;
+bldg:R205 a brick:Room ;
     rdfs:label "Office" ;
     bf:adjacentTo bldg:R203,
         bldg:R204,
@@ -389,7 +388,7 @@ bldg:R205 a brick1:Room ;
     bf:isPartOf bldg:SouthZone,
         bldg:floor_2 .
 
-bldg:R219 a brick1:Room ;
+bldg:R219 a brick:Room ;
     rdfs:label "Open Office SouthEast" ;
     bf:adjacentTo bldg:R211,
         bldg:R212,
@@ -402,7 +401,7 @@ bldg:R219 a brick1:Room ;
     bf:isPartOf bldg:CentralZone,
         bldg:floor_2 .
 
-bldg:floor_2 a brick1:Floor ;
+bldg:floor_2 a brick:Floor ;
     bf:hasPart bldg:R200,
         bldg:R201,
         bldg:R203,
