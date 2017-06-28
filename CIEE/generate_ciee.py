@@ -95,55 +95,58 @@ for room, adjlist in adjacency.items():
 
 # add zone temperature sensors
 g.add((CIEE.hamilton_005C, RDF.type, BRICK.Zone_Temperature_Sensor))
-g.add((CIEE.hamilton_005C, BF.uri,  Literal("gvnMwdNvhD5ClAuF8SQzrp-Ywcjx9c1m4du9N5MRCXs=/sensors/s.hamilton/00126d070000005C/i.temperature/signal/operative")))
+g.add((CIEE.hamilton_005C, BF.uri,  Literal("ciee/sensors/s.hamilton/00126d070000005C/i.temperature/signal/operative")))
 
 g.add((CIEE.hamilton_005D, RDF.type, BRICK.Zone_Temperature_Sensor))
-g.add((CIEE.hamilton_005D, BF.uri,  Literal("gvnMwdNvhD5ClAuF8SQzrp-Ywcjx9c1m4du9N5MRCXs=/sensors/s.hamilton/00126d070000005D/i.temperature/signal/operative")))
+g.add((CIEE.hamilton_005D, BF.uri,  Literal("ciee/sensors/s.hamilton/00126d070000005D/i.temperature/signal/operative")))
 
 g.add((CIEE.hamilton_0027, RDF.type, BRICK.Zone_Temperature_Sensor))
-g.add((CIEE.hamilton_0027, BF.uri,  Literal("gvnMwdNvhD5ClAuF8SQzrp-Ywcjx9c1m4du9N5MRCXs=/sensors/s.hamilton/00126d0700000027/i.temperature/signal/operative")))
+g.add((CIEE.hamilton_0027, BF.uri,  Literal("ciee/sensors/s.hamilton/00126d0700000027/i.temperature/signal/operative")))
 
 g.add((CIEE.hamilton_002B, RDF.type, BRICK.Zone_Temperature_Sensor))
-g.add((CIEE.hamilton_002B, BF.uri,  Literal("gvnMwdNvhD5ClAuF8SQzrp-Ywcjx9c1m4du9N5MRCXs=/sensors/s.hamilton/00126d070000002B/i.temperature/signal/operative")))
+g.add((CIEE.hamilton_002B, BF.uri,  Literal("ciee/sensors/s.hamilton/00126d070000002B/i.temperature/signal/operative")))
 
 g.add((CIEE.hamilton_002E, RDF.type, BRICK.Zone_Temperature_Sensor))
-g.add((CIEE.hamilton_002E, BF.uri,  Literal("gvnMwdNvhD5ClAuF8SQzrp-Ywcjx9c1m4du9N5MRCXs=/sensors/s.hamilton/00126d070000002E/i.temperature/signal/operative")))
+g.add((CIEE.hamilton_002E, BF.uri,  Literal("ciee/sensors/s.hamilton/00126d070000002E/i.temperature/signal/operative")))
 
 g.add((CIEE.hamilton_002A, RDF.type, BRICK.Zone_Temperature_Sensor))
-g.add((CIEE.hamilton_002A, BF.uri,  Literal("gvnMwdNvhD5ClAuF8SQzrp-Ywcjx9c1m4du9N5MRCXs=/sensors/s.hamilton/00126d070000002A/i.temperature/signal/operative")))
+g.add((CIEE.hamilton_002A, BF.uri,  Literal("ciee/sensors/s.hamilton/00126d070000002A/i.temperature/signal/operative")))
 
 g.add((CIEE.hamilton_005E, RDF.type, BRICK.Zone_Temperature_Sensor))
-g.add((CIEE.hamilton_005E, BF.uri,  Literal("gvnMwdNvhD5ClAuF8SQzrp-Ywcjx9c1m4du9N5MRCXs=/sensors/s.hamilton/00126d070000005E/i.temperature/signal/operative")))
+g.add((CIEE.hamilton_005E, BF.uri,  Literal("ciee/sensors/s.hamilton/00126d070000005E/i.temperature/signal/operative")))
 
 g.add((CIEE.hamilton_005A, RDF.type, BRICK.Zone_Temperature_Sensor))
-g.add((CIEE.hamilton_005A, BF.uri,  Literal("gvnMwdNvhD5ClAuF8SQzrp-Ywcjx9c1m4du9N5MRCXs=/sensors/s.hamilton/00126d070000005A/i.temperature/signal/operative")))
+g.add((CIEE.hamilton_005A, BF.uri,  Literal("ciee/sensors/s.hamilton/00126d070000005A/i.temperature/signal/operative")))
 
 g.add((CIEE.hamilton_0060, RDF.type, BRICK.Zone_Temperature_Sensor))
-g.add((CIEE.hamilton_0060, BF.uri,  Literal("gvnMwdNvhD5ClAuF8SQzrp-Ywcjx9c1m4du9N5MRCXs=/sensors/s.hamilton/00126d0700000060/i.temperature/signal/operative")))
+g.add((CIEE.hamilton_0060, BF.uri,  Literal("ciee/sensors/s.hamilton/00126d0700000060/i.temperature/signal/operative")))
 
 g.add((CIEE.hamilton_0028, RDF.type, BRICK.Zone_Temperature_Sensor))
-g.add((CIEE.hamilton_0028, BF.uri,  Literal("gvnMwdNvhD5ClAuF8SQzrp-Ywcjx9c1m4du9N5MRCXs=/sensors/s.hamilton/00126d0700000028/i.temperature/signal/operative")))
+g.add((CIEE.hamilton_0028, BF.uri,  Literal("ciee/sensors/s.hamilton/00126d0700000028/i.temperature/signal/operative")))
 
 g.add((CIEE.hamilton_002C, RDF.type, BRICK.Zone_Temperature_Sensor))
-g.add((CIEE.hamilton_002C, BF.uri,  Literal("gvnMwdNvhD5ClAuF8SQzrp-Ywcjx9c1m4du9N5MRCXs=/sensors/s.hamilton/00126d070000002C/i.temperature/signal/operative")))
+g.add((CIEE.hamilton_002C, BF.uri,  Literal("ciee/sensors/s.hamilton/00126d070000002C/i.temperature/signal/operative")))
 
 g.add((CIEE.hamilton_0022, RDF.type, BRICK.Zone_Temperature_Sensor))
-g.add((CIEE.hamilton_0022, BF.uri,  Literal("gvnMwdNvhD5ClAuF8SQzrp-Ywcjx9c1m4du9N5MRCXs=/sensors/s.hamilton/00126d0700000022/i.temperature/signal/operative")))
+g.add((CIEE.hamilton_0022, BF.uri,  Literal("ciee/sensors/s.hamilton/00126d0700000022/i.temperature/signal/operative")))
 
 g.add((CIEE.hamilton_005B, RDF.type, BRICK.Zone_Temperature_Sensor))
-g.add((CIEE.hamilton_005B, BF.uri,  Literal("gvnMwdNvhD5ClAuF8SQzrp-Ywcjx9c1m4du9N5MRCXs=/sensors/s.hamilton/00126d070000005B/i.temperature/signal/operative")))
+g.add((CIEE.hamilton_005B, BF.uri,  Literal("ciee/sensors/s.hamilton/00126d070000005B/i.temperature/signal/operative")))
 
 g.add((CIEE.hamilton_0025, RDF.type, BRICK.Zone_Temperature_Sensor))
-g.add((CIEE.hamilton_0025, BF.uri,  Literal("gvnMwdNvhD5ClAuF8SQzrp-Ywcjx9c1m4du9N5MRCXs=/sensors/s.hamilton/00126d0700000025/i.temperature/signal/operative")))
+g.add((CIEE.hamilton_0025, BF.uri,  Literal("ciee/sensors/s.hamilton/00126d0700000025/i.temperature/signal/operative")))
 
 g.add((CIEE.hamilton_005F, RDF.type, BRICK.Zone_Temperature_Sensor))
-g.add((CIEE.hamilton_005F, BF.uri,  Literal("gvnMwdNvhD5ClAuF8SQzrp-Ywcjx9c1m4du9N5MRCXs=/sensors/s.hamilton/00126d070000005F/i.temperature/signal/operative")))
+g.add((CIEE.hamilton_005F, BF.uri,  Literal("ciee/sensors/s.hamilton/00126d070000005F/i.temperature/signal/operative")))
 
 g.add((CIEE.hamilton_0029, RDF.type, BRICK.Zone_Temperature_Sensor))
-g.add((CIEE.hamilton_0029, BF.uri,  Literal("gvnMwdNvhD5ClAuF8SQzrp-Ywcjx9c1m4du9N5MRCXs=/sensors/s.hamilton/00126d0700000029/i.temperature/signal/operative")))
+g.add((CIEE.hamilton_0029, BF.uri,  Literal("ciee/sensors/s.hamilton/00126d0700000029/i.temperature/signal/operative")))
 
 # add sensors to rooms
+g.add((CIEE.R203, BF.hasPoint, CIEE.hamilton_0029))
 g.add((CIEE.R206, BF.hasPoint, CIEE.hamilton_0027))
+g.add((CIEE.R207, BF.hasPoint, CIEE.hamilton_005C))
+g.add((CIEE.R208, BF.hasPoint, CIEE.hamilton_005D))
 g.add((CIEE.R208, BF.hasPoint, CIEE.hamilton_002B))
 g.add((CIEE.R209, BF.hasPoint, CIEE.hamilton_002E))
 g.add((CIEE.R210, BF.hasPoint, CIEE.hamilton_002A))
@@ -155,7 +158,21 @@ g.add((CIEE.R215, BF.hasPoint, CIEE.hamilton_002C))
 g.add((CIEE.R216, BF.hasPoint, CIEE.hamilton_0022))
 g.add((CIEE.R217, BF.hasPoint, CIEE.hamilton_005B))
 g.add((CIEE.EastOpen, BF.hasPoint, CIEE.hamilton_0025))
-g.add((CIEE.WestOpen, BF.hasPoint, CIEE.hamilton_0029))
+g.add((CIEE.R203, BF.isLocationOf, CIEE.hamilton_0029))
+g.add((CIEE.R206, BF.isLocationOf, CIEE.hamilton_0027))
+g.add((CIEE.R207, BF.isLocationOf, CIEE.hamilton_005C))
+g.add((CIEE.R208, BF.isLocationOf, CIEE.hamilton_005D))
+g.add((CIEE.R208, BF.isLocationOf, CIEE.hamilton_002B))
+g.add((CIEE.R209, BF.isLocationOf, CIEE.hamilton_002E))
+g.add((CIEE.R210, BF.isLocationOf, CIEE.hamilton_002A))
+g.add((CIEE.R211, BF.isLocationOf, CIEE.hamilton_005E))
+g.add((CIEE.R212, BF.isLocationOf, CIEE.hamilton_005A))
+g.add((CIEE.R213, BF.isLocationOf, CIEE.hamilton_0060))
+g.add((CIEE.R214, BF.isLocationOf, CIEE.hamilton_0028))
+g.add((CIEE.R215, BF.isLocationOf, CIEE.hamilton_002C))
+g.add((CIEE.R216, BF.isLocationOf, CIEE.hamilton_0022))
+g.add((CIEE.R217, BF.isLocationOf, CIEE.hamilton_005B))
+g.add((CIEE.EastOpen, BF.isLocationOf, CIEE.hamilton_0025))
 
 # add HVAC zones
 g.add((CIEE.SouthZone, RDF.type, BRICK.HVAC_Zone))
@@ -211,15 +228,15 @@ g.add((CIEE.RTU4, BF.feeds, CIEE.NorthZone))
 # add thermostats
 g.add((CIEE.openoffice_tstat, RDF.type, BRICK.Thermostat))
 g.add((CIEE.openoffice_tstat, BF.controls, CIEE.RTU3))
-g.add((CIEE.openoffice_tstat, BF.uri, Literal("gvnMwdNvhD5ClAuF8SQzrp-Ywcjx9c1m4du9N5MRCXs=/devices/venstar/s.venstar/OpenSpace/i.xbos.thermostat")))
+g.add((CIEE.openoffice_tstat, BF.uri, Literal("ciee/devices/venstar/s.venstar/OpenSpace/i.xbos.thermostat")))
 
 g.add((CIEE.conference_tstat, RDF.type, BRICK.Thermostat))
 g.add((CIEE.conference_tstat, BF.controls, CIEE.RTU1))
-g.add((CIEE.conference_tstat, BF.uri, Literal("gvnMwdNvhD5ClAuF8SQzrp-Ywcjx9c1m4du9N5MRCXs=/devices/venstar/s.venstar/ConferenceRoom/i.xbos.thermostat")))
+g.add((CIEE.conference_tstat, BF.uri, Literal("ciee/devices/venstar/s.venstar/ConferenceRoom/i.xbos.thermostat")))
 
 g.add((CIEE.carl_tstat, RDF.type, BRICK.Thermostat))
 g.add((CIEE.carl_tstat, BF.controls, CIEE.RTU2))
-g.add((CIEE.carl_tstat, BF.uri, Literal("gvnMwdNvhD5ClAuF8SQzrp-Ywcjx9c1m4du9N5MRCXs=/devices/venstar/s.venstar/CarlsOffice/i.xbos.thermostat")))
+g.add((CIEE.carl_tstat, BF.uri, Literal("ciee/devices/venstar/s.venstar/CarlsOffice/i.xbos.thermostat")))
 
 # add Lighting
 

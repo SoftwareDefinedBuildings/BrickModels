@@ -11,33 +11,25 @@ bldg:RTU4 a brick:RTU ;
 
 bldg:RTU5 a brick:RTU .
 
-bldg:WestOpen bf:hasPoint bldg:hamilton_0029 .
-
 bldg:carl_tstat a brick:Thermostat ;
     bf:controls bldg:RTU2 ;
-    bf:uri "gvnMwdNvhD5ClAuF8SQzrp-Ywcjx9c1m4du9N5MRCXs=/devices/venstar/s.venstar/CarlsOffice/i.xbos.thermostat" .
+    bf:uri "ciee/devices/venstar/s.venstar/CarlsOffice/i.xbos.thermostat" .
 
 bldg:conference_tstat a brick:Thermostat ;
     bf:controls bldg:RTU1 ;
-    bf:uri "gvnMwdNvhD5ClAuF8SQzrp-Ywcjx9c1m4du9N5MRCXs=/devices/venstar/s.venstar/ConferenceRoom/i.xbos.thermostat" .
+    bf:uri "ciee/devices/venstar/s.venstar/ConferenceRoom/i.xbos.thermostat" .
 
 bldg:floor_1 a brick:Floor .
 
 bldg:floor_mezz a brick:Floor ;
     bf:hasPart bldg:ServerRoom .
 
-bldg:hamilton_005C a brick:Zone_Temperature_Sensor ;
-    bf:uri "gvnMwdNvhD5ClAuF8SQzrp-Ywcjx9c1m4du9N5MRCXs=/sensors/s.hamilton/00126d070000005C/i.temperature/signal/operative" .
-
-bldg:hamilton_005D a brick:Zone_Temperature_Sensor ;
-    bf:uri "gvnMwdNvhD5ClAuF8SQzrp-Ywcjx9c1m4du9N5MRCXs=/sensors/s.hamilton/00126d070000005D/i.temperature/signal/operative" .
-
 bldg:hamilton_005F a brick:Zone_Temperature_Sensor ;
-    bf:uri "gvnMwdNvhD5ClAuF8SQzrp-Ywcjx9c1m4du9N5MRCXs=/sensors/s.hamilton/00126d070000005F/i.temperature/signal/operative" .
+    bf:uri "ciee/sensors/s.hamilton/00126d070000005F/i.temperature/signal/operative" .
 
 bldg:openoffice_tstat a brick:Thermostat ;
     bf:controls bldg:RTU3 ;
-    bf:uri "gvnMwdNvhD5ClAuF8SQzrp-Ywcjx9c1m4du9N5MRCXs=/devices/venstar/s.venstar/OpenSpace/i.xbos.thermostat" .
+    bf:uri "ciee/devices/venstar/s.venstar/OpenSpace/i.xbos.thermostat" .
 
 bldg:CentralZone a brick:HVAC_Zone ;
     bf:hasPart bldg:R218,
@@ -48,7 +40,8 @@ bldg:CentralZone a brick:HVAC_Zone ;
         bldg:R223,
         bldg:R225 .
 
-bldg:EastOpen bf:hasPoint bldg:hamilton_0025 .
+bldg:EastOpen bf:hasPoint bldg:hamilton_0025 ;
+    bf:isLocationOf bldg:hamilton_0025 .
 
 bldg:EastZone a brick:HVAC_Zone ;
     bf:hasPart bldg:R213,
@@ -84,50 +77,56 @@ bldg:SouthZone a brick:HVAC_Zone ;
         bldg:R211,
         bldg:R212 .
 
-bldg:hamilton_0022 a brick:Zone_Temperature_Sensor ;
-    bf:uri "gvnMwdNvhD5ClAuF8SQzrp-Ywcjx9c1m4du9N5MRCXs=/sensors/s.hamilton/00126d0700000022/i.temperature/signal/operative" .
-
-bldg:hamilton_0025 a brick:Zone_Temperature_Sensor ;
-    bf:uri "gvnMwdNvhD5ClAuF8SQzrp-Ywcjx9c1m4du9N5MRCXs=/sensors/s.hamilton/00126d0700000025/i.temperature/signal/operative" .
-
-bldg:hamilton_0027 a brick:Zone_Temperature_Sensor ;
-    bf:uri "gvnMwdNvhD5ClAuF8SQzrp-Ywcjx9c1m4du9N5MRCXs=/sensors/s.hamilton/00126d0700000027/i.temperature/signal/operative" .
-
-bldg:hamilton_0028 a brick:Zone_Temperature_Sensor ;
-    bf:uri "gvnMwdNvhD5ClAuF8SQzrp-Ywcjx9c1m4du9N5MRCXs=/sensors/s.hamilton/00126d0700000028/i.temperature/signal/operative" .
-
-bldg:hamilton_0029 a brick:Zone_Temperature_Sensor ;
-    bf:uri "gvnMwdNvhD5ClAuF8SQzrp-Ywcjx9c1m4du9N5MRCXs=/sensors/s.hamilton/00126d0700000029/i.temperature/signal/operative" .
-
-bldg:hamilton_002A a brick:Zone_Temperature_Sensor ;
-    bf:uri "gvnMwdNvhD5ClAuF8SQzrp-Ywcjx9c1m4du9N5MRCXs=/sensors/s.hamilton/00126d070000002A/i.temperature/signal/operative" .
-
-bldg:hamilton_002B a brick:Zone_Temperature_Sensor ;
-    bf:uri "gvnMwdNvhD5ClAuF8SQzrp-Ywcjx9c1m4du9N5MRCXs=/sensors/s.hamilton/00126d070000002B/i.temperature/signal/operative" .
-
-bldg:hamilton_002C a brick:Zone_Temperature_Sensor ;
-    bf:uri "gvnMwdNvhD5ClAuF8SQzrp-Ywcjx9c1m4du9N5MRCXs=/sensors/s.hamilton/00126d070000002C/i.temperature/signal/operative" .
-
-bldg:hamilton_002E a brick:Zone_Temperature_Sensor ;
-    bf:uri "gvnMwdNvhD5ClAuF8SQzrp-Ywcjx9c1m4du9N5MRCXs=/sensors/s.hamilton/00126d070000002E/i.temperature/signal/operative" .
-
-bldg:hamilton_005A a brick:Zone_Temperature_Sensor ;
-    bf:uri "gvnMwdNvhD5ClAuF8SQzrp-Ywcjx9c1m4du9N5MRCXs=/sensors/s.hamilton/00126d070000005A/i.temperature/signal/operative" .
-
-bldg:hamilton_005B a brick:Zone_Temperature_Sensor ;
-    bf:uri "gvnMwdNvhD5ClAuF8SQzrp-Ywcjx9c1m4du9N5MRCXs=/sensors/s.hamilton/00126d070000005B/i.temperature/signal/operative" .
-
-bldg:hamilton_005E a brick:Zone_Temperature_Sensor ;
-    bf:uri "gvnMwdNvhD5ClAuF8SQzrp-Ywcjx9c1m4du9N5MRCXs=/sensors/s.hamilton/00126d070000005E/i.temperature/signal/operative" .
-
-bldg:hamilton_0060 a brick:Zone_Temperature_Sensor ;
-    bf:uri "gvnMwdNvhD5ClAuF8SQzrp-Ywcjx9c1m4du9N5MRCXs=/sensors/s.hamilton/00126d0700000060/i.temperature/signal/operative" .
-
 bldg:R200 a brick:Room ;
     rdfs:label "Women's Bathroom" ;
     bf:adjacentTo bldg:R201,
         bldg:R203 ;
     bf:isPartOf bldg:floor_2 .
+
+bldg:hamilton_0022 a brick:Zone_Temperature_Sensor ;
+    bf:uri "ciee/sensors/s.hamilton/00126d0700000022/i.temperature/signal/operative" .
+
+bldg:hamilton_0025 a brick:Zone_Temperature_Sensor ;
+    bf:uri "ciee/sensors/s.hamilton/00126d0700000025/i.temperature/signal/operative" .
+
+bldg:hamilton_0027 a brick:Zone_Temperature_Sensor ;
+    bf:uri "ciee/sensors/s.hamilton/00126d0700000027/i.temperature/signal/operative" .
+
+bldg:hamilton_0028 a brick:Zone_Temperature_Sensor ;
+    bf:uri "ciee/sensors/s.hamilton/00126d0700000028/i.temperature/signal/operative" .
+
+bldg:hamilton_0029 a brick:Zone_Temperature_Sensor ;
+    bf:uri "ciee/sensors/s.hamilton/00126d0700000029/i.temperature/signal/operative" .
+
+bldg:hamilton_002A a brick:Zone_Temperature_Sensor ;
+    bf:uri "ciee/sensors/s.hamilton/00126d070000002A/i.temperature/signal/operative" .
+
+bldg:hamilton_002B a brick:Zone_Temperature_Sensor ;
+    bf:uri "ciee/sensors/s.hamilton/00126d070000002B/i.temperature/signal/operative" .
+
+bldg:hamilton_002C a brick:Zone_Temperature_Sensor ;
+    bf:uri "ciee/sensors/s.hamilton/00126d070000002C/i.temperature/signal/operative" .
+
+bldg:hamilton_002E a brick:Zone_Temperature_Sensor ;
+    bf:uri "ciee/sensors/s.hamilton/00126d070000002E/i.temperature/signal/operative" .
+
+bldg:hamilton_005A a brick:Zone_Temperature_Sensor ;
+    bf:uri "ciee/sensors/s.hamilton/00126d070000005A/i.temperature/signal/operative" .
+
+bldg:hamilton_005B a brick:Zone_Temperature_Sensor ;
+    bf:uri "ciee/sensors/s.hamilton/00126d070000005B/i.temperature/signal/operative" .
+
+bldg:hamilton_005C a brick:Zone_Temperature_Sensor ;
+    bf:uri "ciee/sensors/s.hamilton/00126d070000005C/i.temperature/signal/operative" .
+
+bldg:hamilton_005D a brick:Zone_Temperature_Sensor ;
+    bf:uri "ciee/sensors/s.hamilton/00126d070000005D/i.temperature/signal/operative" .
+
+bldg:hamilton_005E a brick:Zone_Temperature_Sensor ;
+    bf:uri "ciee/sensors/s.hamilton/00126d070000005E/i.temperature/signal/operative" .
+
+bldg:hamilton_0060 a brick:Zone_Temperature_Sensor ;
+    bf:uri "ciee/sensors/s.hamilton/00126d0700000060/i.temperature/signal/operative" .
 
 bldg:R201 a brick:Room ;
     rdfs:label "Men's Bathroom" ;
@@ -141,6 +140,7 @@ bldg:R217 a brick:Room ;
     bf:adjacentTo bldg:R216,
         bldg:R218 ;
     bf:hasPoint bldg:hamilton_005B ;
+    bf:isLocationOf bldg:hamilton_005B ;
     bf:isPartOf bldg:floor_2 .
 
 bldg:R206 a brick:Room ;
@@ -149,6 +149,7 @@ bldg:R206 a brick:Room ;
         bldg:R205,
         bldg:R207 ;
     bf:hasPoint bldg:hamilton_0027 ;
+    bf:isLocationOf bldg:hamilton_0027 ;
     bf:isPartOf bldg:floor_2 .
 
 bldg:R208 a brick:Room ;
@@ -156,7 +157,10 @@ bldg:R208 a brick:Room ;
     bf:adjacentTo bldg:R204,
         bldg:R207,
         bldg:R209 ;
-    bf:hasPoint bldg:hamilton_002B ;
+    bf:hasPoint bldg:hamilton_002B,
+        bldg:hamilton_005D ;
+    bf:isLocationOf bldg:hamilton_002B,
+        bldg:hamilton_005D ;
     bf:isPartOf bldg:floor_2 .
 
 bldg:R209 a brick:Room ;
@@ -165,6 +169,7 @@ bldg:R209 a brick:Room ;
         bldg:R208,
         bldg:R210 ;
     bf:hasPoint bldg:hamilton_002E ;
+    bf:isLocationOf bldg:hamilton_002E ;
     bf:isPartOf bldg:floor_2 .
 
 bldg:R210 a brick:Room ;
@@ -173,6 +178,7 @@ bldg:R210 a brick:Room ;
         bldg:R209,
         bldg:R211 ;
     bf:hasPoint bldg:hamilton_002A ;
+    bf:isLocationOf bldg:hamilton_002A ;
     bf:isPartOf bldg:floor_2 .
 
 bldg:R214 a brick:Room ;
@@ -181,6 +187,7 @@ bldg:R214 a brick:Room ;
         bldg:R215,
         bldg:R219 ;
     bf:hasPoint bldg:hamilton_0028 ;
+    bf:isLocationOf bldg:hamilton_0028 ;
     bf:isPartOf bldg:floor_2 .
 
 bldg:R216 a brick:Room ;
@@ -189,6 +196,7 @@ bldg:R216 a brick:Room ;
         bldg:R217,
         bldg:R218 ;
     bf:hasPoint bldg:hamilton_0022 ;
+    bf:isLocationOf bldg:hamilton_0022 ;
     bf:isPartOf bldg:floor_2 .
 
 bldg:R207 a brick:Room ;
@@ -197,6 +205,8 @@ bldg:R207 a brick:Room ;
         bldg:R204,
         bldg:R206,
         bldg:R208 ;
+    bf:hasPoint bldg:hamilton_005C ;
+    bf:isLocationOf bldg:hamilton_005C ;
     bf:isPartOf bldg:floor_2 .
 
 bldg:R211 a brick:Room ;
@@ -206,6 +216,7 @@ bldg:R211 a brick:Room ;
         bldg:R212,
         bldg:R219 ;
     bf:hasPoint bldg:hamilton_005E ;
+    bf:isLocationOf bldg:hamilton_005E ;
     bf:isPartOf bldg:floor_2 .
 
 bldg:R212 a brick:Room ;
@@ -215,6 +226,7 @@ bldg:R212 a brick:Room ;
         bldg:R213,
         bldg:R219 ;
     bf:hasPoint bldg:hamilton_005A ;
+    bf:isLocationOf bldg:hamilton_005A ;
     bf:isPartOf bldg:floor_2 .
 
 bldg:R213 a brick:Room ;
@@ -224,6 +236,7 @@ bldg:R213 a brick:Room ;
         bldg:R214,
         bldg:R219 ;
     bf:hasPoint bldg:hamilton_0060 ;
+    bf:isLocationOf bldg:hamilton_0060 ;
     bf:isPartOf bldg:floor_2 .
 
 bldg:R215 a brick:Room ;
@@ -233,6 +246,7 @@ bldg:R215 a brick:Room ;
         bldg:R218,
         bldg:R219 ;
     bf:hasPoint bldg:hamilton_002C ;
+    bf:isLocationOf bldg:hamilton_002C ;
     bf:isPartOf bldg:floor_2 .
 
 bldg:R224 a brick:Room ;
@@ -291,6 +305,8 @@ bldg:R203 a brick:Room ;
         bldg:R206,
         bldg:R207,
         bldg:R226 ;
+    bf:hasPoint bldg:hamilton_0029 ;
+    bf:isLocationOf bldg:hamilton_0029 ;
     bf:isPartOf bldg:floor_2 .
 
 bldg:R204 bf:adjacentTo bldg:R203,
