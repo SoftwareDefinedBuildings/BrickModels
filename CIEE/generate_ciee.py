@@ -2,6 +2,12 @@ from rdflib import Graph, Namespace, URIRef, Literal
 import rdflib
 import re
 
+BOSSWAVE=True
+
+if BOSSWAVE:
+    from bw2dataclient import DataClient
+    client = DataClient(archivers=["ucberkeley"])
+
 RDF = Namespace('http://www.w3.org/1999/02/22-rdf-syntax-ns#')
 RDFS = Namespace('http://www.w3.org/2000/01/rdf-schema#')
 BRICK = Namespace('https://brickschema.org/schema/1.0.1/Brick#')
@@ -93,86 +99,64 @@ for room, adjlist in adjacency.items():
         g.add((CIEE['R'+str(adjroom)], BF.adjacentTo, CIEE['R'+str(room)]))
 
 
-# add zone temperature sensors
-g.add((CIEE.hamilton_005C, RDF.type, BRICK.Zone_Temperature_Sensor))
-g.add((CIEE.hamilton_005C, BF.uri,  Literal("ciee/sensors/s.hamilton/00126d070000005C/i.temperature/signal/operative")))
+sensors2rooms = {
+    '0029': CIEE.R203,
+    '0027': CIEE.R206,
+    '005c': CIEE.R207,
+    '005d': CIEE.R208,
+    '002b': CIEE.R208,
+    '002e': CIEE.R209,
+    '002a': CIEE.R210,
+    '005e': CIEE.R211,
+    '005a': CIEE.R212,
+    '0060': CIEE.R213,
+    '0028': CIEE.R214,
+    '002c': CIEE.R215,
+    '0022': CIEE.R216,
+    '005b': CIEE.R217,
+    '0025': CIEE.EastOpen,
+}
 
-g.add((CIEE.hamilton_005D, RDF.type, BRICK.Zone_Temperature_Sensor))
-g.add((CIEE.hamilton_005D, BF.uri,  Literal("ciee/sensors/s.hamilton/00126d070000005D/i.temperature/signal/operative")))
+g.add((BRICK.Illumination_Sensor, RDFS.subClassOf, BRICK.Sensor))
+for sensor, room in sensors2rooms.items():
+    name = "hamilton_"+sensor
+    g.add((CIEE[name]+"_air_temp", RDF.type, BRICK.Zone_Temperature_Sensor))
+    g.add((CIEE[name]+"_air_temp", BF.uri, Literal("ciee/sensors/s.hamilton/00126d070000{0}/i.temperature/signal/operative".format(sensor))))
+    g.add((CIEE[name]+"_air_temp", BF.isLocatedIn, room))
+    g.add((CIEE[name]+"_air_temp", BF.isPointOf, room))
 
-g.add((CIEE.hamilton_0027, RDF.type, BRICK.Zone_Temperature_Sensor))
-g.add((CIEE.hamilton_0027, BF.uri,  Literal("ciee/sensors/s.hamilton/00126d0700000027/i.temperature/signal/operative")))
+    g.add((CIEE[name]+"_pir", RDF.type, BRICK.Occupancy_Sensor))
+    g.add((CIEE[name]+"_pir", BF.uri, Literal("ciee/sensors/s.hamilton/00126d070000{0}/i.temperature/signal/operative".format(sensor))))
+    g.add((CIEE[name]+"_pir", BF.isLocatedIn, room))
+    g.add((CIEE[name]+"_pir", BF.isPointOf, room))
 
-g.add((CIEE.hamilton_002B, RDF.type, BRICK.Zone_Temperature_Sensor))
-g.add((CIEE.hamilton_002B, BF.uri,  Literal("ciee/sensors/s.hamilton/00126d070000002B/i.temperature/signal/operative")))
+    g.add((CIEE[name]+"_air_rh", RDF.type, BRICK.Relative_Humidity_Sensor))
+    g.add((CIEE[name]+"_air_rh", BF.uri, Literal("ciee/sensors/s.hamilton/00126d070000{0}/i.temperature/signal/operative".format(sensor))))
+    g.add((CIEE[name]+"_air_rh", BF.isLocatedIn, room))
+    g.add((CIEE[name]+"_air_rh", BF.isPointOf, room))
 
-g.add((CIEE.hamilton_002E, RDF.type, BRICK.Zone_Temperature_Sensor))
-g.add((CIEE.hamilton_002E, BF.uri,  Literal("ciee/sensors/s.hamilton/00126d070000002E/i.temperature/signal/operative")))
+    g.add((CIEE[name]+"_lux", RDF.type, BRICK.Illumination_Sensor))
+    g.add((CIEE[name]+"_lux", BF.uri, Literal("ciee/sensors/s.hamilton/00126d070000{0}/i.temperature/signal/operative".format(sensor))))
+    g.add((CIEE[name]+"_lux", BF.isLocatedIn, room))
+    g.add((CIEE[name]+"_lux", BF.isPointOf, room))
 
-g.add((CIEE.hamilton_002A, RDF.type, BRICK.Zone_Temperature_Sensor))
-g.add((CIEE.hamilton_002A, BF.uri,  Literal("ciee/sensors/s.hamilton/00126d070000002A/i.temperature/signal/operative")))
+    if BOSSWAVE:
+        uuid = client.uuids('name = "air_temp" and Deployment = "CIEE" and uri like "{0}"'.format(sensor))
+        if len(uuid) > 0:
+            g.add((CIEE[name]+"_air_temp", BF.uuid, Literal(uuid[0])))
 
-g.add((CIEE.hamilton_005E, RDF.type, BRICK.Zone_Temperature_Sensor))
-g.add((CIEE.hamilton_005E, BF.uri,  Literal("ciee/sensors/s.hamilton/00126d070000005E/i.temperature/signal/operative")))
+        uuid = client.uuids('name = "pir" and Deployment = "CIEE" and uri like "{0}"'.format(sensor))
+        if len(uuid) > 0:
+            g.add((CIEE[name]+"_pir", BF.uuid, Literal(uuid[0])))
 
-g.add((CIEE.hamilton_005A, RDF.type, BRICK.Zone_Temperature_Sensor))
-g.add((CIEE.hamilton_005A, BF.uri,  Literal("ciee/sensors/s.hamilton/00126d070000005A/i.temperature/signal/operative")))
+        uuid = client.uuids('name = "air_rh" and Deployment = "CIEE" and uri like "{0}"'.format(sensor))
+        if len(uuid) > 0:
+            g.add((CIEE[name]+"_air_rh", BF.uuid, Literal(uuid[0])))
 
-g.add((CIEE.hamilton_0060, RDF.type, BRICK.Zone_Temperature_Sensor))
-g.add((CIEE.hamilton_0060, BF.uri,  Literal("ciee/sensors/s.hamilton/00126d0700000060/i.temperature/signal/operative")))
+        uuid = client.uuids('name = "lux" and Deployment = "CIEE" and uri like "{0}"'.format(sensor))
+        if len(uuid) > 0:
+            g.add((CIEE[name]+"_lux", BF.uuid, Literal(uuid[0])))
 
-g.add((CIEE.hamilton_0028, RDF.type, BRICK.Zone_Temperature_Sensor))
-g.add((CIEE.hamilton_0028, BF.uri,  Literal("ciee/sensors/s.hamilton/00126d0700000028/i.temperature/signal/operative")))
-
-g.add((CIEE.hamilton_002C, RDF.type, BRICK.Zone_Temperature_Sensor))
-g.add((CIEE.hamilton_002C, BF.uri,  Literal("ciee/sensors/s.hamilton/00126d070000002C/i.temperature/signal/operative")))
-
-g.add((CIEE.hamilton_0022, RDF.type, BRICK.Zone_Temperature_Sensor))
-g.add((CIEE.hamilton_0022, BF.uri,  Literal("ciee/sensors/s.hamilton/00126d0700000022/i.temperature/signal/operative")))
-
-g.add((CIEE.hamilton_005B, RDF.type, BRICK.Zone_Temperature_Sensor))
-g.add((CIEE.hamilton_005B, BF.uri,  Literal("ciee/sensors/s.hamilton/00126d070000005B/i.temperature/signal/operative")))
-
-g.add((CIEE.hamilton_0025, RDF.type, BRICK.Zone_Temperature_Sensor))
-g.add((CIEE.hamilton_0025, BF.uri,  Literal("ciee/sensors/s.hamilton/00126d0700000025/i.temperature/signal/operative")))
-
-g.add((CIEE.hamilton_005F, RDF.type, BRICK.Zone_Temperature_Sensor))
-g.add((CIEE.hamilton_005F, BF.uri,  Literal("ciee/sensors/s.hamilton/00126d070000005F/i.temperature/signal/operative")))
-
-g.add((CIEE.hamilton_0029, RDF.type, BRICK.Zone_Temperature_Sensor))
-g.add((CIEE.hamilton_0029, BF.uri,  Literal("ciee/sensors/s.hamilton/00126d0700000029/i.temperature/signal/operative")))
-
-# add sensors to rooms
-g.add((CIEE.R203, BF.hasPoint, CIEE.hamilton_0029))
-g.add((CIEE.R206, BF.hasPoint, CIEE.hamilton_0027))
-g.add((CIEE.R207, BF.hasPoint, CIEE.hamilton_005C))
-g.add((CIEE.R208, BF.hasPoint, CIEE.hamilton_005D))
-g.add((CIEE.R208, BF.hasPoint, CIEE.hamilton_002B))
-g.add((CIEE.R209, BF.hasPoint, CIEE.hamilton_002E))
-g.add((CIEE.R210, BF.hasPoint, CIEE.hamilton_002A))
-g.add((CIEE.R211, BF.hasPoint, CIEE.hamilton_005E))
-g.add((CIEE.R212, BF.hasPoint, CIEE.hamilton_005A))
-g.add((CIEE.R213, BF.hasPoint, CIEE.hamilton_0060))
-g.add((CIEE.R214, BF.hasPoint, CIEE.hamilton_0028))
-g.add((CIEE.R215, BF.hasPoint, CIEE.hamilton_002C))
-g.add((CIEE.R216, BF.hasPoint, CIEE.hamilton_0022))
-g.add((CIEE.R217, BF.hasPoint, CIEE.hamilton_005B))
-g.add((CIEE.EastOpen, BF.hasPoint, CIEE.hamilton_0025))
-g.add((CIEE.R203, BF.isLocationOf, CIEE.hamilton_0029))
-g.add((CIEE.R206, BF.isLocationOf, CIEE.hamilton_0027))
-g.add((CIEE.R207, BF.isLocationOf, CIEE.hamilton_005C))
-g.add((CIEE.R208, BF.isLocationOf, CIEE.hamilton_005D))
-g.add((CIEE.R208, BF.isLocationOf, CIEE.hamilton_002B))
-g.add((CIEE.R209, BF.isLocationOf, CIEE.hamilton_002E))
-g.add((CIEE.R210, BF.isLocationOf, CIEE.hamilton_002A))
-g.add((CIEE.R211, BF.isLocationOf, CIEE.hamilton_005E))
-g.add((CIEE.R212, BF.isLocationOf, CIEE.hamilton_005A))
-g.add((CIEE.R213, BF.isLocationOf, CIEE.hamilton_0060))
-g.add((CIEE.R214, BF.isLocationOf, CIEE.hamilton_0028))
-g.add((CIEE.R215, BF.isLocationOf, CIEE.hamilton_002C))
-g.add((CIEE.R216, BF.isLocationOf, CIEE.hamilton_0022))
-g.add((CIEE.R217, BF.isLocationOf, CIEE.hamilton_005B))
-g.add((CIEE.EastOpen, BF.isLocationOf, CIEE.hamilton_0025))
 
 # add HVAC zones
 g.add((CIEE.SouthZone, RDF.type, BRICK.HVAC_Zone))
