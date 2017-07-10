@@ -227,6 +227,7 @@ g.add((CIEE.carl_tstat, BF.uri, Literal("ciee/devices/venstar/s.venstar/CarlsOff
 # add meter
 g.add((CIEE.building_meter, RDF.type, BRICK.Electric_Meter))
 g.add((CIEE.building_meter, BF.uri, Literal("ciee/devices/s.eagle/0xd8d5b9000000a110/i.meter")))
+g.add((CIEE.building_meter, BF.uuid, Literal("d6e251a-48e1-3bc0-907d-7d5440c34bb9")))
 
 # save building
 g.serialize(destination='ciee.ttl',format='turtle')
