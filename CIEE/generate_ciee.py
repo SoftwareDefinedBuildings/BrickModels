@@ -145,7 +145,7 @@ for sensor, room in sensors2rooms.items():
         if len(uuid) > 0:
             g.add((CIEE[name]+"_air_temp", BF.uuid, Literal(uuid[0])))
 
-        uuid = client.uuids('name = "pir" and Deployment = "CIEE" and uri like "{0}"'.format(sensor))
+        uuid = client.uuids('name = "presence" and Deployment = "CIEE" and uri like "{0}"'.format(sensor))
         if len(uuid) > 0:
             g.add((CIEE[name]+"_pir", BF.uuid, Literal(uuid[0])))
 
@@ -227,7 +227,7 @@ g.add((CIEE.carl_tstat, BF.uri, Literal("ciee/devices/venstar/s.venstar/CarlsOff
 # add meter
 g.add((CIEE.building_meter, RDF.type, BRICK.Electric_Meter))
 g.add((CIEE.building_meter, BF.uri, Literal("ciee/devices/s.eagle/0xd8d5b9000000a110/i.meter")))
-g.add((CIEE.building_meter, BF.uuid, Literal("d6e251a-48e1-3bc0-907d-7d5440c34bb9")))
+g.add((CIEE.building_meter, BF.uuid, Literal("4d6e251a-48e1-3bc0-907d-7d5440c34bb9")))
 
 # save building
 g.serialize(destination='ciee.ttl',format='turtle')

@@ -13,7 +13,7 @@ bldg:RTU5 a brick:RTU .
 
 bldg:building_meter a brick:Electric_Meter ;
     bf:uri "ciee/devices/s.eagle/0xd8d5b9000000a110/i.meter" ;
-    bf:uuid "d6e251a-48e1-3bc0-907d-7d5440c34bb9" .
+    bf:uuid "4d6e251a-48e1-3bc0-907d-7d5440c34bb9" .
 
 bldg:carl_tstat a brick:Thermostat ;
     bf:controls bldg:RTU2 ;
@@ -49,7 +49,8 @@ bldg:hamilton_0022_lux a brick:Illumination_Sensor ;
 bldg:hamilton_0022_pir a brick:Occupancy_Sensor ;
     bf:isLocatedIn bldg:R216 ;
     bf:isPointOf bldg:R216 ;
-    bf:uri "ciee/sensors/s.hamilton/00126d0700000022/i.temperature/signal/operative" .
+    bf:uri "ciee/sensors/s.hamilton/00126d0700000022/i.temperature/signal/operative" ;
+    bf:uuid "be0a6276-17b4-31a7-bef7-ae6b88d3440b" .
 
 bldg:hamilton_0025_air_rh a brick:Relative_Humidity_Sensor ;
     bf:isLocatedIn bldg:EastOpen ;
@@ -72,7 +73,8 @@ bldg:hamilton_0025_lux a brick:Illumination_Sensor ;
 bldg:hamilton_0025_pir a brick:Occupancy_Sensor ;
     bf:isLocatedIn bldg:EastOpen ;
     bf:isPointOf bldg:EastOpen ;
-    bf:uri "ciee/sensors/s.hamilton/00126d0700000025/i.temperature/signal/operative" .
+    bf:uri "ciee/sensors/s.hamilton/00126d0700000025/i.temperature/signal/operative" ;
+    bf:uuid "c2c477b4-c02c-32cc-9334-81fe419d0e81" .
 
 bldg:hamilton_0027_air_rh a brick:Relative_Humidity_Sensor ;
     bf:isLocatedIn bldg:R206 ;
@@ -95,7 +97,8 @@ bldg:hamilton_0027_lux a brick:Illumination_Sensor ;
 bldg:hamilton_0027_pir a brick:Occupancy_Sensor ;
     bf:isLocatedIn bldg:R206 ;
     bf:isPointOf bldg:R206 ;
-    bf:uri "ciee/sensors/s.hamilton/00126d0700000027/i.temperature/signal/operative" .
+    bf:uri "ciee/sensors/s.hamilton/00126d0700000027/i.temperature/signal/operative" ;
+    bf:uuid "497145c4-2087-3e89-9c8f-f54b87dfb016" .
 
 bldg:hamilton_0028_air_rh a brick:Relative_Humidity_Sensor ;
     bf:isLocatedIn bldg:R214 ;
@@ -118,7 +121,8 @@ bldg:hamilton_0028_lux a brick:Illumination_Sensor ;
 bldg:hamilton_0028_pir a brick:Occupancy_Sensor ;
     bf:isLocatedIn bldg:R214 ;
     bf:isPointOf bldg:R214 ;
-    bf:uri "ciee/sensors/s.hamilton/00126d0700000028/i.temperature/signal/operative" .
+    bf:uri "ciee/sensors/s.hamilton/00126d0700000028/i.temperature/signal/operative" ;
+    bf:uuid "4e4f0b0f-9918-356b-9b68-fdc49f75867d" .
 
 bldg:hamilton_0029_air_rh a brick:Relative_Humidity_Sensor ;
     bf:isLocatedIn bldg:R203 ;
@@ -141,7 +145,8 @@ bldg:hamilton_0029_lux a brick:Illumination_Sensor ;
 bldg:hamilton_0029_pir a brick:Occupancy_Sensor ;
     bf:isLocatedIn bldg:R203 ;
     bf:isPointOf bldg:R203 ;
-    bf:uri "ciee/sensors/s.hamilton/00126d0700000029/i.temperature/signal/operative" .
+    bf:uri "ciee/sensors/s.hamilton/00126d0700000029/i.temperature/signal/operative" ;
+    bf:uuid "c0623266-12b8-337f-8b37-6bf40e60cfa3" .
 
 bldg:hamilton_002a_air_rh a brick:Relative_Humidity_Sensor ;
     bf:isLocatedIn bldg:R210 ;
@@ -164,7 +169,8 @@ bldg:hamilton_002a_lux a brick:Illumination_Sensor ;
 bldg:hamilton_002a_pir a brick:Occupancy_Sensor ;
     bf:isLocatedIn bldg:R210 ;
     bf:isPointOf bldg:R210 ;
-    bf:uri "ciee/sensors/s.hamilton/00126d070000002a/i.temperature/signal/operative" .
+    bf:uri "ciee/sensors/s.hamilton/00126d070000002a/i.temperature/signal/operative" ;
+    bf:uuid "989ed503-9aa2-310e-abd3-464f6169e175" .
 
 bldg:hamilton_002b_air_rh a brick:Relative_Humidity_Sensor ;
     bf:isLocatedIn bldg:R208 ;
@@ -187,7 +193,8 @@ bldg:hamilton_002b_lux a brick:Illumination_Sensor ;
 bldg:hamilton_002b_pir a brick:Occupancy_Sensor ;
     bf:isLocatedIn bldg:R208 ;
     bf:isPointOf bldg:R208 ;
-    bf:uri "ciee/sensors/s.hamilton/00126d070000002b/i.temperature/signal/operative" .
+    bf:uri "ciee/sensors/s.hamilton/00126d070000002b/i.temperature/signal/operative" ;
+    bf:uuid "bdbbbf7c-21c3-3b61-8469-8516a8c666dd" .
 
 bldg:hamilton_002c_air_rh a brick:Relative_Humidity_Sensor ;
     bf:isLocatedIn bldg:R215 ;
@@ -210,7 +217,8 @@ bldg:hamilton_002c_lux a brick:Illumination_Sensor ;
 bldg:hamilton_002c_pir a brick:Occupancy_Sensor ;
     bf:isLocatedIn bldg:R215 ;
     bf:isPointOf bldg:R215 ;
-    bf:uri "ciee/sensors/s.hamilton/00126d070000002c/i.temperature/signal/operative" .
+    bf:uri "ciee/sensors/s.hamilton/00126d070000002c/i.temperature/signal/operative" ;
+    bf:uuid "c6adf801-47df-395d-b8a9-9959f8ab972e" .
 
 bldg:hamilton_002e_air_rh a brick:Relative_Humidity_Sensor ;
     bf:isLocatedIn bldg:R209 ;
@@ -233,7 +241,8 @@ bldg:hamilton_002e_lux a brick:Illumination_Sensor ;
 bldg:hamilton_002e_pir a brick:Occupancy_Sensor ;
     bf:isLocatedIn bldg:R209 ;
     bf:isPointOf bldg:R209 ;
-    bf:uri "ciee/sensors/s.hamilton/00126d070000002e/i.temperature/signal/operative" .
+    bf:uri "ciee/sensors/s.hamilton/00126d070000002e/i.temperature/signal/operative" ;
+    bf:uuid "242cde13-7d25-306a-bfc8-918ad7bb26d6" .
 
 bldg:hamilton_005a_air_rh a brick:Relative_Humidity_Sensor ;
     bf:isLocatedIn bldg:R212 ;
@@ -256,7 +265,8 @@ bldg:hamilton_005a_lux a brick:Illumination_Sensor ;
 bldg:hamilton_005a_pir a brick:Occupancy_Sensor ;
     bf:isLocatedIn bldg:R212 ;
     bf:isPointOf bldg:R212 ;
-    bf:uri "ciee/sensors/s.hamilton/00126d070000005a/i.temperature/signal/operative" .
+    bf:uri "ciee/sensors/s.hamilton/00126d070000005a/i.temperature/signal/operative" ;
+    bf:uuid "23d2afce-4c86-37c5-b1c2-f258758c3263" .
 
 bldg:hamilton_005b_air_rh a brick:Relative_Humidity_Sensor ;
     bf:isLocatedIn bldg:R217 ;
@@ -279,7 +289,8 @@ bldg:hamilton_005b_lux a brick:Illumination_Sensor ;
 bldg:hamilton_005b_pir a brick:Occupancy_Sensor ;
     bf:isLocatedIn bldg:R217 ;
     bf:isPointOf bldg:R217 ;
-    bf:uri "ciee/sensors/s.hamilton/00126d070000005b/i.temperature/signal/operative" .
+    bf:uri "ciee/sensors/s.hamilton/00126d070000005b/i.temperature/signal/operative" ;
+    bf:uuid "e448db62-f95a-386e-a8f0-30085a46a03e" .
 
 bldg:hamilton_005c_air_rh a brick:Relative_Humidity_Sensor ;
     bf:isLocatedIn bldg:R207 ;
@@ -302,7 +313,8 @@ bldg:hamilton_005c_lux a brick:Illumination_Sensor ;
 bldg:hamilton_005c_pir a brick:Occupancy_Sensor ;
     bf:isLocatedIn bldg:R207 ;
     bf:isPointOf bldg:R207 ;
-    bf:uri "ciee/sensors/s.hamilton/00126d070000005c/i.temperature/signal/operative" .
+    bf:uri "ciee/sensors/s.hamilton/00126d070000005c/i.temperature/signal/operative" ;
+    bf:uuid "d919a14e-3ebd-3e5b-9727-0df54f287032" .
 
 bldg:hamilton_005d_air_rh a brick:Relative_Humidity_Sensor ;
     bf:isLocatedIn bldg:R208 ;
@@ -325,7 +337,8 @@ bldg:hamilton_005d_lux a brick:Illumination_Sensor ;
 bldg:hamilton_005d_pir a brick:Occupancy_Sensor ;
     bf:isLocatedIn bldg:R208 ;
     bf:isPointOf bldg:R208 ;
-    bf:uri "ciee/sensors/s.hamilton/00126d070000005d/i.temperature/signal/operative" .
+    bf:uri "ciee/sensors/s.hamilton/00126d070000005d/i.temperature/signal/operative" ;
+    bf:uuid "47e37419-5091-3877-a476-bb6f942e93af" .
 
 bldg:hamilton_005e_air_rh a brick:Relative_Humidity_Sensor ;
     bf:isLocatedIn bldg:R211 ;
@@ -348,7 +361,8 @@ bldg:hamilton_005e_lux a brick:Illumination_Sensor ;
 bldg:hamilton_005e_pir a brick:Occupancy_Sensor ;
     bf:isLocatedIn bldg:R211 ;
     bf:isPointOf bldg:R211 ;
-    bf:uri "ciee/sensors/s.hamilton/00126d070000005e/i.temperature/signal/operative" .
+    bf:uri "ciee/sensors/s.hamilton/00126d070000005e/i.temperature/signal/operative" ;
+    bf:uuid "cab606d0-6d14-3aff-a0c2-e862ae297f22" .
 
 bldg:hamilton_0060_air_rh a brick:Relative_Humidity_Sensor ;
     bf:isLocatedIn bldg:R213 ;
@@ -371,7 +385,8 @@ bldg:hamilton_0060_lux a brick:Illumination_Sensor ;
 bldg:hamilton_0060_pir a brick:Occupancy_Sensor ;
     bf:isLocatedIn bldg:R213 ;
     bf:isPointOf bldg:R213 ;
-    bf:uri "ciee/sensors/s.hamilton/00126d0700000060/i.temperature/signal/operative" .
+    bf:uri "ciee/sensors/s.hamilton/00126d0700000060/i.temperature/signal/operative" ;
+    bf:uuid "e0430def-1ca1-3968-b680-4ad2e0dea51a" .
 
 bldg:openoffice_tstat a brick:Thermostat ;
     bf:controls bldg:RTU3 ;
