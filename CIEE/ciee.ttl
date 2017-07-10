@@ -12,7 +12,8 @@ bldg:RTU4 a brick:RTU ;
 bldg:RTU5 a brick:RTU .
 
 bldg:building_meter a brick:Electric_Meter ;
-    bf:uri "ciee/devices/s.eagle/0xd8d5b9000000a110/i.meter" .
+    bf:uri "ciee/devices/s.eagle/0xd8d5b9000000a110/i.meter" ;
+    bf:uuid "d6e251a-48e1-3bc0-907d-7d5440c34bb9" .
 
 bldg:carl_tstat a brick:Thermostat ;
     bf:controls bldg:RTU2 ;
