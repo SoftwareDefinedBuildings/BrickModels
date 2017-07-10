@@ -11,6 +11,9 @@ bldg:RTU4 a brick:RTU ;
 
 bldg:RTU5 a brick:RTU .
 
+bldg:building_meter a brick:Electric_Meter ;
+    bf:uri "ciee/devices/s.eagle/0xd8d5b9000000a110/i.meter" .
+
 bldg:carl_tstat a brick:Thermostat ;
     bf:controls bldg:RTU2 ;
     bf:uri "ciee/devices/venstar/s.venstar/CarlsOffice/i.xbos.thermostat" .

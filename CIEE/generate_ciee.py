@@ -224,6 +224,10 @@ g.add((CIEE.carl_tstat, BF.uri, Literal("ciee/devices/venstar/s.venstar/CarlsOff
 
 # add Lighting
 
+# add meter
+g.add((CIEE.building_meter, RDF.type, BRICK.Electric_Meter))
+g.add((CIEE.building_meter, BF.uri, Literal("ciee/devices/s.eagle/0xd8d5b9000000a110/i.meter")))
+
 # save building
 g.serialize(destination='ciee.ttl',format='turtle')
 print len(g), "triples"
