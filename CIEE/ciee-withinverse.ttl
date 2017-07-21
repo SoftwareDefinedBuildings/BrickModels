@@ -23,20 +23,92 @@ bldg:ServerRoom a brick:Room ;
     rdf:label "Server Room" ;
     bf:isPartOf bldg:floor_mezz .
 
-bldg:carl_tstat a brick:Thermostat ;
-    bf:controls bldg:RTU2 ;
-    bf:uri "ciee/devices/venstar/s.venstar/CarlsOffice/i.xbos.thermostat" .
+bldg:carl_tstat_cooling_setpoint a brick:Supply_Air_Temperature_Cooling_Setpoint ;
+    bf:isPointOf bldg:carl_tstat ;
+    bf:uuid "d38446d4-32cc-34bd-b293-0a3871a6759b" .
 
-bldg:conference_tstat a brick:Thermostat ;
-    bf:controls bldg:RTU1 ;
-    bf:uri "ciee/devices/venstar/s.venstar/ConferenceRoom/i.xbos.thermostat" .
+bldg:carl_tstat_fan a brick:Fan_Command ;
+    bf:isPointOf bldg:carl_tstat ;
+    bf:uuid "49cb0dff-b571-3155-b08d-3e7c9aa8a934" .
+
+bldg:carl_tstat_heating_setpoint a brick:Supply_Air_Temperature_Heating_Setpoint ;
+    bf:isPointOf bldg:carl_tstat ;
+    bf:uuid "e4d39723-5907-35bd-a9b2-fc57b58b3779" .
+
+bldg:carl_tstat_mode a brick:Thermostat_Mode_Command ;
+    bf:isPointOf bldg:carl_tstat ;
+    bf:uuid "3bc7ce21-2384-3ebe-aedd-8c2822b5a10c" .
+
+bldg:carl_tstat_override a brick:Override_Command ;
+    bf:isPointOf bldg:carl_tstat ;
+    bf:uuid "388512db-58c4-33ab-93dc-f85abcaf78d4" .
+
+bldg:carl_tstat_state a brick:Thermostat_Status ;
+    bf:isPointOf bldg:carl_tstat ;
+    bf:uuid "7e543d07-16d1-32bb-94af-95a01f4675f9" .
+
+bldg:carl_tstat_temperature a brick:Temperature_Sensor ;
+    bf:isPointOf bldg:carl_tstat ;
+    bf:uuid "b47ba370-bceb-39cf-9552-d1225d910039" .
+
+bldg:conference_tstat_cooling_setpoint a brick:Supply_Air_Temperature_Cooling_Setpoint ;
+    bf:isPointOf bldg:conference_tstat ;
+    bf:uuid "dbbf4a91-107a-3b15-b2c0-a49b54116daa" .
+
+bldg:conference_tstat_fan a brick:Fan_Command ;
+    bf:isPointOf bldg:conference_tstat ;
+    bf:uuid "5c965d7d-e1b4-39a5-b2d8-e3e6cad0e136" .
+
+bldg:conference_tstat_heating_setpoint a brick:Supply_Air_Temperature_Heating_Setpoint ;
+    bf:isPointOf bldg:conference_tstat ;
+    bf:uuid "eeadc8ed-6255-320d-b845-84f44748fe95" .
+
+bldg:conference_tstat_mode a brick:Thermostat_Mode_Command ;
+    bf:isPointOf bldg:conference_tstat ;
+    bf:uuid "a4639323-1e57-3512-83fb-b01234378fd8" .
+
+bldg:conference_tstat_override a brick:Override_Command ;
+    bf:isPointOf bldg:conference_tstat ;
+    bf:uuid "25008947-b7db-32d4-87c1-b93be6dc5097" .
+
+bldg:conference_tstat_state a brick:Thermostat_Status ;
+    bf:isPointOf bldg:conference_tstat ;
+    bf:uuid "dfb2b403-fd08-3e9b-bf3f-18c699ce40d6" .
+
+bldg:conference_tstat_temperature a brick:Temperature_Sensor ;
+    bf:isPointOf bldg:conference_tstat ;
+    bf:uuid "03099008-5224-3b61-b07e-eee445e64620" .
 
 bldg:floor_mezz a brick:Floor ;
     bf:hasPart bldg:ServerRoom .
 
-bldg:openoffice_tstat a brick:Thermostat ;
-    bf:controls bldg:RTU3 ;
-    bf:uri "ciee/devices/venstar/s.venstar/OpenSpace/i.xbos.thermostat" .
+bldg:openoffice_tstat_cooling_setpoint a brick:Supply_Air_Temperature_Cooling_Setpoint ;
+    bf:isPointOf bldg:openoffice_tstat ;
+    bf:uuid "0d037818-02c2-3e5b-87e9-94570d43b418" .
+
+bldg:openoffice_tstat_fan a brick:Fan_Command ;
+    bf:isPointOf bldg:openoffice_tstat ;
+    bf:uuid "4a471518-3cdd-3039-ab20-9f0f964e95c0" .
+
+bldg:openoffice_tstat_heating_setpoint a brick:Supply_Air_Temperature_Heating_Setpoint ;
+    bf:isPointOf bldg:openoffice_tstat ;
+    bf:uuid "6cbee2ae-06e7-3fc3-a2fc-698fa3deadee" .
+
+bldg:openoffice_tstat_mode a brick:Thermostat_Mode_Command ;
+    bf:isPointOf bldg:openoffice_tstat ;
+    bf:uuid "22e4f56b-1147-3302-83df-c7631b9b0b79" .
+
+bldg:openoffice_tstat_override a brick:Override_Command ;
+    bf:isPointOf bldg:openoffice_tstat ;
+    bf:uuid "67b3beeb-5a75-338b-b51e-7734781fac02" .
+
+bldg:openoffice_tstat_state a brick:Thermostat_Status ;
+    bf:isPointOf bldg:openoffice_tstat ;
+    bf:uuid "187ed9b8-ee9b-3042-875e-088a08da37ae" .
+
+bldg:openoffice_tstat_temperature a brick:Temperature_Sensor ;
+    bf:isPointOf bldg:openoffice_tstat ;
+    bf:uuid "c05385e5-a947-37a3-902e-f6ea45a43fe8" .
 
 bldg:RTU1 a brick:RTU ;
     bf:feeds bldg:SouthZone ;
@@ -539,6 +611,39 @@ bldg:R222 a brick:Room ;
         bldg:R225 ;
     bf:isPartOf bldg:CentralZone,
         bldg:floor_2 .
+
+bldg:carl_tstat a brick:Thermostat ;
+    bf:controls bldg:RTU2 ;
+    bf:hasPoint bldg:carl_tstat_cooling_setpoint,
+        bldg:carl_tstat_fan,
+        bldg:carl_tstat_heating_setpoint,
+        bldg:carl_tstat_mode,
+        bldg:carl_tstat_override,
+        bldg:carl_tstat_state,
+        bldg:carl_tstat_temperature ;
+    bf:uri "ciee/devices/pelican/s.pelican/SouthEastCorner/i.xbos.thermostat" .
+
+bldg:conference_tstat a brick:Thermostat ;
+    bf:controls bldg:RTU1 ;
+    bf:hasPoint bldg:conference_tstat_cooling_setpoint,
+        bldg:conference_tstat_fan,
+        bldg:conference_tstat_heating_setpoint,
+        bldg:conference_tstat_mode,
+        bldg:conference_tstat_override,
+        bldg:conference_tstat_state,
+        bldg:conference_tstat_temperature ;
+    bf:uri "ciee/devices/venstar/s.venstar/ConferenceRoom/i.xbos.thermostat" .
+
+bldg:openoffice_tstat a brick:Thermostat ;
+    bf:controls bldg:RTU3 ;
+    bf:hasPoint bldg:openoffice_tstat_cooling_setpoint,
+        bldg:openoffice_tstat_fan,
+        bldg:openoffice_tstat_heating_setpoint,
+        bldg:openoffice_tstat_mode,
+        bldg:openoffice_tstat_override,
+        bldg:openoffice_tstat_state,
+        bldg:openoffice_tstat_temperature ;
+    bf:uri "ciee/devices/venstar/s.venstar/OpenSpace/i.xbos.thermostat" .
 
 bldg:EastOpen bf:contains bldg:hamilton_0025_air_rh,
         bldg:hamilton_0025_air_temp,
