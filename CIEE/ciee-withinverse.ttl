@@ -10,10 +10,11 @@
 
 bldg:RTU5 a brick:RTU .
 
-bldg:floor_1 a brick:Floor .
+bldg:building_meter a brick:Electric_Meter ;
+    bf:uri "ciee/devices/s.eagle/0xd8d5b9000000a110/i.meter" ;
+    bf:uuid "4d6e251a-48e1-3bc0-907d-7d5440c34bb9" .
 
-bldg:hamilton_005F a brick:Zone_Temperature_Sensor ;
-    bf:uri "ciee/sensors/s.hamilton/00126d070000005F/i.temperature/signal/operative" .
+bldg:floor_1 a brick:Floor .
 
 bldg:RTU4 a brick:RTU ;
     bf:feeds bldg:NorthZone .
@@ -37,10 +38,6 @@ bldg:openoffice_tstat a brick:Thermostat ;
     bf:controls bldg:RTU3 ;
     bf:uri "ciee/devices/venstar/s.venstar/OpenSpace/i.xbos.thermostat" .
 
-bldg:EastOpen bf:hasPoint bldg:hamilton_0025 ;
-    bf:isLocationOf bldg:hamilton_0025 ;
-    bf:isPartOf bldg:NorthZone .
-
 bldg:RTU1 a brick:RTU ;
     bf:feeds bldg:SouthZone ;
     bf:isControlledBy bldg:conference_tstat .
@@ -53,65 +50,365 @@ bldg:RTU3 a brick:RTU ;
     bf:feeds bldg:CentralZone ;
     bf:isControlledBy bldg:openoffice_tstat .
 
-bldg:hamilton_0022 a brick:Zone_Temperature_Sensor ;
+bldg:hamilton_0022_air_rh a brick:Relative_Humidity_Sensor ;
+    bf:isLocatedIn bldg:R216 ;
     bf:isPointOf bldg:R216 ;
-    bf:uri "ciee/sensors/s.hamilton/00126d0700000022/i.temperature/signal/operative" .
+    bf:uri "ciee/sensors/s.hamilton/00126d0700000022/i.temperature/signal/operative" ;
+    bf:uuid "f8017406-28c8-320d-9fe6-ba8c9ce94b09" .
 
-bldg:hamilton_0025 a brick:Zone_Temperature_Sensor ;
+bldg:hamilton_0022_air_temp a brick:Zone_Temperature_Sensor ;
+    bf:isLocatedIn bldg:R216 ;
+    bf:isPointOf bldg:R216 ;
+    bf:uri "ciee/sensors/s.hamilton/00126d0700000022/i.temperature/signal/operative" ;
+    bf:uuid "b315ed38-fae1-31ae-a53c-9202aa0ef600" .
+
+bldg:hamilton_0022_lux a brick:Illumination_Sensor ;
+    bf:isLocatedIn bldg:R216 ;
+    bf:isPointOf bldg:R216 ;
+    bf:uri "ciee/sensors/s.hamilton/00126d0700000022/i.temperature/signal/operative" ;
+    bf:uuid "9395a1fb-3766-3854-b484-5b6e285c1156" .
+
+bldg:hamilton_0022_pir a brick:Occupancy_Sensor ;
+    bf:isLocatedIn bldg:R216 ;
+    bf:isPointOf bldg:R216 ;
+    bf:uri "ciee/sensors/s.hamilton/00126d0700000022/i.temperature/signal/operative" ;
+    bf:uuid "be0a6276-17b4-31a7-bef7-ae6b88d3440b" .
+
+bldg:hamilton_0025_air_rh a brick:Relative_Humidity_Sensor ;
+    bf:isLocatedIn bldg:EastOpen ;
     bf:isPointOf bldg:EastOpen ;
-    bf:uri "ciee/sensors/s.hamilton/00126d0700000025/i.temperature/signal/operative" .
+    bf:uri "ciee/sensors/s.hamilton/00126d0700000025/i.temperature/signal/operative" ;
+    bf:uuid "891a1c36-ae4c-3142-a07d-d3b5d3fba271" .
 
-bldg:hamilton_0027 a brick:Zone_Temperature_Sensor ;
+bldg:hamilton_0025_air_temp a brick:Zone_Temperature_Sensor ;
+    bf:isLocatedIn bldg:EastOpen ;
+    bf:isPointOf bldg:EastOpen ;
+    bf:uri "ciee/sensors/s.hamilton/00126d0700000025/i.temperature/signal/operative" ;
+    bf:uuid "777faf39-c059-3a2d-b85b-ac3dfb12e54c" .
+
+bldg:hamilton_0025_lux a brick:Illumination_Sensor ;
+    bf:isLocatedIn bldg:EastOpen ;
+    bf:isPointOf bldg:EastOpen ;
+    bf:uri "ciee/sensors/s.hamilton/00126d0700000025/i.temperature/signal/operative" ;
+    bf:uuid "96160505-25a9-399b-95db-b972d68bf362" .
+
+bldg:hamilton_0025_pir a brick:Occupancy_Sensor ;
+    bf:isLocatedIn bldg:EastOpen ;
+    bf:isPointOf bldg:EastOpen ;
+    bf:uri "ciee/sensors/s.hamilton/00126d0700000025/i.temperature/signal/operative" ;
+    bf:uuid "c2c477b4-c02c-32cc-9334-81fe419d0e81" .
+
+bldg:hamilton_0027_air_rh a brick:Relative_Humidity_Sensor ;
+    bf:isLocatedIn bldg:R206 ;
     bf:isPointOf bldg:R206 ;
-    bf:uri "ciee/sensors/s.hamilton/00126d0700000027/i.temperature/signal/operative" .
+    bf:uri "ciee/sensors/s.hamilton/00126d0700000027/i.temperature/signal/operative" ;
+    bf:uuid "789579a2-c37e-3079-b04f-bc32effbb4ef" .
 
-bldg:hamilton_0028 a brick:Zone_Temperature_Sensor ;
+bldg:hamilton_0027_air_temp a brick:Zone_Temperature_Sensor ;
+    bf:isLocatedIn bldg:R206 ;
+    bf:isPointOf bldg:R206 ;
+    bf:uri "ciee/sensors/s.hamilton/00126d0700000027/i.temperature/signal/operative" ;
+    bf:uuid "7d907c16-4851-34be-93a7-46182575fa85" .
+
+bldg:hamilton_0027_lux a brick:Illumination_Sensor ;
+    bf:isLocatedIn bldg:R206 ;
+    bf:isPointOf bldg:R206 ;
+    bf:uri "ciee/sensors/s.hamilton/00126d0700000027/i.temperature/signal/operative" ;
+    bf:uuid "b849d90a-85ec-3c97-8ad0-b0d76f56e6b2" .
+
+bldg:hamilton_0027_pir a brick:Occupancy_Sensor ;
+    bf:isLocatedIn bldg:R206 ;
+    bf:isPointOf bldg:R206 ;
+    bf:uri "ciee/sensors/s.hamilton/00126d0700000027/i.temperature/signal/operative" ;
+    bf:uuid "497145c4-2087-3e89-9c8f-f54b87dfb016" .
+
+bldg:hamilton_0028_air_rh a brick:Relative_Humidity_Sensor ;
+    bf:isLocatedIn bldg:R214 ;
     bf:isPointOf bldg:R214 ;
-    bf:uri "ciee/sensors/s.hamilton/00126d0700000028/i.temperature/signal/operative" .
+    bf:uri "ciee/sensors/s.hamilton/00126d0700000028/i.temperature/signal/operative" ;
+    bf:uuid "f62ed54b-7b9e-319b-9b9c-9901c680b983" .
 
-bldg:hamilton_0029 a brick:Zone_Temperature_Sensor ;
+bldg:hamilton_0028_air_temp a brick:Zone_Temperature_Sensor ;
+    bf:isLocatedIn bldg:R214 ;
+    bf:isPointOf bldg:R214 ;
+    bf:uri "ciee/sensors/s.hamilton/00126d0700000028/i.temperature/signal/operative" ;
+    bf:uuid "4c910f33-cd1a-3f1d-a740-48c42e20a28b" .
+
+bldg:hamilton_0028_lux a brick:Illumination_Sensor ;
+    bf:isLocatedIn bldg:R214 ;
+    bf:isPointOf bldg:R214 ;
+    bf:uri "ciee/sensors/s.hamilton/00126d0700000028/i.temperature/signal/operative" ;
+    bf:uuid "a332bccc-9516-3175-beaf-8a478b0c49b0" .
+
+bldg:hamilton_0028_pir a brick:Occupancy_Sensor ;
+    bf:isLocatedIn bldg:R214 ;
+    bf:isPointOf bldg:R214 ;
+    bf:uri "ciee/sensors/s.hamilton/00126d0700000028/i.temperature/signal/operative" ;
+    bf:uuid "4e4f0b0f-9918-356b-9b68-fdc49f75867d" .
+
+bldg:hamilton_0029_air_rh a brick:Relative_Humidity_Sensor ;
+    bf:isLocatedIn bldg:R203 ;
     bf:isPointOf bldg:R203 ;
-    bf:uri "ciee/sensors/s.hamilton/00126d0700000029/i.temperature/signal/operative" .
+    bf:uri "ciee/sensors/s.hamilton/00126d0700000029/i.temperature/signal/operative" ;
+    bf:uuid "5dd8b2fa-acff-30ef-b3a6-a0ab3bc054ca" .
 
-bldg:hamilton_002A a brick:Zone_Temperature_Sensor ;
+bldg:hamilton_0029_air_temp a brick:Zone_Temperature_Sensor ;
+    bf:isLocatedIn bldg:R203 ;
+    bf:isPointOf bldg:R203 ;
+    bf:uri "ciee/sensors/s.hamilton/00126d0700000029/i.temperature/signal/operative" ;
+    bf:uuid "148814c5-e766-3632-b54c-344ff1e469fd" .
+
+bldg:hamilton_0029_lux a brick:Illumination_Sensor ;
+    bf:isLocatedIn bldg:R203 ;
+    bf:isPointOf bldg:R203 ;
+    bf:uri "ciee/sensors/s.hamilton/00126d0700000029/i.temperature/signal/operative" ;
+    bf:uuid "92ccbcb0-84ea-38de-b94a-c89209777ab0" .
+
+bldg:hamilton_0029_pir a brick:Occupancy_Sensor ;
+    bf:isLocatedIn bldg:R203 ;
+    bf:isPointOf bldg:R203 ;
+    bf:uri "ciee/sensors/s.hamilton/00126d0700000029/i.temperature/signal/operative" ;
+    bf:uuid "c0623266-12b8-337f-8b37-6bf40e60cfa3" .
+
+bldg:hamilton_002a_air_rh a brick:Relative_Humidity_Sensor ;
+    bf:isLocatedIn bldg:R210 ;
     bf:isPointOf bldg:R210 ;
-    bf:uri "ciee/sensors/s.hamilton/00126d070000002A/i.temperature/signal/operative" .
+    bf:uri "ciee/sensors/s.hamilton/00126d070000002a/i.temperature/signal/operative" ;
+    bf:uuid "e6cfed6a-52e2-389c-9138-3da02794bd52" .
 
-bldg:hamilton_002B a brick:Zone_Temperature_Sensor ;
+bldg:hamilton_002a_air_temp a brick:Zone_Temperature_Sensor ;
+    bf:isLocatedIn bldg:R210 ;
+    bf:isPointOf bldg:R210 ;
+    bf:uri "ciee/sensors/s.hamilton/00126d070000002a/i.temperature/signal/operative" ;
+    bf:uuid "d7cbcd57-d7c0-386c-a1e7-12766f05f2b3" .
+
+bldg:hamilton_002a_lux a brick:Illumination_Sensor ;
+    bf:isLocatedIn bldg:R210 ;
+    bf:isPointOf bldg:R210 ;
+    bf:uri "ciee/sensors/s.hamilton/00126d070000002a/i.temperature/signal/operative" ;
+    bf:uuid "70e64713-fd4a-3f94-ad7c-ca2f83a74382" .
+
+bldg:hamilton_002a_pir a brick:Occupancy_Sensor ;
+    bf:isLocatedIn bldg:R210 ;
+    bf:isPointOf bldg:R210 ;
+    bf:uri "ciee/sensors/s.hamilton/00126d070000002a/i.temperature/signal/operative" ;
+    bf:uuid "989ed503-9aa2-310e-abd3-464f6169e175" .
+
+bldg:hamilton_002b_air_rh a brick:Relative_Humidity_Sensor ;
+    bf:isLocatedIn bldg:R208 ;
     bf:isPointOf bldg:R208 ;
-    bf:uri "ciee/sensors/s.hamilton/00126d070000002B/i.temperature/signal/operative" .
+    bf:uri "ciee/sensors/s.hamilton/00126d070000002b/i.temperature/signal/operative" ;
+    bf:uuid "ecce4b33-e4d9-3b87-9e3c-1c93d4c62c08" .
 
-bldg:hamilton_002C a brick:Zone_Temperature_Sensor ;
+bldg:hamilton_002b_air_temp a brick:Zone_Temperature_Sensor ;
+    bf:isLocatedIn bldg:R208 ;
+    bf:isPointOf bldg:R208 ;
+    bf:uri "ciee/sensors/s.hamilton/00126d070000002b/i.temperature/signal/operative" ;
+    bf:uuid "e962047c-c314-3e1b-9cc7-0c33d0d18b55" .
+
+bldg:hamilton_002b_lux a brick:Illumination_Sensor ;
+    bf:isLocatedIn bldg:R208 ;
+    bf:isPointOf bldg:R208 ;
+    bf:uri "ciee/sensors/s.hamilton/00126d070000002b/i.temperature/signal/operative" ;
+    bf:uuid "11996d2f-fe5c-3838-9ae0-727b0d9d30b7" .
+
+bldg:hamilton_002b_pir a brick:Occupancy_Sensor ;
+    bf:isLocatedIn bldg:R208 ;
+    bf:isPointOf bldg:R208 ;
+    bf:uri "ciee/sensors/s.hamilton/00126d070000002b/i.temperature/signal/operative" ;
+    bf:uuid "bdbbbf7c-21c3-3b61-8469-8516a8c666dd" .
+
+bldg:hamilton_002c_air_rh a brick:Relative_Humidity_Sensor ;
+    bf:isLocatedIn bldg:R215 ;
     bf:isPointOf bldg:R215 ;
-    bf:uri "ciee/sensors/s.hamilton/00126d070000002C/i.temperature/signal/operative" .
+    bf:uri "ciee/sensors/s.hamilton/00126d070000002c/i.temperature/signal/operative" ;
+    bf:uuid "c377a8a4-6905-3479-b355-eade8d62948e" .
 
-bldg:hamilton_002E a brick:Zone_Temperature_Sensor ;
+bldg:hamilton_002c_air_temp a brick:Zone_Temperature_Sensor ;
+    bf:isLocatedIn bldg:R215 ;
+    bf:isPointOf bldg:R215 ;
+    bf:uri "ciee/sensors/s.hamilton/00126d070000002c/i.temperature/signal/operative" ;
+    bf:uuid "6e5d4f59-78d3-3085-98e3-f8d46e365c04" .
+
+bldg:hamilton_002c_lux a brick:Illumination_Sensor ;
+    bf:isLocatedIn bldg:R215 ;
+    bf:isPointOf bldg:R215 ;
+    bf:uri "ciee/sensors/s.hamilton/00126d070000002c/i.temperature/signal/operative" ;
+    bf:uuid "00b88162-0468-34c2-b625-f5db61cc4e7b" .
+
+bldg:hamilton_002c_pir a brick:Occupancy_Sensor ;
+    bf:isLocatedIn bldg:R215 ;
+    bf:isPointOf bldg:R215 ;
+    bf:uri "ciee/sensors/s.hamilton/00126d070000002c/i.temperature/signal/operative" ;
+    bf:uuid "c6adf801-47df-395d-b8a9-9959f8ab972e" .
+
+bldg:hamilton_002e_air_rh a brick:Relative_Humidity_Sensor ;
+    bf:isLocatedIn bldg:R209 ;
     bf:isPointOf bldg:R209 ;
-    bf:uri "ciee/sensors/s.hamilton/00126d070000002E/i.temperature/signal/operative" .
+    bf:uri "ciee/sensors/s.hamilton/00126d070000002e/i.temperature/signal/operative" ;
+    bf:uuid "6b54bf39-ffbf-30d9-90e5-76f92cba72d0" .
 
-bldg:hamilton_005A a brick:Zone_Temperature_Sensor ;
+bldg:hamilton_002e_air_temp a brick:Zone_Temperature_Sensor ;
+    bf:isLocatedIn bldg:R209 ;
+    bf:isPointOf bldg:R209 ;
+    bf:uri "ciee/sensors/s.hamilton/00126d070000002e/i.temperature/signal/operative" ;
+    bf:uuid "e6c1a17d-375d-3018-908b-75b607de190e" .
+
+bldg:hamilton_002e_lux a brick:Illumination_Sensor ;
+    bf:isLocatedIn bldg:R209 ;
+    bf:isPointOf bldg:R209 ;
+    bf:uri "ciee/sensors/s.hamilton/00126d070000002e/i.temperature/signal/operative" ;
+    bf:uuid "23194baa-a7bf-331e-98cf-33d83c1a0a5f" .
+
+bldg:hamilton_002e_pir a brick:Occupancy_Sensor ;
+    bf:isLocatedIn bldg:R209 ;
+    bf:isPointOf bldg:R209 ;
+    bf:uri "ciee/sensors/s.hamilton/00126d070000002e/i.temperature/signal/operative" ;
+    bf:uuid "242cde13-7d25-306a-bfc8-918ad7bb26d6" .
+
+bldg:hamilton_005a_air_rh a brick:Relative_Humidity_Sensor ;
+    bf:isLocatedIn bldg:R212 ;
     bf:isPointOf bldg:R212 ;
-    bf:uri "ciee/sensors/s.hamilton/00126d070000005A/i.temperature/signal/operative" .
+    bf:uri "ciee/sensors/s.hamilton/00126d070000005a/i.temperature/signal/operative" ;
+    bf:uuid "a6624658-7cdc-3a9e-a084-f536a493a752" .
 
-bldg:hamilton_005B a brick:Zone_Temperature_Sensor ;
+bldg:hamilton_005a_air_temp a brick:Zone_Temperature_Sensor ;
+    bf:isLocatedIn bldg:R212 ;
+    bf:isPointOf bldg:R212 ;
+    bf:uri "ciee/sensors/s.hamilton/00126d070000005a/i.temperature/signal/operative" ;
+    bf:uuid "f1baf473-8578-340d-8a8c-96482dc3f0b2" .
+
+bldg:hamilton_005a_lux a brick:Illumination_Sensor ;
+    bf:isLocatedIn bldg:R212 ;
+    bf:isPointOf bldg:R212 ;
+    bf:uri "ciee/sensors/s.hamilton/00126d070000005a/i.temperature/signal/operative" ;
+    bf:uuid "93880771-418a-349f-b1bd-d7942641b674" .
+
+bldg:hamilton_005a_pir a brick:Occupancy_Sensor ;
+    bf:isLocatedIn bldg:R212 ;
+    bf:isPointOf bldg:R212 ;
+    bf:uri "ciee/sensors/s.hamilton/00126d070000005a/i.temperature/signal/operative" ;
+    bf:uuid "23d2afce-4c86-37c5-b1c2-f258758c3263" .
+
+bldg:hamilton_005b_air_rh a brick:Relative_Humidity_Sensor ;
+    bf:isLocatedIn bldg:R217 ;
     bf:isPointOf bldg:R217 ;
-    bf:uri "ciee/sensors/s.hamilton/00126d070000005B/i.temperature/signal/operative" .
+    bf:uri "ciee/sensors/s.hamilton/00126d070000005b/i.temperature/signal/operative" ;
+    bf:uuid "15881ebd-d695-33ac-b1a7-0a466509977a" .
 
-bldg:hamilton_005C a brick:Zone_Temperature_Sensor ;
+bldg:hamilton_005b_air_temp a brick:Zone_Temperature_Sensor ;
+    bf:isLocatedIn bldg:R217 ;
+    bf:isPointOf bldg:R217 ;
+    bf:uri "ciee/sensors/s.hamilton/00126d070000005b/i.temperature/signal/operative" ;
+    bf:uuid "2f6cd75c-0a40-3339-8af9-a68b360caa32" .
+
+bldg:hamilton_005b_lux a brick:Illumination_Sensor ;
+    bf:isLocatedIn bldg:R217 ;
+    bf:isPointOf bldg:R217 ;
+    bf:uri "ciee/sensors/s.hamilton/00126d070000005b/i.temperature/signal/operative" ;
+    bf:uuid "20925ac9-61a2-3ff6-9415-78dc9d56cefc" .
+
+bldg:hamilton_005b_pir a brick:Occupancy_Sensor ;
+    bf:isLocatedIn bldg:R217 ;
+    bf:isPointOf bldg:R217 ;
+    bf:uri "ciee/sensors/s.hamilton/00126d070000005b/i.temperature/signal/operative" ;
+    bf:uuid "e448db62-f95a-386e-a8f0-30085a46a03e" .
+
+bldg:hamilton_005c_air_rh a brick:Relative_Humidity_Sensor ;
+    bf:isLocatedIn bldg:R207 ;
     bf:isPointOf bldg:R207 ;
-    bf:uri "ciee/sensors/s.hamilton/00126d070000005C/i.temperature/signal/operative" .
+    bf:uri "ciee/sensors/s.hamilton/00126d070000005c/i.temperature/signal/operative" ;
+    bf:uuid "45ea5b21-9d09-359f-a80c-2bb5754f7828" .
 
-bldg:hamilton_005D a brick:Zone_Temperature_Sensor ;
+bldg:hamilton_005c_air_temp a brick:Zone_Temperature_Sensor ;
+    bf:isLocatedIn bldg:R207 ;
+    bf:isPointOf bldg:R207 ;
+    bf:uri "ciee/sensors/s.hamilton/00126d070000005c/i.temperature/signal/operative" ;
+    bf:uuid "24f521b8-eef6-3ca8-9c71-59752b0ba45d" .
+
+bldg:hamilton_005c_lux a brick:Illumination_Sensor ;
+    bf:isLocatedIn bldg:R207 ;
+    bf:isPointOf bldg:R207 ;
+    bf:uri "ciee/sensors/s.hamilton/00126d070000005c/i.temperature/signal/operative" ;
+    bf:uuid "28640fdc-6012-3e41-a759-208c29440ded" .
+
+bldg:hamilton_005c_pir a brick:Occupancy_Sensor ;
+    bf:isLocatedIn bldg:R207 ;
+    bf:isPointOf bldg:R207 ;
+    bf:uri "ciee/sensors/s.hamilton/00126d070000005c/i.temperature/signal/operative" ;
+    bf:uuid "d919a14e-3ebd-3e5b-9727-0df54f287032" .
+
+bldg:hamilton_005d_air_rh a brick:Relative_Humidity_Sensor ;
+    bf:isLocatedIn bldg:R208 ;
     bf:isPointOf bldg:R208 ;
-    bf:uri "ciee/sensors/s.hamilton/00126d070000005D/i.temperature/signal/operative" .
+    bf:uri "ciee/sensors/s.hamilton/00126d070000005d/i.temperature/signal/operative" ;
+    bf:uuid "fa777824-6473-3004-a705-eec445eb9106" .
 
-bldg:hamilton_005E a brick:Zone_Temperature_Sensor ;
+bldg:hamilton_005d_air_temp a brick:Zone_Temperature_Sensor ;
+    bf:isLocatedIn bldg:R208 ;
+    bf:isPointOf bldg:R208 ;
+    bf:uri "ciee/sensors/s.hamilton/00126d070000005d/i.temperature/signal/operative" ;
+    bf:uuid "83ab0b1a-0a96-3530-bb66-f0f092e4a517" .
+
+bldg:hamilton_005d_lux a brick:Illumination_Sensor ;
+    bf:isLocatedIn bldg:R208 ;
+    bf:isPointOf bldg:R208 ;
+    bf:uri "ciee/sensors/s.hamilton/00126d070000005d/i.temperature/signal/operative" ;
+    bf:uuid "b4c40ab6-d337-3123-b914-5c89dd4a15b1" .
+
+bldg:hamilton_005d_pir a brick:Occupancy_Sensor ;
+    bf:isLocatedIn bldg:R208 ;
+    bf:isPointOf bldg:R208 ;
+    bf:uri "ciee/sensors/s.hamilton/00126d070000005d/i.temperature/signal/operative" ;
+    bf:uuid "47e37419-5091-3877-a476-bb6f942e93af" .
+
+bldg:hamilton_005e_air_rh a brick:Relative_Humidity_Sensor ;
+    bf:isLocatedIn bldg:R211 ;
     bf:isPointOf bldg:R211 ;
-    bf:uri "ciee/sensors/s.hamilton/00126d070000005E/i.temperature/signal/operative" .
+    bf:uri "ciee/sensors/s.hamilton/00126d070000005e/i.temperature/signal/operative" ;
+    bf:uuid "8de1a7e2-64f5-3e0a-a5f1-edd9220037f4" .
 
-bldg:hamilton_0060 a brick:Zone_Temperature_Sensor ;
+bldg:hamilton_005e_air_temp a brick:Zone_Temperature_Sensor ;
+    bf:isLocatedIn bldg:R211 ;
+    bf:isPointOf bldg:R211 ;
+    bf:uri "ciee/sensors/s.hamilton/00126d070000005e/i.temperature/signal/operative" ;
+    bf:uuid "9d99692f-c79b-3325-831d-938aedf432b0" .
+
+bldg:hamilton_005e_lux a brick:Illumination_Sensor ;
+    bf:isLocatedIn bldg:R211 ;
+    bf:isPointOf bldg:R211 ;
+    bf:uri "ciee/sensors/s.hamilton/00126d070000005e/i.temperature/signal/operative" ;
+    bf:uuid "9ba535a0-2c4a-3005-9b20-ae5b9c48a5a8" .
+
+bldg:hamilton_005e_pir a brick:Occupancy_Sensor ;
+    bf:isLocatedIn bldg:R211 ;
+    bf:isPointOf bldg:R211 ;
+    bf:uri "ciee/sensors/s.hamilton/00126d070000005e/i.temperature/signal/operative" ;
+    bf:uuid "cab606d0-6d14-3aff-a0c2-e862ae297f22" .
+
+bldg:hamilton_0060_air_rh a brick:Relative_Humidity_Sensor ;
+    bf:isLocatedIn bldg:R213 ;
     bf:isPointOf bldg:R213 ;
-    bf:uri "ciee/sensors/s.hamilton/00126d0700000060/i.temperature/signal/operative" .
+    bf:uri "ciee/sensors/s.hamilton/00126d0700000060/i.temperature/signal/operative" ;
+    bf:uuid "e0836e7e-9791-3da9-a71c-31a3a7d71073" .
+
+bldg:hamilton_0060_air_temp a brick:Zone_Temperature_Sensor ;
+    bf:isLocatedIn bldg:R213 ;
+    bf:isPointOf bldg:R213 ;
+    bf:uri "ciee/sensors/s.hamilton/00126d0700000060/i.temperature/signal/operative" ;
+    bf:uuid "7558b64d-5a4e-3dc5-a450-9dd5b41532f4" .
+
+bldg:hamilton_0060_lux a brick:Illumination_Sensor ;
+    bf:isLocatedIn bldg:R213 ;
+    bf:isPointOf bldg:R213 ;
+    bf:uri "ciee/sensors/s.hamilton/00126d0700000060/i.temperature/signal/operative" ;
+    bf:uuid "140b8490-71e0-37fb-b45a-3f1d61fa45b7" .
+
+bldg:hamilton_0060_pir a brick:Occupancy_Sensor ;
+    bf:isLocatedIn bldg:R213 ;
+    bf:isPointOf bldg:R213 ;
+    bf:uri "ciee/sensors/s.hamilton/00126d0700000060/i.temperature/signal/operative" ;
+    bf:uuid "e0430def-1ca1-3968-b680-4ad2e0dea51a" .
 
 bldg:R200 a brick:Room ;
     rdfs:label "Women's Bathroom" ;
@@ -132,15 +429,6 @@ bldg:R201 a brick:Room ;
         bldg:R226 ;
     bf:isPartOf bldg:floor_2 .
 
-bldg:R217 a brick:Room ;
-    rdfs:label "Office" ;
-    bf:adjacentTo bldg:R216,
-        bldg:R218 ;
-    bf:hasPoint bldg:hamilton_005B ;
-    bf:isLocationOf bldg:hamilton_005B ;
-    bf:isPartOf bldg:EastZone,
-        bldg:floor_2 .
-
 brick:RTU a owl:Class ;
     rdfs:subClassOf brick:AHU .
 
@@ -151,56 +439,6 @@ bldg:EastZone a brick:HVAC_Zone ;
         bldg:R216,
         bldg:R217 ;
     bf:isFedBy bldg:RTU2 .
-
-bldg:R206 a brick:Room ;
-    rdfs:label "Office" ;
-    bf:adjacentTo bldg:R203,
-        bldg:R205,
-        bldg:R207 ;
-    bf:hasPoint bldg:hamilton_0027 ;
-    bf:isLocationOf bldg:hamilton_0027 ;
-    bf:isPartOf bldg:SouthZone,
-        bldg:floor_2 .
-
-bldg:R209 a brick:Room ;
-    rdfs:label "Office" ;
-    bf:adjacentTo bldg:R205,
-        bldg:R208,
-        bldg:R210 ;
-    bf:hasPoint bldg:hamilton_002E ;
-    bf:isLocationOf bldg:hamilton_002E ;
-    bf:isPartOf bldg:SouthZone,
-        bldg:floor_2 .
-
-bldg:R210 a brick:Room ;
-    rdfs:label "Office" ;
-    bf:adjacentTo bldg:R205,
-        bldg:R209,
-        bldg:R211 ;
-    bf:hasPoint bldg:hamilton_002A ;
-    bf:isLocationOf bldg:hamilton_002A ;
-    bf:isPartOf bldg:SouthZone,
-        bldg:floor_2 .
-
-bldg:R214 a brick:Room ;
-    rdfs:label "Office" ;
-    bf:adjacentTo bldg:R213,
-        bldg:R215,
-        bldg:R219 ;
-    bf:hasPoint bldg:hamilton_0028 ;
-    bf:isLocationOf bldg:hamilton_0028 ;
-    bf:isPartOf bldg:EastZone,
-        bldg:floor_2 .
-
-bldg:R216 a brick:Room ;
-    rdfs:label "Office" ;
-    bf:adjacentTo bldg:R215,
-        bldg:R217,
-        bldg:R218 ;
-    bf:hasPoint bldg:hamilton_0022 ;
-    bf:isLocationOf bldg:hamilton_0022 ;
-    bf:isPartOf bldg:EastZone,
-        bldg:floor_2 .
 
 bldg:R224 a brick:Room ;
     rdfs:label "Office" ;
@@ -218,73 +456,6 @@ bldg:R204 bf:adjacentTo bldg:R203,
         bldg:R223,
         bldg:R225,
         bldg:R226 .
-
-bldg:R207 a brick:Room ;
-    rdfs:label "Office" ;
-    bf:adjacentTo bldg:R203,
-        bldg:R204,
-        bldg:R206,
-        bldg:R208 ;
-    bf:hasPoint bldg:hamilton_005C ;
-    bf:isLocationOf bldg:hamilton_005C ;
-    bf:isPartOf bldg:SouthZone,
-        bldg:floor_2 .
-
-bldg:R208 a brick:Room ;
-    rdfs:label "Conference Room" ;
-    bf:adjacentTo bldg:R204,
-        bldg:R207,
-        bldg:R209 ;
-    bf:hasPoint bldg:hamilton_002B,
-        bldg:hamilton_005D ;
-    bf:isLocationOf bldg:hamilton_002B,
-        bldg:hamilton_005D ;
-    bf:isPartOf bldg:SouthZone,
-        bldg:floor_2 .
-
-bldg:R211 a brick:Room ;
-    rdfs:label "Office" ;
-    bf:adjacentTo bldg:R205,
-        bldg:R210,
-        bldg:R212,
-        bldg:R219 ;
-    bf:hasPoint bldg:hamilton_005E ;
-    bf:isLocationOf bldg:hamilton_005E ;
-    bf:isPartOf bldg:SouthZone,
-        bldg:floor_2 .
-
-bldg:R212 a brick:Room ;
-    rdfs:label "Office" ;
-    bf:adjacentTo bldg:R205,
-        bldg:R211,
-        bldg:R213,
-        bldg:R219 ;
-    bf:hasPoint bldg:hamilton_005A ;
-    bf:isLocationOf bldg:hamilton_005A ;
-    bf:isPartOf bldg:SouthZone,
-        bldg:floor_2 .
-
-bldg:R213 a brick:Room ;
-    rdfs:label "Office" ;
-    bf:adjacentTo bldg:R205,
-        bldg:R212,
-        bldg:R214,
-        bldg:R219 ;
-    bf:hasPoint bldg:hamilton_0060 ;
-    bf:isLocationOf bldg:hamilton_0060 ;
-    bf:isPartOf bldg:EastZone,
-        bldg:floor_2 .
-
-bldg:R215 a brick:Room ;
-    rdfs:label "Office" ;
-    bf:adjacentTo bldg:R214,
-        bldg:R216,
-        bldg:R218,
-        bldg:R219 ;
-    bf:hasPoint bldg:hamilton_002C ;
-    bf:isLocationOf bldg:hamilton_002C ;
-    bf:isPartOf bldg:EastZone,
-        bldg:floor_2 .
 
 bldg:R221 a brick:Room ;
     rdfs:label "Open Office SouthWest" ;
@@ -369,18 +540,15 @@ bldg:R222 a brick:Room ;
     bf:isPartOf bldg:CentralZone,
         bldg:floor_2 .
 
-bldg:R203 a brick:Room ;
-    rdfs:label "Office" ;
-    bf:adjacentTo bldg:R200,
-        bldg:R201,
-        bldg:R204,
-        bldg:R205,
-        bldg:R206,
-        bldg:R207,
-        bldg:R226 ;
-    bf:hasPoint bldg:hamilton_0029 ;
-    bf:isLocationOf bldg:hamilton_0029 ;
-    bf:isPartOf bldg:floor_2 .
+bldg:EastOpen bf:contains bldg:hamilton_0025_air_rh,
+        bldg:hamilton_0025_air_temp,
+        bldg:hamilton_0025_lux,
+        bldg:hamilton_0025_pir ;
+    bf:hasPoint bldg:hamilton_0025_air_rh,
+        bldg:hamilton_0025_air_temp,
+        bldg:hamilton_0025_lux,
+        bldg:hamilton_0025_pir ;
+    bf:isPartOf bldg:NorthZone .
 
 bldg:SouthZone a brick:HVAC_Zone ;
     bf:hasPart bldg:R205,
@@ -417,6 +585,231 @@ bldg:R219 a brick:Room ;
         bldg:R220,
         bldg:R221 ;
     bf:isPartOf bldg:CentralZone,
+        bldg:floor_2 .
+
+bldg:R217 a brick:Room ;
+    rdfs:label "Office" ;
+    bf:adjacentTo bldg:R216,
+        bldg:R218 ;
+    bf:contains bldg:hamilton_005b_air_rh,
+        bldg:hamilton_005b_air_temp,
+        bldg:hamilton_005b_lux,
+        bldg:hamilton_005b_pir ;
+    bf:hasPoint bldg:hamilton_005b_air_rh,
+        bldg:hamilton_005b_air_temp,
+        bldg:hamilton_005b_lux,
+        bldg:hamilton_005b_pir ;
+    bf:isPartOf bldg:EastZone,
+        bldg:floor_2 .
+
+bldg:R206 a brick:Room ;
+    rdfs:label "Office" ;
+    bf:adjacentTo bldg:R203,
+        bldg:R205,
+        bldg:R207 ;
+    bf:contains bldg:hamilton_0027_air_rh,
+        bldg:hamilton_0027_air_temp,
+        bldg:hamilton_0027_lux,
+        bldg:hamilton_0027_pir ;
+    bf:hasPoint bldg:hamilton_0027_air_rh,
+        bldg:hamilton_0027_air_temp,
+        bldg:hamilton_0027_lux,
+        bldg:hamilton_0027_pir ;
+    bf:isPartOf bldg:SouthZone,
+        bldg:floor_2 .
+
+bldg:R209 a brick:Room ;
+    rdfs:label "Office" ;
+    bf:adjacentTo bldg:R205,
+        bldg:R208,
+        bldg:R210 ;
+    bf:contains bldg:hamilton_002e_air_rh,
+        bldg:hamilton_002e_air_temp,
+        bldg:hamilton_002e_lux,
+        bldg:hamilton_002e_pir ;
+    bf:hasPoint bldg:hamilton_002e_air_rh,
+        bldg:hamilton_002e_air_temp,
+        bldg:hamilton_002e_lux,
+        bldg:hamilton_002e_pir ;
+    bf:isPartOf bldg:SouthZone,
+        bldg:floor_2 .
+
+bldg:R210 a brick:Room ;
+    rdfs:label "Office" ;
+    bf:adjacentTo bldg:R205,
+        bldg:R209,
+        bldg:R211 ;
+    bf:contains bldg:hamilton_002a_air_rh,
+        bldg:hamilton_002a_air_temp,
+        bldg:hamilton_002a_lux,
+        bldg:hamilton_002a_pir ;
+    bf:hasPoint bldg:hamilton_002a_air_rh,
+        bldg:hamilton_002a_air_temp,
+        bldg:hamilton_002a_lux,
+        bldg:hamilton_002a_pir ;
+    bf:isPartOf bldg:SouthZone,
+        bldg:floor_2 .
+
+bldg:R214 a brick:Room ;
+    rdfs:label "Office" ;
+    bf:adjacentTo bldg:R213,
+        bldg:R215,
+        bldg:R219 ;
+    bf:contains bldg:hamilton_0028_air_rh,
+        bldg:hamilton_0028_air_temp,
+        bldg:hamilton_0028_lux,
+        bldg:hamilton_0028_pir ;
+    bf:hasPoint bldg:hamilton_0028_air_rh,
+        bldg:hamilton_0028_air_temp,
+        bldg:hamilton_0028_lux,
+        bldg:hamilton_0028_pir ;
+    bf:isPartOf bldg:EastZone,
+        bldg:floor_2 .
+
+bldg:R216 a brick:Room ;
+    rdfs:label "Office" ;
+    bf:adjacentTo bldg:R215,
+        bldg:R217,
+        bldg:R218 ;
+    bf:contains bldg:hamilton_0022_air_rh,
+        bldg:hamilton_0022_air_temp,
+        bldg:hamilton_0022_lux,
+        bldg:hamilton_0022_pir ;
+    bf:hasPoint bldg:hamilton_0022_air_rh,
+        bldg:hamilton_0022_air_temp,
+        bldg:hamilton_0022_lux,
+        bldg:hamilton_0022_pir ;
+    bf:isPartOf bldg:EastZone,
+        bldg:floor_2 .
+
+bldg:R207 a brick:Room ;
+    rdfs:label "Office" ;
+    bf:adjacentTo bldg:R203,
+        bldg:R204,
+        bldg:R206,
+        bldg:R208 ;
+    bf:contains bldg:hamilton_005c_air_rh,
+        bldg:hamilton_005c_air_temp,
+        bldg:hamilton_005c_lux,
+        bldg:hamilton_005c_pir ;
+    bf:hasPoint bldg:hamilton_005c_air_rh,
+        bldg:hamilton_005c_air_temp,
+        bldg:hamilton_005c_lux,
+        bldg:hamilton_005c_pir ;
+    bf:isPartOf bldg:SouthZone,
+        bldg:floor_2 .
+
+bldg:R211 a brick:Room ;
+    rdfs:label "Office" ;
+    bf:adjacentTo bldg:R205,
+        bldg:R210,
+        bldg:R212,
+        bldg:R219 ;
+    bf:contains bldg:hamilton_005e_air_rh,
+        bldg:hamilton_005e_air_temp,
+        bldg:hamilton_005e_lux,
+        bldg:hamilton_005e_pir ;
+    bf:hasPoint bldg:hamilton_005e_air_rh,
+        bldg:hamilton_005e_air_temp,
+        bldg:hamilton_005e_lux,
+        bldg:hamilton_005e_pir ;
+    bf:isPartOf bldg:SouthZone,
+        bldg:floor_2 .
+
+bldg:R212 a brick:Room ;
+    rdfs:label "Office" ;
+    bf:adjacentTo bldg:R205,
+        bldg:R211,
+        bldg:R213,
+        bldg:R219 ;
+    bf:contains bldg:hamilton_005a_air_rh,
+        bldg:hamilton_005a_air_temp,
+        bldg:hamilton_005a_lux,
+        bldg:hamilton_005a_pir ;
+    bf:hasPoint bldg:hamilton_005a_air_rh,
+        bldg:hamilton_005a_air_temp,
+        bldg:hamilton_005a_lux,
+        bldg:hamilton_005a_pir ;
+    bf:isPartOf bldg:SouthZone,
+        bldg:floor_2 .
+
+bldg:R213 a brick:Room ;
+    rdfs:label "Office" ;
+    bf:adjacentTo bldg:R205,
+        bldg:R212,
+        bldg:R214,
+        bldg:R219 ;
+    bf:contains bldg:hamilton_0060_air_rh,
+        bldg:hamilton_0060_air_temp,
+        bldg:hamilton_0060_lux,
+        bldg:hamilton_0060_pir ;
+    bf:hasPoint bldg:hamilton_0060_air_rh,
+        bldg:hamilton_0060_air_temp,
+        bldg:hamilton_0060_lux,
+        bldg:hamilton_0060_pir ;
+    bf:isPartOf bldg:EastZone,
+        bldg:floor_2 .
+
+bldg:R215 a brick:Room ;
+    rdfs:label "Office" ;
+    bf:adjacentTo bldg:R214,
+        bldg:R216,
+        bldg:R218,
+        bldg:R219 ;
+    bf:contains bldg:hamilton_002c_air_rh,
+        bldg:hamilton_002c_air_temp,
+        bldg:hamilton_002c_lux,
+        bldg:hamilton_002c_pir ;
+    bf:hasPoint bldg:hamilton_002c_air_rh,
+        bldg:hamilton_002c_air_temp,
+        bldg:hamilton_002c_lux,
+        bldg:hamilton_002c_pir ;
+    bf:isPartOf bldg:EastZone,
+        bldg:floor_2 .
+
+brick:Illumination_Sensor rdfs:subClassOf brick:Sensor .
+
+bldg:R203 a brick:Room ;
+    rdfs:label "Office" ;
+    bf:adjacentTo bldg:R200,
+        bldg:R201,
+        bldg:R204,
+        bldg:R205,
+        bldg:R206,
+        bldg:R207,
+        bldg:R226 ;
+    bf:contains bldg:hamilton_0029_air_rh,
+        bldg:hamilton_0029_air_temp,
+        bldg:hamilton_0029_lux,
+        bldg:hamilton_0029_pir ;
+    bf:hasPoint bldg:hamilton_0029_air_rh,
+        bldg:hamilton_0029_air_temp,
+        bldg:hamilton_0029_lux,
+        bldg:hamilton_0029_pir ;
+    bf:isPartOf bldg:floor_2 .
+
+bldg:R208 a brick:Room ;
+    rdfs:label "Conference Room" ;
+    bf:adjacentTo bldg:R204,
+        bldg:R207,
+        bldg:R209 ;
+    bf:contains bldg:hamilton_002b_air_rh,
+        bldg:hamilton_002b_air_temp,
+        bldg:hamilton_002b_lux,
+        bldg:hamilton_002b_pir,
+        bldg:hamilton_005d_air_rh,
+        bldg:hamilton_005d_air_temp,
+        bldg:hamilton_005d_lux,
+        bldg:hamilton_005d_pir ;
+    bf:hasPoint bldg:hamilton_002b_air_rh,
+        bldg:hamilton_002b_air_temp,
+        bldg:hamilton_002b_lux,
+        bldg:hamilton_002b_pir,
+        bldg:hamilton_005d_air_rh,
+        bldg:hamilton_005d_air_temp,
+        bldg:hamilton_005d_lux,
+        bldg:hamilton_005d_pir ;
+    bf:isPartOf bldg:SouthZone,
         bldg:floor_2 .
 
 bldg:floor_2 a brick:Floor ;
