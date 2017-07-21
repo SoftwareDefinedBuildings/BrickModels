@@ -1,12 +1,7 @@
 from rdflib import Graph, Namespace, URIRef, Literal
 import rdflib
 import re
-
-BOSSWAVE=True
-
-if BOSSWAVE:
-    from bw2dataclient import DataClient
-    client = DataClient(archivers=["ucberkeley"])
+from xbos.services.brick import Generator
 
 RDF = Namespace('http://www.w3.org/1999/02/22-rdf-syntax-ns#')
 RDFS = Namespace('http://www.w3.org/2000/01/rdf-schema#')
@@ -22,6 +17,14 @@ g.bind('rdfs', RDFS)
 g.bind('brick', BRICK)
 g.bind('bf', BRICKFRAME)
 g.bind('bldg', CIEE)
+
+
+BOSSWAVE=True
+
+if BOSSWAVE:
+    from bw2dataclient import DataClient
+    client = DataClient(archivers=["ucberkeley"])
+    generator = Generator(CIEE, client)
 
 # add floors
 g.add((CIEE.floor_1, RDF.type, BRICK.Floor))
@@ -210,17 +213,12 @@ g.add((CIEE.RTU3, BF.feeds, CIEE.CentralZone))
 g.add((CIEE.RTU4, BF.feeds, CIEE.NorthZone))
 
 # add thermostats
-g.add((CIEE.openoffice_tstat, RDF.type, BRICK.Thermostat))
-g.add((CIEE.openoffice_tstat, BF.controls, CIEE.RTU3))
-g.add((CIEE.openoffice_tstat, BF.uri, Literal("ciee/devices/venstar/s.venstar/OpenSpace/i.xbos.thermostat")))
-
-g.add((CIEE.conference_tstat, RDF.type, BRICK.Thermostat))
-g.add((CIEE.conference_tstat, BF.controls, CIEE.RTU1))
-g.add((CIEE.conference_tstat, BF.uri, Literal("ciee/devices/venstar/s.venstar/ConferenceRoom/i.xbos.thermostat")))
-
-g.add((CIEE.carl_tstat, RDF.type, BRICK.Thermostat))
-g.add((CIEE.carl_tstat, BF.controls, CIEE.RTU2))
-g.add((CIEE.carl_tstat, BF.uri, Literal("ciee/devices/venstar/s.venstar/CarlsOffice/i.xbos.thermostat")))
+for t in generator.add_xbos_thermostat(CIEE.openoffice_tstat,"ciee/devices/venstar/s.venstar/OpenSpace/i.xbos.thermostat", CIEE.RTU3):
+    g.add(t)
+for t in generator.add_xbos_thermostat(CIEE.conference_tstat,"ciee/devices/venstar/s.venstar/ConferenceRoom/i.xbos.thermostat", CIEE.RTU1):
+    g.add(t)
+for t in generator.add_xbos_thermostat(CIEE.carl_tstat,"ciee/devices/pelican/s.pelican/SouthEastCorner/i.xbos.thermostat", CIEE.RTU2):
+    g.add(t)
 
 # add Lighting
 
