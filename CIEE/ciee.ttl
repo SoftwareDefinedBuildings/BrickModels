@@ -6,9 +6,6 @@
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-bldg:RTU4 a brick:RTU ;
-    bf:feeds bldg:NorthZone .
-
 bldg:RTU5 a brick:RTU .
 
 bldg:building_meter a brick:Electric_Meter ;
@@ -25,6 +22,17 @@ bldg:carl_tstat a brick:Thermostat ;
         bldg:carl_tstat_state,
         bldg:carl_tstat_temperature ;
     bf:uri "ciee/devices/pelican/s.pelican/SouthEastCorner/i.xbos.thermostat" .
+
+bldg:clarity_tstat a brick:Thermostat ;
+    bf:controls bldg:RTU4 ;
+    bf:hasPoint bldg:clarity_tstat_cooling_setpoint,
+        bldg:clarity_tstat_fan,
+        bldg:clarity_tstat_heating_setpoint,
+        bldg:clarity_tstat_mode,
+        bldg:clarity_tstat_override,
+        bldg:clarity_tstat_state,
+        bldg:clarity_tstat_temperature ;
+    bf:uri "ciee/devices/venstar/s.venstar/Clarity/i.xbos.thermostat" .
 
 bldg:conference_tstat a brick:Thermostat ;
     bf:controls bldg:RTU1 ;
@@ -443,6 +451,9 @@ bldg:RTU2 a brick:RTU ;
 bldg:RTU3 a brick:RTU ;
     bf:feeds bldg:CentralZone .
 
+bldg:RTU4 a brick:RTU ;
+    bf:feeds bldg:NorthZone .
+
 bldg:ServerRoom a brick:Room ;
     rdf:label "Server Room" .
 
@@ -476,6 +487,27 @@ bldg:carl_tstat_state a brick:Thermostat_Status ;
 
 bldg:carl_tstat_temperature a brick:Temperature_Sensor ;
     bf:uuid "b47ba370-bceb-39cf-9552-d1225d910039" .
+
+bldg:clarity_tstat_cooling_setpoint a brick:Supply_Air_Temperature_Cooling_Setpoint ;
+    bf:uuid "9fa56ac1-0f8a-3ad2-86e8-72e816b875ad" .
+
+bldg:clarity_tstat_fan a brick:Fan_Command ;
+    bf:uuid "f1bb9994-4b72-3112-b4a6-e2eb49bd2b6f" .
+
+bldg:clarity_tstat_heating_setpoint a brick:Supply_Air_Temperature_Heating_Setpoint ;
+    bf:uuid "e4e0db0b-1c15-330e-a864-011e558f542e" .
+
+bldg:clarity_tstat_mode a brick:Thermostat_Mode_Command ;
+    bf:uuid "c74200d0-0ee1-3951-a7f6-2bc8857cb303" .
+
+bldg:clarity_tstat_override a brick:Override_Command ;
+    bf:uuid "04a4ac49-a888-38c6-b000-e81e3ff5e630" .
+
+bldg:clarity_tstat_state a brick:Thermostat_Status ;
+    bf:uuid "5e55e5b1-007b-39fa-98b6-ae01baa6dccd" .
+
+bldg:clarity_tstat_temperature a brick:Temperature_Sensor ;
+    bf:uuid "c7e33fa6-f683-36e9-b97a-7f096e4b57d4" .
 
 bldg:conference_tstat_cooling_setpoint a brick:Supply_Air_Temperature_Cooling_Setpoint ;
     bf:uuid "dbbf4a91-107a-3b15-b2c0-a49b54116daa" .

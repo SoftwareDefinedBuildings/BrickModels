@@ -219,6 +219,8 @@ for t in generator.add_xbos_thermostat(CIEE.conference_tstat,"ciee/devices/venst
     g.add(t)
 for t in generator.add_xbos_thermostat(CIEE.carl_tstat,"ciee/devices/pelican/s.pelican/SouthEastCorner/i.xbos.thermostat", CIEE.RTU2):
     g.add(t)
+for t in generator.add_xbos_thermostat(CIEE.clarity_tstat,"ciee/devices/venstar/s.venstar/Clarity/i.xbos.thermostat", CIEE.RTU4):
+    g.add(t)
 
 # add Lighting
 
