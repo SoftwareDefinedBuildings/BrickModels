@@ -146,6 +146,7 @@ for sensor, room in sensors2rooms.items():
     if BOSSWAVE:
         uuid = client.uuids('name = "air_temp" and Deployment = "CIEE" and uri like "{0}"'.format(sensor))
         if len(uuid) > 0:
+            print uuid
             g.add((CIEE[name]+"_air_temp", BF.uuid, Literal(uuid[0])))
 
         uuid = client.uuids('name = "presence" and Deployment = "CIEE" and uri like "{0}"'.format(sensor))
@@ -223,6 +224,81 @@ for t in generator.add_xbos_thermostat(CIEE.clarity_tstat,"ciee/devices/venstar/
     g.add(t)
 
 # add Lighting
+lights2rooms = {
+   "Sensor01907b": CIEE.R207,
+   "Sensor01930e": CIEE.R207,
+   "Sensor02d444": CIEE.R207,
+   "Sensor013263": CIEE.R207,
+   "Sensor01942b": CIEE.R207,
+   "Sensor02309c": CIEE.R207,
+   "Sensor01935b": CIEE.R207,
+   "Sensor02d429": CIEE.R207,
+   "Sensor02d432": CIEE.R207,
+   "Sensor02d454": CIEE.R207,
+   "Sensor02d455": CIEE.R207,
+   "Sensor01902e": CIEE.R207,
+   "Sensor019324": CIEE.R207,
+   "Sensor02d433": CIEE.R207,
+   "Sensor02d458": CIEE.R207,
+   "Sensor01934e": CIEE.R207,
+   "Sensor02d438": CIEE.R207,
+   "Sensor018ff9": CIEE.R207,
+   "Sensor30005f": CIEE.R207,
+   "Sensor00d56d": CIEE.R207,
+}
+for lightname, roomname in lights2rooms.items():
+    name = "enlighted_"+lightname
+    g.add((CIEE[name], RDF.type, BRICK.Lighting_System))
+    g.add((CIEE[name], BF.isLocatedIn, roomname))
+    url = Literal("ciee/devices/enlighted/s.enlighted/{0}/i.xbos.light".format(lightname))
+    for t in generator.add_xbos_light(CIEE[name], url):
+        g.add(t)
+
+    metername = "enlighted_"+lightname+"_meter"
+    g.add((CIEE[metername], RDF.type, BRICK.Electric_Meter))
+    g.add((CIEE[metername], BF.isPointOf, CIEE[name]))
+    g.add((CIEE[metername], BF.uri, Literal("ciee/devices/enlighted/s.enlighted/{0}/i.xbos.meter".format(lightname))))
+
+    occname = "enlighted_"+lightname+"_meter"
+    g.add((CIEE[occname], RDF.type, BRICK.Occupancy_Sensor))
+    g.add((CIEE[occname], BF.isPointOf, roomname))
+    g.add((CIEE[occname], BF.isLocatedIn, roomname))
+    g.add((CIEE[occname], BF.uri, Literal("ciee/devices/enlighted/s.enlighted/{0}/i.xbos.occupancy_sensor/signal/info".format(lightname))))
+
+lights2zones = {
+   "Sensor01907b": "lightingzone1",
+   "Sensor01930e": "lightingzone1",
+   "Sensor02d444": "lightingzone1",
+   "Sensor013263": "lightingzone1",
+   "Sensor01942b": "lightingzone1",
+   "Sensor02309c": "lightingzone1",
+   "Sensor01935b": "lightingzone1",
+   "Sensor02d429": "lightingzone1",
+   "Sensor02d432": "lightingzone1",
+   "Sensor02d454": "lightingzone1",
+   "Sensor02d455": "lightingzone1",
+   "Sensor01902e": "lightingzone1",
+   "Sensor019324": "lightingzone1",
+   "Sensor02d433": "lightingzone1",
+   "Sensor02d458": "lightingzone1",
+   "Sensor01934e": "lightingzone1",
+   "Sensor02d438": "lightingzone1",
+   "Sensor018ff9": "lightingzone1",
+   "Sensor30005f": "lightingzone1",
+   "Sensor00d56d": "lightingzone1",
+}
+for lightname, zonename in lights2zones.items():
+    name = "enlighted_"+lightname
+    g.add((CIEE[zonename], RDF.type, BRICK.Lighting_Zone))
+    g.add((CIEE[name], BF.feeds, CIEE[zonename]))
+
+lightingzones = {
+    "lightingzone1": [CIEE.R207, CIEE.R208],
+}
+for zone, roomlist in lightingzones.items():
+    for room in roomlist:
+        g.add((CIEE[zone], BF.hasPart, room))
+    
 
 # add meter
 g.add((CIEE.building_meter, RDF.type, BRICK.Electric_Meter))
