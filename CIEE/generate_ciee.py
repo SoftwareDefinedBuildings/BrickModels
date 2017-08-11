@@ -257,13 +257,27 @@ for lightname, roomname in lights2rooms.items():
     metername = "enlighted_"+lightname+"_meter"
     g.add((CIEE[metername], RDF.type, BRICK.Electric_Meter))
     g.add((CIEE[metername], BF.isPointOf, CIEE[name]))
-    g.add((CIEE[metername], BF.uri, Literal("ciee/devices/enlighted/s.enlighted/{0}/i.xbos.meter".format(lightname))))
+    uri = "ciee/devices/enlighted/s.enlighted/{0}/i.xbos.meter".format(lightname)
+    g.add((CIEE[metername], BF.uri, Literal(uri)))
+    if BOSSWAVE:
+        rest_of_uri = '/'.join(uri.split("/")[1:])
+        namespace = uri.split("/")[0]
+        uuid = client.uuids('name = "power" and namespace = "{0}" and uri like "{1}"'.format(namespace, rest_of_uri))
+        if len(uuid) > 0:
+            g.add((CIEE[metername], BF.uuid, Literal(uuid[0])))
 
-    occname = "enlighted_"+lightname+"_meter"
+    occname = "enlighted_"+lightname+"_occupancy"
     g.add((CIEE[occname], RDF.type, BRICK.Occupancy_Sensor))
     g.add((CIEE[occname], BF.isPointOf, roomname))
     g.add((CIEE[occname], BF.isLocatedIn, roomname))
-    g.add((CIEE[occname], BF.uri, Literal("ciee/devices/enlighted/s.enlighted/{0}/i.xbos.occupancy_sensor/signal/info".format(lightname))))
+    uri = "ciee/devices/enlighted/s.enlighted/{0}/i.xbos.occupancy_sensor".format(lightname)
+    g.add((CIEE[occname], BF.uri, Literal(uri)))
+    if BOSSWAVE:
+        rest_of_uri = '/'.join(uri.split("/")[1:])
+        namespace = uri.split("/")[0]
+        uuid = client.uuids('name = "occupancy" and namespace = "{0}" and uri like "{1}"'.format(namespace, rest_of_uri))
+        if len(uuid) > 0:
+            g.add((CIEE[occname], BF.uuid, Literal(uuid[0])))
 
 lights2zones = {
    "Sensor01907b": "lightingzone1",
