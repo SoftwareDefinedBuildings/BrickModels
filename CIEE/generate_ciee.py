@@ -262,20 +262,21 @@ for lightname, roomname in lights2rooms.items():
     if BOSSWAVE:
         rest_of_uri = '/'.join(uri.split("/")[1:])
         namespace = uri.split("/")[0]
-        uuid = client.uuids('name = "power" and namespace = "{0}" and uri like "{1}"'.format(namespace, rest_of_uri))
+        uuid = client.uuids('name = "power" and namespace = "{0}" and originaluri like "{1}"'.format(namespace, rest_of_uri))
         if len(uuid) > 0:
             g.add((CIEE[metername], BF.uuid, Literal(uuid[0])))
 
     occname = "enlighted_"+lightname+"_occupancy"
     g.add((CIEE[occname], RDF.type, BRICK.Occupancy_Sensor))
     g.add((CIEE[occname], BF.isPointOf, roomname))
+    g.add((CIEE[occname], BF.isPointOf, CIEE[name]))
     g.add((CIEE[occname], BF.isLocatedIn, roomname))
     uri = "ciee/devices/enlighted/s.enlighted/{0}/i.xbos.occupancy_sensor".format(lightname)
     g.add((CIEE[occname], BF.uri, Literal(uri)))
     if BOSSWAVE:
         rest_of_uri = '/'.join(uri.split("/")[1:])
         namespace = uri.split("/")[0]
-        uuid = client.uuids('name = "occupancy" and namespace = "{0}" and uri like "{1}"'.format(namespace, rest_of_uri))
+        uuid = client.uuids('name = "occupancy" and namespace = "{0}" and originaluri like "{1}"'.format(namespace, rest_of_uri))
         if len(uuid) > 0:
             g.add((CIEE[occname], BF.uuid, Literal(uuid[0])))
 
