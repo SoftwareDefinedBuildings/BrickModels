@@ -40,7 +40,7 @@ bldg:carl_tstat_override a brick:Override_Command ;
     bf:isPointOf bldg:carl_tstat ;
     bf:uuid "388512db-58c4-33ab-93dc-f85abcaf78d4" .
 
-bldg:carl_tstat_state a brick:Mode_Status ;
+bldg:carl_tstat_state a brick:Thermostat_Status ;
     bf:isPointOf bldg:carl_tstat ;
     bf:uuid "7e543d07-16d1-32bb-94af-95a01f4675f9" .
 
@@ -68,7 +68,7 @@ bldg:clarity_tstat_override a brick:Override_Command ;
     bf:isPointOf bldg:clarity_tstat ;
     bf:uuid "04a4ac49-a888-38c6-b000-e81e3ff5e630" .
 
-bldg:clarity_tstat_state a brick:Mode_Status ;
+bldg:clarity_tstat_state a brick:Thermostat_Status ;
     bf:isPointOf bldg:clarity_tstat ;
     bf:uuid "5e55e5b1-007b-39fa-98b6-ae01baa6dccd" .
 
@@ -96,7 +96,7 @@ bldg:conference_tstat_override a brick:Override_Command ;
     bf:isPointOf bldg:conference_tstat ;
     bf:uuid "25008947-b7db-32d4-87c1-b93be6dc5097" .
 
-bldg:conference_tstat_state a brick:Mode_Status ;
+bldg:conference_tstat_state a brick:Thermostat_Status ;
     bf:isPointOf bldg:conference_tstat ;
     bf:uuid "dfb2b403-fd08-3e9b-bf3f-18c699ce40d6" .
 
@@ -104,263 +104,266 @@ bldg:conference_tstat_temperature a brick:Temperature_Sensor ;
     bf:isPointOf bldg:conference_tstat ;
     bf:uuid "03099008-5224-3b61-b07e-eee445e64620" .
 
-bldg:enlighted_Sensor00d56d_brightness a brick:Lighting_System_Luminance_Setpoint ;
+bldg:copy_room a brick:Lighting_Zone ;
+    bf:isFedBy bldg:enlighted_Sensor00d56d .
+
+bldg:enlighted_Sensor00d56d_brightness a brick:Lighting_System_Luminance_Command ;
     bf:isPointOf bldg:enlighted_Sensor00d56d ;
     bf:uuid "dec2e13a-8b8d-3d48-bf75-161678443fdd" .
 
 bldg:enlighted_Sensor00d56d_meter a brick:Electric_Meter ;
     bf:isPointOf bldg:enlighted_Sensor00d56d ;
     bf:uri "ciee/devices/enlighted/s.enlighted/Sensor00d56d/i.xbos.meter" ;
-    bf:uuid "1f93942a-0ad7-336a-8795-b3f5463132dd" .
+    bf:uuid "4ba8333d-74cc-39f2-8938-ead227ad0f95" .
 
-bldg:enlighted_Sensor00d56d_state a brick:Lighting_System_Luminance_Command ;
+bldg:enlighted_Sensor00d56d_state a brick:Lighting_State ;
     bf:isPointOf bldg:enlighted_Sensor00d56d ;
     bf:uuid "be7039a6-fb6b-3ab2-8216-bae08cee04b2" .
 
-bldg:enlighted_Sensor013263_brightness a brick:Lighting_System_Luminance_Setpoint ;
+bldg:enlighted_Sensor013263_brightness a brick:Lighting_System_Luminance_Command ;
     bf:isPointOf bldg:enlighted_Sensor013263 ;
     bf:uuid "879bd484-63ab-39ad-a320-c684311e2f81" .
 
 bldg:enlighted_Sensor013263_meter a brick:Electric_Meter ;
     bf:isPointOf bldg:enlighted_Sensor013263 ;
     bf:uri "ciee/devices/enlighted/s.enlighted/Sensor013263/i.xbos.meter" ;
-    bf:uuid "7deb4364-c805-37db-af15-c4bb167e2d1e" .
+    bf:uuid "7749cd62-333a-35ed-b0d3-ca248b15c360" .
 
-bldg:enlighted_Sensor013263_state a brick:Lighting_System_Luminance_Command ;
+bldg:enlighted_Sensor013263_state a brick:Lighting_State ;
     bf:isPointOf bldg:enlighted_Sensor013263 ;
     bf:uuid "f7a9882c-3e70-3f07-be42-46655d3f7929" .
 
-bldg:enlighted_Sensor018ff9_brightness a brick:Lighting_System_Luminance_Setpoint ;
+bldg:enlighted_Sensor018ff9_brightness a brick:Lighting_System_Luminance_Command ;
     bf:isPointOf bldg:enlighted_Sensor018ff9 ;
     bf:uuid "0e9660b4-78a2-3747-ab52-0ab7c00e5cb2" .
 
 bldg:enlighted_Sensor018ff9_meter a brick:Electric_Meter ;
     bf:isPointOf bldg:enlighted_Sensor018ff9 ;
     bf:uri "ciee/devices/enlighted/s.enlighted/Sensor018ff9/i.xbos.meter" ;
-    bf:uuid "a6c93352-4ee9-3a78-b8fc-2cc5f0241c24" .
+    bf:uuid "e8da2b81-d179-3611-8ac7-4a1619c1407b" .
 
-bldg:enlighted_Sensor018ff9_state a brick:Lighting_System_Luminance_Command ;
+bldg:enlighted_Sensor018ff9_state a brick:Lighting_State ;
     bf:isPointOf bldg:enlighted_Sensor018ff9 ;
     bf:uuid "892df924-d3cf-39e3-adee-8ba7ffff3c7f" .
 
-bldg:enlighted_Sensor01902e_brightness a brick:Lighting_System_Luminance_Setpoint ;
+bldg:enlighted_Sensor01902e_brightness a brick:Lighting_System_Luminance_Command ;
     bf:isPointOf bldg:enlighted_Sensor01902e ;
     bf:uuid "9780b442-10d2-3d5d-b8d7-d0e851222310" .
 
 bldg:enlighted_Sensor01902e_meter a brick:Electric_Meter ;
     bf:isPointOf bldg:enlighted_Sensor01902e ;
     bf:uri "ciee/devices/enlighted/s.enlighted/Sensor01902e/i.xbos.meter" ;
-    bf:uuid "220bf58b-3a33-3e8d-96f9-7bab087cecac" .
+    bf:uuid "33ed7b93-605c-39f4-85b9-e43b3fcdfa7b" .
 
-bldg:enlighted_Sensor01902e_state a brick:Lighting_System_Luminance_Command ;
+bldg:enlighted_Sensor01902e_state a brick:Lighting_State ;
     bf:isPointOf bldg:enlighted_Sensor01902e ;
     bf:uuid "a2285f62-7b4d-3aa1-8257-c867b26339bb" .
 
-bldg:enlighted_Sensor01907b_brightness a brick:Lighting_System_Luminance_Setpoint ;
+bldg:enlighted_Sensor01907b_brightness a brick:Lighting_System_Luminance_Command ;
     bf:isPointOf bldg:enlighted_Sensor01907b ;
     bf:uuid "ffca54ee-4bb7-3b31-bb5b-dc786a967d13" .
 
 bldg:enlighted_Sensor01907b_meter a brick:Electric_Meter ;
     bf:isPointOf bldg:enlighted_Sensor01907b ;
     bf:uri "ciee/devices/enlighted/s.enlighted/Sensor01907b/i.xbos.meter" ;
-    bf:uuid "0e74ca1d-9c99-331b-aaff-8a958f765954" .
+    bf:uuid "e53d51a3-bbe1-3af3-9cf2-649c9ead299b" .
 
-bldg:enlighted_Sensor01907b_state a brick:Lighting_System_Luminance_Command ;
+bldg:enlighted_Sensor01907b_state a brick:Lighting_State ;
     bf:isPointOf bldg:enlighted_Sensor01907b ;
     bf:uuid "fc1f8658-6ad0-36e8-a9d9-803fd9927e6d" .
 
-bldg:enlighted_Sensor01930e_brightness a brick:Lighting_System_Luminance_Setpoint ;
+bldg:enlighted_Sensor01930e_brightness a brick:Lighting_System_Luminance_Command ;
     bf:isPointOf bldg:enlighted_Sensor01930e ;
     bf:uuid "976b7d1e-3081-3615-940b-5b6b2f3e0cc1" .
 
 bldg:enlighted_Sensor01930e_meter a brick:Electric_Meter ;
     bf:isPointOf bldg:enlighted_Sensor01930e ;
     bf:uri "ciee/devices/enlighted/s.enlighted/Sensor01930e/i.xbos.meter" ;
-    bf:uuid "807cd6ff-0079-303d-b1b8-a7a9c20eb978" .
+    bf:uuid "c5c295d9-76e0-34ef-92d5-149fa25f22a3" .
 
-bldg:enlighted_Sensor01930e_state a brick:Lighting_System_Luminance_Command ;
+bldg:enlighted_Sensor01930e_state a brick:Lighting_State ;
     bf:isPointOf bldg:enlighted_Sensor01930e ;
     bf:uuid "5f589095-7004-3618-8ac5-ec9f84160f0e" .
 
-bldg:enlighted_Sensor019324_brightness a brick:Lighting_System_Luminance_Setpoint ;
+bldg:enlighted_Sensor019324_brightness a brick:Lighting_System_Luminance_Command ;
     bf:isPointOf bldg:enlighted_Sensor019324 ;
     bf:uuid "a8045cdc-4e9f-3d8a-90bd-41cb4ef5a317" .
 
 bldg:enlighted_Sensor019324_meter a brick:Electric_Meter ;
     bf:isPointOf bldg:enlighted_Sensor019324 ;
     bf:uri "ciee/devices/enlighted/s.enlighted/Sensor019324/i.xbos.meter" ;
-    bf:uuid "5305cb44-388c-3012-9ca7-00d34f974168" .
+    bf:uuid "05dcc4ae-de8c-3c6d-943b-153bebb06e39" .
 
-bldg:enlighted_Sensor019324_state a brick:Lighting_System_Luminance_Command ;
+bldg:enlighted_Sensor019324_state a brick:Lighting_State ;
     bf:isPointOf bldg:enlighted_Sensor019324 ;
     bf:uuid "403ed576-bea6-3d43-9e53-4f49d1baf4b3" .
 
-bldg:enlighted_Sensor01934e_brightness a brick:Lighting_System_Luminance_Setpoint ;
+bldg:enlighted_Sensor01934e_brightness a brick:Lighting_System_Luminance_Command ;
     bf:isPointOf bldg:enlighted_Sensor01934e ;
     bf:uuid "0979b507-cc83-3db6-85ec-3bf0f4e7fd3a" .
 
 bldg:enlighted_Sensor01934e_meter a brick:Electric_Meter ;
     bf:isPointOf bldg:enlighted_Sensor01934e ;
     bf:uri "ciee/devices/enlighted/s.enlighted/Sensor01934e/i.xbos.meter" ;
-    bf:uuid "8d65755b-70b8-3608-b03b-811cb1c54991" .
+    bf:uuid "ce6ea005-9d70-30e5-83a5-13c312c40aa7" .
 
-bldg:enlighted_Sensor01934e_state a brick:Lighting_System_Luminance_Command ;
+bldg:enlighted_Sensor01934e_state a brick:Lighting_State ;
     bf:isPointOf bldg:enlighted_Sensor01934e ;
     bf:uuid "cfed92df-072d-3f1a-b389-f1fedb02b92f" .
 
-bldg:enlighted_Sensor01935b_brightness a brick:Lighting_System_Luminance_Setpoint ;
+bldg:enlighted_Sensor01935b_brightness a brick:Lighting_System_Luminance_Command ;
     bf:isPointOf bldg:enlighted_Sensor01935b ;
     bf:uuid "236f9036-4ba0-308d-9908-281f51404f1c" .
 
 bldg:enlighted_Sensor01935b_meter a brick:Electric_Meter ;
     bf:isPointOf bldg:enlighted_Sensor01935b ;
     bf:uri "ciee/devices/enlighted/s.enlighted/Sensor01935b/i.xbos.meter" ;
-    bf:uuid "5ee93af7-b157-390f-8089-5592c3c80aca" .
+    bf:uuid "6125c4aa-7685-390d-a745-27a19e05ada2" .
 
-bldg:enlighted_Sensor01935b_state a brick:Lighting_System_Luminance_Command ;
+bldg:enlighted_Sensor01935b_state a brick:Lighting_State ;
     bf:isPointOf bldg:enlighted_Sensor01935b ;
     bf:uuid "946ac52e-b8c4-3583-96b9-368fcd259667" .
 
-bldg:enlighted_Sensor01942b_brightness a brick:Lighting_System_Luminance_Setpoint ;
+bldg:enlighted_Sensor01942b_brightness a brick:Lighting_System_Luminance_Command ;
     bf:isPointOf bldg:enlighted_Sensor01942b ;
     bf:uuid "d79e1cd7-7914-38b0-b373-5a331d28f161" .
 
 bldg:enlighted_Sensor01942b_meter a brick:Electric_Meter ;
     bf:isPointOf bldg:enlighted_Sensor01942b ;
     bf:uri "ciee/devices/enlighted/s.enlighted/Sensor01942b/i.xbos.meter" ;
-    bf:uuid "71c018b6-9639-3781-8ff8-ac99935225bc" .
+    bf:uuid "7fc65a1a-70da-320d-923d-7d33df77e83c" .
 
-bldg:enlighted_Sensor01942b_state a brick:Lighting_System_Luminance_Command ;
+bldg:enlighted_Sensor01942b_state a brick:Lighting_State ;
     bf:isPointOf bldg:enlighted_Sensor01942b ;
     bf:uuid "a8325480-25cb-3a16-b1c4-1d5620ec954c" .
 
-bldg:enlighted_Sensor02309c_brightness a brick:Lighting_System_Luminance_Setpoint ;
+bldg:enlighted_Sensor02309c_brightness a brick:Lighting_System_Luminance_Command ;
     bf:isPointOf bldg:enlighted_Sensor02309c ;
     bf:uuid "2c9aed4f-0f45-33a8-bf54-2faef24592c4" .
 
 bldg:enlighted_Sensor02309c_meter a brick:Electric_Meter ;
     bf:isPointOf bldg:enlighted_Sensor02309c ;
     bf:uri "ciee/devices/enlighted/s.enlighted/Sensor02309c/i.xbos.meter" ;
-    bf:uuid "840835c4-2f71-3dce-a5b0-be3fc0dcd154" .
+    bf:uuid "6db3c938-e7b5-362e-8ec7-fd1715bfa4b6" .
 
-bldg:enlighted_Sensor02309c_state a brick:Lighting_System_Luminance_Command ;
+bldg:enlighted_Sensor02309c_state a brick:Lighting_State ;
     bf:isPointOf bldg:enlighted_Sensor02309c ;
     bf:uuid "1613ddae-e839-3eac-8c62-06155821996d" .
 
-bldg:enlighted_Sensor02d429_brightness a brick:Lighting_System_Luminance_Setpoint ;
+bldg:enlighted_Sensor02d429_brightness a brick:Lighting_System_Luminance_Command ;
     bf:isPointOf bldg:enlighted_Sensor02d429 ;
     bf:uuid "4bd1f31e-32f8-3f07-a262-45c8dc6b1351" .
 
 bldg:enlighted_Sensor02d429_meter a brick:Electric_Meter ;
     bf:isPointOf bldg:enlighted_Sensor02d429 ;
     bf:uri "ciee/devices/enlighted/s.enlighted/Sensor02d429/i.xbos.meter" ;
-    bf:uuid "72a583d2-6c94-3dba-a1a7-eaa93e21d156" .
+    bf:uuid "41016955-fdb1-340e-9d38-f580a2e34800" .
 
-bldg:enlighted_Sensor02d429_state a brick:Lighting_System_Luminance_Command ;
+bldg:enlighted_Sensor02d429_state a brick:Lighting_State ;
     bf:isPointOf bldg:enlighted_Sensor02d429 ;
     bf:uuid "13c60f24-7ea5-3782-90aa-1b84fee54658" .
 
-bldg:enlighted_Sensor02d432_brightness a brick:Lighting_System_Luminance_Setpoint ;
+bldg:enlighted_Sensor02d432_brightness a brick:Lighting_System_Luminance_Command ;
     bf:isPointOf bldg:enlighted_Sensor02d432 ;
     bf:uuid "17a4d994-4c4b-3f6d-a4b6-718a02482dce" .
 
 bldg:enlighted_Sensor02d432_meter a brick:Electric_Meter ;
     bf:isPointOf bldg:enlighted_Sensor02d432 ;
     bf:uri "ciee/devices/enlighted/s.enlighted/Sensor02d432/i.xbos.meter" ;
-    bf:uuid "f198e440-35cc-31f5-b118-320ffe7dc8e9" .
+    bf:uuid "5b812bbc-f1c3-3d43-a655-40a3d44837fc" .
 
-bldg:enlighted_Sensor02d432_state a brick:Lighting_System_Luminance_Command ;
+bldg:enlighted_Sensor02d432_state a brick:Lighting_State ;
     bf:isPointOf bldg:enlighted_Sensor02d432 ;
     bf:uuid "adfbb150-7952-32d1-9552-2bba5e809912" .
 
-bldg:enlighted_Sensor02d433_brightness a brick:Lighting_System_Luminance_Setpoint ;
+bldg:enlighted_Sensor02d433_brightness a brick:Lighting_System_Luminance_Command ;
     bf:isPointOf bldg:enlighted_Sensor02d433 ;
     bf:uuid "4bdbc933-5b63-340d-98c2-a41946545549" .
 
 bldg:enlighted_Sensor02d433_meter a brick:Electric_Meter ;
     bf:isPointOf bldg:enlighted_Sensor02d433 ;
     bf:uri "ciee/devices/enlighted/s.enlighted/Sensor02d433/i.xbos.meter" ;
-    bf:uuid "43857379-4e64-36c2-986a-25c1697948f6" .
+    bf:uuid "c5d201cf-fb7e-3e83-aab3-517e93df1919" .
 
-bldg:enlighted_Sensor02d433_state a brick:Lighting_System_Luminance_Command ;
+bldg:enlighted_Sensor02d433_state a brick:Lighting_State ;
     bf:isPointOf bldg:enlighted_Sensor02d433 ;
     bf:uuid "c35a5f2f-84d7-317a-8bd8-12e85a841421" .
 
-bldg:enlighted_Sensor02d438_brightness a brick:Lighting_System_Luminance_Setpoint ;
+bldg:enlighted_Sensor02d438_brightness a brick:Lighting_System_Luminance_Command ;
     bf:isPointOf bldg:enlighted_Sensor02d438 ;
     bf:uuid "ca5c8a09-b88f-3cb0-9bc0-dadf89b13206" .
 
 bldg:enlighted_Sensor02d438_meter a brick:Electric_Meter ;
     bf:isPointOf bldg:enlighted_Sensor02d438 ;
     bf:uri "ciee/devices/enlighted/s.enlighted/Sensor02d438/i.xbos.meter" ;
-    bf:uuid "01f20e95-cb2b-3d58-b28c-c3583967146c" .
+    bf:uuid "38b1ad08-2c56-3462-87bf-91800a1f3af1" .
 
-bldg:enlighted_Sensor02d438_state a brick:Lighting_System_Luminance_Command ;
+bldg:enlighted_Sensor02d438_state a brick:Lighting_State ;
     bf:isPointOf bldg:enlighted_Sensor02d438 ;
     bf:uuid "04b40a8a-01f7-396c-bfa5-0296cd7e28c2" .
 
-bldg:enlighted_Sensor02d444_brightness a brick:Lighting_System_Luminance_Setpoint ;
+bldg:enlighted_Sensor02d444_brightness a brick:Lighting_System_Luminance_Command ;
     bf:isPointOf bldg:enlighted_Sensor02d444 ;
     bf:uuid "c7e3959c-bb1f-38ca-8255-5b546ce83788" .
 
 bldg:enlighted_Sensor02d444_meter a brick:Electric_Meter ;
     bf:isPointOf bldg:enlighted_Sensor02d444 ;
     bf:uri "ciee/devices/enlighted/s.enlighted/Sensor02d444/i.xbos.meter" ;
-    bf:uuid "9b50d88c-4665-3696-a8af-a6de91bf3735" .
+    bf:uuid "65b682ce-3a1f-3072-b64a-3a354be841c0" .
 
-bldg:enlighted_Sensor02d444_state a brick:Lighting_System_Luminance_Command ;
+bldg:enlighted_Sensor02d444_state a brick:Lighting_State ;
     bf:isPointOf bldg:enlighted_Sensor02d444 ;
     bf:uuid "18bee112-44c3-34f1-8d3a-c8b4e491b2ac" .
 
-bldg:enlighted_Sensor02d454_brightness a brick:Lighting_System_Luminance_Setpoint ;
+bldg:enlighted_Sensor02d454_brightness a brick:Lighting_System_Luminance_Command ;
     bf:isPointOf bldg:enlighted_Sensor02d454 ;
     bf:uuid "72df0f41-0f18-35d0-a0f4-acbfa1aa0774" .
 
 bldg:enlighted_Sensor02d454_meter a brick:Electric_Meter ;
     bf:isPointOf bldg:enlighted_Sensor02d454 ;
     bf:uri "ciee/devices/enlighted/s.enlighted/Sensor02d454/i.xbos.meter" ;
-    bf:uuid "2f1e4982-3256-3be4-851c-a6855b23f9b9" .
+    bf:uuid "72ef9222-40c4-3914-8e9f-6e050cb9e8fc" .
 
-bldg:enlighted_Sensor02d454_state a brick:Lighting_System_Luminance_Command ;
+bldg:enlighted_Sensor02d454_state a brick:Lighting_State ;
     bf:isPointOf bldg:enlighted_Sensor02d454 ;
     bf:uuid "65866c55-5918-39de-b72d-e4db58afeb54" .
 
-bldg:enlighted_Sensor02d455_brightness a brick:Lighting_System_Luminance_Setpoint ;
+bldg:enlighted_Sensor02d455_brightness a brick:Lighting_System_Luminance_Command ;
     bf:isPointOf bldg:enlighted_Sensor02d455 ;
     bf:uuid "e1f4ac24-0cd7-331f-b988-9223b2fb3a53" .
 
 bldg:enlighted_Sensor02d455_meter a brick:Electric_Meter ;
     bf:isPointOf bldg:enlighted_Sensor02d455 ;
     bf:uri "ciee/devices/enlighted/s.enlighted/Sensor02d455/i.xbos.meter" ;
-    bf:uuid "7f266633-4bde-38a3-9a15-ebaddcee949a" .
+    bf:uuid "6537ddc4-2796-3091-876d-554f9bf3ef5a" .
 
-bldg:enlighted_Sensor02d455_state a brick:Lighting_System_Luminance_Command ;
+bldg:enlighted_Sensor02d455_state a brick:Lighting_State ;
     bf:isPointOf bldg:enlighted_Sensor02d455 ;
     bf:uuid "a53f841e-ad8f-3d75-b016-c3203c83a847" .
 
-bldg:enlighted_Sensor02d458_brightness a brick:Lighting_System_Luminance_Setpoint ;
+bldg:enlighted_Sensor02d458_brightness a brick:Lighting_System_Luminance_Command ;
     bf:isPointOf bldg:enlighted_Sensor02d458 ;
     bf:uuid "cc470358-7a18-3b53-95b1-e8256f31d0c1" .
 
 bldg:enlighted_Sensor02d458_meter a brick:Electric_Meter ;
     bf:isPointOf bldg:enlighted_Sensor02d458 ;
     bf:uri "ciee/devices/enlighted/s.enlighted/Sensor02d458/i.xbos.meter" ;
-    bf:uuid "252d7d66-f8ce-3553-b149-e8e3938c3a22" .
+    bf:uuid "c7713607-1736-30c5-aded-8e848eb42a6a" .
 
-bldg:enlighted_Sensor02d458_state a brick:Lighting_System_Luminance_Command ;
+bldg:enlighted_Sensor02d458_state a brick:Lighting_State ;
     bf:isPointOf bldg:enlighted_Sensor02d458 ;
     bf:uuid "b353f9b0-e919-33e6-bb91-62fefaa47645" .
 
-bldg:enlighted_Sensor30005f_brightness a brick:Lighting_System_Luminance_Setpoint ;
+bldg:enlighted_Sensor30005f_brightness a brick:Lighting_System_Luminance_Command ;
     bf:isPointOf bldg:enlighted_Sensor30005f ;
     bf:uuid "647f7ca9-593f-3876-95d3-33832c86ade7" .
 
 bldg:enlighted_Sensor30005f_meter a brick:Electric_Meter ;
     bf:isPointOf bldg:enlighted_Sensor30005f ;
     bf:uri "ciee/devices/enlighted/s.enlighted/Sensor30005f/i.xbos.meter" ;
-    bf:uuid "0ce591e9-ea99-3754-84d2-ecea517b3f27" .
+    bf:uuid "3dc5bd0b-d0b9-3a3e-845c-d3bc4f8df220" .
 
-bldg:enlighted_Sensor30005f_state a brick:Lighting_System_Luminance_Command ;
+bldg:enlighted_Sensor30005f_state a brick:Lighting_State ;
     bf:isPointOf bldg:enlighted_Sensor30005f ;
     bf:uuid "bec90c09-1f1f-393b-9036-a6045952d6c1" .
 
@@ -387,7 +390,7 @@ bldg:openoffice_tstat_override a brick:Override_Command ;
     bf:isPointOf bldg:openoffice_tstat ;
     bf:uuid "67b3beeb-5a75-338b-b51e-7734781fac02" .
 
-bldg:openoffice_tstat_state a brick:Mode_Status ;
+bldg:openoffice_tstat_state a brick:Thermostat_Status ;
     bf:isPointOf bldg:openoffice_tstat ;
     bf:uuid "187ed9b8-ee9b-3042-875e-088a08da37ae" .
 
@@ -410,126 +413,6 @@ bldg:RTU3 a brick:RTU ;
 bldg:RTU4 a brick:RTU ;
     bf:feeds bldg:NorthZone ;
     bf:isControlledBy bldg:clarity_tstat .
-
-bldg:enlighted_Sensor00d56d_occupancy a brick:Occupancy_Sensor ;
-    bf:isLocatedIn bldg:R207 ;
-    bf:isPointOf bldg:R207 ;
-    bf:uri "ciee/devices/enlighted/s.enlighted/Sensor00d56d/i.xbos.occupancy_sensor" ;
-    bf:uuid "01d47ae0-ec47-3234-a89c-cc5d54e6836d" .
-
-bldg:enlighted_Sensor013263_occupancy a brick:Occupancy_Sensor ;
-    bf:isLocatedIn bldg:R207 ;
-    bf:isPointOf bldg:R207 ;
-    bf:uri "ciee/devices/enlighted/s.enlighted/Sensor013263/i.xbos.occupancy_sensor" ;
-    bf:uuid "1d2f82bf-a06d-3e6e-b054-a287834adbf7" .
-
-bldg:enlighted_Sensor018ff9_occupancy a brick:Occupancy_Sensor ;
-    bf:isLocatedIn bldg:R207 ;
-    bf:isPointOf bldg:R207 ;
-    bf:uri "ciee/devices/enlighted/s.enlighted/Sensor018ff9/i.xbos.occupancy_sensor" ;
-    bf:uuid "4c58059a-45be-3976-8744-acd07eddff88" .
-
-bldg:enlighted_Sensor01902e_occupancy a brick:Occupancy_Sensor ;
-    bf:isLocatedIn bldg:R207 ;
-    bf:isPointOf bldg:R207 ;
-    bf:uri "ciee/devices/enlighted/s.enlighted/Sensor01902e/i.xbos.occupancy_sensor" ;
-    bf:uuid "27fe70d8-4383-3599-aaa3-9edeef1227b7" .
-
-bldg:enlighted_Sensor01907b_occupancy a brick:Occupancy_Sensor ;
-    bf:isLocatedIn bldg:R207 ;
-    bf:isPointOf bldg:R207 ;
-    bf:uri "ciee/devices/enlighted/s.enlighted/Sensor01907b/i.xbos.occupancy_sensor" ;
-    bf:uuid "b4329738-e224-3fa4-a66b-f2b6410d483f" .
-
-bldg:enlighted_Sensor01930e_occupancy a brick:Occupancy_Sensor ;
-    bf:isLocatedIn bldg:R207 ;
-    bf:isPointOf bldg:R207 ;
-    bf:uri "ciee/devices/enlighted/s.enlighted/Sensor01930e/i.xbos.occupancy_sensor" ;
-    bf:uuid "37a0d30a-dbfe-304e-936e-3ac01783ce21" .
-
-bldg:enlighted_Sensor019324_occupancy a brick:Occupancy_Sensor ;
-    bf:isLocatedIn bldg:R207 ;
-    bf:isPointOf bldg:R207 ;
-    bf:uri "ciee/devices/enlighted/s.enlighted/Sensor019324/i.xbos.occupancy_sensor" ;
-    bf:uuid "ac2520ad-f594-39ab-b2cc-f257d087bc22" .
-
-bldg:enlighted_Sensor01934e_occupancy a brick:Occupancy_Sensor ;
-    bf:isLocatedIn bldg:R207 ;
-    bf:isPointOf bldg:R207 ;
-    bf:uri "ciee/devices/enlighted/s.enlighted/Sensor01934e/i.xbos.occupancy_sensor" ;
-    bf:uuid "2f5a3c68-b8fc-3e4a-9493-8d48a82f5342" .
-
-bldg:enlighted_Sensor01935b_occupancy a brick:Occupancy_Sensor ;
-    bf:isLocatedIn bldg:R207 ;
-    bf:isPointOf bldg:R207 ;
-    bf:uri "ciee/devices/enlighted/s.enlighted/Sensor01935b/i.xbos.occupancy_sensor" ;
-    bf:uuid "ba75dd1f-408f-3f39-9a0c-a4815905303e" .
-
-bldg:enlighted_Sensor01942b_occupancy a brick:Occupancy_Sensor ;
-    bf:isLocatedIn bldg:R207 ;
-    bf:isPointOf bldg:R207 ;
-    bf:uri "ciee/devices/enlighted/s.enlighted/Sensor01942b/i.xbos.occupancy_sensor" ;
-    bf:uuid "34a79d67-6efa-35fd-bbd3-294efe6cc350" .
-
-bldg:enlighted_Sensor02309c_occupancy a brick:Occupancy_Sensor ;
-    bf:isLocatedIn bldg:R207 ;
-    bf:isPointOf bldg:R207 ;
-    bf:uri "ciee/devices/enlighted/s.enlighted/Sensor02309c/i.xbos.occupancy_sensor" ;
-    bf:uuid "d6728d7a-5001-3101-b285-2ca7312ae8e6" .
-
-bldg:enlighted_Sensor02d429_occupancy a brick:Occupancy_Sensor ;
-    bf:isLocatedIn bldg:R207 ;
-    bf:isPointOf bldg:R207 ;
-    bf:uri "ciee/devices/enlighted/s.enlighted/Sensor02d429/i.xbos.occupancy_sensor" ;
-    bf:uuid "f360847b-c967-3c25-8d1c-2177dc9911f8" .
-
-bldg:enlighted_Sensor02d432_occupancy a brick:Occupancy_Sensor ;
-    bf:isLocatedIn bldg:R207 ;
-    bf:isPointOf bldg:R207 ;
-    bf:uri "ciee/devices/enlighted/s.enlighted/Sensor02d432/i.xbos.occupancy_sensor" ;
-    bf:uuid "600c3134-7843-37a1-afeb-d38790d2bd4a" .
-
-bldg:enlighted_Sensor02d433_occupancy a brick:Occupancy_Sensor ;
-    bf:isLocatedIn bldg:R207 ;
-    bf:isPointOf bldg:R207 ;
-    bf:uri "ciee/devices/enlighted/s.enlighted/Sensor02d433/i.xbos.occupancy_sensor" ;
-    bf:uuid "66f9438a-fa4a-3bfb-9d87-d7e2ed490a1a" .
-
-bldg:enlighted_Sensor02d438_occupancy a brick:Occupancy_Sensor ;
-    bf:isLocatedIn bldg:R207 ;
-    bf:isPointOf bldg:R207 ;
-    bf:uri "ciee/devices/enlighted/s.enlighted/Sensor02d438/i.xbos.occupancy_sensor" ;
-    bf:uuid "a89bd011-229d-327d-931c-c3751f3e333a" .
-
-bldg:enlighted_Sensor02d444_occupancy a brick:Occupancy_Sensor ;
-    bf:isLocatedIn bldg:R207 ;
-    bf:isPointOf bldg:R207 ;
-    bf:uri "ciee/devices/enlighted/s.enlighted/Sensor02d444/i.xbos.occupancy_sensor" ;
-    bf:uuid "6642a791-447e-35ab-9696-0280d89a1e9f" .
-
-bldg:enlighted_Sensor02d454_occupancy a brick:Occupancy_Sensor ;
-    bf:isLocatedIn bldg:R207 ;
-    bf:isPointOf bldg:R207 ;
-    bf:uri "ciee/devices/enlighted/s.enlighted/Sensor02d454/i.xbos.occupancy_sensor" ;
-    bf:uuid "cc6870ed-a6a4-3d0a-8c99-8e2f0a4d6f55" .
-
-bldg:enlighted_Sensor02d455_occupancy a brick:Occupancy_Sensor ;
-    bf:isLocatedIn bldg:R207 ;
-    bf:isPointOf bldg:R207 ;
-    bf:uri "ciee/devices/enlighted/s.enlighted/Sensor02d455/i.xbos.occupancy_sensor" ;
-    bf:uuid "5955ca4c-d8e6-3819-b091-a614ae274e87" .
-
-bldg:enlighted_Sensor02d458_occupancy a brick:Occupancy_Sensor ;
-    bf:isLocatedIn bldg:R207 ;
-    bf:isPointOf bldg:R207 ;
-    bf:uri "ciee/devices/enlighted/s.enlighted/Sensor02d458/i.xbos.occupancy_sensor" ;
-    bf:uuid "b6ecd759-1db5-354c-b1a1-24eb99f5d01e" .
-
-bldg:enlighted_Sensor30005f_occupancy a brick:Occupancy_Sensor ;
-    bf:isLocatedIn bldg:R207 ;
-    bf:isPointOf bldg:R207 ;
-    bf:uri "ciee/devices/enlighted/s.enlighted/Sensor30005f/i.xbos.occupancy_sensor" ;
-    bf:uuid "e943af8d-ab44-3196-9bc0-f22d2e0363cb" .
 
 bldg:hamilton_0022_air_rh a brick:Relative_Humidity_Sensor ;
     bf:isLocatedIn bldg:R216 ;
@@ -891,11 +774,172 @@ bldg:hamilton_0060_pir a brick:Occupancy_Sensor ;
     bf:uri "ciee/sensors/s.hamilton/00126d0700000060/i.temperature/signal/operative" ;
     bf:uuid "e0430def-1ca1-3968-b680-4ad2e0dea51a" .
 
+bldg:lightingzone1 bf:hasPart bldg:R207,
+        bldg:R208 .
+
+bldg:north_east_open_office a brick:Lighting_Zone ;
+    bf:isFedBy bldg:enlighted_Sensor01902e,
+        bldg:enlighted_Sensor02309c .
+
+bldg:south_east_open_office a brick:Lighting_Zone ;
+    bf:isFedBy bldg:enlighted_Sensor018ff9,
+        bldg:enlighted_Sensor01907b .
+
 bldg:R200 a brick:Room ;
     rdfs:label "Women's Bathroom" ;
     bf:adjacentTo bldg:R201,
         bldg:R203 ;
     bf:isPartOf bldg:floor_2 .
+
+bldg:enlighted_Sensor00d56d_occupancy a brick:Occupancy_Sensor ;
+    bf:isLocatedIn bldg:R203 ;
+    bf:isPointOf bldg:R203,
+        bldg:enlighted_Sensor00d56d ;
+    bf:uri "ciee/devices/enlighted/s.enlighted/Sensor00d56d/i.xbos.occupancy_sensor" ;
+    bf:uuid "99870724-722d-3dd6-8a44-138c6c6243af" .
+
+bldg:enlighted_Sensor013263_occupancy a brick:Occupancy_Sensor ;
+    bf:isLocatedIn bldg:R208 ;
+    bf:isPointOf bldg:R208,
+        bldg:enlighted_Sensor013263 ;
+    bf:uri "ciee/devices/enlighted/s.enlighted/Sensor013263/i.xbos.occupancy_sensor" ;
+    bf:uuid "0c51371e-6029-3302-984d-b71d850e899a" .
+
+bldg:enlighted_Sensor018ff9_occupancy a brick:Occupancy_Sensor ;
+    bf:isLocatedIn bldg:R219 ;
+    bf:isPointOf bldg:R219,
+        bldg:enlighted_Sensor018ff9 ;
+    bf:uri "ciee/devices/enlighted/s.enlighted/Sensor018ff9/i.xbos.occupancy_sensor" ;
+    bf:uuid "191ec5e3-2a12-39e8-8416-212eea0eedd0" .
+
+bldg:enlighted_Sensor01902e_occupancy a brick:Occupancy_Sensor ;
+    bf:isLocatedIn bldg:R220 ;
+    bf:isPointOf bldg:R220,
+        bldg:enlighted_Sensor01902e ;
+    bf:uri "ciee/devices/enlighted/s.enlighted/Sensor01902e/i.xbos.occupancy_sensor" ;
+    bf:uuid "c5fefca9-58b3-37b5-ba10-ac178449d9d4" .
+
+bldg:enlighted_Sensor01907b_occupancy a brick:Occupancy_Sensor ;
+    bf:isLocatedIn bldg:R219 ;
+    bf:isPointOf bldg:R219,
+        bldg:enlighted_Sensor01907b ;
+    bf:uri "ciee/devices/enlighted/s.enlighted/Sensor01907b/i.xbos.occupancy_sensor" ;
+    bf:uuid "5ac07704-af4b-3fdb-8038-6f464ce18c35" .
+
+bldg:enlighted_Sensor01930e_occupancy a brick:Occupancy_Sensor ;
+    bf:isLocatedIn bldg:R218 ;
+    bf:isPointOf bldg:R218,
+        bldg:enlighted_Sensor01930e ;
+    bf:uri "ciee/devices/enlighted/s.enlighted/Sensor01930e/i.xbos.occupancy_sensor" ;
+    bf:uuid "862089d9-4c06-3ac1-bc1d-84d8d8f122d8" .
+
+bldg:enlighted_Sensor019324_occupancy a brick:Occupancy_Sensor ;
+    bf:isLocatedIn bldg:R218 ;
+    bf:isPointOf bldg:R218,
+        bldg:enlighted_Sensor019324 ;
+    bf:uri "ciee/devices/enlighted/s.enlighted/Sensor019324/i.xbos.occupancy_sensor" ;
+    bf:uuid "f91e8678-47a2-3da6-9eec-753f4364044c" .
+
+bldg:enlighted_Sensor01934e_occupancy a brick:Occupancy_Sensor ;
+    bf:isLocatedIn bldg:R221 ;
+    bf:isPointOf bldg:R221,
+        bldg:enlighted_Sensor01934e ;
+    bf:uri "ciee/devices/enlighted/s.enlighted/Sensor01934e/i.xbos.occupancy_sensor" ;
+    bf:uuid "05240142-25e2-33f5-a3f3-bb52f2d934c5" .
+
+bldg:enlighted_Sensor01935b_occupancy a brick:Occupancy_Sensor ;
+    bf:isLocatedIn bldg:R218 ;
+    bf:isPointOf bldg:R218,
+        bldg:enlighted_Sensor01935b ;
+    bf:uri "ciee/devices/enlighted/s.enlighted/Sensor01935b/i.xbos.occupancy_sensor" ;
+    bf:uuid "f3262678-43d5-39ab-ab42-13abd3c952f9" .
+
+bldg:enlighted_Sensor01942b_occupancy a brick:Occupancy_Sensor ;
+    bf:isLocatedIn bldg:R221 ;
+    bf:isPointOf bldg:R221,
+        bldg:enlighted_Sensor01942b ;
+    bf:uri "ciee/devices/enlighted/s.enlighted/Sensor01942b/i.xbos.occupancy_sensor" ;
+    bf:uuid "80198599-4d12-3692-8068-e3b9bdd7d79f" .
+
+bldg:enlighted_Sensor02309c_occupancy a brick:Occupancy_Sensor ;
+    bf:isLocatedIn bldg:R220 ;
+    bf:isPointOf bldg:R220,
+        bldg:enlighted_Sensor02309c ;
+    bf:uri "ciee/devices/enlighted/s.enlighted/Sensor02309c/i.xbos.occupancy_sensor" ;
+    bf:uuid "f5994eac-9691-36a6-8610-599aa3ecbd36" .
+
+bldg:enlighted_Sensor02d429_occupancy a brick:Occupancy_Sensor ;
+    bf:isLocatedIn bldg:R208 ;
+    bf:isPointOf bldg:R208,
+        bldg:enlighted_Sensor02d429 ;
+    bf:uri "ciee/devices/enlighted/s.enlighted/Sensor02d429/i.xbos.occupancy_sensor" ;
+    bf:uuid "611ac5e9-33a5-3273-9fa6-548d3ad59481" .
+
+bldg:enlighted_Sensor02d432_occupancy a brick:Occupancy_Sensor ;
+    bf:isLocatedIn bldg:R208 ;
+    bf:isPointOf bldg:R208,
+        bldg:enlighted_Sensor02d432 ;
+    bf:uri "ciee/devices/enlighted/s.enlighted/Sensor02d432/i.xbos.occupancy_sensor" ;
+    bf:uuid "2b3f9905-3bb7-302a-9545-7bfe2eb63547" .
+
+bldg:enlighted_Sensor02d433_occupancy a brick:Occupancy_Sensor ;
+    bf:isLocatedIn bldg:R208 ;
+    bf:isPointOf bldg:R208,
+        bldg:enlighted_Sensor02d433 ;
+    bf:uri "ciee/devices/enlighted/s.enlighted/Sensor02d433/i.xbos.occupancy_sensor" ;
+    bf:uuid "2f5c888d-c0c6-33b4-9c30-d609f1e16fea" .
+
+bldg:enlighted_Sensor02d438_occupancy a brick:Occupancy_Sensor ;
+    bf:isLocatedIn bldg:R208 ;
+    bf:isPointOf bldg:R208,
+        bldg:enlighted_Sensor02d438 ;
+    bf:uri "ciee/devices/enlighted/s.enlighted/Sensor02d438/i.xbos.occupancy_sensor" ;
+    bf:uuid "afed35be-ef70-341a-8bf4-565d815bfd90" .
+
+bldg:enlighted_Sensor02d444_occupancy a brick:Occupancy_Sensor ;
+    bf:isLocatedIn bldg:R208 ;
+    bf:isPointOf bldg:R208,
+        bldg:enlighted_Sensor02d444 ;
+    bf:uri "ciee/devices/enlighted/s.enlighted/Sensor02d444/i.xbos.occupancy_sensor" ;
+    bf:uuid "aefa14ef-a13a-355b-9b87-51511db7f541" .
+
+bldg:enlighted_Sensor02d454_occupancy a brick:Occupancy_Sensor ;
+    bf:isLocatedIn bldg:R208 ;
+    bf:isPointOf bldg:R208,
+        bldg:enlighted_Sensor02d454 ;
+    bf:uri "ciee/devices/enlighted/s.enlighted/Sensor02d454/i.xbos.occupancy_sensor" ;
+    bf:uuid "c27adbad-b1b5-342c-91eb-a6709d365871" .
+
+bldg:enlighted_Sensor02d455_occupancy a brick:Occupancy_Sensor ;
+    bf:isLocatedIn bldg:R208 ;
+    bf:isPointOf bldg:R208,
+        bldg:enlighted_Sensor02d455 ;
+    bf:uri "ciee/devices/enlighted/s.enlighted/Sensor02d455/i.xbos.occupancy_sensor" ;
+    bf:uuid "97ba99af-869b-3c43-94e3-93040c9bdd33" .
+
+bldg:enlighted_Sensor02d458_occupancy a brick:Occupancy_Sensor ;
+    bf:isLocatedIn bldg:R208 ;
+    bf:isPointOf bldg:R208,
+        bldg:enlighted_Sensor02d458 ;
+    bf:uri "ciee/devices/enlighted/s.enlighted/Sensor02d458/i.xbos.occupancy_sensor" ;
+    bf:uuid "00f45f05-08f9-3def-a977-357493fad61e" .
+
+bldg:enlighted_Sensor30005f_occupancy a brick:Occupancy_Sensor ;
+    bf:isLocatedIn bldg:R221 ;
+    bf:isPointOf bldg:R221,
+        bldg:enlighted_Sensor30005f ;
+    bf:uri "ciee/devices/enlighted/s.enlighted/Sensor30005f/i.xbos.occupancy_sensor" ;
+    bf:uuid "3cea0629-6fcd-3c6a-9786-7b571eaaf13d" .
+
+bldg:north_west_open_office a brick:Lighting_Zone ;
+    bf:isFedBy bldg:enlighted_Sensor01930e,
+        bldg:enlighted_Sensor019324,
+        bldg:enlighted_Sensor01935b .
+
+bldg:south_west_open_office a brick:Lighting_Zone ;
+    bf:isFedBy bldg:enlighted_Sensor01934e,
+        bldg:enlighted_Sensor01942b,
+        bldg:enlighted_Sensor30005f .
 
 bldg:NorthZone a brick:HVAC_Zone ;
     bf:hasPart bldg:EastOpen,
@@ -910,165 +954,11 @@ bldg:R201 a brick:Room ;
         bldg:R226 ;
     bf:isPartOf bldg:floor_2 .
 
-bldg:enlighted_Sensor00d56d a brick:Lighting_System ;
-    bf:feeds bldg:lightingzone1 ;
-    bf:hasPoint bldg:enlighted_Sensor00d56d_brightness,
-        bldg:enlighted_Sensor00d56d_meter,
-        bldg:enlighted_Sensor00d56d_state ;
-    bf:isLocatedIn bldg:R207 ;
-    bf:uri "ciee/devices/enlighted/s.enlighted/Sensor00d56d/i.xbos.light" .
+brick:Thermostat_Mode_Command a owl:Class ;
+    rdfs:subClassOf brick:Command .
 
-bldg:enlighted_Sensor013263 a brick:Lighting_System ;
-    bf:feeds bldg:lightingzone1 ;
-    bf:hasPoint bldg:enlighted_Sensor013263_brightness,
-        bldg:enlighted_Sensor013263_meter,
-        bldg:enlighted_Sensor013263_state ;
-    bf:isLocatedIn bldg:R207 ;
-    bf:uri "ciee/devices/enlighted/s.enlighted/Sensor013263/i.xbos.light" .
-
-bldg:enlighted_Sensor018ff9 a brick:Lighting_System ;
-    bf:feeds bldg:lightingzone1 ;
-    bf:hasPoint bldg:enlighted_Sensor018ff9_brightness,
-        bldg:enlighted_Sensor018ff9_meter,
-        bldg:enlighted_Sensor018ff9_state ;
-    bf:isLocatedIn bldg:R207 ;
-    bf:uri "ciee/devices/enlighted/s.enlighted/Sensor018ff9/i.xbos.light" .
-
-bldg:enlighted_Sensor01902e a brick:Lighting_System ;
-    bf:feeds bldg:lightingzone1 ;
-    bf:hasPoint bldg:enlighted_Sensor01902e_brightness,
-        bldg:enlighted_Sensor01902e_meter,
-        bldg:enlighted_Sensor01902e_state ;
-    bf:isLocatedIn bldg:R207 ;
-    bf:uri "ciee/devices/enlighted/s.enlighted/Sensor01902e/i.xbos.light" .
-
-bldg:enlighted_Sensor01907b a brick:Lighting_System ;
-    bf:feeds bldg:lightingzone1 ;
-    bf:hasPoint bldg:enlighted_Sensor01907b_brightness,
-        bldg:enlighted_Sensor01907b_meter,
-        bldg:enlighted_Sensor01907b_state ;
-    bf:isLocatedIn bldg:R207 ;
-    bf:uri "ciee/devices/enlighted/s.enlighted/Sensor01907b/i.xbos.light" .
-
-bldg:enlighted_Sensor01930e a brick:Lighting_System ;
-    bf:feeds bldg:lightingzone1 ;
-    bf:hasPoint bldg:enlighted_Sensor01930e_brightness,
-        bldg:enlighted_Sensor01930e_meter,
-        bldg:enlighted_Sensor01930e_state ;
-    bf:isLocatedIn bldg:R207 ;
-    bf:uri "ciee/devices/enlighted/s.enlighted/Sensor01930e/i.xbos.light" .
-
-bldg:enlighted_Sensor019324 a brick:Lighting_System ;
-    bf:feeds bldg:lightingzone1 ;
-    bf:hasPoint bldg:enlighted_Sensor019324_brightness,
-        bldg:enlighted_Sensor019324_meter,
-        bldg:enlighted_Sensor019324_state ;
-    bf:isLocatedIn bldg:R207 ;
-    bf:uri "ciee/devices/enlighted/s.enlighted/Sensor019324/i.xbos.light" .
-
-bldg:enlighted_Sensor01934e a brick:Lighting_System ;
-    bf:feeds bldg:lightingzone1 ;
-    bf:hasPoint bldg:enlighted_Sensor01934e_brightness,
-        bldg:enlighted_Sensor01934e_meter,
-        bldg:enlighted_Sensor01934e_state ;
-    bf:isLocatedIn bldg:R207 ;
-    bf:uri "ciee/devices/enlighted/s.enlighted/Sensor01934e/i.xbos.light" .
-
-bldg:enlighted_Sensor01935b a brick:Lighting_System ;
-    bf:feeds bldg:lightingzone1 ;
-    bf:hasPoint bldg:enlighted_Sensor01935b_brightness,
-        bldg:enlighted_Sensor01935b_meter,
-        bldg:enlighted_Sensor01935b_state ;
-    bf:isLocatedIn bldg:R207 ;
-    bf:uri "ciee/devices/enlighted/s.enlighted/Sensor01935b/i.xbos.light" .
-
-bldg:enlighted_Sensor01942b a brick:Lighting_System ;
-    bf:feeds bldg:lightingzone1 ;
-    bf:hasPoint bldg:enlighted_Sensor01942b_brightness,
-        bldg:enlighted_Sensor01942b_meter,
-        bldg:enlighted_Sensor01942b_state ;
-    bf:isLocatedIn bldg:R207 ;
-    bf:uri "ciee/devices/enlighted/s.enlighted/Sensor01942b/i.xbos.light" .
-
-bldg:enlighted_Sensor02309c a brick:Lighting_System ;
-    bf:feeds bldg:lightingzone1 ;
-    bf:hasPoint bldg:enlighted_Sensor02309c_brightness,
-        bldg:enlighted_Sensor02309c_meter,
-        bldg:enlighted_Sensor02309c_state ;
-    bf:isLocatedIn bldg:R207 ;
-    bf:uri "ciee/devices/enlighted/s.enlighted/Sensor02309c/i.xbos.light" .
-
-bldg:enlighted_Sensor02d429 a brick:Lighting_System ;
-    bf:feeds bldg:lightingzone1 ;
-    bf:hasPoint bldg:enlighted_Sensor02d429_brightness,
-        bldg:enlighted_Sensor02d429_meter,
-        bldg:enlighted_Sensor02d429_state ;
-    bf:isLocatedIn bldg:R207 ;
-    bf:uri "ciee/devices/enlighted/s.enlighted/Sensor02d429/i.xbos.light" .
-
-bldg:enlighted_Sensor02d432 a brick:Lighting_System ;
-    bf:feeds bldg:lightingzone1 ;
-    bf:hasPoint bldg:enlighted_Sensor02d432_brightness,
-        bldg:enlighted_Sensor02d432_meter,
-        bldg:enlighted_Sensor02d432_state ;
-    bf:isLocatedIn bldg:R207 ;
-    bf:uri "ciee/devices/enlighted/s.enlighted/Sensor02d432/i.xbos.light" .
-
-bldg:enlighted_Sensor02d433 a brick:Lighting_System ;
-    bf:feeds bldg:lightingzone1 ;
-    bf:hasPoint bldg:enlighted_Sensor02d433_brightness,
-        bldg:enlighted_Sensor02d433_meter,
-        bldg:enlighted_Sensor02d433_state ;
-    bf:isLocatedIn bldg:R207 ;
-    bf:uri "ciee/devices/enlighted/s.enlighted/Sensor02d433/i.xbos.light" .
-
-bldg:enlighted_Sensor02d438 a brick:Lighting_System ;
-    bf:feeds bldg:lightingzone1 ;
-    bf:hasPoint bldg:enlighted_Sensor02d438_brightness,
-        bldg:enlighted_Sensor02d438_meter,
-        bldg:enlighted_Sensor02d438_state ;
-    bf:isLocatedIn bldg:R207 ;
-    bf:uri "ciee/devices/enlighted/s.enlighted/Sensor02d438/i.xbos.light" .
-
-bldg:enlighted_Sensor02d444 a brick:Lighting_System ;
-    bf:feeds bldg:lightingzone1 ;
-    bf:hasPoint bldg:enlighted_Sensor02d444_brightness,
-        bldg:enlighted_Sensor02d444_meter,
-        bldg:enlighted_Sensor02d444_state ;
-    bf:isLocatedIn bldg:R207 ;
-    bf:uri "ciee/devices/enlighted/s.enlighted/Sensor02d444/i.xbos.light" .
-
-bldg:enlighted_Sensor02d454 a brick:Lighting_System ;
-    bf:feeds bldg:lightingzone1 ;
-    bf:hasPoint bldg:enlighted_Sensor02d454_brightness,
-        bldg:enlighted_Sensor02d454_meter,
-        bldg:enlighted_Sensor02d454_state ;
-    bf:isLocatedIn bldg:R207 ;
-    bf:uri "ciee/devices/enlighted/s.enlighted/Sensor02d454/i.xbos.light" .
-
-bldg:enlighted_Sensor02d455 a brick:Lighting_System ;
-    bf:feeds bldg:lightingzone1 ;
-    bf:hasPoint bldg:enlighted_Sensor02d455_brightness,
-        bldg:enlighted_Sensor02d455_meter,
-        bldg:enlighted_Sensor02d455_state ;
-    bf:isLocatedIn bldg:R207 ;
-    bf:uri "ciee/devices/enlighted/s.enlighted/Sensor02d455/i.xbos.light" .
-
-bldg:enlighted_Sensor02d458 a brick:Lighting_System ;
-    bf:feeds bldg:lightingzone1 ;
-    bf:hasPoint bldg:enlighted_Sensor02d458_brightness,
-        bldg:enlighted_Sensor02d458_meter,
-        bldg:enlighted_Sensor02d458_state ;
-    bf:isLocatedIn bldg:R207 ;
-    bf:uri "ciee/devices/enlighted/s.enlighted/Sensor02d458/i.xbos.light" .
-
-bldg:enlighted_Sensor30005f a brick:Lighting_System ;
-    bf:feeds bldg:lightingzone1 ;
-    bf:hasPoint bldg:enlighted_Sensor30005f_brightness,
-        bldg:enlighted_Sensor30005f_meter,
-        bldg:enlighted_Sensor30005f_state ;
-    bf:isLocatedIn bldg:R207 ;
-    bf:uri "ciee/devices/enlighted/s.enlighted/Sensor30005f/i.xbos.light" .
+brick:Thermostat_Status a owl:Class ;
+    rdfs:subClassOf brick:Status .
 
 brick:RTU a owl:Class ;
     rdfs:subClassOf brick:AHU .
@@ -1090,6 +980,186 @@ bldg:R224 a brick:Room ;
     bf:isPartOf bldg:NorthZone,
         bldg:floor_2 .
 
+bldg:enlighted_Sensor00d56d a brick:Lighting_System ;
+    bf:feeds bldg:copy_room ;
+    bf:hasPoint bldg:enlighted_Sensor00d56d_brightness,
+        bldg:enlighted_Sensor00d56d_meter,
+        bldg:enlighted_Sensor00d56d_occupancy,
+        bldg:enlighted_Sensor00d56d_state ;
+    bf:isLocatedIn bldg:R203 ;
+    bf:uri "ciee/devices/enlighted/s.enlighted/Sensor00d56d/i.xbos.light" .
+
+bldg:enlighted_Sensor013263 a brick:Lighting_System ;
+    bf:feeds bldg:conference_room ;
+    bf:hasPoint bldg:enlighted_Sensor013263_brightness,
+        bldg:enlighted_Sensor013263_meter,
+        bldg:enlighted_Sensor013263_occupancy,
+        bldg:enlighted_Sensor013263_state ;
+    bf:isLocatedIn bldg:R208 ;
+    bf:uri "ciee/devices/enlighted/s.enlighted/Sensor013263/i.xbos.light" .
+
+bldg:enlighted_Sensor018ff9 a brick:Lighting_System ;
+    bf:feeds bldg:south_east_open_office ;
+    bf:hasPoint bldg:enlighted_Sensor018ff9_brightness,
+        bldg:enlighted_Sensor018ff9_meter,
+        bldg:enlighted_Sensor018ff9_occupancy,
+        bldg:enlighted_Sensor018ff9_state ;
+    bf:isLocatedIn bldg:R219 ;
+    bf:uri "ciee/devices/enlighted/s.enlighted/Sensor018ff9/i.xbos.light" .
+
+bldg:enlighted_Sensor01902e a brick:Lighting_System ;
+    bf:feeds bldg:north_east_open_office ;
+    bf:hasPoint bldg:enlighted_Sensor01902e_brightness,
+        bldg:enlighted_Sensor01902e_meter,
+        bldg:enlighted_Sensor01902e_occupancy,
+        bldg:enlighted_Sensor01902e_state ;
+    bf:isLocatedIn bldg:R220 ;
+    bf:uri "ciee/devices/enlighted/s.enlighted/Sensor01902e/i.xbos.light" .
+
+bldg:enlighted_Sensor01907b a brick:Lighting_System ;
+    bf:feeds bldg:south_east_open_office ;
+    bf:hasPoint bldg:enlighted_Sensor01907b_brightness,
+        bldg:enlighted_Sensor01907b_meter,
+        bldg:enlighted_Sensor01907b_occupancy,
+        bldg:enlighted_Sensor01907b_state ;
+    bf:isLocatedIn bldg:R219 ;
+    bf:uri "ciee/devices/enlighted/s.enlighted/Sensor01907b/i.xbos.light" .
+
+bldg:enlighted_Sensor01930e a brick:Lighting_System ;
+    bf:feeds bldg:north_west_open_office ;
+    bf:hasPoint bldg:enlighted_Sensor01930e_brightness,
+        bldg:enlighted_Sensor01930e_meter,
+        bldg:enlighted_Sensor01930e_occupancy,
+        bldg:enlighted_Sensor01930e_state ;
+    bf:isLocatedIn bldg:R218 ;
+    bf:uri "ciee/devices/enlighted/s.enlighted/Sensor01930e/i.xbos.light" .
+
+bldg:enlighted_Sensor019324 a brick:Lighting_System ;
+    bf:feeds bldg:north_west_open_office ;
+    bf:hasPoint bldg:enlighted_Sensor019324_brightness,
+        bldg:enlighted_Sensor019324_meter,
+        bldg:enlighted_Sensor019324_occupancy,
+        bldg:enlighted_Sensor019324_state ;
+    bf:isLocatedIn bldg:R218 ;
+    bf:uri "ciee/devices/enlighted/s.enlighted/Sensor019324/i.xbos.light" .
+
+bldg:enlighted_Sensor01934e a brick:Lighting_System ;
+    bf:feeds bldg:south_west_open_office ;
+    bf:hasPoint bldg:enlighted_Sensor01934e_brightness,
+        bldg:enlighted_Sensor01934e_meter,
+        bldg:enlighted_Sensor01934e_occupancy,
+        bldg:enlighted_Sensor01934e_state ;
+    bf:isLocatedIn bldg:R221 ;
+    bf:uri "ciee/devices/enlighted/s.enlighted/Sensor01934e/i.xbos.light" .
+
+bldg:enlighted_Sensor01935b a brick:Lighting_System ;
+    bf:feeds bldg:north_west_open_office ;
+    bf:hasPoint bldg:enlighted_Sensor01935b_brightness,
+        bldg:enlighted_Sensor01935b_meter,
+        bldg:enlighted_Sensor01935b_occupancy,
+        bldg:enlighted_Sensor01935b_state ;
+    bf:isLocatedIn bldg:R218 ;
+    bf:uri "ciee/devices/enlighted/s.enlighted/Sensor01935b/i.xbos.light" .
+
+bldg:enlighted_Sensor01942b a brick:Lighting_System ;
+    bf:feeds bldg:south_west_open_office ;
+    bf:hasPoint bldg:enlighted_Sensor01942b_brightness,
+        bldg:enlighted_Sensor01942b_meter,
+        bldg:enlighted_Sensor01942b_occupancy,
+        bldg:enlighted_Sensor01942b_state ;
+    bf:isLocatedIn bldg:R221 ;
+    bf:uri "ciee/devices/enlighted/s.enlighted/Sensor01942b/i.xbos.light" .
+
+bldg:enlighted_Sensor02309c a brick:Lighting_System ;
+    bf:feeds bldg:north_east_open_office ;
+    bf:hasPoint bldg:enlighted_Sensor02309c_brightness,
+        bldg:enlighted_Sensor02309c_meter,
+        bldg:enlighted_Sensor02309c_occupancy,
+        bldg:enlighted_Sensor02309c_state ;
+    bf:isLocatedIn bldg:R220 ;
+    bf:uri "ciee/devices/enlighted/s.enlighted/Sensor02309c/i.xbos.light" .
+
+bldg:enlighted_Sensor02d429 a brick:Lighting_System ;
+    bf:feeds bldg:conference_room ;
+    bf:hasPoint bldg:enlighted_Sensor02d429_brightness,
+        bldg:enlighted_Sensor02d429_meter,
+        bldg:enlighted_Sensor02d429_occupancy,
+        bldg:enlighted_Sensor02d429_state ;
+    bf:isLocatedIn bldg:R208 ;
+    bf:uri "ciee/devices/enlighted/s.enlighted/Sensor02d429/i.xbos.light" .
+
+bldg:enlighted_Sensor02d432 a brick:Lighting_System ;
+    bf:feeds bldg:conference_room ;
+    bf:hasPoint bldg:enlighted_Sensor02d432_brightness,
+        bldg:enlighted_Sensor02d432_meter,
+        bldg:enlighted_Sensor02d432_occupancy,
+        bldg:enlighted_Sensor02d432_state ;
+    bf:isLocatedIn bldg:R208 ;
+    bf:uri "ciee/devices/enlighted/s.enlighted/Sensor02d432/i.xbos.light" .
+
+bldg:enlighted_Sensor02d433 a brick:Lighting_System ;
+    bf:feeds bldg:conference_room ;
+    bf:hasPoint bldg:enlighted_Sensor02d433_brightness,
+        bldg:enlighted_Sensor02d433_meter,
+        bldg:enlighted_Sensor02d433_occupancy,
+        bldg:enlighted_Sensor02d433_state ;
+    bf:isLocatedIn bldg:R208 ;
+    bf:uri "ciee/devices/enlighted/s.enlighted/Sensor02d433/i.xbos.light" .
+
+bldg:enlighted_Sensor02d438 a brick:Lighting_System ;
+    bf:feeds bldg:conference_room ;
+    bf:hasPoint bldg:enlighted_Sensor02d438_brightness,
+        bldg:enlighted_Sensor02d438_meter,
+        bldg:enlighted_Sensor02d438_occupancy,
+        bldg:enlighted_Sensor02d438_state ;
+    bf:isLocatedIn bldg:R208 ;
+    bf:uri "ciee/devices/enlighted/s.enlighted/Sensor02d438/i.xbos.light" .
+
+bldg:enlighted_Sensor02d444 a brick:Lighting_System ;
+    bf:feeds bldg:conference_room ;
+    bf:hasPoint bldg:enlighted_Sensor02d444_brightness,
+        bldg:enlighted_Sensor02d444_meter,
+        bldg:enlighted_Sensor02d444_occupancy,
+        bldg:enlighted_Sensor02d444_state ;
+    bf:isLocatedIn bldg:R208 ;
+    bf:uri "ciee/devices/enlighted/s.enlighted/Sensor02d444/i.xbos.light" .
+
+bldg:enlighted_Sensor02d454 a brick:Lighting_System ;
+    bf:feeds bldg:conference_room ;
+    bf:hasPoint bldg:enlighted_Sensor02d454_brightness,
+        bldg:enlighted_Sensor02d454_meter,
+        bldg:enlighted_Sensor02d454_occupancy,
+        bldg:enlighted_Sensor02d454_state ;
+    bf:isLocatedIn bldg:R208 ;
+    bf:uri "ciee/devices/enlighted/s.enlighted/Sensor02d454/i.xbos.light" .
+
+bldg:enlighted_Sensor02d455 a brick:Lighting_System ;
+    bf:feeds bldg:conference_room ;
+    bf:hasPoint bldg:enlighted_Sensor02d455_brightness,
+        bldg:enlighted_Sensor02d455_meter,
+        bldg:enlighted_Sensor02d455_occupancy,
+        bldg:enlighted_Sensor02d455_state ;
+    bf:isLocatedIn bldg:R208 ;
+    bf:uri "ciee/devices/enlighted/s.enlighted/Sensor02d455/i.xbos.light" .
+
+bldg:enlighted_Sensor02d458 a brick:Lighting_System ;
+    bf:feeds bldg:conference_room ;
+    bf:hasPoint bldg:enlighted_Sensor02d458_brightness,
+        bldg:enlighted_Sensor02d458_meter,
+        bldg:enlighted_Sensor02d458_occupancy,
+        bldg:enlighted_Sensor02d458_state ;
+    bf:isLocatedIn bldg:R208 ;
+    bf:uri "ciee/devices/enlighted/s.enlighted/Sensor02d458/i.xbos.light" .
+
+bldg:enlighted_Sensor30005f a brick:Lighting_System ;
+    bf:feeds bldg:south_west_open_office ;
+    bf:hasPoint bldg:enlighted_Sensor30005f_brightness,
+        bldg:enlighted_Sensor30005f_meter,
+        bldg:enlighted_Sensor30005f_occupancy,
+        bldg:enlighted_Sensor30005f_state ;
+    bf:isLocatedIn bldg:R221 ;
+    bf:uri "ciee/devices/enlighted/s.enlighted/Sensor30005f/i.xbos.light" .
+
 bldg:R204 bf:adjacentTo bldg:R203,
         bldg:R205,
         bldg:R207,
@@ -1097,16 +1167,6 @@ bldg:R204 bf:adjacentTo bldg:R203,
         bldg:R223,
         bldg:R225,
         bldg:R226 .
-
-bldg:R221 a brick:Room ;
-    rdfs:label "Open Office SouthWest" ;
-    bf:adjacentTo bldg:R218,
-        bldg:R219,
-        bldg:R220,
-        bldg:R222,
-        bldg:R223 ;
-    bf:isPartOf bldg:CentralZone,
-        bldg:floor_2 .
 
 bldg:R223 a brick:Room ;
     rdfs:label "Office" ;
@@ -1147,28 +1207,6 @@ bldg:CentralZone a brick:HVAC_Zone ;
         bldg:R223,
         bldg:R225 ;
     bf:isFedBy bldg:RTU3 .
-
-bldg:R218 a brick:Room ;
-    rdfs:label "Open Office NorthEast" ;
-    bf:adjacentTo bldg:R215,
-        bldg:R216,
-        bldg:R217,
-        bldg:R219,
-        bldg:R220,
-        bldg:R221 ;
-    bf:isPartOf bldg:CentralZone,
-        bldg:floor_2 .
-
-bldg:R220 a brick:Room ;
-    rdfs:label "Open Office NorthWest" ;
-    bf:adjacentTo bldg:R218,
-        bldg:R219,
-        bldg:R221,
-        bldg:R222,
-        bldg:R223,
-        bldg:R224 ;
-    bf:isPartOf bldg:CentralZone,
-        bldg:floor_2 .
 
 bldg:R222 a brick:Room ;
     rdfs:label "Office" ;
@@ -1257,19 +1295,6 @@ bldg:R205 a brick:Room ;
         bldg:R212,
         bldg:R213 ;
     bf:isPartOf bldg:SouthZone,
-        bldg:floor_2 .
-
-bldg:R219 a brick:Room ;
-    rdfs:label "Open Office SouthEast" ;
-    bf:adjacentTo bldg:R211,
-        bldg:R212,
-        bldg:R213,
-        bldg:R214,
-        bldg:R215,
-        bldg:R218,
-        bldg:R220,
-        bldg:R221 ;
-    bf:isPartOf bldg:CentralZone,
         bldg:floor_2 .
 
 bldg:R217 a brick:Room ;
@@ -1435,7 +1460,121 @@ bldg:R215 a brick:Room ;
     bf:isPartOf bldg:EastZone,
         bldg:floor_2 .
 
+bldg:R207 a brick:Room ;
+    rdfs:label "Office" ;
+    bf:adjacentTo bldg:R203,
+        bldg:R204,
+        bldg:R206,
+        bldg:R208 ;
+    bf:contains bldg:hamilton_005c_air_rh,
+        bldg:hamilton_005c_air_temp,
+        bldg:hamilton_005c_lux,
+        bldg:hamilton_005c_pir ;
+    bf:hasPoint bldg:hamilton_005c_air_rh,
+        bldg:hamilton_005c_air_temp,
+        bldg:hamilton_005c_lux,
+        bldg:hamilton_005c_pir ;
+    bf:isPartOf bldg:SouthZone,
+        bldg:floor_2,
+        bldg:lightingzone1 .
+
+bldg:R220 a brick:Room ;
+    rdfs:label "Open Office NorthWest" ;
+    bf:adjacentTo bldg:R218,
+        bldg:R219,
+        bldg:R221,
+        bldg:R222,
+        bldg:R223,
+        bldg:R224 ;
+    bf:contains bldg:enlighted_Sensor01902e,
+        bldg:enlighted_Sensor01902e_occupancy,
+        bldg:enlighted_Sensor02309c,
+        bldg:enlighted_Sensor02309c_occupancy ;
+    bf:hasPoint bldg:enlighted_Sensor01902e_occupancy,
+        bldg:enlighted_Sensor02309c_occupancy ;
+    bf:isPartOf bldg:CentralZone,
+        bldg:conference_room,
+        bldg:floor_2 .
+
+bldg:conference_room a brick:Lighting_Zone ;
+    bf:hasPart bldg:R203,
+        bldg:R208,
+        bldg:R218,
+        bldg:R219,
+        bldg:R220,
+        bldg:R221 ;
+    bf:isFedBy bldg:enlighted_Sensor013263,
+        bldg:enlighted_Sensor02d429,
+        bldg:enlighted_Sensor02d432,
+        bldg:enlighted_Sensor02d433,
+        bldg:enlighted_Sensor02d438,
+        bldg:enlighted_Sensor02d444,
+        bldg:enlighted_Sensor02d454,
+        bldg:enlighted_Sensor02d455,
+        bldg:enlighted_Sensor02d458 .
+
 brick:Illumination_Sensor rdfs:subClassOf brick:Sensor .
+
+bldg:R219 a brick:Room ;
+    rdfs:label "Open Office SouthEast" ;
+    bf:adjacentTo bldg:R211,
+        bldg:R212,
+        bldg:R213,
+        bldg:R214,
+        bldg:R215,
+        bldg:R218,
+        bldg:R220,
+        bldg:R221 ;
+    bf:contains bldg:enlighted_Sensor018ff9,
+        bldg:enlighted_Sensor018ff9_occupancy,
+        bldg:enlighted_Sensor01907b,
+        bldg:enlighted_Sensor01907b_occupancy ;
+    bf:hasPoint bldg:enlighted_Sensor018ff9_occupancy,
+        bldg:enlighted_Sensor01907b_occupancy ;
+    bf:isPartOf bldg:CentralZone,
+        bldg:conference_room,
+        bldg:floor_2 .
+
+bldg:R221 a brick:Room ;
+    rdfs:label "Open Office SouthWest" ;
+    bf:adjacentTo bldg:R218,
+        bldg:R219,
+        bldg:R220,
+        bldg:R222,
+        bldg:R223 ;
+    bf:contains bldg:enlighted_Sensor01934e,
+        bldg:enlighted_Sensor01934e_occupancy,
+        bldg:enlighted_Sensor01942b,
+        bldg:enlighted_Sensor01942b_occupancy,
+        bldg:enlighted_Sensor30005f,
+        bldg:enlighted_Sensor30005f_occupancy ;
+    bf:hasPoint bldg:enlighted_Sensor01934e_occupancy,
+        bldg:enlighted_Sensor01942b_occupancy,
+        bldg:enlighted_Sensor30005f_occupancy ;
+    bf:isPartOf bldg:CentralZone,
+        bldg:conference_room,
+        bldg:floor_2 .
+
+bldg:R218 a brick:Room ;
+    rdfs:label "Open Office NorthEast" ;
+    bf:adjacentTo bldg:R215,
+        bldg:R216,
+        bldg:R217,
+        bldg:R219,
+        bldg:R220,
+        bldg:R221 ;
+    bf:contains bldg:enlighted_Sensor01930e,
+        bldg:enlighted_Sensor01930e_occupancy,
+        bldg:enlighted_Sensor019324,
+        bldg:enlighted_Sensor019324_occupancy,
+        bldg:enlighted_Sensor01935b,
+        bldg:enlighted_Sensor01935b_occupancy ;
+    bf:hasPoint bldg:enlighted_Sensor01930e_occupancy,
+        bldg:enlighted_Sensor019324_occupancy,
+        bldg:enlighted_Sensor01935b_occupancy ;
+    bf:isPartOf bldg:CentralZone,
+        bldg:conference_room,
+        bldg:floor_2 .
 
 bldg:R203 a brick:Room ;
     rdfs:label "Office" ;
@@ -1446,64 +1585,19 @@ bldg:R203 a brick:Room ;
         bldg:R206,
         bldg:R207,
         bldg:R226 ;
-    bf:contains bldg:hamilton_0029_air_rh,
+    bf:contains bldg:enlighted_Sensor00d56d,
+        bldg:enlighted_Sensor00d56d_occupancy,
+        bldg:hamilton_0029_air_rh,
         bldg:hamilton_0029_air_temp,
         bldg:hamilton_0029_lux,
         bldg:hamilton_0029_pir ;
-    bf:hasPoint bldg:hamilton_0029_air_rh,
+    bf:hasPoint bldg:enlighted_Sensor00d56d_occupancy,
+        bldg:hamilton_0029_air_rh,
         bldg:hamilton_0029_air_temp,
         bldg:hamilton_0029_lux,
         bldg:hamilton_0029_pir ;
-    bf:isPartOf bldg:floor_2 .
-
-bldg:R208 a brick:Room ;
-    rdfs:label "Conference Room" ;
-    bf:adjacentTo bldg:R204,
-        bldg:R207,
-        bldg:R209 ;
-    bf:contains bldg:hamilton_002b_air_rh,
-        bldg:hamilton_002b_air_temp,
-        bldg:hamilton_002b_lux,
-        bldg:hamilton_002b_pir,
-        bldg:hamilton_005d_air_rh,
-        bldg:hamilton_005d_air_temp,
-        bldg:hamilton_005d_lux,
-        bldg:hamilton_005d_pir ;
-    bf:hasPoint bldg:hamilton_002b_air_rh,
-        bldg:hamilton_002b_air_temp,
-        bldg:hamilton_002b_lux,
-        bldg:hamilton_002b_pir,
-        bldg:hamilton_005d_air_rh,
-        bldg:hamilton_005d_air_temp,
-        bldg:hamilton_005d_lux,
-        bldg:hamilton_005d_pir ;
-    bf:isPartOf bldg:SouthZone,
-        bldg:floor_2,
-        bldg:lightingzone1 .
-
-bldg:lightingzone1 a brick:Lighting_Zone ;
-    bf:hasPart bldg:R207,
-        bldg:R208 ;
-    bf:isFedBy bldg:enlighted_Sensor00d56d,
-        bldg:enlighted_Sensor013263,
-        bldg:enlighted_Sensor018ff9,
-        bldg:enlighted_Sensor01902e,
-        bldg:enlighted_Sensor01907b,
-        bldg:enlighted_Sensor01930e,
-        bldg:enlighted_Sensor019324,
-        bldg:enlighted_Sensor01934e,
-        bldg:enlighted_Sensor01935b,
-        bldg:enlighted_Sensor01942b,
-        bldg:enlighted_Sensor02309c,
-        bldg:enlighted_Sensor02d429,
-        bldg:enlighted_Sensor02d432,
-        bldg:enlighted_Sensor02d433,
-        bldg:enlighted_Sensor02d438,
-        bldg:enlighted_Sensor02d444,
-        bldg:enlighted_Sensor02d454,
-        bldg:enlighted_Sensor02d455,
-        bldg:enlighted_Sensor02d458,
-        bldg:enlighted_Sensor30005f .
+    bf:isPartOf bldg:conference_room,
+        bldg:floor_2 .
 
 bldg:floor_2 a brick:Floor ;
     bf:hasPart bldg:R200,
@@ -1532,34 +1626,13 @@ bldg:floor_2 a brick:Floor ;
         bldg:R225,
         bldg:R226 .
 
-bldg:R207 a brick:Room ;
-    rdfs:label "Office" ;
-    bf:adjacentTo bldg:R203,
-        bldg:R204,
-        bldg:R206,
-        bldg:R208 ;
-    bf:contains bldg:enlighted_Sensor00d56d,
-        bldg:enlighted_Sensor00d56d_occupancy,
-        bldg:enlighted_Sensor013263,
+bldg:R208 a brick:Room ;
+    rdfs:label "Conference Room" ;
+    bf:adjacentTo bldg:R204,
+        bldg:R207,
+        bldg:R209 ;
+    bf:contains bldg:enlighted_Sensor013263,
         bldg:enlighted_Sensor013263_occupancy,
-        bldg:enlighted_Sensor018ff9,
-        bldg:enlighted_Sensor018ff9_occupancy,
-        bldg:enlighted_Sensor01902e,
-        bldg:enlighted_Sensor01902e_occupancy,
-        bldg:enlighted_Sensor01907b,
-        bldg:enlighted_Sensor01907b_occupancy,
-        bldg:enlighted_Sensor01930e,
-        bldg:enlighted_Sensor01930e_occupancy,
-        bldg:enlighted_Sensor019324,
-        bldg:enlighted_Sensor019324_occupancy,
-        bldg:enlighted_Sensor01934e,
-        bldg:enlighted_Sensor01934e_occupancy,
-        bldg:enlighted_Sensor01935b,
-        bldg:enlighted_Sensor01935b_occupancy,
-        bldg:enlighted_Sensor01942b,
-        bldg:enlighted_Sensor01942b_occupancy,
-        bldg:enlighted_Sensor02309c,
-        bldg:enlighted_Sensor02309c_occupancy,
         bldg:enlighted_Sensor02d429,
         bldg:enlighted_Sensor02d429_occupancy,
         bldg:enlighted_Sensor02d432,
@@ -1576,23 +1649,15 @@ bldg:R207 a brick:Room ;
         bldg:enlighted_Sensor02d455_occupancy,
         bldg:enlighted_Sensor02d458,
         bldg:enlighted_Sensor02d458_occupancy,
-        bldg:enlighted_Sensor30005f,
-        bldg:enlighted_Sensor30005f_occupancy,
-        bldg:hamilton_005c_air_rh,
-        bldg:hamilton_005c_air_temp,
-        bldg:hamilton_005c_lux,
-        bldg:hamilton_005c_pir ;
-    bf:hasPoint bldg:enlighted_Sensor00d56d_occupancy,
-        bldg:enlighted_Sensor013263_occupancy,
-        bldg:enlighted_Sensor018ff9_occupancy,
-        bldg:enlighted_Sensor01902e_occupancy,
-        bldg:enlighted_Sensor01907b_occupancy,
-        bldg:enlighted_Sensor01930e_occupancy,
-        bldg:enlighted_Sensor019324_occupancy,
-        bldg:enlighted_Sensor01934e_occupancy,
-        bldg:enlighted_Sensor01935b_occupancy,
-        bldg:enlighted_Sensor01942b_occupancy,
-        bldg:enlighted_Sensor02309c_occupancy,
+        bldg:hamilton_002b_air_rh,
+        bldg:hamilton_002b_air_temp,
+        bldg:hamilton_002b_lux,
+        bldg:hamilton_002b_pir,
+        bldg:hamilton_005d_air_rh,
+        bldg:hamilton_005d_air_temp,
+        bldg:hamilton_005d_lux,
+        bldg:hamilton_005d_pir ;
+    bf:hasPoint bldg:enlighted_Sensor013263_occupancy,
         bldg:enlighted_Sensor02d429_occupancy,
         bldg:enlighted_Sensor02d432_occupancy,
         bldg:enlighted_Sensor02d433_occupancy,
@@ -1601,12 +1666,16 @@ bldg:R207 a brick:Room ;
         bldg:enlighted_Sensor02d454_occupancy,
         bldg:enlighted_Sensor02d455_occupancy,
         bldg:enlighted_Sensor02d458_occupancy,
-        bldg:enlighted_Sensor30005f_occupancy,
-        bldg:hamilton_005c_air_rh,
-        bldg:hamilton_005c_air_temp,
-        bldg:hamilton_005c_lux,
-        bldg:hamilton_005c_pir ;
+        bldg:hamilton_002b_air_rh,
+        bldg:hamilton_002b_air_temp,
+        bldg:hamilton_002b_lux,
+        bldg:hamilton_002b_pir,
+        bldg:hamilton_005d_air_rh,
+        bldg:hamilton_005d_air_temp,
+        bldg:hamilton_005d_lux,
+        bldg:hamilton_005d_pir ;
     bf:isPartOf bldg:SouthZone,
+        bldg:conference_room,
         bldg:floor_2,
         bldg:lightingzone1 .
 

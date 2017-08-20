@@ -225,26 +225,32 @@ for t in generator.add_xbos_thermostat(CIEE.clarity_tstat,"ciee/devices/venstar/
 
 # add Lighting
 lights2rooms = {
-   "Sensor01907b": CIEE.R207,
-   "Sensor01930e": CIEE.R207,
-   "Sensor02d444": CIEE.R207,
-   "Sensor013263": CIEE.R207,
-   "Sensor01942b": CIEE.R207,
-   "Sensor02309c": CIEE.R207,
-   "Sensor01935b": CIEE.R207,
-   "Sensor02d429": CIEE.R207,
-   "Sensor02d432": CIEE.R207,
-   "Sensor02d454": CIEE.R207,
-   "Sensor02d455": CIEE.R207,
-   "Sensor01902e": CIEE.R207,
-   "Sensor019324": CIEE.R207,
-   "Sensor02d433": CIEE.R207,
-   "Sensor02d458": CIEE.R207,
-   "Sensor01934e": CIEE.R207,
-   "Sensor02d438": CIEE.R207,
-   "Sensor018ff9": CIEE.R207,
-   "Sensor30005f": CIEE.R207,
-   "Sensor00d56d": CIEE.R207,
+   "Sensor01930e": CIEE.R218,
+   "Sensor01935b": CIEE.R218,
+   "Sensor019324": CIEE.R218,
+
+   "Sensor02309c": CIEE.R220,
+   "Sensor01902e": CIEE.R220,
+
+   "Sensor01942b": CIEE.R221,
+   "Sensor01934e": CIEE.R221,
+   "Sensor30005f": CIEE.R221,
+
+   "Sensor01907b": CIEE.R219,
+   "Sensor018ff9": CIEE.R219,
+
+   "Sensor02d438": CIEE.R208,
+   "Sensor02d458": CIEE.R208,
+   "Sensor02d429": CIEE.R208,
+   "Sensor02d454": CIEE.R208,
+   "Sensor02d455": CIEE.R208,
+   "Sensor02d444": CIEE.R208,
+
+   "Sensor02d432": CIEE.R208,
+   "Sensor013263": CIEE.R208,
+   "Sensor02d433": CIEE.R208,
+
+   "Sensor00d56d": CIEE.R203,
 }
 for lightname, roomname in lights2rooms.items():
     name = "enlighted_"+lightname
@@ -281,31 +287,48 @@ for lightname, roomname in lights2rooms.items():
             g.add((CIEE[occname], BF.uuid, Literal(uuid[0])))
 
 lights2zones = {
-   "Sensor01907b": "lightingzone1",
-   "Sensor01930e": "lightingzone1",
-   "Sensor02d444": "lightingzone1",
-   "Sensor013263": "lightingzone1",
-   "Sensor01942b": "lightingzone1",
-   "Sensor02309c": "lightingzone1",
-   "Sensor01935b": "lightingzone1",
-   "Sensor02d429": "lightingzone1",
-   "Sensor02d432": "lightingzone1",
-   "Sensor02d454": "lightingzone1",
-   "Sensor02d455": "lightingzone1",
-   "Sensor01902e": "lightingzone1",
-   "Sensor019324": "lightingzone1",
-   "Sensor02d433": "lightingzone1",
-   "Sensor02d458": "lightingzone1",
-   "Sensor01934e": "lightingzone1",
-   "Sensor02d438": "lightingzone1",
-   "Sensor018ff9": "lightingzone1",
-   "Sensor30005f": "lightingzone1",
-   "Sensor00d56d": "lightingzone1",
+   "Sensor01930e": 'north_west_open_office',
+   "Sensor01935b": 'north_west_open_office',
+   "Sensor019324": 'north_west_open_office',
+
+   "Sensor02309c": 'north_east_open_office',
+   "Sensor01902e": 'north_east_open_office',
+
+   "Sensor01942b": 'south_west_open_office',
+   "Sensor01934e": 'south_west_open_office',
+   "Sensor30005f": 'south_west_open_office',
+
+   "Sensor01907b": 'south_east_open_office',
+   "Sensor018ff9": 'south_east_open_office',
+
+   "Sensor02d438": 'conference_room',
+   "Sensor02d458": 'conference_room',
+   "Sensor02d429": 'conference_room',
+   "Sensor02d454": 'conference_room',
+   "Sensor02d455": 'conference_room',
+   "Sensor02d444": 'conference_room',
+   "Sensor02d432": 'conference_room',
+   "Sensor013263": 'conference_room',
+   "Sensor02d433": 'conference_room',
+
+   "Sensor00d56d": 'copy_room',
+}
+lightzones = {
+    'north_west_open_office': [CIEE.R218],
+    'north_east_open_office': [CIEE.R220],
+    'south_west_open_office': [CIEE.R221],
+    'south_east_open_office': [CIEE.R219],
+    'conference_room': [CIEE.R208],
+    'copy_room': [CIEE.R203],
 }
 for lightname, zonename in lights2zones.items():
     name = "enlighted_"+lightname
     g.add((CIEE[zonename], RDF.type, BRICK.Lighting_Zone))
     g.add((CIEE[name], BF.feeds, CIEE[zonename]))
+for zone, roomlist in lightzones.items():
+    name = "lighting_"+zone
+    for room in roomlist:
+        g.add((CIEE[zonename], BF.hasPart, room))
 
 lightingzones = {
     "lightingzone1": [CIEE.R207, CIEE.R208],

@@ -51,8 +51,8 @@ bldg:enlighted_Sensor00d56d_meter a brick:Electric_Meter ;
     bf:uuid "4ba8333d-74cc-39f2-8938-ead227ad0f95" .
 
 bldg:enlighted_Sensor00d56d_occupancy a brick:Occupancy_Sensor ;
-    bf:isLocatedIn bldg:R207 ;
-    bf:isPointOf bldg:R207,
+    bf:isLocatedIn bldg:R203 ;
+    bf:isPointOf bldg:R203,
         bldg:enlighted_Sensor00d56d ;
     bf:uri "ciee/devices/enlighted/s.enlighted/Sensor00d56d/i.xbos.occupancy_sensor" ;
     bf:uuid "99870724-722d-3dd6-8a44-138c6c6243af" .
@@ -63,8 +63,8 @@ bldg:enlighted_Sensor013263_meter a brick:Electric_Meter ;
     bf:uuid "7749cd62-333a-35ed-b0d3-ca248b15c360" .
 
 bldg:enlighted_Sensor013263_occupancy a brick:Occupancy_Sensor ;
-    bf:isLocatedIn bldg:R207 ;
-    bf:isPointOf bldg:R207,
+    bf:isLocatedIn bldg:R208 ;
+    bf:isPointOf bldg:R208,
         bldg:enlighted_Sensor013263 ;
     bf:uri "ciee/devices/enlighted/s.enlighted/Sensor013263/i.xbos.occupancy_sensor" ;
     bf:uuid "0c51371e-6029-3302-984d-b71d850e899a" .
@@ -75,8 +75,8 @@ bldg:enlighted_Sensor018ff9_meter a brick:Electric_Meter ;
     bf:uuid "e8da2b81-d179-3611-8ac7-4a1619c1407b" .
 
 bldg:enlighted_Sensor018ff9_occupancy a brick:Occupancy_Sensor ;
-    bf:isLocatedIn bldg:R207 ;
-    bf:isPointOf bldg:R207,
+    bf:isLocatedIn bldg:R219 ;
+    bf:isPointOf bldg:R219,
         bldg:enlighted_Sensor018ff9 ;
     bf:uri "ciee/devices/enlighted/s.enlighted/Sensor018ff9/i.xbos.occupancy_sensor" ;
     bf:uuid "191ec5e3-2a12-39e8-8416-212eea0eedd0" .
@@ -87,8 +87,8 @@ bldg:enlighted_Sensor01902e_meter a brick:Electric_Meter ;
     bf:uuid "33ed7b93-605c-39f4-85b9-e43b3fcdfa7b" .
 
 bldg:enlighted_Sensor01902e_occupancy a brick:Occupancy_Sensor ;
-    bf:isLocatedIn bldg:R207 ;
-    bf:isPointOf bldg:R207,
+    bf:isLocatedIn bldg:R220 ;
+    bf:isPointOf bldg:R220,
         bldg:enlighted_Sensor01902e ;
     bf:uri "ciee/devices/enlighted/s.enlighted/Sensor01902e/i.xbos.occupancy_sensor" ;
     bf:uuid "c5fefca9-58b3-37b5-ba10-ac178449d9d4" .
@@ -99,8 +99,8 @@ bldg:enlighted_Sensor01907b_meter a brick:Electric_Meter ;
     bf:uuid "e53d51a3-bbe1-3af3-9cf2-649c9ead299b" .
 
 bldg:enlighted_Sensor01907b_occupancy a brick:Occupancy_Sensor ;
-    bf:isLocatedIn bldg:R207 ;
-    bf:isPointOf bldg:R207,
+    bf:isLocatedIn bldg:R219 ;
+    bf:isPointOf bldg:R219,
         bldg:enlighted_Sensor01907b ;
     bf:uri "ciee/devices/enlighted/s.enlighted/Sensor01907b/i.xbos.occupancy_sensor" ;
     bf:uuid "5ac07704-af4b-3fdb-8038-6f464ce18c35" .
@@ -111,8 +111,8 @@ bldg:enlighted_Sensor01930e_meter a brick:Electric_Meter ;
     bf:uuid "c5c295d9-76e0-34ef-92d5-149fa25f22a3" .
 
 bldg:enlighted_Sensor01930e_occupancy a brick:Occupancy_Sensor ;
-    bf:isLocatedIn bldg:R207 ;
-    bf:isPointOf bldg:R207,
+    bf:isLocatedIn bldg:R218 ;
+    bf:isPointOf bldg:R218,
         bldg:enlighted_Sensor01930e ;
     bf:uri "ciee/devices/enlighted/s.enlighted/Sensor01930e/i.xbos.occupancy_sensor" ;
     bf:uuid "862089d9-4c06-3ac1-bc1d-84d8d8f122d8" .
@@ -123,8 +123,8 @@ bldg:enlighted_Sensor019324_meter a brick:Electric_Meter ;
     bf:uuid "05dcc4ae-de8c-3c6d-943b-153bebb06e39" .
 
 bldg:enlighted_Sensor019324_occupancy a brick:Occupancy_Sensor ;
-    bf:isLocatedIn bldg:R207 ;
-    bf:isPointOf bldg:R207,
+    bf:isLocatedIn bldg:R218 ;
+    bf:isPointOf bldg:R218,
         bldg:enlighted_Sensor019324 ;
     bf:uri "ciee/devices/enlighted/s.enlighted/Sensor019324/i.xbos.occupancy_sensor" ;
     bf:uuid "f91e8678-47a2-3da6-9eec-753f4364044c" .
@@ -135,8 +135,8 @@ bldg:enlighted_Sensor01934e_meter a brick:Electric_Meter ;
     bf:uuid "ce6ea005-9d70-30e5-83a5-13c312c40aa7" .
 
 bldg:enlighted_Sensor01934e_occupancy a brick:Occupancy_Sensor ;
-    bf:isLocatedIn bldg:R207 ;
-    bf:isPointOf bldg:R207,
+    bf:isLocatedIn bldg:R221 ;
+    bf:isPointOf bldg:R221,
         bldg:enlighted_Sensor01934e ;
     bf:uri "ciee/devices/enlighted/s.enlighted/Sensor01934e/i.xbos.occupancy_sensor" ;
     bf:uuid "05240142-25e2-33f5-a3f3-bb52f2d934c5" .
@@ -147,8 +147,8 @@ bldg:enlighted_Sensor01935b_meter a brick:Electric_Meter ;
     bf:uuid "6125c4aa-7685-390d-a745-27a19e05ada2" .
 
 bldg:enlighted_Sensor01935b_occupancy a brick:Occupancy_Sensor ;
-    bf:isLocatedIn bldg:R207 ;
-    bf:isPointOf bldg:R207,
+    bf:isLocatedIn bldg:R218 ;
+    bf:isPointOf bldg:R218,
         bldg:enlighted_Sensor01935b ;
     bf:uri "ciee/devices/enlighted/s.enlighted/Sensor01935b/i.xbos.occupancy_sensor" ;
     bf:uuid "f3262678-43d5-39ab-ab42-13abd3c952f9" .
@@ -159,8 +159,8 @@ bldg:enlighted_Sensor01942b_meter a brick:Electric_Meter ;
     bf:uuid "7fc65a1a-70da-320d-923d-7d33df77e83c" .
 
 bldg:enlighted_Sensor01942b_occupancy a brick:Occupancy_Sensor ;
-    bf:isLocatedIn bldg:R207 ;
-    bf:isPointOf bldg:R207,
+    bf:isLocatedIn bldg:R221 ;
+    bf:isPointOf bldg:R221,
         bldg:enlighted_Sensor01942b ;
     bf:uri "ciee/devices/enlighted/s.enlighted/Sensor01942b/i.xbos.occupancy_sensor" ;
     bf:uuid "80198599-4d12-3692-8068-e3b9bdd7d79f" .
@@ -171,8 +171,8 @@ bldg:enlighted_Sensor02309c_meter a brick:Electric_Meter ;
     bf:uuid "6db3c938-e7b5-362e-8ec7-fd1715bfa4b6" .
 
 bldg:enlighted_Sensor02309c_occupancy a brick:Occupancy_Sensor ;
-    bf:isLocatedIn bldg:R207 ;
-    bf:isPointOf bldg:R207,
+    bf:isLocatedIn bldg:R220 ;
+    bf:isPointOf bldg:R220,
         bldg:enlighted_Sensor02309c ;
     bf:uri "ciee/devices/enlighted/s.enlighted/Sensor02309c/i.xbos.occupancy_sensor" ;
     bf:uuid "f5994eac-9691-36a6-8610-599aa3ecbd36" .
@@ -183,8 +183,8 @@ bldg:enlighted_Sensor02d429_meter a brick:Electric_Meter ;
     bf:uuid "41016955-fdb1-340e-9d38-f580a2e34800" .
 
 bldg:enlighted_Sensor02d429_occupancy a brick:Occupancy_Sensor ;
-    bf:isLocatedIn bldg:R207 ;
-    bf:isPointOf bldg:R207,
+    bf:isLocatedIn bldg:R208 ;
+    bf:isPointOf bldg:R208,
         bldg:enlighted_Sensor02d429 ;
     bf:uri "ciee/devices/enlighted/s.enlighted/Sensor02d429/i.xbos.occupancy_sensor" ;
     bf:uuid "611ac5e9-33a5-3273-9fa6-548d3ad59481" .
@@ -195,8 +195,8 @@ bldg:enlighted_Sensor02d432_meter a brick:Electric_Meter ;
     bf:uuid "5b812bbc-f1c3-3d43-a655-40a3d44837fc" .
 
 bldg:enlighted_Sensor02d432_occupancy a brick:Occupancy_Sensor ;
-    bf:isLocatedIn bldg:R207 ;
-    bf:isPointOf bldg:R207,
+    bf:isLocatedIn bldg:R208 ;
+    bf:isPointOf bldg:R208,
         bldg:enlighted_Sensor02d432 ;
     bf:uri "ciee/devices/enlighted/s.enlighted/Sensor02d432/i.xbos.occupancy_sensor" ;
     bf:uuid "2b3f9905-3bb7-302a-9545-7bfe2eb63547" .
@@ -207,8 +207,8 @@ bldg:enlighted_Sensor02d433_meter a brick:Electric_Meter ;
     bf:uuid "c5d201cf-fb7e-3e83-aab3-517e93df1919" .
 
 bldg:enlighted_Sensor02d433_occupancy a brick:Occupancy_Sensor ;
-    bf:isLocatedIn bldg:R207 ;
-    bf:isPointOf bldg:R207,
+    bf:isLocatedIn bldg:R208 ;
+    bf:isPointOf bldg:R208,
         bldg:enlighted_Sensor02d433 ;
     bf:uri "ciee/devices/enlighted/s.enlighted/Sensor02d433/i.xbos.occupancy_sensor" ;
     bf:uuid "2f5c888d-c0c6-33b4-9c30-d609f1e16fea" .
@@ -219,8 +219,8 @@ bldg:enlighted_Sensor02d438_meter a brick:Electric_Meter ;
     bf:uuid "38b1ad08-2c56-3462-87bf-91800a1f3af1" .
 
 bldg:enlighted_Sensor02d438_occupancy a brick:Occupancy_Sensor ;
-    bf:isLocatedIn bldg:R207 ;
-    bf:isPointOf bldg:R207,
+    bf:isLocatedIn bldg:R208 ;
+    bf:isPointOf bldg:R208,
         bldg:enlighted_Sensor02d438 ;
     bf:uri "ciee/devices/enlighted/s.enlighted/Sensor02d438/i.xbos.occupancy_sensor" ;
     bf:uuid "afed35be-ef70-341a-8bf4-565d815bfd90" .
@@ -231,8 +231,8 @@ bldg:enlighted_Sensor02d444_meter a brick:Electric_Meter ;
     bf:uuid "65b682ce-3a1f-3072-b64a-3a354be841c0" .
 
 bldg:enlighted_Sensor02d444_occupancy a brick:Occupancy_Sensor ;
-    bf:isLocatedIn bldg:R207 ;
-    bf:isPointOf bldg:R207,
+    bf:isLocatedIn bldg:R208 ;
+    bf:isPointOf bldg:R208,
         bldg:enlighted_Sensor02d444 ;
     bf:uri "ciee/devices/enlighted/s.enlighted/Sensor02d444/i.xbos.occupancy_sensor" ;
     bf:uuid "aefa14ef-a13a-355b-9b87-51511db7f541" .
@@ -243,8 +243,8 @@ bldg:enlighted_Sensor02d454_meter a brick:Electric_Meter ;
     bf:uuid "72ef9222-40c4-3914-8e9f-6e050cb9e8fc" .
 
 bldg:enlighted_Sensor02d454_occupancy a brick:Occupancy_Sensor ;
-    bf:isLocatedIn bldg:R207 ;
-    bf:isPointOf bldg:R207,
+    bf:isLocatedIn bldg:R208 ;
+    bf:isPointOf bldg:R208,
         bldg:enlighted_Sensor02d454 ;
     bf:uri "ciee/devices/enlighted/s.enlighted/Sensor02d454/i.xbos.occupancy_sensor" ;
     bf:uuid "c27adbad-b1b5-342c-91eb-a6709d365871" .
@@ -255,8 +255,8 @@ bldg:enlighted_Sensor02d455_meter a brick:Electric_Meter ;
     bf:uuid "6537ddc4-2796-3091-876d-554f9bf3ef5a" .
 
 bldg:enlighted_Sensor02d455_occupancy a brick:Occupancy_Sensor ;
-    bf:isLocatedIn bldg:R207 ;
-    bf:isPointOf bldg:R207,
+    bf:isLocatedIn bldg:R208 ;
+    bf:isPointOf bldg:R208,
         bldg:enlighted_Sensor02d455 ;
     bf:uri "ciee/devices/enlighted/s.enlighted/Sensor02d455/i.xbos.occupancy_sensor" ;
     bf:uuid "97ba99af-869b-3c43-94e3-93040c9bdd33" .
@@ -267,8 +267,8 @@ bldg:enlighted_Sensor02d458_meter a brick:Electric_Meter ;
     bf:uuid "c7713607-1736-30c5-aded-8e848eb42a6a" .
 
 bldg:enlighted_Sensor02d458_occupancy a brick:Occupancy_Sensor ;
-    bf:isLocatedIn bldg:R207 ;
-    bf:isPointOf bldg:R207,
+    bf:isLocatedIn bldg:R208 ;
+    bf:isPointOf bldg:R208,
         bldg:enlighted_Sensor02d458 ;
     bf:uri "ciee/devices/enlighted/s.enlighted/Sensor02d458/i.xbos.occupancy_sensor" ;
     bf:uuid "00f45f05-08f9-3def-a977-357493fad61e" .
@@ -279,8 +279,8 @@ bldg:enlighted_Sensor30005f_meter a brick:Electric_Meter ;
     bf:uuid "3dc5bd0b-d0b9-3a3e-845c-d3bc4f8df220" .
 
 bldg:enlighted_Sensor30005f_occupancy a brick:Occupancy_Sensor ;
-    bf:isLocatedIn bldg:R207 ;
-    bf:isPointOf bldg:R207,
+    bf:isLocatedIn bldg:R221 ;
+    bf:isPointOf bldg:R221,
         bldg:enlighted_Sensor30005f ;
     bf:uri "ciee/devices/enlighted/s.enlighted/Sensor30005f/i.xbos.occupancy_sensor" ;
     bf:uuid "3cea0629-6fcd-3c6a-9786-7b571eaaf13d" .
@@ -650,6 +650,9 @@ bldg:hamilton_0060_pir a brick:Occupancy_Sensor ;
     bf:uri "ciee/sensors/s.hamilton/00126d0700000060/i.temperature/signal/operative" ;
     bf:uuid "e0430def-1ca1-3968-b680-4ad2e0dea51a" .
 
+bldg:lightingzone1 bf:hasPart bldg:R207,
+        bldg:R208 .
+
 bldg:openoffice_tstat a brick:Thermostat ;
     bf:controls bldg:RTU3 ;
     bf:hasPoint bldg:openoffice_tstat_cooling_setpoint,
@@ -769,6 +772,8 @@ bldg:conference_tstat_state a brick:Thermostat_Status ;
 
 bldg:conference_tstat_temperature a brick:Temperature_Sensor ;
     bf:uuid "03099008-5224-3b61-b07e-eee445e64620" .
+
+bldg:copy_room a brick:Lighting_Zone .
 
 bldg:enlighted_Sensor00d56d_brightness a brick:Lighting_System_Luminance_Command ;
     bf:uuid "dec2e13a-8b8d-3d48-bf75-161678443fdd" .
@@ -918,144 +923,148 @@ bldg:R200 a brick:Room ;
     bf:isPartOf bldg:floor_2 .
 
 bldg:enlighted_Sensor00d56d a brick:Lighting_System ;
-    bf:feeds bldg:lightingzone1 ;
+    bf:feeds bldg:copy_room ;
     bf:hasPoint bldg:enlighted_Sensor00d56d_brightness,
         bldg:enlighted_Sensor00d56d_state ;
-    bf:isLocatedIn bldg:R207 ;
+    bf:isLocatedIn bldg:R203 ;
     bf:uri "ciee/devices/enlighted/s.enlighted/Sensor00d56d/i.xbos.light" .
 
 bldg:enlighted_Sensor013263 a brick:Lighting_System ;
-    bf:feeds bldg:lightingzone1 ;
+    bf:feeds bldg:conference_room ;
     bf:hasPoint bldg:enlighted_Sensor013263_brightness,
         bldg:enlighted_Sensor013263_state ;
-    bf:isLocatedIn bldg:R207 ;
+    bf:isLocatedIn bldg:R208 ;
     bf:uri "ciee/devices/enlighted/s.enlighted/Sensor013263/i.xbos.light" .
 
 bldg:enlighted_Sensor018ff9 a brick:Lighting_System ;
-    bf:feeds bldg:lightingzone1 ;
+    bf:feeds bldg:south_east_open_office ;
     bf:hasPoint bldg:enlighted_Sensor018ff9_brightness,
         bldg:enlighted_Sensor018ff9_state ;
-    bf:isLocatedIn bldg:R207 ;
+    bf:isLocatedIn bldg:R219 ;
     bf:uri "ciee/devices/enlighted/s.enlighted/Sensor018ff9/i.xbos.light" .
 
 bldg:enlighted_Sensor01902e a brick:Lighting_System ;
-    bf:feeds bldg:lightingzone1 ;
+    bf:feeds bldg:north_east_open_office ;
     bf:hasPoint bldg:enlighted_Sensor01902e_brightness,
         bldg:enlighted_Sensor01902e_state ;
-    bf:isLocatedIn bldg:R207 ;
+    bf:isLocatedIn bldg:R220 ;
     bf:uri "ciee/devices/enlighted/s.enlighted/Sensor01902e/i.xbos.light" .
 
 bldg:enlighted_Sensor01907b a brick:Lighting_System ;
-    bf:feeds bldg:lightingzone1 ;
+    bf:feeds bldg:south_east_open_office ;
     bf:hasPoint bldg:enlighted_Sensor01907b_brightness,
         bldg:enlighted_Sensor01907b_state ;
-    bf:isLocatedIn bldg:R207 ;
+    bf:isLocatedIn bldg:R219 ;
     bf:uri "ciee/devices/enlighted/s.enlighted/Sensor01907b/i.xbos.light" .
 
 bldg:enlighted_Sensor01930e a brick:Lighting_System ;
-    bf:feeds bldg:lightingzone1 ;
+    bf:feeds bldg:north_west_open_office ;
     bf:hasPoint bldg:enlighted_Sensor01930e_brightness,
         bldg:enlighted_Sensor01930e_state ;
-    bf:isLocatedIn bldg:R207 ;
+    bf:isLocatedIn bldg:R218 ;
     bf:uri "ciee/devices/enlighted/s.enlighted/Sensor01930e/i.xbos.light" .
 
 bldg:enlighted_Sensor019324 a brick:Lighting_System ;
-    bf:feeds bldg:lightingzone1 ;
+    bf:feeds bldg:north_west_open_office ;
     bf:hasPoint bldg:enlighted_Sensor019324_brightness,
         bldg:enlighted_Sensor019324_state ;
-    bf:isLocatedIn bldg:R207 ;
+    bf:isLocatedIn bldg:R218 ;
     bf:uri "ciee/devices/enlighted/s.enlighted/Sensor019324/i.xbos.light" .
 
 bldg:enlighted_Sensor01934e a brick:Lighting_System ;
-    bf:feeds bldg:lightingzone1 ;
+    bf:feeds bldg:south_west_open_office ;
     bf:hasPoint bldg:enlighted_Sensor01934e_brightness,
         bldg:enlighted_Sensor01934e_state ;
-    bf:isLocatedIn bldg:R207 ;
+    bf:isLocatedIn bldg:R221 ;
     bf:uri "ciee/devices/enlighted/s.enlighted/Sensor01934e/i.xbos.light" .
 
 bldg:enlighted_Sensor01935b a brick:Lighting_System ;
-    bf:feeds bldg:lightingzone1 ;
+    bf:feeds bldg:north_west_open_office ;
     bf:hasPoint bldg:enlighted_Sensor01935b_brightness,
         bldg:enlighted_Sensor01935b_state ;
-    bf:isLocatedIn bldg:R207 ;
+    bf:isLocatedIn bldg:R218 ;
     bf:uri "ciee/devices/enlighted/s.enlighted/Sensor01935b/i.xbos.light" .
 
 bldg:enlighted_Sensor01942b a brick:Lighting_System ;
-    bf:feeds bldg:lightingzone1 ;
+    bf:feeds bldg:south_west_open_office ;
     bf:hasPoint bldg:enlighted_Sensor01942b_brightness,
         bldg:enlighted_Sensor01942b_state ;
-    bf:isLocatedIn bldg:R207 ;
+    bf:isLocatedIn bldg:R221 ;
     bf:uri "ciee/devices/enlighted/s.enlighted/Sensor01942b/i.xbos.light" .
 
 bldg:enlighted_Sensor02309c a brick:Lighting_System ;
-    bf:feeds bldg:lightingzone1 ;
+    bf:feeds bldg:north_east_open_office ;
     bf:hasPoint bldg:enlighted_Sensor02309c_brightness,
         bldg:enlighted_Sensor02309c_state ;
-    bf:isLocatedIn bldg:R207 ;
+    bf:isLocatedIn bldg:R220 ;
     bf:uri "ciee/devices/enlighted/s.enlighted/Sensor02309c/i.xbos.light" .
 
 bldg:enlighted_Sensor02d429 a brick:Lighting_System ;
-    bf:feeds bldg:lightingzone1 ;
+    bf:feeds bldg:conference_room ;
     bf:hasPoint bldg:enlighted_Sensor02d429_brightness,
         bldg:enlighted_Sensor02d429_state ;
-    bf:isLocatedIn bldg:R207 ;
+    bf:isLocatedIn bldg:R208 ;
     bf:uri "ciee/devices/enlighted/s.enlighted/Sensor02d429/i.xbos.light" .
 
 bldg:enlighted_Sensor02d432 a brick:Lighting_System ;
-    bf:feeds bldg:lightingzone1 ;
+    bf:feeds bldg:conference_room ;
     bf:hasPoint bldg:enlighted_Sensor02d432_brightness,
         bldg:enlighted_Sensor02d432_state ;
-    bf:isLocatedIn bldg:R207 ;
+    bf:isLocatedIn bldg:R208 ;
     bf:uri "ciee/devices/enlighted/s.enlighted/Sensor02d432/i.xbos.light" .
 
 bldg:enlighted_Sensor02d433 a brick:Lighting_System ;
-    bf:feeds bldg:lightingzone1 ;
+    bf:feeds bldg:conference_room ;
     bf:hasPoint bldg:enlighted_Sensor02d433_brightness,
         bldg:enlighted_Sensor02d433_state ;
-    bf:isLocatedIn bldg:R207 ;
+    bf:isLocatedIn bldg:R208 ;
     bf:uri "ciee/devices/enlighted/s.enlighted/Sensor02d433/i.xbos.light" .
 
 bldg:enlighted_Sensor02d438 a brick:Lighting_System ;
-    bf:feeds bldg:lightingzone1 ;
+    bf:feeds bldg:conference_room ;
     bf:hasPoint bldg:enlighted_Sensor02d438_brightness,
         bldg:enlighted_Sensor02d438_state ;
-    bf:isLocatedIn bldg:R207 ;
+    bf:isLocatedIn bldg:R208 ;
     bf:uri "ciee/devices/enlighted/s.enlighted/Sensor02d438/i.xbos.light" .
 
 bldg:enlighted_Sensor02d444 a brick:Lighting_System ;
-    bf:feeds bldg:lightingzone1 ;
+    bf:feeds bldg:conference_room ;
     bf:hasPoint bldg:enlighted_Sensor02d444_brightness,
         bldg:enlighted_Sensor02d444_state ;
-    bf:isLocatedIn bldg:R207 ;
+    bf:isLocatedIn bldg:R208 ;
     bf:uri "ciee/devices/enlighted/s.enlighted/Sensor02d444/i.xbos.light" .
 
 bldg:enlighted_Sensor02d454 a brick:Lighting_System ;
-    bf:feeds bldg:lightingzone1 ;
+    bf:feeds bldg:conference_room ;
     bf:hasPoint bldg:enlighted_Sensor02d454_brightness,
         bldg:enlighted_Sensor02d454_state ;
-    bf:isLocatedIn bldg:R207 ;
+    bf:isLocatedIn bldg:R208 ;
     bf:uri "ciee/devices/enlighted/s.enlighted/Sensor02d454/i.xbos.light" .
 
 bldg:enlighted_Sensor02d455 a brick:Lighting_System ;
-    bf:feeds bldg:lightingzone1 ;
+    bf:feeds bldg:conference_room ;
     bf:hasPoint bldg:enlighted_Sensor02d455_brightness,
         bldg:enlighted_Sensor02d455_state ;
-    bf:isLocatedIn bldg:R207 ;
+    bf:isLocatedIn bldg:R208 ;
     bf:uri "ciee/devices/enlighted/s.enlighted/Sensor02d455/i.xbos.light" .
 
 bldg:enlighted_Sensor02d458 a brick:Lighting_System ;
-    bf:feeds bldg:lightingzone1 ;
+    bf:feeds bldg:conference_room ;
     bf:hasPoint bldg:enlighted_Sensor02d458_brightness,
         bldg:enlighted_Sensor02d458_state ;
-    bf:isLocatedIn bldg:R207 ;
+    bf:isLocatedIn bldg:R208 ;
     bf:uri "ciee/devices/enlighted/s.enlighted/Sensor02d458/i.xbos.light" .
 
 bldg:enlighted_Sensor30005f a brick:Lighting_System ;
-    bf:feeds bldg:lightingzone1 ;
+    bf:feeds bldg:south_west_open_office ;
     bf:hasPoint bldg:enlighted_Sensor30005f_brightness,
         bldg:enlighted_Sensor30005f_state ;
-    bf:isLocatedIn bldg:R207 ;
+    bf:isLocatedIn bldg:R221 ;
     bf:uri "ciee/devices/enlighted/s.enlighted/Sensor30005f/i.xbos.light" .
+
+bldg:north_east_open_office a brick:Lighting_Zone .
+
+bldg:south_east_open_office a brick:Lighting_Zone .
 
 bldg:R201 a brick:Room ;
     rdfs:label "Men's Bathroom" ;
@@ -1063,6 +1072,16 @@ bldg:R201 a brick:Room ;
         bldg:R203,
         bldg:R226 ;
     bf:isPartOf bldg:floor_2 .
+
+bldg:north_west_open_office a brick:Lighting_Zone .
+
+bldg:south_west_open_office a brick:Lighting_Zone .
+
+brick:Thermostat_Mode_Command a <http://www.w3.org/2002/07/owl#Class> ;
+    rdfs:subClassOf brick:Command .
+
+brick:Thermostat_Status a <http://www.w3.org/2002/07/owl#Class> ;
+    rdfs:subClassOf brick:Status .
 
 bldg:R224 a brick:Room ;
     rdfs:label "Office" ;
@@ -1074,15 +1093,6 @@ bldg:R224 a brick:Room ;
 
 brick:RTU a <http://www.w3.org/2002/07/owl#Class> ;
     rdfs:subClassOf brick:AHU .
-
-bldg:R221 a brick:Room ;
-    rdfs:label "Open Office SouthWest" ;
-    bf:adjacentTo bldg:R218,
-        bldg:R219,
-        bldg:R220,
-        bldg:R222,
-        bldg:R223 ;
-    bf:isPartOf bldg:floor_2 .
 
 bldg:R223 a brick:Room ;
     rdfs:label "Office" ;
@@ -1119,26 +1129,6 @@ bldg:R204 bf:adjacentTo bldg:R203,
         bldg:R225,
         bldg:R226 .
 
-bldg:R218 a brick:Room ;
-    rdfs:label "Open Office NorthEast" ;
-    bf:adjacentTo bldg:R215,
-        bldg:R216,
-        bldg:R217,
-        bldg:R219,
-        bldg:R220,
-        bldg:R221 ;
-    bf:isPartOf bldg:floor_2 .
-
-bldg:R220 a brick:Room ;
-    rdfs:label "Open Office NorthWest" ;
-    bf:adjacentTo bldg:R218,
-        bldg:R219,
-        bldg:R221,
-        bldg:R222,
-        bldg:R223,
-        bldg:R224 ;
-    bf:isPartOf bldg:floor_2 .
-
 bldg:R222 a brick:Room ;
     rdfs:label "Office" ;
     bf:adjacentTo bldg:R220,
@@ -1161,17 +1151,13 @@ bldg:R205 a brick:Room ;
         bldg:R213 ;
     bf:isPartOf bldg:floor_2 .
 
-bldg:R219 a brick:Room ;
-    rdfs:label "Open Office SouthEast" ;
-    bf:adjacentTo bldg:R211,
-        bldg:R212,
-        bldg:R213,
-        bldg:R214,
-        bldg:R215,
+bldg:conference_room a brick:Lighting_Zone ;
+    bf:hasPart bldg:R203,
+        bldg:R208,
         bldg:R218,
+        bldg:R219,
         bldg:R220,
-        bldg:R221 ;
-    bf:isPartOf bldg:floor_2 .
+        bldg:R221 .
 
 bldg:R217 a brick:Room ;
     rdfs:label "Office" ;
@@ -1246,6 +1232,57 @@ bldg:R215 a brick:Room ;
         bldg:R219 ;
     bf:isPartOf bldg:floor_2 .
 
+bldg:R207 a brick:Room ;
+    rdfs:label "Office" ;
+    bf:adjacentTo bldg:R203,
+        bldg:R204,
+        bldg:R206,
+        bldg:R208 ;
+    bf:isPartOf bldg:floor_2 .
+
+bldg:R220 a brick:Room ;
+    rdfs:label "Open Office NorthWest" ;
+    bf:adjacentTo bldg:R218,
+        bldg:R219,
+        bldg:R221,
+        bldg:R222,
+        bldg:R223,
+        bldg:R224 ;
+    bf:isPartOf bldg:floor_2 .
+
+brick:Illumination_Sensor rdfs:subClassOf brick:Sensor .
+
+bldg:R219 a brick:Room ;
+    rdfs:label "Open Office SouthEast" ;
+    bf:adjacentTo bldg:R211,
+        bldg:R212,
+        bldg:R213,
+        bldg:R214,
+        bldg:R215,
+        bldg:R218,
+        bldg:R220,
+        bldg:R221 ;
+    bf:isPartOf bldg:floor_2 .
+
+bldg:R221 a brick:Room ;
+    rdfs:label "Open Office SouthWest" ;
+    bf:adjacentTo bldg:R218,
+        bldg:R219,
+        bldg:R220,
+        bldg:R222,
+        bldg:R223 ;
+    bf:isPartOf bldg:floor_2 .
+
+bldg:R218 a brick:Room ;
+    rdfs:label "Open Office NorthEast" ;
+    bf:adjacentTo bldg:R215,
+        bldg:R216,
+        bldg:R217,
+        bldg:R219,
+        bldg:R220,
+        bldg:R221 ;
+    bf:isPartOf bldg:floor_2 .
+
 bldg:R203 a brick:Room ;
     rdfs:label "Office" ;
     bf:adjacentTo bldg:R200,
@@ -1257,26 +1294,12 @@ bldg:R203 a brick:Room ;
         bldg:R226 ;
     bf:isPartOf bldg:floor_2 .
 
-brick:Illumination_Sensor rdfs:subClassOf brick:Sensor .
-
-bldg:lightingzone1 a brick:Lighting_Zone ;
-    bf:hasPart bldg:R207,
-        bldg:R208 .
+bldg:floor_2 a brick:Floor .
 
 bldg:R208 a brick:Room ;
     rdfs:label "Conference Room" ;
     bf:adjacentTo bldg:R204,
         bldg:R207,
         bldg:R209 ;
-    bf:isPartOf bldg:floor_2 .
-
-bldg:floor_2 a brick:Floor .
-
-bldg:R207 a brick:Room ;
-    rdfs:label "Office" ;
-    bf:adjacentTo bldg:R203,
-        bldg:R204,
-        bldg:R206,
-        bldg:R208 ;
     bf:isPartOf bldg:floor_2 .
 
