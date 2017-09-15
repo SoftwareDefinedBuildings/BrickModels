@@ -101,6 +101,13 @@ for room, adjlist in adjacency.items():
         g.add((CIEE['R'+str(room)], BF.adjacentTo, CIEE['R'+str(adjroom)]))
         g.add((CIEE['R'+str(adjroom)], BF.adjacentTo, CIEE['R'+str(room)]))
 
+# add meter
+g.add((BRICK.Building_Electric_Meter, RDF.type, OWL.Class))
+g.add((BRICK.Building_Electric_Meter, RDFS.subClassOf, BRICK.Electric_Meter))
+
+g.add((CIEE.building_meter, RDF.type, BRICK.Building_Electric_Meter))
+g.add((CIEE.building_meter, BF.uri, Literal("ciee/devices/s.eagle/0xd8d5b9000000a110/i.meter")))
+g.add((CIEE.building_meter, BF.uuid, Literal("4d6e251a-48e1-3bc0-907d-7d5440c34bb9")))
 
 sensors2rooms = {
     '0029': CIEE.R203,
@@ -121,6 +128,7 @@ sensors2rooms = {
 }
 
 g.add((BRICK.Illumination_Sensor, RDFS.subClassOf, BRICK.Sensor))
+g.add((BRICK.Illumination_Sensor, RDF.type, OWL.Class))
 for sensor, room in sensors2rooms.items():
     name = "hamilton_"+sensor
     g.add((CIEE[name]+"_air_temp", RDF.type, BRICK.Zone_Temperature_Sensor))
@@ -214,12 +222,19 @@ g.add((CIEE.RTU3, BF.feeds, CIEE.CentralZone))
 g.add((CIEE.RTU4, BF.feeds, CIEE.NorthZone))
 
 # add thermostats
+g.add((CIEE.RTU3, BF.hasPoint, CIEE.building_meter))
 for t in generator.add_xbos_thermostat(CIEE.openoffice_tstat,"ciee/devices/venstar/s.venstar/OpenSpace/i.xbos.thermostat", CIEE.RTU3):
     g.add(t)
+
+g.add((CIEE.RTU1, BF.hasPoint, CIEE.building_meter))
 for t in generator.add_xbos_thermostat(CIEE.conference_tstat,"ciee/devices/venstar/s.venstar/ConferenceRoom/i.xbos.thermostat", CIEE.RTU1):
     g.add(t)
+
+g.add((CIEE.RTU2, BF.hasPoint, CIEE.building_meter))
 for t in generator.add_xbos_thermostat(CIEE.carl_tstat,"ciee/devices/pelican/s.pelican/SouthEastCorner/i.xbos.thermostat", CIEE.RTU2):
     g.add(t)
+
+g.add((CIEE.RTU4, BF.hasPoint, CIEE.building_meter))
 for t in generator.add_xbos_thermostat(CIEE.clarity_tstat,"ciee/devices/venstar/s.venstar/Clarity/i.xbos.thermostat", CIEE.RTU4):
     g.add(t)
 
@@ -262,6 +277,7 @@ for lightname, roomname in lights2rooms.items():
 
     metername = "enlighted_"+lightname+"_meter"
     g.add((CIEE[metername], RDF.type, BRICK.Electric_Meter))
+    g.add((CIEE[metername], BF.feeds, CIEE.building_meter))
     g.add((CIEE[metername], BF.isPointOf, CIEE[name]))
     uri = "ciee/devices/enlighted/s.enlighted/{0}/i.xbos.meter".format(lightname)
     g.add((CIEE[metername], BF.uri, Literal(uri)))
@@ -336,12 +352,7 @@ lightingzones = {
 for zone, roomlist in lightingzones.items():
     for room in roomlist:
         g.add((CIEE[zone], BF.hasPart, room))
-    
 
-# add meter
-g.add((CIEE.building_meter, RDF.type, BRICK.Electric_Meter))
-g.add((CIEE.building_meter, BF.uri, Literal("ciee/devices/s.eagle/0xd8d5b9000000a110/i.meter")))
-g.add((CIEE.building_meter, BF.uuid, Literal("4d6e251a-48e1-3bc0-907d-7d5440c34bb9")))
 
 # save building
 g.serialize(destination='ciee.ttl',format='turtle')
