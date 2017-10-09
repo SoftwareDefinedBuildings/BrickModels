@@ -5,6 +5,7 @@ import random
 import re
 RDF = Namespace('http://www.w3.org/1999/02/22-rdf-syntax-ns#')
 RDFS = Namespace('http://www.w3.org/2000/01/rdf-schema#')
+OWL = Namespace('http://www.w3.org/2002/07/owl#')
 BRICK = Namespace('https://brickschema.org/schema/1.0.1/Brick#')
 BF = Namespace('https://brickschema.org/schema/1.0.1/BrickFrame#')
 BRICKTAG = Namespace('https://brickschema.org/schema/1.0.1/BrickTag#')
@@ -17,103 +18,13 @@ g.bind('bf', BF)
 g.bind('btag', BRICKTAG)
 g.bind('sdh', SDH)
 
-# Air handling units
-g.add((BRICK.VAV_With_Reheat, RDFS.subClassOf, BRICK.VAV))
-g.add((SDH['AH1'], RDF.type, BRICK.Air_Handler_Unit))
-for i in range(1,10):
-    rhc = 'RHC-{0}'.format(i)
-    g.add((SDH[rhc], RDF.type, BRICK.Reheat_Coil))
-    g.add((SDH['AH1'], BF.hasPart, SDH[rhc]))
 
-rhc_points = json.load(open('rhc_point.json'))
-for pname, uuid in rhc_points.items():
-    rhc = re.match(r'.*(RHC-[0-9]).*', pname).groups()[0]
-    point = pname.split(':')[1]
-    if point == 'CTL STPT':
-        klass = BRICK.Temperature_Setpoint
-    elif point == 'HEAT.COOL':
-        klass = BRICK.Heating_Command
-    elif point == 'ROOM TEMP':
-        klass = BRICK.Zone_Air_Temperature_Sensor
-    else:
-        print(point)
-        continue
-    name = (rhc+point).replace(' ','_')
-    g.add((SDH[name], RDF.type, klass))
-    g.add((SDH[rhc], BF.hasPoint, SDH[name]))
-    g.add((SDH[name], BF.uuid, Literal(uuid)))
 
-rah_points = json.load(open('rah_points.json'))
-for doc in rah_points:
-    description = doc.pop('Description')
-    pointname = doc.keys()[0]
-    uuid = doc[pointname]
-    rah = re.match(r'.*(RAH-[0-9]+).*', pointname)
-    g.add((SDH[rah], RDF.type, BRICK.VAV_With_Reheat))
-    if rah is None: continue
-    rah = rah.groups()[0]
-    if description == "CFM":
-        klass = BRICK.Air_Flow_Sensor
-    elif description == "CFM SETPOINT":
-        klass = BRICK.Air_Flow_Setpoint
-    elif description == "COOLING COIL VLV":
-        klass = BRICK.Cooling_Valve_Command
-    elif description == "OCCUPIED":
-        klass = BRICK.Occupancy_Sensor
-    elif description == "SAT SETPOINT":
-        klass = BRICK.Supply_Air_Temperature_Setpoint
-    elif description == "SF SPEED":
-        klass = BRICK.Supply_Fan_VFD_Speed
-    elif description == "SUPPLY AIR TEMP":
-        klass = BRICK.Supply_Air_Temperature_Sensor
-    elif description == "TEMP STPT":
-        klass = BRICK.Temperature_Setpoint
-    else:
-        continue
-    g.add((SDH[pointname], RDF.type, klass))
-    g.add((SDH[rah], BF.hasPoint, SDH[pointname]))
-    g.add((SDH[pointname], BF.uuid, Literal(uuid)))
-
-g.add((SDH['AH2A'], RDF.type, BRICK.Air_Handler_Unit))
-
-g.add((SDH['AH2A_SF_CFM'], RDF.type, BRICK.Supply_Air_Temperature_Sensor))
-g.add((SDH['AH2A'], BF.hasPoint, SDH['AH2A_SF_CFM']))
-g.add((SDH['AH2A_SF_CFM'], BF.uuid, Literal("64aceef3-5034-574b-a803-f04ad1224d39")))
-
-g.add((SDH['AH2A_SF_VFD'], RDF.type, BRICK.Variable_Frequency_Drive))
-g.add((SDH['AH2A'], BF.hasPart, SDH['AH2A_SF_VFD']))
-g.add((SDH['AH2A_SF_VFD_Percent'], RDF.type, BRICK.Frequency_Sensor))
-g.add((SDH['AH2A_SF_VFD'], BF.uuid, Literal("67b07607-576f-507d-b467-669c8d1da4be")))
-
-g.add((SDH['AH2B'], RDF.type, BRICK.Air_Handler_Unit))
-
-g.add((SDH['AH2B_SF_CFM'], RDF.type, BRICK.Supply_Air_Temperature_Sensor))
-g.add((SDH['AH2B'], BF.hasPoint, SDH['AH2B_SF_CFM']))
-g.add((SDH['AH2B_SF_CFM'], BF.uuid, Literal("e4d4df35-2b0d-562a-801c-8f588dcf803a")))
-
-g.add((SDH['AH2B_SF_VFD'], RDF.type, BRICK.Variable_Frequency_Drive))
-g.add((SDH['AH2B'], BF.hasPart, SDH['AH2B_SF_VFD']))
-g.add((SDH['AH2B_SF_VFD_Percent'], RDF.type, BRICK.Frequency_Sensor))
-g.add((SDH['AH2B_SF_VFD'], BF.uuid, Literal("88764253-d926-5a27-8b8e-767382e765f8")))
-
-# map AHU to VAV (this is made up!!)
-ahu2vav = {
-    'AH1': [],
-    'AH2A': [],
-    'AH2B': [],
-}
-ahu2vav['AH1'].extend(['S1-{:02d}'.format(i) for i in range(1,21)])
-ahu2vav['AH1'].extend(['S2-{:02d}'.format(i) for i in range(1,22)])
-ahu2vav['AH2A'].extend(['S3-{:02d}'.format(i) for i in range(1,22)])
-ahu2vav['AH2A'].extend(['S4-{:02d}'.format(i) for i in range(1,22)])
-ahu2vav['AH2A'].extend(['S5-{:02d}'.format(i) for i in range(1,22)])
-ahu2vav['AH2B'].extend(['S6-{:02d}'.format(i) for i in range(1,21)])
-ahu2vav['AH2B'].extend(['S7-{:02d}'.format(i) for i in range(1,17)])
-
-for ahu, vavlist in ahu2vav.items():
-    g.add((SDH[ahu], RDF.type, BRICK.AHU))
-    for vav in vavlist:
-        g.add((SDH[ahu], BF.feeds, SDH[vav]))
+#####################################
+##
+## Spatial Structure: Floors + Rooms
+##
+#####################################
 
 # add floors + rooms
 flr2rm = {
@@ -275,49 +186,217 @@ for floor, roomlist in flr2rm.items():
         g.add((SDH[room], BF.isPartOf, SDH[floor]))
         g.add((SDH[room], RDFS.label, Literal(label)))
 
-# generate VAV boxes
-for vavidx in range(1,21):
-    vav = 'S1-{:02d}'.format(vavidx)
-    zone = 'ZoneS1-{:02d}'.format(vavidx)
-    g.add((SDH[vav], RDF.type, BRICK.VAV))
+#####################################
+##
+## Air Handling Units
+##
+#####################################
+
+# instantiate the AHUs themselves
+g.add((SDH['AH1'], RDF.type, BRICK.Air_Handler_Unit))
+g.add((SDH['AH2A'], RDF.type, BRICK.Air_Handler_Unit))
+g.add((SDH['AH2B'], RDF.type, BRICK.Air_Handler_Unit))
+
+# add points to AHUs
+g.add((SDH['AH2A_SF_CFM'], RDF.type, BRICK.Supply_Air_Temperature_Sensor))
+g.add((SDH['AH2A'], BF.hasPoint, SDH['AH2A_SF_CFM']))
+g.add((SDH['AH2A_SF_CFM'], BF.uuid, Literal("64aceef3-5034-574b-a803-f04ad1224d39")))
+
+g.add((SDH['AH2A_SF_VFD'], RDF.type, BRICK.Variable_Frequency_Drive))
+g.add((SDH['AH2A'], BF.hasPart, SDH['AH2A_SF_VFD']))
+g.add((SDH['AH2A_SF_VFD_Percent'], RDF.type, BRICK.Frequency_Sensor))
+g.add((SDH['AH2A_SF_VFD'], BF.uuid, Literal("67b07607-576f-507d-b467-669c8d1da4be")))
+
+g.add((SDH['AH2B_SF_CFM'], RDF.type, BRICK.Supply_Air_Temperature_Sensor))
+g.add((SDH['AH2B'], BF.hasPoint, SDH['AH2B_SF_CFM']))
+g.add((SDH['AH2B_SF_CFM'], BF.uuid, Literal("e4d4df35-2b0d-562a-801c-8f588dcf803a")))
+
+g.add((SDH['AH2B_SF_VFD'], RDF.type, BRICK.Variable_Frequency_Drive))
+g.add((SDH['AH2B'], BF.hasPart, SDH['AH2B_SF_VFD']))
+g.add((SDH['AH2B_SF_VFD_Percent'], RDF.type, BRICK.Frequency_Sensor))
+g.add((SDH['AH2B_SF_VFD'], BF.uuid, Literal("88764253-d926-5a27-8b8e-767382e765f8")))
+
+
+#####################################
+##
+## VAVs with Reheat (nano fab lab)
+##
+#####################################
+
+# create the class
+g.add((BRICK.VAV_With_Reheat, RDF.type, OWL.Class))
+g.add((BRICK.VAV_With_Reheat, RDFS.subClassOf, BRICK.VAV))
+
+# the JSON files groups all RAH VAV points together,
+# so we just loop through this file and generate the RAH VAV
+# and its points as we go along.
+rah_points = json.load(open('rah_points.json'))
+for doc in rah_points:
+    description = doc.pop('Description')
+    pointname = doc.keys()[0]
+    uuid = doc[pointname]
+    rah = re.match(r'.*(RAH[0-9]+).*', pointname)
+    g.add((SDH[rah], RDF.type, BRICK.VAV_With_Reheat))
+    if rah is None: continue
+    rah = rah.groups()[0]
+    rah_room = re.match(r'.*RAH[0-9]+_([0-9]+).*', pointname)
+    if rah_room is not None:
+        roomname = 'R' + rah_room.groups()[0]
+        # if the pointname contains a room identifier, then
+        # we add that room to a zone and associate the RVAV
+        zone = 'Zone_{0}'.format(rah)
+        g.add((SDH[zone], RDF.type, BRICK.HVAC_Zone))
+        g.add((SDH[rah], BF.feeds, SDH[zone]))
+        g.add((SDH[roomname], RDF.type, BRICK.Room))
+        g.add((SDH[zone], BF.hasPart, SDH[roomname]))
+
+    if description == "CFM":
+        klass = BRICK.Air_Flow_Sensor
+    elif description == "CFM SETPOINT":
+        klass = BRICK.Air_Flow_Setpoint
+    elif description == "COOLING COIL VLV":
+        klass = BRICK.Cooling_Valve_Command
+    elif description == "OCCUPIED":
+        klass = BRICK.Occupancy_Sensor
+    elif description == "SAT SETPOINT":
+        klass = BRICK.Supply_Air_Temperature_Setpoint
+    elif description == "SF SPEED":
+        klass = BRICK.Supply_Fan_VFD_Speed
+    elif description == "SUPPLY AIR TEMP":
+        klass = BRICK.Supply_Air_Temperature_Sensor
+    elif description == "TEMP STPT":
+        klass = BRICK.Temperature_Setpoint
+    else:
+        continue
+    g.add((SDH[pointname], RDF.type, klass))
+    g.add((SDH[rah], BF.hasPoint, SDH[pointname]))
+    g.add((SDH[pointname], BF.uuid, Literal(uuid)))
+
+
+#####################################
+##
+## RHC (Reheat coil points)
+## NOTE: These are associated with AH1A/B and are probably related to the RVAVs, but
+## I'm not sure what the exact associations are, so I'm just connecting these to the AHU
+##
+#####################################
+
+for i in range(1,10):
+    rhc = 'RHC-{0}'.format(i)
+    g.add((SDH[rhc], RDF.type, BRICK.Reheat_Coil))
+    g.add((SDH['AH1'], BF.hasPart, SDH[rhc]))
+
+rhc_points = json.load(open('rhc_point.json'))
+for pname, uuid in rhc_points.items():
+    rhc = re.match(r'.*(RHC-[0-9]).*', pname).groups()[0]
+    point = pname.split(':')[1]
+    # TODO: what room is this a temperature setpoint for?
+    if point == 'CTL STPT':
+        klass = BRICK.Temperature_Setpoint
+    elif point == 'HEAT.COOL':
+        klass = BRICK.Heating_Command
+    # TODO: find out what room this is measuring
+    elif point == 'ROOM TEMP':
+        klass = BRICK.Zone_Air_Temperature_Sensor
+    else:
+        print(point)
+        continue
+    name = (rhc+point).replace(' ','_')
+    g.add((SDH[name], RDF.type, klass))
+    g.add((SDH[rhc], BF.hasPoint, SDH[name]))
+    g.add((SDH[name], BF.uuid, Literal(uuid)))
+
+#####################################
+##
+## Office VAVs
+## Note: be aware of constant volume terminal units
+##
+#####################################
+
+# generate all of the labels
+s1vavs = ['S1-{:02d}'.format(i) for i in range(1,21)]
+s2vavs = ['S2-{:02d}'.format(i) for i in range(1,22)]
+s3vavs = ['S3-{:02d}'.format(i) for i in range(1,22)]
+s4vavs = ['S4-{:02d}'.format(i) for i in range(1,22)]
+s5vavs = ['S5-{:02d}'.format(i) for i in range(1,22)]
+s6vavs = ['S6-{:02d}'.format(i) for i in range(1,21)]
+s7vavs = ['S7-{:02d}'.format(i) for i in range(1,17)]
+
+# instantiate them
+for vavlabel in s1vavs+s2vavs+s3vavs+s4vavs+s5vavs+s6vavs+s7vavs:
+    zone = 'Zone{0}'.format(vavlabel)
+    g.add((SDH[vavlabel], RDF.type, BRICK.VAV))
     g.add((SDH[zone], RDF.type, BRICK.HVAC_Zone))
-    g.add((SDH[vav], BF.feeds, SDH[zone]))
-for vavidx in range(1,22):
-    vav = 'S2-{:02d}'.format(vavidx)
-    zone = 'ZoneS2-{:02d}'.format(vavidx)
-    g.add((SDH[vav], RDF.type, BRICK.VAV))
-    g.add((SDH[zone], RDF.type, BRICK.HVAC_Zone))
-    g.add((SDH[vav], BF.feeds, SDH[zone]))
-for vavidx in range(1,22):
-    vav = 'S3-{:02d}'.format(vavidx)
-    zone = 'ZoneS3-{:02d}'.format(vavidx)
-    g.add((SDH[vav], RDF.type, BRICK.VAV))
-    g.add((SDH[zone], RDF.type, BRICK.HVAC_Zone))
-    g.add((SDH[vav], BF.feeds, SDH[zone]))
-for vavidx in range(1,22):
-    vav = 'S4-{:02d}'.format(vavidx)
-    zone = 'ZoneS4-{:02d}'.format(vavidx)
-    g.add((SDH[vav], RDF.type, BRICK.VAV))
-    g.add((SDH[zone], RDF.type, BRICK.HVAC_Zone))
-    g.add((SDH[vav], BF.feeds, SDH[zone]))
-for vavidx in range(1,22):
-    vav = 'S5-{:02d}'.format(vavidx)
-    zone = 'ZoneS5-{:02d}'.format(vavidx)
-    g.add((SDH[vav], RDF.type, BRICK.VAV))
-    g.add((SDH[zone], RDF.type, BRICK.HVAC_Zone))
-    g.add((SDH[vav], BF.feeds, SDH[zone]))
-for vavidx in range(1,21):
-    vav = 'S6-{:02d}'.format(vavidx)
-    zone = 'ZoneS6-{:02d}'.format(vavidx)
-    g.add((SDH[vav], RDF.type, BRICK.VAV))
-    g.add((SDH[zone], RDF.type, BRICK.HVAC_Zone))
-    g.add((SDH[vav], BF.feeds, SDH[zone]))
-for vavidx in range(1,17):
-    vav = 'S7-{:02d}'.format(vavidx)
-    zone = 'ZoneS7-{:02d}'.format(vavidx)
-    g.add((SDH[vav], RDF.type, BRICK.VAV))
-    g.add((SDH[zone], RDF.type, BRICK.HVAC_Zone))
-    g.add((SDH[vav], BF.feeds, SDH[zone]))
+    g.add((SDH[vavlabel], BF.feeds, SDH[zone]))
+
+# add points to the vavs
+vavsensors = json.load(open('vavsensors.json'))
+# TODO: where are the temperature sensors?
+for sensor in vavsensors:
+    vav = sensor.pop('vav')
+    name = sensor.keys()[0]
+    uuid = sensor.values()[0]
+    pointname = vav+name.replace(' ','_')
+    if name == "room temperature":
+        print pointname
+        klass = BRICK.Zone_Air_Temperature_Sensor
+    elif name == "room airflow":
+        klass = BRICK.Supply_Air_Flow_Sensor
+    elif name == "room damper position":
+        klass = BRICK.Damper_Position_Sensor
+        # damper!
+        g.add((SDH[vav+"damper"], RDF.type, BRICK.Damper))
+        g.add((SDH[vav], BF.hasPart, SDH[vav+"damper"]))
+        g.add((SDH[vav+"damper"], BF.hasPoint, SDH[pointname]))
+    elif name == "room heating":
+        klass = BRICK.Zone_Heating_Temperature_Setpoint
+    elif name == "room cooling":
+        klass = BRICK.Zone_Cooling_Temperature_Setpoint
+    elif name == "room maximum airflow":
+        klass = BRICK.Max_Supply_Air_Flow_Setpoint
+    elif name == "room minimum airflow":
+        klass = BRICK.Min_Supply_Air_Flow_Setpoint
+    elif name == "room setpoint":
+        klass = BRICK.Zone_Temperature_Setpoint
+    elif name == "room valve position":
+        klass = BRICK.Heating_Valve_Command
+    else:
+        print(name)
+        continue
+    g.add((SDH[pointname], RDF.type, klass))
+    g.add((SDH[vav], BF.hasPoint, SDH[pointname]))
+    g.add((SDH[pointname], BF.uuid, Literal(uuid)))
+
+# associate the VAVs with the AH2A/B air handlers.
+# The 2 AHUs for the office space operate in parallel
+ahu2vav={'AH2A': [], 'AH2B': []}
+ahu2vav['AH2A'].extend(s1vavs)
+ahu2vav['AH2A'].extend(s2vavs)
+ahu2vav['AH2A'].extend(s3vavs)
+ahu2vav['AH2A'].extend(s4vavs)
+ahu2vav['AH2A'].extend(s5vavs)
+ahu2vav['AH2A'].extend(s6vavs)
+ahu2vav['AH2A'].extend(s7vavs)
+
+ahu2vav['AH2B'].extend(s1vavs)
+ahu2vav['AH2B'].extend(s2vavs)
+ahu2vav['AH2B'].extend(s3vavs)
+ahu2vav['AH2B'].extend(s4vavs)
+ahu2vav['AH2B'].extend(s5vavs)
+ahu2vav['AH2B'].extend(s6vavs)
+ahu2vav['AH2B'].extend(s7vavs)
+
+for ahu, vavlist in ahu2vav.items():
+    g.add((SDH[ahu], RDF.type, BRICK.AHU))
+    for vav in vavlist:
+        g.add((SDH[ahu], BF.feeds, SDH[vav]))
+
+
+#####################################
+##
+## Map HVAC zones to rooms for the office space
+##
+#####################################
 
 zone2room = {
     'ZoneS1-01': ['132'],
@@ -463,379 +542,341 @@ for zonename, roomlist in zone2room.items():
         room = 'R'+room
         g.add((SDH[zonename], BF.hasPart, SDH[room]))
 
-vavsensors = json.load(open('vavsensors.json'))
-for sensor in vavsensors:
-    vav = sensor.pop('vav')
-    name = sensor.keys()[0]
-    uuid = sensor.values()[0]
-    pointname = vav+name.replace(' ','_')
-    if name == "room temperature":
-        klass = BRICK.Zone_Air_Temperature_Sensor
-    elif name == "room airflow":
-        klass = BRICK.Supply_Air_Flow_Sensor
-    elif name == "room damper position":
-        klass = BRICK.Damper_Position_Sensor
-        # damper!
-        g.add((SDH[vav+"damper"], RDF.type, BRICK.Damper))
-        g.add((SDH[vav], BF.hasPart, SDH[vav+"damper"]))
-        g.add((SDH[vav+"damper"], BF.hasPoint, SDH[pointname]))
-    elif name == "room heating":
-        klass = BRICK.Zone_Heating_Temperature_Setpoint
-    elif name == "room cooling":
-        klass = BRICK.Zone_Cooling_Temperature_Setpoint
-    elif name == "room maximum airflow":
-        klass = BRICK.Max_Supply_Air_Flow_Setpoint
-    elif name == "room minimum airflow":
-        klass = BRICK.Min_Supply_Air_Flow_Setpoint
-    elif name == "room setpoint":
-        klass = BRICK.Zone_Temperature_Setpoint
-    elif name == "room valve position":
-        klass = BRICK.Heating_Valve_Command
-    else:
-        print(name)
+
+#####################################
+##
+## Room Temperature Sensors
+##
+#####################################
+
+## Records look like the following
+#    {
+#        "Description": "310 AUDITORIUM",
+#        "Metadata": {
+#            "Extra": {
+#                "Type": "room temperature",
+#                "Vav": "S3-09"
+#            },
+
+for record in json.load(open('metadata.json')):
+    pointname = record.get('Metadata',{}).get('Extra',{}).get('Type')
+    vav = record.get('Metadata',{}).get('Extra',{}).get('Vav')
+    description = record.get('Description','')
+    uuid = record.get('uuid')
+    if pointname is None or vav is None or pointname != 'room temperature':
         continue
-    g.add((SDH[pointname], RDF.type, klass))
-    g.add((SDH[vav], BF.hasPoint, SDH[pointname]))
-    g.add((SDH[pointname], BF.uuid, Literal(uuid)))
+    room = re.match(r'([0-9]+) .*', description)
+    if room is None:
+        continue
+    room = 'R'+room.groups()[0]
+    name = vav+pointname.replace(' ','_')
+    print vav, room, name
+    g.add((SDH[name], BF.isLocatedIn, SDH[room]))
+    g.add((SDH[name], BF.isPointOf, SDH[room]))
 
-sensors = g.query("SELECT ?s WHERE {?s rdf:type brick:Zone_Air_Temperature_Sensor .}")
-rooms = list(g.query("SELECT ?s WHERE {?s rdf:type brick:Room .}"))
-for sensor in sensors:
-    sensor = str(sensor[0]).split('#')[-1]
-    room = random.choice(rooms)[0].split('#')[-1]
-    g.add((SDH[sensor], BF.isLocatedIn, SDH[room]))
-#
-#room2tempsensor = {
-#        "413": ["6e2fb8ba-ad9c-5ca8-b441-e113d57c1a35"],
-#        "432": ["222206a5-2a85-55d4-8118-10d07f1a4e65"],
-#        "434": ["fab22d33-d171-5499-bf74-44cb4a1aac5b"],
-#        "440": ["35badc5a-4f58-5234-997b-d744605177dc"],
-#	"446": ["f993c81a-bfb4-53ca-8e12-7af1a32b9bdb"],
-#	"421": ["3c2b8d4b-6c0a-5239-9a89-c773ab35ecef"],
-#	"424": ["db558b29-78d1-5d7d-9c07-578547745203"],
-#	"423": ["594c15c5-a7fa-5ec9-98ef-7c412bc23cd7"],
-#	"448": ["04bf85a1-41d6-5ecf-95c0-09464fdc5925"],
-#	"429": ["c1f69a00-db44-5458-a373-f38b2997f0d3"],
-#	"470": ["9f7b8d48-6279-5aae-8464-69f38e590b2b"],
-#	"450": ["b88ad9fb-f1a8-5470-83a1-0b707d3a33b4", "9b506d3e-7e4c-5896-871f-a061a98a2a10"],
-#	"471": ["3f113f77-c8ca-5aa7-bab9-a677e840df67"],
-#	"458": ["287171b1-81c5-535b-a92a-a254fec5ba2b"],
-#	"464": ["a71dc6d1-420d-56f9-9b02-f63a5d165fcc"],
-#	"475": ["7483ed25-cae3-5a73-8523-e25183c2748d"],
-#	"460": ["ab896e4c-a54b-5136-80f2-63aa5b6b5993"],
-#	"477": ["a7aad37c-6dd8-5252-8443-65471582f8e9"],
-#	"466": ["51db63bf-5aa4-5e5b-ad0e-8f63abcead48"],
-#	"468": ["7e6e8fde-f84c-53c5-bd9d-c58456314a62"],
+#adjacencies = {
+#    "511" :["510","513"],
+#    "513" :["511","515"],
+#    "515" :["513"],
+#    "510" :["511","530"],
+#    "530" :["510"],
+#    "520" :["520A","520B," "520C," "520D", "532"],
+#    "520A":["520","520B"],
+#    "520B":["520","520A"],
+#    "520C":["520"],
+#    "520D":["520"],
+#    "532" :["520","538"],
+#    "538" :["532"],
+#    "548" :["520C"],
+#    "552" :["548","554"],
+#    "554" :["552","556"],
+#    "556" :["554","558"],
+#    "558" :["556","562"],
+#    "562" :["558","564"],
+#    "564" :["562","566"],
+#    "566" :["564"],
+#    "571" :["573"],
+#    "573" :["571","575"],
+#    "575" :["573","577"],
+#    "577" :["575","579"],
+#    "579" :["577"],
+#    "580" :["581","582A"],
+#    "581" :["580","582A", "582"],
+#    "582" :["581","583", "582A"],
+#    "582A":["582","581", "580", "591"],
+#    "583" :["582","582A", "584", "593"],
+#    "584" :["583","585"],
+#    "585" :["584","586", "595"],
+#    "586" :["585","599", "597"],
+#    "599" :["597","586"],
+#    "597" :["599","586"],
+#    "595" :["585","586", "584"],
+#    "593" :["583"],
+#    "591" :["582A","580"],
+#    "630A":["630B","621E","630"],
+#    "630":["630A"],
+#    "621E":["630B","630A","621D"],
+#    "630B":["621E","630A"],
+#    "621D":["621E","621C","621"],
+#    "621C":["621D","621B","621"],
+#    "621B":["621C","621A","621"],
+#    "621A":["621B","621"],
+#    "621":["621A","621B","621C","621D","621E"],
+#    "671":["673"],
+#    "673":["671","675"],
+#    "675":["673","677"],
+#    "677":["675","679"],
+#    "679":["677"],
+#    "640":["642"],
+#    "642":["640","644"],
+#    "644":["642","646"],
+#    "646":["644","648"],
+#    "648":["646","652A"],
+#    "652A":["652","652B"],
+#    "652":["652A","652B"],
+#    "652B":["652A","652","656A"],
+#    "656A":["652B","656","656B"],
+#    "656":["652","656A","656B","664"],
+#    "656B":["656A","656","666"],
+#    "664":["656","666"],
+#    "666":["656B","664"],
+#    "730":["732","717"],
+#    "732":["730","736"],
+#    "717":["730","719"],
+#    "719":["717","721","718"],
+#    "721":["719","723","722"],
+#    "723":["721","725","724"],
+#    "725":["723","726"],
+#    "718":["722","719"],
+#    "722":["718","724","721"],
+#    "724":["722","726","723"],
+#    "726":["724","725"],
+#    "736":["732","738"],
+#    "738":["736","748","746"],
+#    "746":["738","748","754"],
+#    "748":["752","746","738"],
+#    "752":["748","754","750"],
+#    "754":["752","746","750"],
+#    "750":["752","754","771","773","775","768"],
+#    "771":["773","750"],
+#    "773":["771","775","750"],
+#    "775":["773","750","777"],
+#    "777":["775","779","768"],
+#    "779":["777","768"],
+#    "768":["750","777","779"],
 #}
-#for room, tempsensorlist in room2tempsensor.items():
+#for room, adjlist in adjacencies.items():
 #    room = 'R'+room
-#    for tmpsensor in tempsensorlist:
-#        name = tempsensornames[tmpsensor]
-#        g.add((SDH[name], BF.isLocatedIn, SDH[room]))
-
-adjacencies = {
-    "511" :["510","513"],
-    "513" :["511","515"],
-    "515" :["513"],
-    "510" :["511","530"],
-    "530" :["510"],
-    "520" :["520A","520B," "520C," "520D", "532"],
-    "520A":["520","520B"],
-    "520B":["520","520A"],
-    "520C":["520"],
-    "520D":["520"],
-    "532" :["520","538"],
-    "538" :["532"],
-    "548" :["520C"],
-    "552" :["548","554"],
-    "554" :["552","556"],
-    "556" :["554","558"],
-    "558" :["556","562"],
-    "562" :["558","564"],
-    "564" :["562","566"],
-    "566" :["564"],
-    "571" :["573"],
-    "573" :["571","575"],
-    "575" :["573","577"],
-    "577" :["575","579"],
-    "579" :["577"],
-    "580" :["581","582A"],
-    "581" :["580","582A", "582"],
-    "582" :["581","583", "582A"],
-    "582A":["582","581", "580", "591"],
-    "583" :["582","582A", "584", "593"],
-    "584" :["583","585"],
-    "585" :["584","586", "595"],
-    "586" :["585","599", "597"],
-    "599" :["597","586"],
-    "597" :["599","586"],
-    "595" :["585","586", "584"],
-    "593" :["583"],
-    "591" :["582A","580"],
-    "630A":["630B","621E","630"],
-    "630":["630A"],
-    "621E":["630B","630A","621D"],
-    "630B":["621E","630A"],
-    "621D":["621E","621C","621"],
-    "621C":["621D","621B","621"],
-    "621B":["621C","621A","621"],
-    "621A":["621B","621"],
-    "621":["621A","621B","621C","621D","621E"],
-    "671":["673"],
-    "673":["671","675"],
-    "675":["673","677"],
-    "677":["675","679"],
-    "679":["677"],
-    "640":["642"],
-    "642":["640","644"],
-    "644":["642","646"],
-    "646":["644","648"],
-    "648":["646","652A"],
-    "652A":["652","652B"],
-    "652":["652A","652B"],
-    "652B":["652A","652","656A"],
-    "656A":["652B","656","656B"],
-    "656":["652","656A","656B","664"],
-    "656B":["656A","656","666"],
-    "664":["656","666"],
-    "666":["656B","664"],
-    "730":["732","717"],
-    "732":["730","736"],
-    "717":["730","719"],
-    "719":["717","721","718"],
-    "721":["719","723","722"],
-    "723":["721","725","724"],
-    "725":["723","726"],
-    "718":["722","719"],
-    "722":["718","724","721"],
-    "724":["722","726","723"],
-    "726":["724","725"],
-    "736":["732","738"],
-    "738":["736","748","746"],
-    "746":["738","748","754"],
-    "748":["752","746","738"],
-    "752":["748","754","750"],
-    "754":["752","746","750"],
-    "750":["752","754","771","773","775","768"],
-    "771":["773","750"],
-    "773":["771","775","750"],
-    "775":["773","750","777"],
-    "777":["775","779","768"],
-    "779":["777","768"],
-    "768":["750","777","779"],
-}
-for room, adjlist in adjacencies.items():
-    room = 'R'+room
-    for neighbor in adjlist:
-        neighbor = 'R'+neighbor
-        g.add((SDH[room], BF.adjacentTo, SDH[neighbor]))
-
-adjacencies = {
-    '413': {
-            'air': [],
-            'door': ['410'],
-            'wall': ['415'],
-           },
-    '415': {
-            'air': [],
-            'door': ['410'],
-            'wall': ['413','417'],
-           },
-    '417': {
-            'air': [],
-            'door': ['410'],
-            'wall': ['415','419'],
-           },
-    '419': {
-            'air': [],
-            'door': ['410'],
-            'wall': ['417','421'],
-           },
-    '421': {
-            'air': [],
-            'door': ['410'],
-            'wall': ['419','423'],
-           },
-
-    '423': {
-            'air': [],
-            'door': ['410'],
-            'wall': ['421','425'],
-           },
-
-    '425': {
-            'air': [],
-            'door': ['410'],
-            'wall': ['423','470'],
-           },
-    '418': {
-            'air': [],
-            'door': ['410'],
-            'wall': ['422','440','450'],
-           },
-    '422': {
-            'air': [],
-            'door': ['410'],
-            'wall': ['418','424','440','450'],
-           },
-    '424': {
-            'air': [],
-            'door': ['410'],
-            'wall': ['422','426','440','450'],
-           },
-    '426': {
-            'air': [],
-            'door': ['410'],
-            'wall': ['424','470','440','450'],
-           },
-    '427': {
-            'air': [],
-            'door': ['470'],
-            'wall': [],
-           },
-    '430': {
-            'air': [],
-            'door': ['432'],
-            'wall': ['410'],
-    },
-    '432': {
-            'air': ['440','434'],
-            'door': ['430'],
-            'wall': [],
-           },
-    '434': {
-            'air': ['432','440'],
-            'door': [],
-            'wall': ['442'],
-           },
-    '440': {
-            'air': ['432','434','450'],
-            'door': ['442','444','446','448'],
-            'wall': ['418','422','424','426'],
-           },
-    '442': {
-            'air': [],
-            'door': ['440'],
-            'wall': ['434','444'],
-           },
-    '444': {
-            'air': [],
-            'door': ['440'],
-            'wall': ['442','446'],
-           },
-    '446': {
-            'air': [],
-            'door': ['440'],
-            'wall': ['444','448'],
-           },
-    '448': {
-            'air': [],
-            'door': ['440'],
-            'wall': ['446','452','450'],
-           },
-    '450': {
-            'air': ['440','460'],
-            'door': ['470','448','452','454','456','458','462','471','473','475'],
-            'wall': ['418','422','424','426'],
-           },
-    '452': {
-            'air': [],
-            'door': ['450'],
-            'wall': ['448','454'],
-           },
-    '454': {
-            'air': [],
-            'door': ['450'],
-            'wall': ['452','456'],
-           },
-    '456': {
-            'air': [],
-            'door': ['450'],
-            'wall': ['454','458'],
-           },
-    '458': {
-            'air': [],
-            'door': ['450'],
-            'wall': ['456','462'],
-           },
-    '460': {
-            'air': ['450','468','466'],
-            'door': ['479','477','462','464'],
-            'wall': [],
-           },
-    '462': {
-            'air': [],
-            'door': ['460','450'],
-            'wall': ['458','464'],
-           },
-    '464': {
-            'air': [],
-            'door': ['460'],
-            'wall': ['462','466'],
-           },
-    '466': {
-            'air': ['460','468'],
-            'door': [],
-            'wall': ['464'],
-           },
-    '468': {
-            'air': ['460','466'],
-            'door': ['472'],
-            'wall': [],
-           },
-    '470': {
-            'air': [],
-            'door': ['427','450','410'],
-            'wall': ['425','426'],
-    },
-    '471': {
-            'air': [],
-            'door': ['450'],
-            'wall': ['473'],
-           },
-    '472': {
-            'air': [],
-            'door': ['468'],
-            'wall': [],
-           },
-    '473': {
-            'air': [],
-            'door': ['450'],
-            'wall': ['471','475'],
-           },
-    '475': {
-            'air': [],
-            'door': ['450'],
-            'wall': ['479','473'],
-           },
-    '479': {
-            'air': [],
-            'door': ['460'],
-            'wall': ['475','477'],
-           },
-    '477': {
-            'air': [],
-            'door': ['460'],
-            'wall': ['479'],
-           },
-    '410': {
-            'air': [],
-            'door': ['413','415','417','419','421','423','425','418','422','424','426','470'],
-            'wall': ['430'],
-    },
-}
-
-for room, neighbors in adjacencies.items():
-    room = 'R' + room
-    for nb in neighbors['air']:
-        nb = 'R' + nb
-        g.add((SDH[room], BF.adjacentTo, SDH[nb]))
-    for nb in neighbors['door']:
-        nb = 'R' + nb
-        g.add((SDH[room], BF.adjacentTo, SDH[nb]))
-    for nb in neighbors['wall']:
-        nb = 'R' + nb
-        g.add((SDH[room], BF.adjacentTo, SDH[nb]))
+#    for neighbor in adjlist:
+#        neighbor = 'R'+neighbor
+#        g.add((SDH[room], BF.adjacentTo, SDH[neighbor]))
+#
+#adjacencies = {
+#    '413': {
+#            'air': [],
+#            'door': ['410'],
+#            'wall': ['415'],
+#           },
+#    '415': {
+#            'air': [],
+#            'door': ['410'],
+#            'wall': ['413','417'],
+#           },
+#    '417': {
+#            'air': [],
+#            'door': ['410'],
+#            'wall': ['415','419'],
+#           },
+#    '419': {
+#            'air': [],
+#            'door': ['410'],
+#            'wall': ['417','421'],
+#           },
+#    '421': {
+#            'air': [],
+#            'door': ['410'],
+#            'wall': ['419','423'],
+#           },
+#
+#    '423': {
+#            'air': [],
+#            'door': ['410'],
+#            'wall': ['421','425'],
+#           },
+#
+#    '425': {
+#            'air': [],
+#            'door': ['410'],
+#            'wall': ['423','470'],
+#           },
+#    '418': {
+#            'air': [],
+#            'door': ['410'],
+#            'wall': ['422','440','450'],
+#           },
+#    '422': {
+#            'air': [],
+#            'door': ['410'],
+#            'wall': ['418','424','440','450'],
+#           },
+#    '424': {
+#            'air': [],
+#            'door': ['410'],
+#            'wall': ['422','426','440','450'],
+#           },
+#    '426': {
+#            'air': [],
+#            'door': ['410'],
+#            'wall': ['424','470','440','450'],
+#           },
+#    '427': {
+#            'air': [],
+#            'door': ['470'],
+#            'wall': [],
+#           },
+#    '430': {
+#            'air': [],
+#            'door': ['432'],
+#            'wall': ['410'],
+#    },
+#    '432': {
+#            'air': ['440','434'],
+#            'door': ['430'],
+#            'wall': [],
+#           },
+#    '434': {
+#            'air': ['432','440'],
+#            'door': [],
+#            'wall': ['442'],
+#           },
+#    '440': {
+#            'air': ['432','434','450'],
+#            'door': ['442','444','446','448'],
+#            'wall': ['418','422','424','426'],
+#           },
+#    '442': {
+#            'air': [],
+#            'door': ['440'],
+#            'wall': ['434','444'],
+#           },
+#    '444': {
+#            'air': [],
+#            'door': ['440'],
+#            'wall': ['442','446'],
+#           },
+#    '446': {
+#            'air': [],
+#            'door': ['440'],
+#            'wall': ['444','448'],
+#           },
+#    '448': {
+#            'air': [],
+#            'door': ['440'],
+#            'wall': ['446','452','450'],
+#           },
+#    '450': {
+#            'air': ['440','460'],
+#            'door': ['470','448','452','454','456','458','462','471','473','475'],
+#            'wall': ['418','422','424','426'],
+#           },
+#    '452': {
+#            'air': [],
+#            'door': ['450'],
+#            'wall': ['448','454'],
+#           },
+#    '454': {
+#            'air': [],
+#            'door': ['450'],
+#            'wall': ['452','456'],
+#           },
+#    '456': {
+#            'air': [],
+#            'door': ['450'],
+#            'wall': ['454','458'],
+#           },
+#    '458': {
+#            'air': [],
+#            'door': ['450'],
+#            'wall': ['456','462'],
+#           },
+#    '460': {
+#            'air': ['450','468','466'],
+#            'door': ['479','477','462','464'],
+#            'wall': [],
+#           },
+#    '462': {
+#            'air': [],
+#            'door': ['460','450'],
+#            'wall': ['458','464'],
+#           },
+#    '464': {
+#            'air': [],
+#            'door': ['460'],
+#            'wall': ['462','466'],
+#           },
+#    '466': {
+#            'air': ['460','468'],
+#            'door': [],
+#            'wall': ['464'],
+#           },
+#    '468': {
+#            'air': ['460','466'],
+#            'door': ['472'],
+#            'wall': [],
+#           },
+#    '470': {
+#            'air': [],
+#            'door': ['427','450','410'],
+#            'wall': ['425','426'],
+#    },
+#    '471': {
+#            'air': [],
+#            'door': ['450'],
+#            'wall': ['473'],
+#           },
+#    '472': {
+#            'air': [],
+#            'door': ['468'],
+#            'wall': [],
+#           },
+#    '473': {
+#            'air': [],
+#            'door': ['450'],
+#            'wall': ['471','475'],
+#           },
+#    '475': {
+#            'air': [],
+#            'door': ['450'],
+#            'wall': ['479','473'],
+#           },
+#    '479': {
+#            'air': [],
+#            'door': ['460'],
+#            'wall': ['475','477'],
+#           },
+#    '477': {
+#            'air': [],
+#            'door': ['460'],
+#            'wall': ['479'],
+#           },
+#    '410': {
+#            'air': [],
+#            'door': ['413','415','417','419','421','423','425','418','422','424','426','470'],
+#            'wall': ['430'],
+#    },
+#}
+#
+#for room, neighbors in adjacencies.items():
+#    room = 'R' + room
+#    for nb in neighbors['air']:
+#        nb = 'R' + nb
+#        g.add((SDH[room], BF.adjacentTo, SDH[nb]))
+#    for nb in neighbors['door']:
+#        nb = 'R' + nb
+#        g.add((SDH[room], BF.adjacentTo, SDH[nb]))
+#    for nb in neighbors['wall']:
+#        nb = 'R' + nb
+#        g.add((SDH[room], BF.adjacentTo, SDH[nb]))
 
 g.serialize(destination='sdh.ttl',format='turtle')
 print(len(g))
