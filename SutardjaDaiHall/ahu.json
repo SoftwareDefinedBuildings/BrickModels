@@ -12,7 +12,7 @@
             "Path": "/Siemens/SDH.PXCM-08/SDH/AH2B/RAH",
             "uuid": "18de5388-1f9a-538e-9cfe-c501151c179b"
         },
-        "Return Air Flow": {
+        "Return Air Flow Sensor": {
             "PointName": "SDH.AH2A.AH2B.RF_CFM",
             "Path": "/Siemens/SDH.PXCM-08/SDH/AH2A/AH2B.RF_CFM",
             "uuid": "67afc70f-d9c3-55d6-adda-6d08afc68e54"
@@ -36,11 +36,6 @@
             "PointName": "SDH.AH2B_RAD",
             "Path": "/Siemens/SDH.PXCM-08/SDH/AH2B/RAD",
             "uuid": "0ca90a18-9e0b-58d0-8637-636c092a8d77"
-        },
-        "Return Air Flow Sensor": {
-            "PointName": "SDH.AH2A.AH2B.RF_CFM",
-            "Path": "/Siemens/SDH.PXCM-08/SDH/AH2A/AH2B.RF_CFM",
-            "uuid": "67afc70f-d9c3-55d6-adda-6d08afc68e54"
         },
 
         "Supply Air Temperature Setpoint": {
@@ -74,7 +69,7 @@
             "uuid": "8212386e-d472-55de-b97e-55c3bfb45ee5"
         },
 
-        "Constant Volume Fan": {
+        "Cooling Coil Valve Percentage": {
             "PointName": "SDH.AH2B_CCV",
             "Path": "/Siemens/SDH.PXCM-08/SDH/AH2B/CCV",
             "uuid": "a09b6130-4e66-59db-a9d8-f6a41ba84d63"
@@ -84,7 +79,7 @@
             "Path": "/Siemens/SDH.PXCM-08/SDH/AH2B/EAD",
             "uuid": "4435ba57-b2b9-5715-8bc7-a5133f5203c4"
         },
-        "Mixed Air Tmperature Sensor": {
+        "Mixed Air Temperature Sensor": {
             "PointName": "SDH.AH2B_MAT",
             "Path": "/Siemens/SDH.PXCM-08/SDH/AH2B/MAT",
             "uuid": "0133e620-fa49-5f03-86ba-762a4e318ea7"
@@ -128,6 +123,64 @@
             "PointName": "SDH.AH2A_RAT",
             "Path": "/Siemens/SDH.PXCM-08/SDH/AH2A/RAT",
             "uuid": "603c5e44-4bd7-5e5b-89ff-f314b939c63d"
+        },
+        "Return Duct Static Pressure Sensor": {
+            "PointName": "SDH.AH2A_RDSP",
+            "Path": "/Siemens/SDH.PXCM-08/SDH/AH2A/RDSP",
+            "uuid": "5c52cb2c-59ee-5ad0-8e7a-3012c748675d"
+        },
+
+        "Return Fan Speed": {
+            "PointName": "SDH.AH2A.RF_VFD:INPUT REF 1",
+            "Path": "/Siemens/SDH.PXCM-08/SDH/AH2A/RF_VFD:INPUT_REF_1",
+            "uuid": "510977d9-3c1d-5f45-908a-3626e5c3b5eb"
+        },
+        "Return Fan Power": {
+            "PointName": "SDH.AH2A.RF_VFD:POWER",
+            "Path": "/Siemens/SDH.PXCM-08/SDH/AH2A/RF_VFD:POWER",
+            "uuid": "02110912-d75a-5f9b-b956-5e12813926ef"
+        },
+        "Return Air Flow Sensor": {
+            "PointName": "SDH.AH2A.AH2B.RF_CFM",
+            "Path": "/Siemens/SDH.PXCM-08/SDH/AH2A/AH2B.RF_CFM",
+            "uuid": "67afc70f-d9c3-55d6-adda-6d08afc68e54"
+        },
+
+        "Supply Air Flow Sensor": {
+            "PointName": "SDH.AH2A.SF_CFM",
+            "Path": "/Siemens/SDH.PXCM-08/SDH/AH2A/SF_CFM",
+            "uuid": "64aceef3-5034-574b-a803-f04ad1224d39"
+        },
+        "Supply Fan Speed": {
+            "PointName": "SDH.AH2A.SF_VFD:INPUT REF 1",
+            "Path": "/Siemens/SDH.PXCM-08/SDH/AH2A/SF_VFD:INPUT_REF_1",
+            "uuid": "67b07607-576f-507d-b467-669c8d1da4be"
+        },
+        "Supply Fan Power": {
+            "PointName": "SDH.AH2A.SF_VFD:POWER",
+            "Path": "/Siemens/SDH.PXCM-08/SDH/AH2A/SF_VFD:POWER",
+            "uuid": "a6fd8a56-7ab2-5f6b-95d5-e0e96cf3b271"
+        },
+        "Supply Duct Static Pressure Sensor": {
+            "PointName": "SDH.AH2A_SDSP",
+            "Path": "/Siemens/SDH.PXCM-08/SDH/AH2A/SDSP",
+            "uuid": "a13b3ae3-a4df-542c-8ce3-16c428305c45"
+        },
+        "Supply Air Temperature Setpoint": {
+            "PointName": "SDH.AH2A_SAT.STP",
+            "Path": "/Siemens/SDH.PXCM-08/SDH/AH2A/SAT.STP",
+            "uuid": "d20604b8-1c55-5e57-b13a-209f07bc9e0c"
+        },
+        "Supply Air Temperature Sensor": {
+            "PointName": "SDH.AH2A_SAT",
+            "Path": "/Siemens/SDH.PXCM-08/SDH/AH2A/SAT",
+            "uuid": "a7aa36e6-10c4-5008-8a02-039988f284df"
+        },
+
+        "Cooling Coil Valve Percentage": {
+            "PointName": "SDH.AH2A_CCV",
+            "Path": "/Siemens/SDH.PXCM-08/SDH/AH2A/CCV",
+            "uuid": "a7653f02-7af6-5198-8e6a-ac734d4400de"
         },
 
         "Exhaust Air Damper": {
