@@ -198,24 +198,9 @@ g.add((SDH['AH2A'], RDF.type, BRICK.Air_Handler_Unit))
 g.add((SDH['AH2B'], RDF.type, BRICK.Air_Handler_Unit))
 
 # add points to AHUs
-g.add((SDH['AH2A_SF_CFM'], RDF.type, BRICK.Supply_Air_Temperature_Sensor))
-g.add((SDH['AH2A'], BF.hasPoint, SDH['AH2A_SF_CFM']))
-g.add((SDH['AH2A_SF_CFM'], BF.uuid, Literal("64aceef3-5034-574b-a803-f04ad1224d39")))
-
-g.add((SDH['AH2A_SF_VFD'], RDF.type, BRICK.Variable_Frequency_Drive))
-g.add((SDH['AH2A'], BF.hasPart, SDH['AH2A_SF_VFD']))
-g.add((SDH['AH2A_SF_VFD_Percent'], RDF.type, BRICK.Frequency_Sensor))
-g.add((SDH['AH2A_SF_VFD'], BF.uuid, Literal("67b07607-576f-507d-b467-669c8d1da4be")))
-
-g.add((SDH['AH2B_SF_CFM'], RDF.type, BRICK.Supply_Air_Temperature_Sensor))
-g.add((SDH['AH2B'], BF.hasPoint, SDH['AH2B_SF_CFM']))
-g.add((SDH['AH2B_SF_CFM'], BF.uuid, Literal("e4d4df35-2b0d-562a-801c-8f588dcf803a")))
-
-g.add((SDH['AH2B_SF_VFD'], RDF.type, BRICK.Variable_Frequency_Drive))
-g.add((SDH['AH2B'], BF.hasPart, SDH['AH2B_SF_VFD']))
-g.add((SDH['AH2B_SF_VFD_Percent'], RDF.type, BRICK.Frequency_Sensor))
-g.add((SDH['AH2B_SF_VFD'], BF.uuid, Literal("88764253-d926-5a27-8b8e-767382e765f8")))
-
+import generate_ahu
+for r in generate_ahu.g:
+    g.add(r)
 
 #####################################
 ##
