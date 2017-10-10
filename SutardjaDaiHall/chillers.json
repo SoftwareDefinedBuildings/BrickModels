@@ -123,10 +123,40 @@
             "Path": "/Siemens/SDH.PXCM-03/SDH/CHx/CHW.FLOW",
             "uuid": "ba5167da-bbe9-55b0-8759-0c4104b6cbc5"
         },
-        "Chilled Water Flow Onicon": {
+        "Total building chilled water flow": {
             "PointName": "SDH.ONICON_CHW.FLOW",
             "Path": "/Siemens/SDH.PXCM-01/SDH/ONICON/CHW.FLOW",
             "uuid": "d58b0c29-3f38-5576-a32a-86f83f8a984d"
+        },
+        "Total office chilled water flow": {
+            "PointName": "SDH.CHW1.FL.METER.1",
+            "Path": "/Siemens/SDH.PXCM-03/SDH/CHW1/FL.METER.1",
+            "uuid": "76f988b8-6408-5d08-aa34-7d818794b902"
+        },
+        "Chilled water flow 1st floor loads": {
+            "PointName": "SDH.CHW1.FL.METER.2",
+            "Path": "/Siemens/SDH.PXCM-03/SDH/CHW1/FL.METER.2",
+            "uuid": "dd145b13-98e1-5164-bd9e-008bde169997"
+        },
+        "Flow to Blum Hall": {
+            "PointName": "SDH.CHW1.FL.METER.3",
+            "Path": "/Siemens/SDH.PXCM-03/SDH/CHW1/FL.METER.3",
+            "uuid": "174a57c0-2e23-55c1-be2f-ca7da25453d1"
+        },
+        "Flow to Nanolab Cooling Water Heat Exchanger": {
+            "PointName": "SDH.CHW1.FL.METER.4",
+            "Path": "/Siemens/SDH.PXCM-03/SDH/CHW1/FL.METER.4",
+            "uuid": "c5543ed6-cca6-56cf-b0b2-79153318bcb6"
+        },
+        "Flow to AHU1A/B + secondary chilled water system": {
+            "PointName": "SDH.CHW1.FL.METER.5",
+            "Path": "/Siemens/SDH.PXCM-03/SDH/CHW1/FL.METER.5",
+            "uuid": "dd1a1137-8a8b-51a4-a5ca-a4f6fe2b503d"
+        },
+        "Flow to secondary chilled water system": {
+            "PointName": "SDH.CHW1.FL.METER.6",
+            "Path": "/Siemens/SDH.PXCM-03/SDH/CHW1/FL.METER.6",
+            "uuid": "0d3722ca-c062-5a41-9bd1-acc58a64c008"
         }
     }
 }

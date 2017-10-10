@@ -1,0 +1,167 @@
+{
+    "AH1A": {},
+    "AH1B": {},
+    "AH2B": {
+        "Return Air Temp": {
+            "PointName": "SDH.AH2B_RAT",
+            "Path": "/Siemens/SDH.PXCM-08/SDH/AH2B/RAT",
+            "uuid": "36d4e532-779e-50b2-b6ba-0a5f1703c787"
+        },
+        "Return Air Humidity": {
+            "PointName": "SDH.AH2B_RAH",
+            "Path": "/Siemens/SDH.PXCM-08/SDH/AH2B/RAH",
+            "uuid": "18de5388-1f9a-538e-9cfe-c501151c179b"
+        },
+        "Return Air Flow": {
+            "PointName": "SDH.AH2A.AH2B.RF_CFM",
+            "Path": "/Siemens/SDH.PXCM-08/SDH/AH2A/AH2B.RF_CFM",
+            "uuid": "67afc70f-d9c3-55d6-adda-6d08afc68e54"
+        },
+        "Return Fan Speed": {
+            "PointName": "SDH.AH2B.RF_VFD:INPUT REF 1",
+            "Path": "/Siemens/SDH.PXCM-08/SDH/AH2B/RF_VFD:INPUT_REF_1",
+            "uuid": "6f12a313-4a81-5bfd-aae5-f8f8b2df54fa"
+        },
+        "Return Fan Power": {
+            "PointName": "SDH.AH2B.RF_VFD:POWER",
+            "Path": "/Siemens/SDH.PXCM-08/SDH/AH2B/RF_VFD:POWER",
+            "uuid": "d3d4e937-1d57-5a50-85b4-d67cf7b15731"
+        },
+        "Return Duct Static Pressure Sensor": {
+            "PointName": "SDH.AH2B_RDSP",
+            "Path": "/Siemens/SDH.PXCM-08/SDH/AH2B/RDSP",
+            "uuid": "fc6a945d-0388-58e8-bcda-09be416f1f57"
+        },
+        "Return Air Damper": {
+            "PointName": "SDH.AH2B_RAD",
+            "Path": "/Siemens/SDH.PXCM-08/SDH/AH2B/RAD",
+            "uuid": "0ca90a18-9e0b-58d0-8637-636c092a8d77"
+        },
+        "Return Air Flow Sensor": {
+            "PointName": "SDH.AH2A.AH2B.RF_CFM",
+            "Path": "/Siemens/SDH.PXCM-08/SDH/AH2A/AH2B.RF_CFM",
+            "uuid": "67afc70f-d9c3-55d6-adda-6d08afc68e54"
+        },
+
+        "Supply Air Temperature Setpoint": {
+            "PointName": "SDH.AH2B_SAT.STP",
+            "Path": "/Siemens/SDH.PXCM-08/SDH/AH2B/SAT.STP",
+            "uuid": "eb36ea17-cddb-573b-916d-9aed3e8cae97"
+        },
+        "Supply Air Temperature": {
+            "PointName": "SDH.AH2B_SAT",
+            "Path": "/Siemens/SDH.PXCM-08/SDH/AH2B/SAT",
+            "uuid": "a73a5e75-b6a0-50ca-acf2-303873876039"
+        },
+        "Supply Air Flow": {
+            "PointName": "SDH.AH2B.SF_CFM",
+            "Path": "/Siemens/SDH.PXCM-08/SDH/AH2B/SF_CFM",
+            "uuid": "e4d4df35-2b0d-562a-801c-8f588dcf803a"
+        },
+        "Supply Fan Speed": {
+            "PointName": "SDH.AH2B.SF_VFD:INPUT REF 1",
+            "Path": "/Siemens/SDH.PXCM-08/SDH/AH2B/SF_VFD:INPUT_REF_1",
+            "uuid": "88764253-d926-5a27-8b8e-767382e765f8"
+        },
+        "Supply Fan Power": {
+            "PointName": "SDH.AH2B.SF_VFD:POWER",
+            "Path": "/Siemens/SDH.PXCM-08/SDH/AH2B/SF_VFD:POWER",
+            "uuid": "78694dbf-fbb2-51b1-9174-5acfe38ceba6"
+        },
+        "Supply Duct Static Pressure Sensor": {
+            "PointName": "SDH.AH2B_SDSP",
+            "Path": "/Siemens/SDH.PXCM-08/SDH/AH2B/SDSP",
+            "uuid": "8212386e-d472-55de-b97e-55c3bfb45ee5"
+        },
+
+        "Constant Volume Fan": {
+            "PointName": "SDH.AH2B_CCV",
+            "Path": "/Siemens/SDH.PXCM-08/SDH/AH2B/CCV",
+            "uuid": "a09b6130-4e66-59db-a9d8-f6a41ba84d63"
+        },
+        "Exhaust Air Damper": {
+            "PointName": "SDH.AH2B_EAD",
+            "Path": "/Siemens/SDH.PXCM-08/SDH/AH2B/EAD",
+            "uuid": "4435ba57-b2b9-5715-8bc7-a5133f5203c4"
+        },
+        "Mixed Air Tmperature Sensor": {
+            "PointName": "SDH.AH2B_MAT",
+            "Path": "/Siemens/SDH.PXCM-08/SDH/AH2B/MAT",
+            "uuid": "0133e620-fa49-5f03-86ba-762a4e318ea7"
+        },
+
+        "Isolation Damper": {
+            "PointName": "SDH.AH2B_ISO.DMPR",
+            "Path": "/Siemens/SDH.PXCM-08/SDH/AH2B/ISO.DMPR",
+            "uuid": "f20dd546-5aa8-55ae-a6e8-a21c822fb59f"
+        },
+
+        "Minimum Outside Air Damper Position": {
+            "PointName": "SDH.AH2B_MIN.OAD",
+            "Path": "/Siemens/SDH.PXCM-08/SDH/AH2B/MIN.OAD",
+            "uuid": "ef2f8598-7482-55fc-ac27-51e76d93ad9f"
+        },
+        "Outside Air Damper": {
+            "PointName": "SDH.AH2B_OAD",
+            "Path": "/Siemens/SDH.PXCM-08/SDH/AH2B/OAD",
+            "uuid": "1e63f9b7-03d9-575c-ae63-c5b3491b681a"
+        }
+
+    },
+    "AH2A": {
+        "Return Air Temp": {
+            "PointName": "SDH.AH2A_RAT",
+            "Path": "/Siemens/SDH.PXCM-08/SDH/AH2A/RAT",
+            "uuid": "603c5e44-4bd7-5e5b-89ff-f314b939c63d"
+        },
+        "Return Air Humidity": {
+            "PointName": "SDH.AH2A_RAH",
+            "Path": "/Siemens/SDH.PXCM-08/SDH/AH2A/RAH",
+            "uuid": "91df5682-6046-5614-b663-fe6715912f83"
+        },
+        "Return Air Damper": {
+            "PointName": "SDH.AH2A_RAD",
+            "Path": "/Siemens/SDH.PXCM-08/SDH/AH2A/RAD",
+            "uuid": "8beb0958-83d8-5301-b950-9300e24d9914"
+        },
+        "Return Air Temperature Sensor": {
+            "PointName": "SDH.AH2A_RAT",
+            "Path": "/Siemens/SDH.PXCM-08/SDH/AH2A/RAT",
+            "uuid": "603c5e44-4bd7-5e5b-89ff-f314b939c63d"
+        },
+
+        "Exhaust Air Damper": {
+            "PointName": "SDH.AH2A_EAD",
+            "Path": "/Siemens/SDH.PXCM-08/SDH/AH2A/EAD",
+            "uuid": "653a704a-527a-5c27-8129-a1d21583b1e5"
+        },
+        "Isolation Damper Position": {
+            "PointName": "SDH.AH2A_ISO.DMPR",
+            "Path": "/Siemens/SDH.PXCM-08/SDH/AH2A/ISO.DMPR",
+            "uuid": "492b3017-7319-5674-9902-4c66d669bfda"
+        },
+        "Minimum Outside Air Damper Position": {
+            "PointName": "SDH.AH2A_MIN.OAD",
+            "Path": "/Siemens/SDH.PXCM-08/SDH/AH2A/MIN.OAD",
+            "uuid": "9554f7c8-b23b-5a28-a5ae-33d50144ee0c"
+        },
+
+        "Mixed Air Temperature Sensor": {
+            "PointName": "SDH.AH2A_MAT",
+            "Path": "/Siemens/SDH.PXCM-08/SDH/AH2A/MAT",
+            "uuid": "275d6375-d407-53d2-a600-7dfb3ee544b2"
+        },
+
+        "Outside Air Damper": {
+            "PointName": "SDH.AH2A_OAD",
+            "Path": "/Siemens/SDH.PXCM-08/SDH/AH2A/OAD",
+            "uuid": "de3dd62e-1b4d-5cf6-9ce8-d3595b21ffbb"
+        },
+        "Outside Air Temperature Sensor": {
+            "PointName": "SDH_OAT",
+            "Path": "/Siemens/SDH.PXCM-08/SDH/OAT",
+            "uuid": "395005af-a42c-587f-9c46-860f3061ef0d"
+        }
+
+    }
+}
