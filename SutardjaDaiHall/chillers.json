@@ -10,12 +10,7 @@
             "Path": "/Siemens/SDH.PXCM-03/SDH/CHW1/BYP_VLV",
             "uuid": "32fffbb5-76fb-59e4-bd4e-95ac0c9fd3db"
         },
-        "Hot Water Bypass Valve": {
-            "PointName": "SDH.HW.BYP_VLV",
-            "Path": "/Siemens/SDH.PXCM-06/SDH/HW/BYP_VLV",
-            "uuid": "b2d9f5dc-a016-50a0-943d-27ac31dfec26"
-        },
-        "Condensed Water Flow": {
+        "Condenser Water Flow": {
             "PointName": "SDH.CH1.CDW.FLOW",
             "Path": "/Siemens/SDH.PXCM-03/SDH/CH1/CDW.FLOW",
             "uuid": "39e4096d-04b9-5b60-a903-c1b7f3d0fd1d"
@@ -26,6 +21,7 @@
             "uuid": "c0db7e86-3f87-51ca-b3b1-62f23e97c868"
         },
         "Chilled Water Supply Temp Reset": {
+            "Desc": "The delta T for how to change the setpoint",
             "PointName": "SDH.CH1.CHWST.RESET",
             "Path": "/Siemens/SDH.PXCM-03/SDH/CH1/CHWST.RESET",
             "uuid": "3c186ace-995c-540f-82bd-2fb6cd092998"
@@ -39,10 +35,21 @@
             "PointName": "SDH.CHW1_CHW.DP.STP",
             "Path": "/Siemens/SDH.PXCM-03/SDH/CHW1/CHW.DP.STP",
             "uuid": "e486d482-2b93-5a76-bb0e-0dcdffb41575"
+        },
+        "Chilled Water Return Temperature": {
+            "PointName": "SDH.CHW1_CHWRT",
+            "Path": "/Siemens/SDH.PXCM-03/SDH/CHW1/CHWRT",
+            "uuid": "5a6fe739-7928-5c56-8b38-ae33f9052c71"
+        },
+        "Chilled Water Supply Temperature": {
+            "PointName": "SDH.CHW1_CHWST",
+            "Path": "/Siemens/SDH.PXCM-03/SDH/CHW1/CHWST",
+            "uuid": "df97f066-2b75-54db-be82-d42625873f22"
         }
+
     },
     "CH2": {
-        "Condensed Water Flow": {
+        "Condenser Water Flow": {
             "PointName": "SDH.CH2.CDW.FLOW",
             "Path": "/Siemens/SDH.PXCM-03/SDH/CH2/CDW.FLOW",
             "uuid": "e01d5ee0-ec5f-54d5-aad5-6c12813dea03"
@@ -152,6 +159,11 @@
             "PointName": "SDH.CHW1.FL.METER.5",
             "Path": "/Siemens/SDH.PXCM-03/SDH/CHW1/FL.METER.5",
             "uuid": "dd1a1137-8a8b-51a4-a5ca-a4f6fe2b503d"
+        },
+        "Hot Water Bypass Valve": {
+            "PointName": "SDH.HW.BYP_VLV",
+            "Path": "/Siemens/SDH.PXCM-06/SDH/HW/BYP_VLV",
+            "uuid": "b2d9f5dc-a016-50a0-943d-27ac31dfec26"
         },
         "Flow to secondary chilled water system": {
             "PointName": "SDH.CHW1.FL.METER.6",
