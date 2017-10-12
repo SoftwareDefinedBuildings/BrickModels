@@ -826,6 +826,9 @@ sdh:RHC-9HEAT.COOL a brick:Heating_Command ;
 sdh:RHC-9ROOM_TEMP a brick:Zone_Air_Temperature_Sensor ;
     bf:uuid "f379df5d-299f-5761-b934-8593fbec1e84" .
 
+sdh:S1-01_AI_3 a brick:Discharge_Air_Temperature_Sensor ;
+    bf:uuid "6b5eebe1-a4e1-5e73-949e-d4ac6cd38411" .
+
 sdh:S1-01damper a brick:Damper ;
     bf:hasPoint sdh:S1-01room_damper_position .
 
@@ -851,6 +854,9 @@ sdh:S1-01room_temperature a brick:Zone_Air_Temperature_Sensor ;
 
 sdh:S1-01room_valve_position a brick:Heating_Valve_Command ;
     bf:uuid "8b783c23-0f72-5dcd-9a34-d2b7ceca70f2" .
+
+sdh:S1-02_AI_3 a brick:Discharge_Air_Temperature_Sensor ;
+    bf:uuid "996bafbd-d02a-5ebf-b3fd-c328466c057e" .
 
 sdh:S1-02damper a brick:Damper ;
     bf:hasPoint sdh:S1-02room_damper_position .
@@ -878,6 +884,9 @@ sdh:S1-02room_temperature a brick:Zone_Air_Temperature_Sensor ;
 sdh:S1-02room_valve_position a brick:Heating_Valve_Command ;
     bf:uuid "d5469c07-2fcd-5e60-963e-e8eac1658efe" .
 
+sdh:S1-03_AI_3 a brick:Discharge_Air_Temperature_Sensor ;
+    bf:uuid "e1f13abb-f611-5cf2-a79f-7fea9fc668dc" .
+
 sdh:S1-03damper a brick:Damper ;
     bf:hasPoint sdh:S1-03room_damper_position .
 
@@ -903,6 +912,9 @@ sdh:S1-03room_temperature a brick:Zone_Air_Temperature_Sensor ;
 
 sdh:S1-03room_valve_position a brick:Heating_Valve_Command ;
     bf:uuid "be9dfc83-fc53-564d-a2d9-1f185b89036d" .
+
+sdh:S1-04_AI_3 a brick:Discharge_Air_Temperature_Sensor ;
+    bf:uuid "9e42a05f-374f-5143-9daa-7600ea9e1bf6" .
 
 sdh:S1-04damper a brick:Damper ;
     bf:hasPoint sdh:S1-04room_damper_position .
@@ -970,6 +982,9 @@ sdh:S1-06room_temperature a brick:Zone_Air_Temperature_Sensor ;
     bf:isPointOf sdh:R175 ;
     bf:uuid "8e5b0e47-a08c-561a-957b-3b7aebd4b17f" .
 
+sdh:S1-07_AI_3 a brick:Discharge_Air_Temperature_Sensor ;
+    bf:uuid "b2c7430b-fbf0-5fa5-b5a7-22b40cc8d653" .
+
 sdh:S1-07damper a brick:Damper ;
     bf:hasPoint sdh:S1-07room_damper_position .
 
@@ -995,6 +1010,9 @@ sdh:S1-07room_temperature a brick:Zone_Air_Temperature_Sensor ;
 
 sdh:S1-07room_valve_position a brick:Heating_Valve_Command ;
     bf:uuid "a576a197-5710-584e-a401-0e20dbddc22a" .
+
+sdh:S1-08_AI_3 a brick:Discharge_Air_Temperature_Sensor ;
+    bf:uuid "21618d68-4a7e-54c3-b845-8de600863100" .
 
 sdh:S1-08damper a brick:Damper ;
     bf:hasPoint sdh:S1-08room_damper_position .
@@ -1022,6 +1040,9 @@ sdh:S1-08room_temperature a brick:Zone_Air_Temperature_Sensor ;
 sdh:S1-08room_valve_position a brick:Heating_Valve_Command ;
     bf:uuid "7b43a03f-a47f-53b6-9d83-dec4e99e7d84" .
 
+sdh:S1-09_AI_3 a brick:Discharge_Air_Temperature_Sensor ;
+    bf:uuid "7aea051e-a2ea-5b08-a7e3-d5c0100039f4" .
+
 sdh:S1-09damper a brick:Damper ;
     bf:hasPoint sdh:S1-09room_damper_position .
 
@@ -1048,6 +1069,9 @@ sdh:S1-09room_temperature a brick:Zone_Air_Temperature_Sensor ;
 sdh:S1-09room_valve_position a brick:Heating_Valve_Command ;
     bf:uuid "fc495910-2280-50e6-9465-02c84c493adb" .
 
+sdh:S1-10_AI_3 a brick:Discharge_Air_Temperature_Sensor ;
+    bf:uuid "92f4a598-47cf-5662-8c5d-46ece7175451" .
+
 sdh:S1-10damper a brick:Damper ;
     bf:hasPoint sdh:S1-10room_damper_position .
 
@@ -1073,6 +1097,9 @@ sdh:S1-10room_temperature a brick:Zone_Air_Temperature_Sensor ;
 
 sdh:S1-10room_valve_position a brick:Heating_Valve_Command ;
     bf:uuid "80d7689b-ffa5-52ad-b014-1c880845dcf8" .
+
+sdh:S1-13_AI_3 a brick:Discharge_Air_Temperature_Sensor ;
+    bf:uuid "9fc81fb3-dffe-5c61-9970-da22890a185f" .
 
 sdh:S1-13damper a brick:Damper ;
     bf:hasPoint sdh:S1-13room_damper_position .
@@ -1116,6 +1143,9 @@ sdh:S1-14room_setpoint a brick:Zone_Temperature_Setpoint ;
 sdh:S1-14room_temperature a brick:Zone_Air_Temperature_Sensor ;
     bf:uuid "5422c6d3-c157-5223-baa3-6c688743c93d" .
 
+sdh:S1-15_AI_3 a brick:Discharge_Air_Temperature_Sensor ;
+    bf:uuid "4b8a6e0f-9e1f-52e6-8d22-129364188c62" .
+
 sdh:S1-15damper a brick:Damper ;
     bf:hasPoint sdh:S1-15room_damper_position .
 
@@ -1142,6 +1172,9 @@ sdh:S1-15room_temperature a brick:Zone_Air_Temperature_Sensor ;
 sdh:S1-15room_valve_position a brick:Heating_Valve_Command ;
     bf:uuid "801e61fa-6fe0-5cf6-a44a-f78b3993fb18" .
 
+sdh:S1-16_AI_3 a brick:Discharge_Air_Temperature_Sensor ;
+    bf:uuid "e50eb42d-f83f-5cfe-9403-9ab7d07ef3a6" .
+
 sdh:S1-16damper a brick:Damper ;
     bf:hasPoint sdh:S1-16room_damper_position .
 
@@ -1165,6 +1198,9 @@ sdh:S1-16room_temperature a brick:Zone_Air_Temperature_Sensor ;
 
 sdh:S1-16room_valve_position a brick:Heating_Valve_Command ;
     bf:uuid "f99d6932-4eed-581a-a12b-f33d893a0fd3" .
+
+sdh:S1-17_AI_3 a brick:Discharge_Air_Temperature_Sensor ;
+    bf:uuid "727ef9a9-9c54-55aa-8cd6-4afd3ffc89b5" .
 
 sdh:S1-17damper a brick:Damper ;
     bf:hasPoint sdh:S1-17room_damper_position .
@@ -1192,6 +1228,9 @@ sdh:S1-17room_temperature a brick:Zone_Air_Temperature_Sensor ;
 sdh:S1-17room_valve_position a brick:Heating_Valve_Command ;
     bf:uuid "c102e415-0da6-50d1-8885-3b34dcb6583a" .
 
+sdh:S1-18_AI_3 a brick:Discharge_Air_Temperature_Sensor ;
+    bf:uuid "ea6cf70e-6bd8-58d8-abd0-1396e6da0976" .
+
 sdh:S1-18damper a brick:Damper ;
     bf:hasPoint sdh:S1-18room_damper_position .
 
@@ -1218,6 +1257,9 @@ sdh:S1-18room_temperature a brick:Zone_Air_Temperature_Sensor ;
 sdh:S1-18room_valve_position a brick:Heating_Valve_Command ;
     bf:uuid "b6e86592-650e-5f28-abf1-414edf72df64" .
 
+sdh:S1-19_AI_3 a brick:Discharge_Air_Temperature_Sensor ;
+    bf:uuid "34958710-a51c-5fcb-ab58-44096bf8a271" .
+
 sdh:S1-19damper a brick:Damper ;
     bf:hasPoint sdh:S1-19room_damper_position .
 
@@ -1242,6 +1284,9 @@ sdh:S1-19room_temperature a brick:Zone_Air_Temperature_Sensor ;
 sdh:S1-19room_valve_position a brick:Heating_Valve_Command ;
     bf:uuid "8de5b41f-37db-54a0-8cf3-1ea7d71c85db" .
 
+sdh:S1-20_AI_3 a brick:Discharge_Air_Temperature_Sensor ;
+    bf:uuid "89d4b2cc-c05f-5068-9d55-ee929bac5316" .
+
 sdh:S1-20damper a brick:Damper ;
     bf:hasPoint sdh:S1-20room_damper_position .
 
@@ -1265,6 +1310,9 @@ sdh:S1-20room_temperature a brick:Zone_Air_Temperature_Sensor ;
 
 sdh:S1-20room_valve_position a brick:Heating_Valve_Command ;
     bf:uuid "3c1f8ad8-4e7c-5146-8570-f270fb07408c" .
+
+sdh:S2-01_AI_3 a brick:Discharge_Air_Temperature_Sensor ;
+    bf:uuid "34ad508d-687c-59ab-989b-126008962f69" .
 
 sdh:S2-01damper a brick:Damper ;
     bf:hasPoint sdh:S2-01room_damper_position .
@@ -1292,6 +1340,9 @@ sdh:S2-01room_temperature a brick:Zone_Air_Temperature_Sensor ;
 sdh:S2-01room_valve_position a brick:Heating_Valve_Command ;
     bf:uuid "c0c5e07d-bc0f-5d47-9c25-8f7038c0978b" .
 
+sdh:S2-02_AI_3 a brick:Discharge_Air_Temperature_Sensor ;
+    bf:uuid "85b6e964-37fd-572b-8cb2-d1c95b0eeea6" .
+
 sdh:S2-02damper a brick:Damper ;
     bf:hasPoint sdh:S2-02room_damper_position .
 
@@ -1317,6 +1368,9 @@ sdh:S2-02room_temperature a brick:Zone_Air_Temperature_Sensor ;
 
 sdh:S2-02room_valve_position a brick:Heating_Valve_Command ;
     bf:uuid "5ce5286a-12b9-581f-834d-6454c61b867f" .
+
+sdh:S2-03_AI_3 a brick:Discharge_Air_Temperature_Sensor ;
+    bf:uuid "9ef4294b-c418-5a50-b0ea-fb7e27de34d5" .
 
 sdh:S2-03damper a brick:Damper ;
     bf:hasPoint sdh:S2-03room_damper_position .
@@ -1344,6 +1398,9 @@ sdh:S2-03room_temperature a brick:Zone_Air_Temperature_Sensor ;
 sdh:S2-03room_valve_position a brick:Heating_Valve_Command ;
     bf:uuid "6e2959b0-f3d7-5db6-90b1-39bbd24380d0" .
 
+sdh:S2-04_AI_3 a brick:Discharge_Air_Temperature_Sensor ;
+    bf:uuid "5b0c64d7-239d-594e-aec1-18bd120a1c97" .
+
 sdh:S2-04damper a brick:Damper ;
     bf:hasPoint sdh:S2-04room_damper_position .
 
@@ -1369,6 +1426,9 @@ sdh:S2-04room_temperature a brick:Zone_Air_Temperature_Sensor ;
 
 sdh:S2-04room_valve_position a brick:Heating_Valve_Command ;
     bf:uuid "7541c432-5f29-5c24-9427-6934a88cc487" .
+
+sdh:S2-05_AI_3 a brick:Discharge_Air_Temperature_Sensor ;
+    bf:uuid "b622ca1c-f17a-552d-999e-b3fa0ea07828" .
 
 sdh:S2-05damper a brick:Damper ;
     bf:hasPoint sdh:S2-05room_damper_position .
@@ -1396,6 +1456,9 @@ sdh:S2-05room_temperature a brick:Zone_Air_Temperature_Sensor ;
 sdh:S2-05room_valve_position a brick:Heating_Valve_Command ;
     bf:uuid "09d7f5ae-f6e5-5053-9269-26020b96582b" .
 
+sdh:S2-06_AI_3 a brick:Discharge_Air_Temperature_Sensor ;
+    bf:uuid "75ccb9c0-0c93-5a3a-893b-549267a0a093" .
+
 sdh:S2-06damper a brick:Damper ;
     bf:hasPoint sdh:S2-06room_damper_position .
 
@@ -1421,6 +1484,9 @@ sdh:S2-06room_temperature a brick:Zone_Air_Temperature_Sensor ;
 
 sdh:S2-06room_valve_position a brick:Heating_Valve_Command ;
     bf:uuid "c7331072-11e3-53ca-9cb9-57acb770d21e" .
+
+sdh:S2-07_AI_3 a brick:Discharge_Air_Temperature_Sensor ;
+    bf:uuid "931197ab-4710-5328-b069-7785407227ba" .
 
 sdh:S2-07damper a brick:Damper ;
     bf:hasPoint sdh:S2-07room_damper_position .
@@ -1488,6 +1554,9 @@ sdh:S2-09room_temperature a brick:Zone_Air_Temperature_Sensor ;
     bf:isPointOf sdh:R275 ;
     bf:uuid "9b70e9d8-45fb-5e3d-8372-c7253f0d9ac9" .
 
+sdh:S2-10_AI_3 a brick:Discharge_Air_Temperature_Sensor ;
+    bf:uuid "6ab57663-5b1b-5635-8267-af51cf1c867b" .
+
 sdh:S2-10damper a brick:Damper ;
     bf:hasPoint sdh:S2-10room_damper_position .
 
@@ -1511,6 +1580,9 @@ sdh:S2-10room_temperature a brick:Zone_Air_Temperature_Sensor ;
 
 sdh:S2-10room_valve_position a brick:Heating_Valve_Command ;
     bf:uuid "6ab8da9a-eca8-503f-ab9f-d3abb06bcadf" .
+
+sdh:S2-11_AI_3 a brick:Discharge_Air_Temperature_Sensor ;
+    bf:uuid "321a46ec-1cec-55dd-902f-d526436de1dc" .
 
 sdh:S2-11damper a brick:Damper ;
     bf:hasPoint sdh:S2-11room_damper_position .
@@ -1538,6 +1610,9 @@ sdh:S2-11room_temperature a brick:Zone_Air_Temperature_Sensor ;
 sdh:S2-11room_valve_position a brick:Heating_Valve_Command ;
     bf:uuid "fddeffe7-5af2-5646-93de-1f0dfee7cbc7" .
 
+sdh:S2-12_AI_3 a brick:Discharge_Air_Temperature_Sensor ;
+    bf:uuid "7900c6b8-c02a-5c72-8821-b05f5c8a9dc9" .
+
 sdh:S2-12damper a brick:Damper ;
     bf:hasPoint sdh:S2-12room_damper_position .
 
@@ -1563,6 +1638,9 @@ sdh:S2-12room_temperature a brick:Zone_Air_Temperature_Sensor ;
 
 sdh:S2-12room_valve_position a brick:Heating_Valve_Command ;
     bf:uuid "ef5f2f30-3fe1-5b18-96c7-6980404c742d" .
+
+sdh:S2-13_AI_3 a brick:Discharge_Air_Temperature_Sensor ;
+    bf:uuid "e65f14ff-83d2-56ce-9122-6217c979266a" .
 
 sdh:S2-13damper a brick:Damper ;
     bf:hasPoint sdh:S2-13room_damper_position .
@@ -1590,6 +1668,9 @@ sdh:S2-13room_temperature a brick:Zone_Air_Temperature_Sensor ;
 sdh:S2-13room_valve_position a brick:Heating_Valve_Command ;
     bf:uuid "3bac4212-d8a4-5b5b-b856-141d7a4bc461" .
 
+sdh:S2-14_AI_3 a brick:Discharge_Air_Temperature_Sensor ;
+    bf:uuid "8c6c078f-d0d8-59c4-9833-aacc77e10024" .
+
 sdh:S2-14damper a brick:Damper ;
     bf:hasPoint sdh:S2-14room_damper_position .
 
@@ -1616,6 +1697,9 @@ sdh:S2-14room_temperature a brick:Zone_Air_Temperature_Sensor ;
 sdh:S2-14room_valve_position a brick:Heating_Valve_Command ;
     bf:uuid "c78e0b32-e281-575d-a6a0-bccc4f04fed5" .
 
+sdh:S2-15_AI_3 a brick:Discharge_Air_Temperature_Sensor ;
+    bf:uuid "413a42ad-9d00-5901-a73e-a78c2886743e" .
+
 sdh:S2-15damper a brick:Damper ;
     bf:hasPoint sdh:S2-15room_damper_position .
 
@@ -1639,6 +1723,9 @@ sdh:S2-15room_temperature a brick:Zone_Air_Temperature_Sensor ;
 
 sdh:S2-15room_valve_position a brick:Heating_Valve_Command ;
     bf:uuid "970364c8-0b23-54a7-b7eb-9cef9a986b9a" .
+
+sdh:S2-16_AI_3 a brick:Discharge_Air_Temperature_Sensor ;
+    bf:uuid "f76d7b80-f781-52e6-9f51-de332b9513c1" .
 
 sdh:S2-16damper a brick:Damper ;
     bf:hasPoint sdh:S2-16room_damper_position .
@@ -1664,6 +1751,9 @@ sdh:S2-16room_temperature a brick:Zone_Air_Temperature_Sensor ;
 sdh:S2-16room_valve_position a brick:Heating_Valve_Command ;
     bf:uuid "ed446007-1c81-5060-b1c0-3fa32377b58f" .
 
+sdh:S2-17_AI_3 a brick:Discharge_Air_Temperature_Sensor ;
+    bf:uuid "4d03a86d-11b2-5e31-95a7-b19bbcd96e2c" .
+
 sdh:S2-17damper a brick:Damper ;
     bf:hasPoint sdh:S2-17room_damper_position .
 
@@ -1687,6 +1777,9 @@ sdh:S2-17room_temperature a brick:Zone_Air_Temperature_Sensor ;
 
 sdh:S2-17room_valve_position a brick:Heating_Valve_Command ;
     bf:uuid "90760e94-952e-5338-893c-85e24dd59914" .
+
+sdh:S2-18_AI_3 a brick:Discharge_Air_Temperature_Sensor ;
+    bf:uuid "f0a997eb-27d3-5e9d-9429-58e48d476fae" .
 
 sdh:S2-18damper a brick:Damper ;
     bf:hasPoint sdh:S2-18room_damper_position .
@@ -1712,6 +1805,9 @@ sdh:S2-18room_temperature a brick:Zone_Air_Temperature_Sensor ;
 sdh:S2-18room_valve_position a brick:Heating_Valve_Command ;
     bf:uuid "3a95c9d2-7d99-59c1-83dd-b2febb6c5ec4" .
 
+sdh:S2-19_AI_3 a brick:Discharge_Air_Temperature_Sensor ;
+    bf:uuid "22b1bc20-14c1-5db8-906d-b923c6291fdd" .
+
 sdh:S2-19damper a brick:Damper ;
     bf:hasPoint sdh:S2-19room_damper_position .
 
@@ -1735,6 +1831,9 @@ sdh:S2-19room_temperature a brick:Zone_Air_Temperature_Sensor ;
 
 sdh:S2-19room_valve_position a brick:Heating_Valve_Command ;
     bf:uuid "a1719077-9c4d-589b-839d-46a7514cf4d6" .
+
+sdh:S2-20_AI_3 a brick:Discharge_Air_Temperature_Sensor ;
+    bf:uuid "908cd091-0edf-5c7d-afe8-a971efdd110f" .
 
 sdh:S2-20damper a brick:Damper ;
     bf:hasPoint sdh:S2-20room_damper_position .
@@ -1760,6 +1859,9 @@ sdh:S2-20room_temperature a brick:Zone_Air_Temperature_Sensor ;
 sdh:S2-20room_valve_position a brick:Heating_Valve_Command ;
     bf:uuid "e127ba20-e7ab-56e0-9f12-290889a716e3" .
 
+sdh:S2-21_AI_3 a brick:Discharge_Air_Temperature_Sensor ;
+    bf:uuid "3c83a7e5-71d9-5f55-88d7-e94bbfcae446" .
+
 sdh:S2-21damper a brick:Damper ;
     bf:hasPoint sdh:S2-21room_damper_position .
 
@@ -1783,6 +1885,9 @@ sdh:S2-21room_temperature a brick:Zone_Air_Temperature_Sensor ;
 
 sdh:S2-21room_valve_position a brick:Heating_Valve_Command ;
     bf:uuid "a8ddc8b6-3274-57bf-9aa8-76f9d891d711" .
+
+sdh:S3-01_AI_3 a brick:Discharge_Air_Temperature_Sensor ;
+    bf:uuid "07a0f2e7-36ae-5a1b-975e-4d4846afe61c" .
 
 sdh:S3-01damper a brick:Damper ;
     bf:hasPoint sdh:S3-01room_damper_position .
@@ -1810,6 +1915,9 @@ sdh:S3-01room_temperature a brick:Zone_Air_Temperature_Sensor ;
 sdh:S3-01room_valve_position a brick:Heating_Valve_Command ;
     bf:uuid "96a05a9e-30e7-594d-9ab0-8797e1345904" .
 
+sdh:S3-02_AI_3 a brick:Discharge_Air_Temperature_Sensor ;
+    bf:uuid "77976c97-aca8-5267-85bc-3e0fadd547d6" .
+
 sdh:S3-02damper a brick:Damper ;
     bf:hasPoint sdh:S3-02room_damper_position .
 
@@ -1836,6 +1944,9 @@ sdh:S3-02room_temperature a brick:Zone_Air_Temperature_Sensor ;
 sdh:S3-02room_valve_position a brick:Heating_Valve_Command ;
     bf:uuid "8f3e2118-a0f9-5e88-89ad-5f0c4fbeba69" .
 
+sdh:S3-03_AI_3 a brick:Discharge_Air_Temperature_Sensor ;
+    bf:uuid "ab5221b2-8842-546a-a42c-db581318f9d7" .
+
 sdh:S3-03damper a brick:Damper ;
     bf:hasPoint sdh:S3-03room_damper_position .
 
@@ -1859,6 +1970,9 @@ sdh:S3-03room_temperature a brick:Zone_Air_Temperature_Sensor ;
 
 sdh:S3-03room_valve_position a brick:Heating_Valve_Command ;
     bf:uuid "2f75a96b-63b7-5770-887a-41ab9b4f4e48" .
+
+sdh:S3-04_AI_3 a brick:Discharge_Air_Temperature_Sensor ;
+    bf:uuid "75debde2-c87d-5b29-bc80-0401c9140e8d" .
 
 sdh:S3-04damper a brick:Damper ;
     bf:hasPoint sdh:S3-04room_damper_position .
@@ -1884,6 +1998,9 @@ sdh:S3-04room_temperature a brick:Zone_Air_Temperature_Sensor ;
 sdh:S3-04room_valve_position a brick:Heating_Valve_Command ;
     bf:uuid "c4825e95-1ddd-5906-8526-b85a017f419f" .
 
+sdh:S3-05_AI_3 a brick:Discharge_Air_Temperature_Sensor ;
+    bf:uuid "977850d8-c0ba-54ef-b09d-7eb7e41b1e0b" .
+
 sdh:S3-05damper a brick:Damper ;
     bf:hasPoint sdh:S3-05room_damper_position .
 
@@ -1908,6 +2025,9 @@ sdh:S3-05room_temperature a brick:Zone_Air_Temperature_Sensor ;
 sdh:S3-05room_valve_position a brick:Heating_Valve_Command ;
     bf:uuid "4f29cf81-dfdd-56c2-8a96-90be30733265" .
 
+sdh:S3-06_AI_3 a brick:Discharge_Air_Temperature_Sensor ;
+    bf:uuid "4efc24dc-3b0d-548a-b37e-897046fa48ca" .
+
 sdh:S3-06damper a brick:Damper ;
     bf:hasPoint sdh:S3-06room_damper_position .
 
@@ -1931,6 +2051,9 @@ sdh:S3-06room_temperature a brick:Zone_Air_Temperature_Sensor ;
 
 sdh:S3-06room_valve_position a brick:Heating_Valve_Command ;
     bf:uuid "070c0c71-05a3-5a2c-a71c-357f6943f585" .
+
+sdh:S3-07_AI_3 a brick:Discharge_Air_Temperature_Sensor ;
+    bf:uuid "8c1c45b6-61d3-5055-b84c-4f5a57282db1" .
 
 sdh:S3-07damper a brick:Damper ;
     bf:hasPoint sdh:S3-07room_damper_position .
@@ -1958,6 +2081,9 @@ sdh:S3-07room_temperature a brick:Zone_Air_Temperature_Sensor ;
 sdh:S3-07room_valve_position a brick:Heating_Valve_Command ;
     bf:uuid "4d071cb3-20cd-5cc9-9bda-9aa4e5b35448" .
 
+sdh:S3-08_AI_3 a brick:Discharge_Air_Temperature_Sensor ;
+    bf:uuid "41d21e08-fbf3-5f2e-91ea-a4765b8ada90" .
+
 sdh:S3-08damper a brick:Damper ;
     bf:hasPoint sdh:S3-08room_damper_position .
 
@@ -1983,6 +2109,9 @@ sdh:S3-08room_temperature a brick:Zone_Air_Temperature_Sensor ;
 
 sdh:S3-08room_valve_position a brick:Heating_Valve_Command ;
     bf:uuid "856bba37-d9a0-52e7-9265-8e42f8bd256d" .
+
+sdh:S3-09_AI_3 a brick:Discharge_Air_Temperature_Sensor ;
+    bf:uuid "0c092790-3c78-55e1-bf9f-6e129129945a" .
 
 sdh:S3-09damper a brick:Damper ;
     bf:hasPoint sdh:S3-09room_damper_position .
@@ -2010,6 +2139,9 @@ sdh:S3-09room_temperature a brick:Zone_Air_Temperature_Sensor ;
 sdh:S3-09room_valve_position a brick:Heating_Valve_Command ;
     bf:uuid "78a4a7a6-9772-557f-84ad-a39e3b95d637" .
 
+sdh:S3-10_AI_3 a brick:Discharge_Air_Temperature_Sensor ;
+    bf:uuid "759f2180-f4d2-5022-8ec3-d98007b3b2fc" .
+
 sdh:S3-10damper a brick:Damper ;
     bf:hasPoint sdh:S3-10room_damper_position .
 
@@ -2036,6 +2168,9 @@ sdh:S3-10room_temperature a brick:Zone_Air_Temperature_Sensor ;
 sdh:S3-10room_valve_position a brick:Heating_Valve_Command ;
     bf:uuid "a9c4b773-e9a4-54ff-be23-e4edf9ab4c64" .
 
+sdh:S3-11_AI_3 a brick:Discharge_Air_Temperature_Sensor ;
+    bf:uuid "e8e41686-3b36-5190-b923-88ae3fa7c279" .
+
 sdh:S3-11damper a brick:Damper ;
     bf:hasPoint sdh:S3-11room_damper_position .
 
@@ -2061,6 +2196,9 @@ sdh:S3-11room_temperature a brick:Zone_Air_Temperature_Sensor ;
 
 sdh:S3-11room_valve_position a brick:Heating_Valve_Command ;
     bf:uuid "78f79002-16dc-54de-bcb8-c38fad9bb18d" .
+
+sdh:S3-12_AI_3 a brick:Discharge_Air_Temperature_Sensor ;
+    bf:uuid "d3a928a8-fbc2-5a88-b043-84c6c2302374" .
 
 sdh:S3-12damper a brick:Damper ;
     bf:hasPoint sdh:S3-12room_damper_position .
@@ -2128,6 +2266,9 @@ sdh:S3-14room_temperature a brick:Zone_Air_Temperature_Sensor ;
     bf:isPointOf sdh:R375 ;
     bf:uuid "2d0d5b23-c3f9-513b-abf2-ae391105cbe7" .
 
+sdh:S3-15_AI_3 a brick:Discharge_Air_Temperature_Sensor ;
+    bf:uuid "4d426b79-fffb-5a3d-943d-14784ffa6b9e" .
+
 sdh:S3-15damper a brick:Damper ;
     bf:hasPoint sdh:S3-15room_damper_position .
 
@@ -2154,6 +2295,9 @@ sdh:S3-15room_temperature a brick:Zone_Air_Temperature_Sensor ;
 sdh:S3-15room_valve_position a brick:Heating_Valve_Command ;
     bf:uuid "9e225e53-491a-565e-a1de-06e3ca620788" .
 
+sdh:S3-16_AI_3 a brick:Discharge_Air_Temperature_Sensor ;
+    bf:uuid "c23ad5ea-9109-5bfd-acfe-4f5808e2aa0e" .
+
 sdh:S3-16damper a brick:Damper ;
     bf:hasPoint sdh:S3-16room_damper_position .
 
@@ -2177,6 +2321,9 @@ sdh:S3-16room_temperature a brick:Zone_Air_Temperature_Sensor ;
 
 sdh:S3-16room_valve_position a brick:Heating_Valve_Command ;
     bf:uuid "544d0b5f-0a78-5c63-9744-1c31277ea8e2" .
+
+sdh:S3-17_AI_3 a brick:Discharge_Air_Temperature_Sensor ;
+    bf:uuid "9ed99125-3c91-5cba-a91c-4886a651b808" .
 
 sdh:S3-17damper a brick:Damper ;
     bf:hasPoint sdh:S3-17room_damper_position .
@@ -2204,6 +2351,9 @@ sdh:S3-17room_temperature a brick:Zone_Air_Temperature_Sensor ;
 sdh:S3-17room_valve_position a brick:Heating_Valve_Command ;
     bf:uuid "a17a931f-8fca-56db-b779-e2f1a57d83de" .
 
+sdh:S3-18_AI_3 a brick:Discharge_Air_Temperature_Sensor ;
+    bf:uuid "1456d69f-8f52-545c-bf88-a30029706a58" .
+
 sdh:S3-18damper a brick:Damper ;
     bf:hasPoint sdh:S3-18room_damper_position .
 
@@ -2230,6 +2380,9 @@ sdh:S3-18room_temperature a brick:Zone_Air_Temperature_Sensor ;
 sdh:S3-18room_valve_position a brick:Heating_Valve_Command ;
     bf:uuid "661b1b0c-8d4e-57e3-a092-d0f6bd1db8bc" .
 
+sdh:S3-19_AI_3 a brick:Discharge_Air_Temperature_Sensor ;
+    bf:uuid "f9c94f8a-2289-5415-93f7-de275f0b16db" .
+
 sdh:S3-19damper a brick:Damper ;
     bf:hasPoint sdh:S3-19room_damper_position .
 
@@ -2253,6 +2406,9 @@ sdh:S3-19room_temperature a brick:Zone_Air_Temperature_Sensor ;
 
 sdh:S3-19room_valve_position a brick:Heating_Valve_Command ;
     bf:uuid "c294ed5d-dd6c-5372-aab9-1a29b6981193" .
+
+sdh:S3-20_AI_3 a brick:Discharge_Air_Temperature_Sensor ;
+    bf:uuid "c99cbbab-b37e-501a-bd2d-895369585771" .
 
 sdh:S3-20damper a brick:Damper ;
     bf:hasPoint sdh:S3-20room_damper_position .
@@ -2280,6 +2436,9 @@ sdh:S3-20room_temperature a brick:Zone_Air_Temperature_Sensor ;
 sdh:S3-20room_valve_position a brick:Heating_Valve_Command ;
     bf:uuid "28b27308-f915-51d2-8e23-916e6ec1514a" .
 
+sdh:S3-21_AI_3 a brick:Discharge_Air_Temperature_Sensor ;
+    bf:uuid "ce112695-3ff2-543c-b853-0f034d932a27" .
+
 sdh:S3-21damper a brick:Damper ;
     bf:hasPoint sdh:S3-21room_damper_position .
 
@@ -2305,6 +2464,9 @@ sdh:S3-21room_temperature a brick:Zone_Air_Temperature_Sensor ;
 
 sdh:S3-21room_valve_position a brick:Heating_Valve_Command ;
     bf:uuid "fa62a13c-3fd2-578a-89dc-bec6fe6fbd83" .
+
+sdh:S4-01_AI_3 a brick:Discharge_Air_Temperature_Sensor ;
+    bf:uuid "8b94c7f9-ade2-5c09-97ad-09607f306912" .
 
 sdh:S4-01damper a brick:Damper ;
     bf:hasPoint sdh:S4-01room_damper_position .
@@ -2332,6 +2494,9 @@ sdh:S4-01room_temperature a brick:Zone_Air_Temperature_Sensor ;
 sdh:S4-01room_valve_position a brick:Heating_Valve_Command ;
     bf:uuid "67c1ac43-3430-5370-9a54-8ffc44b15c2a" .
 
+sdh:S4-02_AI_3 a brick:Discharge_Air_Temperature_Sensor ;
+    bf:uuid "d6e00f26-88d5-544a-9d3a-0b04aa31703f" .
+
 sdh:S4-02damper a brick:Damper ;
     bf:hasPoint sdh:S4-02room_damper_position .
 
@@ -2357,6 +2522,9 @@ sdh:S4-02room_temperature a brick:Zone_Air_Temperature_Sensor ;
 
 sdh:S4-02room_valve_position a brick:Heating_Valve_Command ;
     bf:uuid "ec876b2c-4bde-5714-a3aa-2e22dcf1873a" .
+
+sdh:S4-03_AI_3 a brick:Discharge_Air_Temperature_Sensor ;
+    bf:uuid "8aebf30d-5dfd-57e0-8612-b6053c9bcaf5" .
 
 sdh:S4-03damper a brick:Damper ;
     bf:hasPoint sdh:S4-03room_damper_position .
@@ -2384,6 +2552,9 @@ sdh:S4-03room_temperature a brick:Zone_Air_Temperature_Sensor ;
 sdh:S4-03room_valve_position a brick:Heating_Valve_Command ;
     bf:uuid "5e227a6f-dec3-5508-9445-c649b2a42e0b" .
 
+sdh:S4-04_AI_3 a brick:Discharge_Air_Temperature_Sensor ;
+    bf:uuid "dcc043cf-3f2c-5edf-b2fb-c6f0539daf97" .
+
 sdh:S4-04damper a brick:Damper ;
     bf:hasPoint sdh:S4-04room_damper_position .
 
@@ -2409,6 +2580,9 @@ sdh:S4-04room_temperature a brick:Zone_Air_Temperature_Sensor ;
 
 sdh:S4-04room_valve_position a brick:Heating_Valve_Command ;
     bf:uuid "249074cd-ba44-5aa6-aafc-d1c972de276a" .
+
+sdh:S4-05_AI_3 a brick:Discharge_Air_Temperature_Sensor ;
+    bf:uuid "a9aefa47-7b51-5f85-bdde-27fdd3734ca3" .
 
 sdh:S4-05damper a brick:Damper ;
     bf:hasPoint sdh:S4-05room_damper_position .
@@ -2436,6 +2610,9 @@ sdh:S4-05room_temperature a brick:Zone_Air_Temperature_Sensor ;
 sdh:S4-05room_valve_position a brick:Heating_Valve_Command ;
     bf:uuid "0b79c9ec-297b-5e18-98a1-a05c76b9fc95" .
 
+sdh:S4-06_AI_3 a brick:Discharge_Air_Temperature_Sensor ;
+    bf:uuid "43e9cba7-b778-5e83-90fe-aa1c6ca6a12b" .
+
 sdh:S4-06damper a brick:Damper ;
     bf:hasPoint sdh:S4-06room_damper_position .
 
@@ -2461,6 +2638,9 @@ sdh:S4-06room_temperature a brick:Zone_Air_Temperature_Sensor ;
 
 sdh:S4-06room_valve_position a brick:Heating_Valve_Command ;
     bf:uuid "d8cffc08-ae8c-59ff-86b9-74a744fb818d" .
+
+sdh:S4-07_AI_3 a brick:Discharge_Air_Temperature_Sensor ;
+    bf:uuid "19c8b39a-d281-54e0-8c1f-e29d6077bcac" .
 
 sdh:S4-07damper a brick:Damper ;
     bf:hasPoint sdh:S4-07room_damper_position .
@@ -2488,6 +2668,9 @@ sdh:S4-07room_temperature a brick:Zone_Air_Temperature_Sensor ;
 sdh:S4-07room_valve_position a brick:Heating_Valve_Command ;
     bf:uuid "590dbac1-87b6-5edc-bfc1-0220340d5e61" .
 
+sdh:S4-08_AI_3 a brick:Discharge_Air_Temperature_Sensor ;
+    bf:uuid "7fbd31c0-dcab-563f-adfe-32fcf662e540" .
+
 sdh:S4-08damper a brick:Damper ;
     bf:hasPoint sdh:S4-08room_damper_position .
 
@@ -2513,6 +2696,9 @@ sdh:S4-08room_temperature a brick:Zone_Air_Temperature_Sensor ;
 
 sdh:S4-08room_valve_position a brick:Heating_Valve_Command ;
     bf:uuid "c912b74d-d5ca-53dd-b7c1-a47e02f88352" .
+
+sdh:S4-09_AI_3 a brick:Discharge_Air_Temperature_Sensor ;
+    bf:uuid "ace303f1-2f8f-5a08-832a-68722536406d" .
 
 sdh:S4-09damper a brick:Damper ;
     bf:hasPoint sdh:S4-09room_damper_position .
@@ -2560,6 +2746,9 @@ sdh:S4-10room_temperature a brick:Zone_Air_Temperature_Sensor ;
     bf:isPointOf sdh:R429 ;
     bf:uuid "c1f69a00-db44-5458-a373-f38b2997f0d3" .
 
+sdh:S4-11_AI_3 a brick:Discharge_Air_Temperature_Sensor ;
+    bf:uuid "3fcbaddb-51f1-5569-9705-d25f8faeba9e" .
+
 sdh:S4-11damper a brick:Damper ;
     bf:hasPoint sdh:S4-11room_damper_position .
 
@@ -2586,6 +2775,9 @@ sdh:S4-11room_temperature a brick:Zone_Air_Temperature_Sensor ;
 sdh:S4-11room_valve_position a brick:Heating_Valve_Command ;
     bf:uuid "805b49f1-6a03-541e-b76b-348552cbfd47" .
 
+sdh:S4-12_AI_3 a brick:Discharge_Air_Temperature_Sensor ;
+    bf:uuid "04a4e94f-d22c-5f97-b06b-13dc24bcd8a3" .
+
 sdh:S4-12damper a brick:Damper ;
     bf:hasPoint sdh:S4-12room_damper_position .
 
@@ -2611,6 +2803,9 @@ sdh:S4-12room_temperature a brick:Zone_Air_Temperature_Sensor ;
 
 sdh:S4-12room_valve_position a brick:Heating_Valve_Command ;
     bf:uuid "5e53530b-fae0-5e64-beca-f4b92a491464" .
+
+sdh:S4-13_AI_3 a brick:Discharge_Air_Temperature_Sensor ;
+    bf:uuid "3d9445cd-0389-555b-ac4d-de7b2f7cdefe" .
 
 sdh:S4-13damper a brick:Damper ;
     bf:hasPoint sdh:S4-13room_damper_position .
@@ -2658,6 +2853,9 @@ sdh:S4-14room_temperature a brick:Zone_Air_Temperature_Sensor ;
     bf:isPointOf sdh:R471 ;
     bf:uuid "3f113f77-c8ca-5aa7-bab9-a677e840df67" .
 
+sdh:S4-15_AI_3 a brick:Discharge_Air_Temperature_Sensor ;
+    bf:uuid "d3861552-00e5-548f-b41c-1ad4b0e95a4d" .
+
 sdh:S4-15damper a brick:Damper ;
     bf:hasPoint sdh:S4-15room_damper_position .
 
@@ -2683,6 +2881,9 @@ sdh:S4-15room_temperature a brick:Zone_Air_Temperature_Sensor ;
 
 sdh:S4-15room_valve_position a brick:Heating_Valve_Command ;
     bf:uuid "089017e0-8bde-5e4f-a6ed-a8337ec4ee32" .
+
+sdh:S4-16_AI_3 a brick:Discharge_Air_Temperature_Sensor ;
+    bf:uuid "c690948a-aa23-55a4-b3ca-40e923df28e5" .
 
 sdh:S4-16damper a brick:Damper ;
     bf:hasPoint sdh:S4-16room_damper_position .
@@ -2730,6 +2931,9 @@ sdh:S4-17room_temperature a brick:Zone_Air_Temperature_Sensor ;
     bf:isPointOf sdh:R475 ;
     bf:uuid "7483ed25-cae3-5a73-8523-e25183c2748d" .
 
+sdh:S4-18_AI_3 a brick:Discharge_Air_Temperature_Sensor ;
+    bf:uuid "4db32822-ecdf-5c6c-bc19-0aa06ea53f16" .
+
 sdh:S4-18damper a brick:Damper ;
     bf:hasPoint sdh:S4-18room_damper_position .
 
@@ -2755,6 +2959,9 @@ sdh:S4-18room_temperature a brick:Zone_Air_Temperature_Sensor ;
 
 sdh:S4-18room_valve_position a brick:Heating_Valve_Command ;
     bf:uuid "60682a40-e131-5572-8af0-59c6f8eb5d63" .
+
+sdh:S4-19_AI_3 a brick:Discharge_Air_Temperature_Sensor ;
+    bf:uuid "bc46584a-eb61-5a58-a1fb-a167a754a0cb" .
 
 sdh:S4-19damper a brick:Damper ;
     bf:hasPoint sdh:S4-19room_damper_position .
@@ -2782,6 +2989,9 @@ sdh:S4-19room_temperature a brick:Zone_Air_Temperature_Sensor ;
 sdh:S4-19room_valve_position a brick:Heating_Valve_Command ;
     bf:uuid "2fd4661e-138b-5f48-8479-e08b890a639e" .
 
+sdh:S4-20_AI_3 a brick:Discharge_Air_Temperature_Sensor ;
+    bf:uuid "99a2a094-8599-5665-bf7b-b1021e04d68c" .
+
 sdh:S4-20damper a brick:Damper ;
     bf:hasPoint sdh:S4-20room_damper_position .
 
@@ -2807,6 +3017,9 @@ sdh:S4-20room_temperature a brick:Zone_Air_Temperature_Sensor ;
 
 sdh:S4-20room_valve_position a brick:Heating_Valve_Command ;
     bf:uuid "6baa7d43-e088-5084-9926-0f48daffceb2" .
+
+sdh:S4-21_AI_3 a brick:Discharge_Air_Temperature_Sensor ;
+    bf:uuid "31dcbae3-96be-51ed-b89d-61ad02d8a901" .
 
 sdh:S4-21damper a brick:Damper ;
     bf:hasPoint sdh:S4-21room_damper_position .
@@ -2834,6 +3047,9 @@ sdh:S4-21room_temperature a brick:Zone_Air_Temperature_Sensor ;
 sdh:S4-21room_valve_position a brick:Heating_Valve_Command ;
     bf:uuid "129d65b4-364b-5916-bc94-6b9dacb0b2ce" .
 
+sdh:S5-01_AI_3 a brick:Discharge_Air_Temperature_Sensor ;
+    bf:uuid "a30cad8a-e97a-5b56-84be-bef2a1ccac9e" .
+
 sdh:S5-01damper a brick:Damper ;
     bf:hasPoint sdh:S5-01room_damper_position .
 
@@ -2859,6 +3075,9 @@ sdh:S5-01room_temperature a brick:Zone_Air_Temperature_Sensor ;
 
 sdh:S5-01room_valve_position a brick:Heating_Valve_Command ;
     bf:uuid "080eb277-63d3-57bd-a9ba-bd04f02ba65b" .
+
+sdh:S5-02_AI_3 a brick:Discharge_Air_Temperature_Sensor ;
+    bf:uuid "2518002c-7526-5d64-acf2-e1edc9e7c2f6" .
 
 sdh:S5-02damper a brick:Damper ;
     bf:hasPoint sdh:S5-02room_damper_position .
@@ -2886,6 +3105,9 @@ sdh:S5-02room_temperature a brick:Zone_Air_Temperature_Sensor ;
 sdh:S5-02room_valve_position a brick:Heating_Valve_Command ;
     bf:uuid "c28e4ace-2786-50fb-9910-b38f21eecf88" .
 
+sdh:S5-03_AI_3 a brick:Discharge_Air_Temperature_Sensor ;
+    bf:uuid "25b9b2cf-626e-5028-98de-321ba1ee73ed" .
+
 sdh:S5-03damper a brick:Damper ;
     bf:hasPoint sdh:S5-03room_damper_position .
 
@@ -2911,6 +3133,9 @@ sdh:S5-03room_temperature a brick:Zone_Air_Temperature_Sensor ;
 
 sdh:S5-03room_valve_position a brick:Heating_Valve_Command ;
     bf:uuid "955e3dd8-a911-5e10-a5db-4fec2eb6c657" .
+
+sdh:S5-04_AI_3 a brick:Discharge_Air_Temperature_Sensor ;
+    bf:uuid "5cf362cd-81af-50d4-b3ff-2af1713d0495" .
 
 sdh:S5-04damper a brick:Damper ;
     bf:hasPoint sdh:S5-04room_damper_position .
@@ -2938,6 +3163,9 @@ sdh:S5-04room_temperature a brick:Zone_Air_Temperature_Sensor ;
 sdh:S5-04room_valve_position a brick:Heating_Valve_Command ;
     bf:uuid "1f1ce0ea-e18c-553b-8393-e838254ced7c" .
 
+sdh:S5-05_AI_3 a brick:Discharge_Air_Temperature_Sensor ;
+    bf:uuid "12513077-b9e0-5e2a-93db-6063d218699a" .
+
 sdh:S5-05damper a brick:Damper ;
     bf:hasPoint sdh:S5-05room_damper_position .
 
@@ -2963,6 +3191,9 @@ sdh:S5-05room_temperature a brick:Zone_Air_Temperature_Sensor ;
 
 sdh:S5-05room_valve_position a brick:Heating_Valve_Command ;
     bf:uuid "d81f1681-67dc-5fe2-b720-3711e9063382" .
+
+sdh:S5-06_AI_3 a brick:Discharge_Air_Temperature_Sensor ;
+    bf:uuid "a0a49d1f-c9fc-58b7-844c-395378808f73" .
 
 sdh:S5-06damper a brick:Damper ;
     bf:hasPoint sdh:S5-06room_damper_position .
@@ -2990,6 +3221,9 @@ sdh:S5-06room_temperature a brick:Zone_Air_Temperature_Sensor ;
 sdh:S5-06room_valve_position a brick:Heating_Valve_Command ;
     bf:uuid "10d43393-053f-5011-afb5-b28bfe3167b9" .
 
+sdh:S5-07_AI_3 a brick:Discharge_Air_Temperature_Sensor ;
+    bf:uuid "1e9f0cb0-a46c-5660-9e54-056a3c59c711" .
+
 sdh:S5-07damper a brick:Damper ;
     bf:hasPoint sdh:S5-07room_damper_position .
 
@@ -3015,6 +3249,9 @@ sdh:S5-07room_temperature a brick:Zone_Air_Temperature_Sensor ;
 
 sdh:S5-07room_valve_position a brick:Heating_Valve_Command ;
     bf:uuid "18b905b7-54c0-506e-b440-fabe1dfc9bb3" .
+
+sdh:S5-08_AI_3 a brick:Discharge_Air_Temperature_Sensor ;
+    bf:uuid "cadd7f63-faad-51b2-ab4f-65ccce106884" .
 
 sdh:S5-08damper a brick:Damper ;
     bf:hasPoint sdh:S5-08room_damper_position .
@@ -3042,6 +3279,9 @@ sdh:S5-08room_temperature a brick:Zone_Air_Temperature_Sensor ;
 sdh:S5-08room_valve_position a brick:Heating_Valve_Command ;
     bf:uuid "44d81562-28b7-5730-a5d0-2d405f993148" .
 
+sdh:S5-09_AI_3 a brick:Discharge_Air_Temperature_Sensor ;
+    bf:uuid "fea3a6da-71de-53cc-aa97-44fe6c30a2ea" .
+
 sdh:S5-09damper a brick:Damper ;
     bf:hasPoint sdh:S5-09room_damper_position .
 
@@ -3068,6 +3308,9 @@ sdh:S5-09room_temperature a brick:Zone_Air_Temperature_Sensor ;
 sdh:S5-09room_valve_position a brick:Heating_Valve_Command ;
     bf:uuid "3180f3c0-7d75-5013-b7f1-b140d92f9e09" .
 
+sdh:S5-10_AI_3 a brick:Discharge_Air_Temperature_Sensor ;
+    bf:uuid "c1cb132c-4181-58ba-b723-398f2a225eb5" .
+
 sdh:S5-10damper a brick:Damper ;
     bf:hasPoint sdh:S5-10room_damper_position .
 
@@ -3091,6 +3334,9 @@ sdh:S5-10room_temperature a brick:Zone_Air_Temperature_Sensor ;
 
 sdh:S5-10room_valve_position a brick:Heating_Valve_Command ;
     bf:uuid "0a9433cc-5644-52c8-98d0-0fe11b54efb4" .
+
+sdh:S5-11_AI_3 a brick:Discharge_Air_Temperature_Sensor ;
+    bf:uuid "2eee5b0e-50bf-5cf5-bc9c-f3f6846590f2" .
 
 sdh:S5-11damper a brick:Damper ;
     bf:hasPoint sdh:S5-11room_damper_position .
@@ -3118,6 +3364,9 @@ sdh:S5-11room_temperature a brick:Zone_Air_Temperature_Sensor ;
 sdh:S5-11room_valve_position a brick:Heating_Valve_Command ;
     bf:uuid "1e71a581-4612-5f12-a6fd-6fd1e3f6d6ea" .
 
+sdh:S5-12_AI_3 a brick:Discharge_Air_Temperature_Sensor ;
+    bf:uuid "f2b60831-15f1-535f-92ba-27d0caecf443" .
+
 sdh:S5-12damper a brick:Damper ;
     bf:hasPoint sdh:S5-12room_damper_position .
 
@@ -3144,6 +3393,9 @@ sdh:S5-12room_temperature a brick:Zone_Air_Temperature_Sensor ;
 sdh:S5-12room_valve_position a brick:Heating_Valve_Command ;
     bf:uuid "11170b55-0ab1-5760-b659-41e1962b6bb3" .
 
+sdh:S5-13_AI_3 a brick:Discharge_Air_Temperature_Sensor ;
+    bf:uuid "b6a7f7c2-36f1-58be-8284-865849337d20" .
+
 sdh:S5-13damper a brick:Damper ;
     bf:hasPoint sdh:S5-13room_damper_position .
 
@@ -3169,6 +3421,9 @@ sdh:S5-13room_temperature a brick:Zone_Air_Temperature_Sensor ;
 
 sdh:S5-13room_valve_position a brick:Heating_Valve_Command ;
     bf:uuid "1e235cb8-70c6-586d-9338-25ce7c9595c4" .
+
+sdh:S5-14_AI_3 a brick:Discharge_Air_Temperature_Sensor ;
+    bf:uuid "2c342339-9a3d-57b7-bfc4-a67c740fec31" .
 
 sdh:S5-14damper a brick:Damper ;
     bf:hasPoint sdh:S5-14room_damper_position .
@@ -3216,6 +3471,9 @@ sdh:S5-15room_temperature a brick:Zone_Air_Temperature_Sensor ;
     bf:isPointOf sdh:R571 ;
     bf:uuid "73e1ff5d-07e7-52a9-a6c0-0a57f4c62355" .
 
+sdh:S5-16_AI_3 a brick:Discharge_Air_Temperature_Sensor ;
+    bf:uuid "7f129326-fad3-5249-93cc-1434cd4baa73" .
+
 sdh:S5-16damper a brick:Damper ;
     bf:hasPoint sdh:S5-16room_damper_position .
 
@@ -3262,6 +3520,9 @@ sdh:S5-17room_temperature a brick:Zone_Air_Temperature_Sensor ;
     bf:isPointOf sdh:R575 ;
     bf:uuid "b7b56d68-f1a5-55c5-aa79-a06aed4f3a06" .
 
+sdh:S5-18_AI_3 a brick:Discharge_Air_Temperature_Sensor ;
+    bf:uuid "6f1f4985-cab8-5719-8e76-aa19c8eacf11" .
+
 sdh:S5-18damper a brick:Damper ;
     bf:hasPoint sdh:S5-18room_damper_position .
 
@@ -3287,6 +3548,9 @@ sdh:S5-18room_temperature a brick:Zone_Air_Temperature_Sensor ;
 
 sdh:S5-18room_valve_position a brick:Heating_Valve_Command ;
     bf:uuid "430ce44a-221d-5669-a199-f895c0e31763" .
+
+sdh:S5-19_AI_3 a brick:Discharge_Air_Temperature_Sensor ;
+    bf:uuid "8e53ebc6-413b-5576-ab3c-42d45f95d373" .
 
 sdh:S5-19damper a brick:Damper ;
     bf:hasPoint sdh:S5-19room_damper_position .
@@ -3314,6 +3578,9 @@ sdh:S5-19room_temperature a brick:Zone_Air_Temperature_Sensor ;
 sdh:S5-19room_valve_position a brick:Heating_Valve_Command ;
     bf:uuid "bdd72f0a-6b80-5efa-8e0f-4ff486c47e63" .
 
+sdh:S5-20_AI_3 a brick:Discharge_Air_Temperature_Sensor ;
+    bf:uuid "89852718-40fc-5743-993a-97c48f4d1660" .
+
 sdh:S5-20damper a brick:Damper ;
     bf:hasPoint sdh:S5-20room_damper_position .
 
@@ -3339,6 +3606,9 @@ sdh:S5-20room_temperature a brick:Zone_Air_Temperature_Sensor ;
 
 sdh:S5-20room_valve_position a brick:Heating_Valve_Command ;
     bf:uuid "3b8b6f16-0475-5fa8-bb76-c14e16b3297c" .
+
+sdh:S5-21_AI_3 a brick:Discharge_Air_Temperature_Sensor ;
+    bf:uuid "4c207aef-6792-5073-adcd-84f55f480660" .
 
 sdh:S5-21damper a brick:Damper ;
     bf:hasPoint sdh:S5-21room_damper_position .
@@ -3366,6 +3636,9 @@ sdh:S5-21room_temperature a brick:Zone_Air_Temperature_Sensor ;
 sdh:S5-21room_valve_position a brick:Heating_Valve_Command ;
     bf:uuid "2691f5f2-6d89-504d-96a1-aad2a0075a20" .
 
+sdh:S6-01_AI_3 a brick:Discharge_Air_Temperature_Sensor ;
+    bf:uuid "b7852423-3620-5014-8920-96755c13050f" .
+
 sdh:S6-01damper a brick:Damper ;
     bf:hasPoint sdh:S6-01room_damper_position .
 
@@ -3391,6 +3664,9 @@ sdh:S6-01room_temperature a brick:Zone_Air_Temperature_Sensor ;
 
 sdh:S6-01room_valve_position a brick:Heating_Valve_Command ;
     bf:uuid "68e88dfa-fe7f-5d15-bf34-794e6154c086" .
+
+sdh:S6-02_AI_3 a brick:Discharge_Air_Temperature_Sensor ;
+    bf:uuid "8b362da0-02fd-5e53-9229-2356c6d75720" .
 
 sdh:S6-02damper a brick:Damper ;
     bf:hasPoint sdh:S6-02room_damper_position .
@@ -3418,6 +3694,9 @@ sdh:S6-02room_temperature a brick:Zone_Air_Temperature_Sensor ;
 sdh:S6-02room_valve_position a brick:Heating_Valve_Command ;
     bf:uuid "b160fde2-af8e-526a-a456-8a5ef6e66eef" .
 
+sdh:S6-03_AI_3 a brick:Discharge_Air_Temperature_Sensor ;
+    bf:uuid "a44f76c1-97a8-533a-ae31-07f5af785cc1" .
+
 sdh:S6-03damper a brick:Damper ;
     bf:hasPoint sdh:S6-03room_damper_position .
 
@@ -3444,6 +3723,9 @@ sdh:S6-03room_temperature a brick:Zone_Air_Temperature_Sensor ;
 sdh:S6-03room_valve_position a brick:Heating_Valve_Command ;
     bf:uuid "7aba1654-b7da-5d5a-bb11-4eb369972ed1" .
 
+sdh:S6-04_AI_3 a brick:Discharge_Air_Temperature_Sensor ;
+    bf:uuid "6240dd9c-ce19-553c-9b2c-2439dfaf4187" .
+
 sdh:S6-04damper a brick:Damper ;
     bf:hasPoint sdh:S6-04room_damper_position .
 
@@ -3467,6 +3749,9 @@ sdh:S6-04room_temperature a brick:Zone_Air_Temperature_Sensor ;
 
 sdh:S6-04room_valve_position a brick:Heating_Valve_Command ;
     bf:uuid "04180670-3958-59c4-b67c-a90d624d3c01" .
+
+sdh:S6-05_AI_3 a brick:Discharge_Air_Temperature_Sensor ;
+    bf:uuid "95e73774-debe-5ff3-9562-61d9cd2b75af" .
 
 sdh:S6-05damper a brick:Damper ;
     bf:hasPoint sdh:S6-05room_damper_position .
@@ -3492,6 +3777,9 @@ sdh:S6-05room_temperature a brick:Zone_Air_Temperature_Sensor ;
 sdh:S6-05room_valve_position a brick:Heating_Valve_Command ;
     bf:uuid "76a6de71-7636-56cd-9eea-d5aad7ac1269" .
 
+sdh:S6-06_AI_3 a brick:Discharge_Air_Temperature_Sensor ;
+    bf:uuid "0d48e077-d50b-58d9-9e72-62062145eb67" .
+
 sdh:S6-06damper a brick:Damper ;
     bf:hasPoint sdh:S6-06room_damper_position .
 
@@ -3516,6 +3804,9 @@ sdh:S6-06room_temperature a brick:Zone_Air_Temperature_Sensor ;
 sdh:S6-06room_valve_position a brick:Heating_Valve_Command ;
     bf:uuid "2d339fdd-7d7a-57a3-b600-ab74419a759e" .
 
+sdh:S6-07_AI_3 a brick:Discharge_Air_Temperature_Sensor ;
+    bf:uuid "c0bdcc0e-ea3d-5b81-92c2-b82dfbac8ce1" .
+
 sdh:S6-07damper a brick:Damper ;
     bf:hasPoint sdh:S6-07room_damper_position .
 
@@ -3539,6 +3830,9 @@ sdh:S6-07room_temperature a brick:Zone_Air_Temperature_Sensor ;
 
 sdh:S6-07room_valve_position a brick:Heating_Valve_Command ;
     bf:uuid "28d989b9-a88a-52ec-b88f-bdf5e936e8cc" .
+
+sdh:S6-08_AI_3 a brick:Discharge_Air_Temperature_Sensor ;
+    bf:uuid "25c48ed0-60a6-5770-a780-95c7304a7142" .
 
 sdh:S6-08damper a brick:Damper ;
     bf:hasPoint sdh:S6-08room_damper_position .
@@ -3586,6 +3880,9 @@ sdh:S6-09room_temperature a brick:Zone_Air_Temperature_Sensor ;
     bf:isPointOf sdh:R629 ;
     bf:uuid "d2709c2c-5c3f-5a3c-bb34-920c8905d474" .
 
+sdh:S6-10_AI_3 a brick:Discharge_Air_Temperature_Sensor ;
+    bf:uuid "7db11d38-a2ba-5649-bc9f-996091765cf8" .
+
 sdh:S6-10damper a brick:Damper ;
     bf:hasPoint sdh:S6-10room_damper_position .
 
@@ -3611,6 +3908,9 @@ sdh:S6-10room_temperature a brick:Zone_Air_Temperature_Sensor ;
 
 sdh:S6-10room_valve_position a brick:Heating_Valve_Command ;
     bf:uuid "5d25b8af-e765-5b8a-98c1-8d45e2b6537b" .
+
+sdh:S6-11_AI_3 a brick:Discharge_Air_Temperature_Sensor ;
+    bf:uuid "4588fee9-767a-5520-9c52-946ead59300f" .
 
 sdh:S6-11damper a brick:Damper ;
     bf:hasPoint sdh:S6-11room_damper_position .
@@ -3638,6 +3938,9 @@ sdh:S6-11room_temperature a brick:Zone_Air_Temperature_Sensor ;
 sdh:S6-11room_valve_position a brick:Heating_Valve_Command ;
     bf:uuid "86720dee-727f-5e67-9ff3-710973024345" .
 
+sdh:S6-12_AI_3 a brick:Discharge_Air_Temperature_Sensor ;
+    bf:uuid "5e5e8bb8-3e62-5f27-bb64-482452b569e1" .
+
 sdh:S6-12damper a brick:Damper ;
     bf:hasPoint sdh:S6-12room_damper_position .
 
@@ -3663,6 +3966,9 @@ sdh:S6-12room_temperature a brick:Zone_Air_Temperature_Sensor ;
 
 sdh:S6-12room_valve_position a brick:Heating_Valve_Command ;
     bf:uuid "1ed45f6b-9d09-5520-962c-89d864957448" .
+
+sdh:S6-13_AI_3 a brick:Discharge_Air_Temperature_Sensor ;
+    bf:uuid "16eb9fdd-fdc4-5015-b589-e6e10fe91c3a" .
 
 sdh:S6-13damper a brick:Damper ;
     bf:hasPoint sdh:S6-13room_damper_position .
@@ -3708,6 +4014,9 @@ sdh:S6-14room_temperature a brick:Zone_Air_Temperature_Sensor ;
     bf:isPointOf sdh:R671 ;
     bf:uuid "077eed9d-aae7-5466-bfc3-6e18030af8f1" .
 
+sdh:S6-15_AI_3 a brick:Discharge_Air_Temperature_Sensor ;
+    bf:uuid "b1018f46-db8a-55ac-acd6-59d842d36716" .
+
 sdh:S6-15damper a brick:Damper ;
     bf:hasPoint sdh:S6-15room_damper_position .
 
@@ -3752,6 +4061,9 @@ sdh:S6-16room_temperature a brick:Zone_Air_Temperature_Sensor ;
     bf:isPointOf sdh:R675 ;
     bf:uuid "84f34300-e3bf-5502-99d0-4f0fd7fcb22e" .
 
+sdh:S6-17_AI_3 a brick:Discharge_Air_Temperature_Sensor ;
+    bf:uuid "49061dbe-ab4f-5381-81e8-70047151d190" .
+
 sdh:S6-17damper a brick:Damper ;
     bf:hasPoint sdh:S6-17room_damper_position .
 
@@ -3777,6 +4089,9 @@ sdh:S6-17room_temperature a brick:Zone_Air_Temperature_Sensor ;
 
 sdh:S6-17room_valve_position a brick:Heating_Valve_Command ;
     bf:uuid "f72c655a-7931-5c96-b074-f4a562f402f0" .
+
+sdh:S6-18_AI_3 a brick:Discharge_Air_Temperature_Sensor ;
+    bf:uuid "feee7272-9e9f-56b9-a838-da402d86ad3c" .
 
 sdh:S6-18damper a brick:Damper ;
     bf:hasPoint sdh:S6-18room_damper_position .
@@ -3804,6 +4119,9 @@ sdh:S6-18room_temperature a brick:Zone_Air_Temperature_Sensor ;
 sdh:S6-18room_valve_position a brick:Heating_Valve_Command ;
     bf:uuid "cd3c13a3-8765-5f5a-9c28-7a8977212111" .
 
+sdh:S6-19_AI_3 a brick:Discharge_Air_Temperature_Sensor ;
+    bf:uuid "e3f613d2-ae4e-513a-a05c-b35f3e874de8" .
+
 sdh:S6-19damper a brick:Damper ;
     bf:hasPoint sdh:S6-19room_damper_position .
 
@@ -3829,6 +4147,9 @@ sdh:S6-19room_temperature a brick:Zone_Air_Temperature_Sensor ;
 
 sdh:S6-19room_valve_position a brick:Heating_Valve_Command ;
     bf:uuid "0bf1f574-ef9f-5b4c-8bda-c108600f7c1d" .
+
+sdh:S6-20_AI_3 a brick:Discharge_Air_Temperature_Sensor ;
+    bf:uuid "37bb8ada-0931-5ae3-b659-07faf648ce54" .
 
 sdh:S6-20damper a brick:Damper ;
     bf:hasPoint sdh:S6-20room_damper_position .
@@ -3856,6 +4177,9 @@ sdh:S6-20room_temperature a brick:Zone_Air_Temperature_Sensor ;
 sdh:S6-20room_valve_position a brick:Heating_Valve_Command ;
     bf:uuid "9c045ed4-9f33-5511-9cb3-a5ea752ec8e7" .
 
+sdh:S7-01_AI_3 a brick:Discharge_Air_Temperature_Sensor ;
+    bf:uuid "4cf4d09b-8e6b-54a0-8ab2-8cb93dd09820" .
+
 sdh:S7-01damper a brick:Damper ;
     bf:hasPoint sdh:S7-01room_damper_position .
 
@@ -3881,6 +4205,9 @@ sdh:S7-01room_temperature a brick:Zone_Air_Temperature_Sensor ;
 
 sdh:S7-01room_valve_position a brick:Heating_Valve_Command ;
     bf:uuid "df533ac5-0caf-5e47-9ad8-963185f3d19a" .
+
+sdh:S7-02_AI_3 a brick:Discharge_Air_Temperature_Sensor ;
+    bf:uuid "422c14bb-64ef-5048-bf1f-fa5ea0417e85" .
 
 sdh:S7-02damper a brick:Damper ;
     bf:hasPoint sdh:S7-02room_damper_position .
@@ -3908,6 +4235,9 @@ sdh:S7-02room_temperature a brick:Zone_Air_Temperature_Sensor ;
 sdh:S7-02room_valve_position a brick:Heating_Valve_Command ;
     bf:uuid "2b09f666-46e6-5e44-ab9f-82995c4e07e0" .
 
+sdh:S7-03_AI_3 a brick:Discharge_Air_Temperature_Sensor ;
+    bf:uuid "82382b89-bd57-5126-b89f-03b8af0ae503" .
+
 sdh:S7-03damper a brick:Damper ;
     bf:hasPoint sdh:S7-03room_damper_position .
 
@@ -3933,6 +4263,9 @@ sdh:S7-03room_temperature a brick:Zone_Air_Temperature_Sensor ;
 
 sdh:S7-03room_valve_position a brick:Heating_Valve_Command ;
     bf:uuid "54fad97e-1848-53a4-8d7e-06c2f7c3ca6e" .
+
+sdh:S7-04_AI_3 a brick:Discharge_Air_Temperature_Sensor ;
+    bf:uuid "b3b61ffa-a35e-56f3-9b6e-969f67329686" .
 
 sdh:S7-04damper a brick:Damper ;
     bf:hasPoint sdh:S7-04room_damper_position .
@@ -3960,6 +4293,9 @@ sdh:S7-04room_temperature a brick:Zone_Air_Temperature_Sensor ;
 sdh:S7-04room_valve_position a brick:Heating_Valve_Command ;
     bf:uuid "6bac4ccf-6e80-50e4-9130-7aad258582f0" .
 
+sdh:S7-05_AI_3 a brick:Discharge_Air_Temperature_Sensor ;
+    bf:uuid "11deae69-05fb-55f1-bb6e-eb574ba45a3b" .
+
 sdh:S7-05damper a brick:Damper ;
     bf:hasPoint sdh:S7-05room_damper_position .
 
@@ -3985,6 +4321,9 @@ sdh:S7-05room_temperature a brick:Zone_Air_Temperature_Sensor ;
 
 sdh:S7-05room_valve_position a brick:Heating_Valve_Command ;
     bf:uuid "9ed299bb-89db-5a34-8647-0c890d0d1bad" .
+
+sdh:S7-06_AI_3 a brick:Discharge_Air_Temperature_Sensor ;
+    bf:uuid "fef7f088-6cd7-5ee1-8eb8-ae138f210644" .
 
 sdh:S7-06damper a brick:Damper ;
     bf:hasPoint sdh:S7-06room_damper_position .
@@ -4012,6 +4351,9 @@ sdh:S7-06room_temperature a brick:Zone_Air_Temperature_Sensor ;
 sdh:S7-06room_valve_position a brick:Heating_Valve_Command ;
     bf:uuid "364b6403-85a2-5931-bbbe-ce05929fb19d" .
 
+sdh:S7-07_AI_3 a brick:Discharge_Air_Temperature_Sensor ;
+    bf:uuid "09e9daea-430d-5ebe-bc45-e8287e465331" .
+
 sdh:S7-07damper a brick:Damper ;
     bf:hasPoint sdh:S7-07room_damper_position .
 
@@ -4037,6 +4379,9 @@ sdh:S7-07room_temperature a brick:Zone_Air_Temperature_Sensor ;
 
 sdh:S7-07room_valve_position a brick:Heating_Valve_Command ;
     bf:uuid "d2c33664-a828-525d-8bb6-931a4246215d" .
+
+sdh:S7-08_AI_3 a brick:Discharge_Air_Temperature_Sensor ;
+    bf:uuid "98a75b56-b007-5c63-9137-f3692440b448" .
 
 sdh:S7-08damper a brick:Damper ;
     bf:hasPoint sdh:S7-08room_damper_position .
@@ -4064,6 +4409,9 @@ sdh:S7-08room_temperature a brick:Zone_Air_Temperature_Sensor ;
 sdh:S7-08room_valve_position a brick:Heating_Valve_Command ;
     bf:uuid "2ffc7380-fceb-5ecf-84f8-3f9fbe410b7e" .
 
+sdh:S7-09_AI_3 a brick:Discharge_Air_Temperature_Sensor ;
+    bf:uuid "a8415748-436f-5efe-8190-b2bc0e06a488" .
+
 sdh:S7-09damper a brick:Damper ;
     bf:hasPoint sdh:S7-09room_damper_position .
 
@@ -4089,6 +4437,9 @@ sdh:S7-09room_temperature a brick:Zone_Air_Temperature_Sensor ;
 
 sdh:S7-09room_valve_position a brick:Heating_Valve_Command ;
     bf:uuid "20297184-804f-5f5b-a695-cb5f8126f9ae" .
+
+sdh:S7-10_AI_3 a brick:Discharge_Air_Temperature_Sensor ;
+    bf:uuid "258c9921-76d8-5392-bec9-291e0f27c0e3" .
 
 sdh:S7-10damper a brick:Damper ;
     bf:hasPoint sdh:S7-10room_damper_position .
@@ -4156,6 +4507,9 @@ sdh:S7-12room_temperature a brick:Zone_Air_Temperature_Sensor ;
     bf:isPointOf sdh:R775 ;
     bf:uuid "b6096e01-3a14-5b4e-a113-ab9b32ec0a0d" .
 
+sdh:S7-13_AI_3 a brick:Discharge_Air_Temperature_Sensor ;
+    bf:uuid "e62f6c35-a747-5721-8a91-e58953d7cf54" .
+
 sdh:S7-13damper a brick:Damper ;
     bf:hasPoint sdh:S7-13room_damper_position .
 
@@ -4181,6 +4535,9 @@ sdh:S7-13room_temperature a brick:Zone_Air_Temperature_Sensor ;
 
 sdh:S7-13room_valve_position a brick:Heating_Valve_Command ;
     bf:uuid "75af4b0c-e567-50ff-adec-fcd8167ec09a" .
+
+sdh:S7-14_AI_3 a brick:Discharge_Air_Temperature_Sensor ;
+    bf:uuid "312455f4-7041-59b9-8a6a-9dc5611e6bfc" .
 
 sdh:S7-14damper a brick:Damper ;
     bf:hasPoint sdh:S7-14room_damper_position .
@@ -4208,6 +4565,9 @@ sdh:S7-14room_temperature a brick:Zone_Air_Temperature_Sensor ;
 sdh:S7-14room_valve_position a brick:Heating_Valve_Command ;
     bf:uuid "7de93bc8-0c58-5b5b-92c6-7925ba661efd" .
 
+sdh:S7-15_AI_3 a brick:Discharge_Air_Temperature_Sensor ;
+    bf:uuid "c5f13f24-d596-561e-8da3-b7602945038e" .
+
 sdh:S7-15damper a brick:Damper ;
     bf:hasPoint sdh:S7-15room_damper_position .
 
@@ -4233,6 +4593,9 @@ sdh:S7-15room_temperature a brick:Zone_Air_Temperature_Sensor ;
 
 sdh:S7-15room_valve_position a brick:Heating_Valve_Command ;
     bf:uuid "520edeae-d49d-5447-a56a-d9af18be7b7d" .
+
+sdh:S7-16_AI_3 a brick:Discharge_Air_Temperature_Sensor ;
+    bf:uuid "62a747de-6394-5170-acf9-3c5352ad24af" .
 
 sdh:S7-16damper a brick:Damper ;
     bf:hasPoint sdh:S7-16room_damper_position .
@@ -5372,7 +5735,8 @@ sdh:R587 a brick:Room .
 sdh:S1-01 a brick:VAV ;
     bf:feeds sdh:ZoneS1-01 ;
     bf:hasPart sdh:S1-01damper ;
-    bf:hasPoint sdh:S1-01room_airflow,
+    bf:hasPoint sdh:S1-01_AI_3,
+        sdh:S1-01room_airflow,
         sdh:S1-01room_damper_position,
         sdh:S1-01room_heating,
         sdh:S1-01room_maximum_airflow,
@@ -5387,7 +5751,8 @@ sdh:S1-01room_damper_position a brick:Damper_Position_Sensor ;
 sdh:S1-02 a brick:VAV ;
     bf:feeds sdh:ZoneS1-02 ;
     bf:hasPart sdh:S1-02damper ;
-    bf:hasPoint sdh:S1-02room_airflow,
+    bf:hasPoint sdh:S1-02_AI_3,
+        sdh:S1-02room_airflow,
         sdh:S1-02room_damper_position,
         sdh:S1-02room_heating,
         sdh:S1-02room_maximum_airflow,
@@ -5402,7 +5767,8 @@ sdh:S1-02room_damper_position a brick:Damper_Position_Sensor ;
 sdh:S1-03 a brick:VAV ;
     bf:feeds sdh:ZoneS1-03 ;
     bf:hasPart sdh:S1-03damper ;
-    bf:hasPoint sdh:S1-03room_airflow,
+    bf:hasPoint sdh:S1-03_AI_3,
+        sdh:S1-03room_airflow,
         sdh:S1-03room_damper_position,
         sdh:S1-03room_heating,
         sdh:S1-03room_maximum_airflow,
@@ -5417,7 +5783,8 @@ sdh:S1-03room_damper_position a brick:Damper_Position_Sensor ;
 sdh:S1-04 a brick:VAV ;
     bf:feeds sdh:ZoneS1-04 ;
     bf:hasPart sdh:S1-04damper ;
-    bf:hasPoint sdh:S1-04room_airflow,
+    bf:hasPoint sdh:S1-04_AI_3,
+        sdh:S1-04room_airflow,
         sdh:S1-04room_damper_position,
         sdh:S1-04room_heating,
         sdh:S1-04room_maximum_airflow,
@@ -5458,7 +5825,8 @@ sdh:S1-06room_damper_position a brick:Damper_Position_Sensor ;
 sdh:S1-07 a brick:VAV ;
     bf:feeds sdh:ZoneS1-07 ;
     bf:hasPart sdh:S1-07damper ;
-    bf:hasPoint sdh:S1-07room_airflow,
+    bf:hasPoint sdh:S1-07_AI_3,
+        sdh:S1-07room_airflow,
         sdh:S1-07room_damper_position,
         sdh:S1-07room_heating,
         sdh:S1-07room_maximum_airflow,
@@ -5473,7 +5841,8 @@ sdh:S1-07room_damper_position a brick:Damper_Position_Sensor ;
 sdh:S1-08 a brick:VAV ;
     bf:feeds sdh:ZoneS1-08 ;
     bf:hasPart sdh:S1-08damper ;
-    bf:hasPoint sdh:S1-08room_airflow,
+    bf:hasPoint sdh:S1-08_AI_3,
+        sdh:S1-08room_airflow,
         sdh:S1-08room_damper_position,
         sdh:S1-08room_heating,
         sdh:S1-08room_maximum_airflow,
@@ -5488,7 +5857,8 @@ sdh:S1-08room_damper_position a brick:Damper_Position_Sensor ;
 sdh:S1-09 a brick:VAV ;
     bf:feeds sdh:ZoneS1-09 ;
     bf:hasPart sdh:S1-09damper ;
-    bf:hasPoint sdh:S1-09room_airflow,
+    bf:hasPoint sdh:S1-09_AI_3,
+        sdh:S1-09room_airflow,
         sdh:S1-09room_damper_position,
         sdh:S1-09room_heating,
         sdh:S1-09room_maximum_airflow,
@@ -5503,7 +5873,8 @@ sdh:S1-09room_damper_position a brick:Damper_Position_Sensor ;
 sdh:S1-10 a brick:VAV ;
     bf:feeds sdh:ZoneS1-10 ;
     bf:hasPart sdh:S1-10damper ;
-    bf:hasPoint sdh:S1-10room_airflow,
+    bf:hasPoint sdh:S1-10_AI_3,
+        sdh:S1-10room_airflow,
         sdh:S1-10room_damper_position,
         sdh:S1-10room_heating,
         sdh:S1-10room_maximum_airflow,
@@ -5524,7 +5895,8 @@ sdh:S1-12 a brick:VAV ;
 sdh:S1-13 a brick:VAV ;
     bf:feeds sdh:ZoneS1-13 ;
     bf:hasPart sdh:S1-13damper ;
-    bf:hasPoint sdh:S1-13room_airflow,
+    bf:hasPoint sdh:S1-13_AI_3,
+        sdh:S1-13room_airflow,
         sdh:S1-13room_damper_position,
         sdh:S1-13room_heating,
         sdh:S1-13room_maximum_airflow,
@@ -5552,7 +5924,8 @@ sdh:S1-14room_damper_position a brick:Damper_Position_Sensor ;
 sdh:S1-15 a brick:VAV ;
     bf:feeds sdh:ZoneS1-15 ;
     bf:hasPart sdh:S1-15damper ;
-    bf:hasPoint sdh:S1-15room_airflow,
+    bf:hasPoint sdh:S1-15_AI_3,
+        sdh:S1-15room_airflow,
         sdh:S1-15room_damper_position,
         sdh:S1-15room_heating,
         sdh:S1-15room_maximum_airflow,
@@ -5567,7 +5940,8 @@ sdh:S1-15room_damper_position a brick:Damper_Position_Sensor ;
 sdh:S1-16 a brick:VAV ;
     bf:feeds sdh:ZoneS1-16 ;
     bf:hasPart sdh:S1-16damper ;
-    bf:hasPoint sdh:S1-16room_airflow,
+    bf:hasPoint sdh:S1-16_AI_3,
+        sdh:S1-16room_airflow,
         sdh:S1-16room_damper_position,
         sdh:S1-16room_heating,
         sdh:S1-16room_maximum_airflow,
@@ -5582,7 +5956,8 @@ sdh:S1-16room_damper_position a brick:Damper_Position_Sensor ;
 sdh:S1-17 a brick:VAV ;
     bf:feeds sdh:ZoneS1-17 ;
     bf:hasPart sdh:S1-17damper ;
-    bf:hasPoint sdh:S1-17room_airflow,
+    bf:hasPoint sdh:S1-17_AI_3,
+        sdh:S1-17room_airflow,
         sdh:S1-17room_damper_position,
         sdh:S1-17room_heating,
         sdh:S1-17room_maximum_airflow,
@@ -5597,7 +5972,8 @@ sdh:S1-17room_damper_position a brick:Damper_Position_Sensor ;
 sdh:S1-18 a brick:VAV ;
     bf:feeds sdh:ZoneS1-18 ;
     bf:hasPart sdh:S1-18damper ;
-    bf:hasPoint sdh:S1-18room_airflow,
+    bf:hasPoint sdh:S1-18_AI_3,
+        sdh:S1-18room_airflow,
         sdh:S1-18room_damper_position,
         sdh:S1-18room_heating,
         sdh:S1-18room_maximum_airflow,
@@ -5612,7 +5988,8 @@ sdh:S1-18room_damper_position a brick:Damper_Position_Sensor ;
 sdh:S1-19 a brick:VAV ;
     bf:feeds sdh:ZoneS1-19 ;
     bf:hasPart sdh:S1-19damper ;
-    bf:hasPoint sdh:S1-19room_airflow,
+    bf:hasPoint sdh:S1-19_AI_3,
+        sdh:S1-19room_airflow,
         sdh:S1-19room_damper_position,
         sdh:S1-19room_heating,
         sdh:S1-19room_maximum_airflow,
@@ -5627,7 +6004,8 @@ sdh:S1-19room_damper_position a brick:Damper_Position_Sensor ;
 sdh:S1-20 a brick:VAV ;
     bf:feeds sdh:ZoneS1-20 ;
     bf:hasPart sdh:S1-20damper ;
-    bf:hasPoint sdh:S1-20room_airflow,
+    bf:hasPoint sdh:S1-20_AI_3,
+        sdh:S1-20room_airflow,
         sdh:S1-20room_damper_position,
         sdh:S1-20room_heating,
         sdh:S1-20room_maximum_airflow,
@@ -5642,7 +6020,8 @@ sdh:S1-20room_damper_position a brick:Damper_Position_Sensor ;
 sdh:S2-01 a brick:VAV ;
     bf:feeds sdh:ZoneS2-01 ;
     bf:hasPart sdh:S2-01damper ;
-    bf:hasPoint sdh:S2-01room_airflow,
+    bf:hasPoint sdh:S2-01_AI_3,
+        sdh:S2-01room_airflow,
         sdh:S2-01room_damper_position,
         sdh:S2-01room_heating,
         sdh:S2-01room_maximum_airflow,
@@ -5657,7 +6036,8 @@ sdh:S2-01room_damper_position a brick:Damper_Position_Sensor ;
 sdh:S2-02 a brick:VAV ;
     bf:feeds sdh:ZoneS2-02 ;
     bf:hasPart sdh:S2-02damper ;
-    bf:hasPoint sdh:S2-02room_airflow,
+    bf:hasPoint sdh:S2-02_AI_3,
+        sdh:S2-02room_airflow,
         sdh:S2-02room_damper_position,
         sdh:S2-02room_heating,
         sdh:S2-02room_maximum_airflow,
@@ -5672,7 +6052,8 @@ sdh:S2-02room_damper_position a brick:Damper_Position_Sensor ;
 sdh:S2-03 a brick:VAV ;
     bf:feeds sdh:ZoneS2-03 ;
     bf:hasPart sdh:S2-03damper ;
-    bf:hasPoint sdh:S2-03room_airflow,
+    bf:hasPoint sdh:S2-03_AI_3,
+        sdh:S2-03room_airflow,
         sdh:S2-03room_damper_position,
         sdh:S2-03room_heating,
         sdh:S2-03room_maximum_airflow,
@@ -5687,7 +6068,8 @@ sdh:S2-03room_damper_position a brick:Damper_Position_Sensor ;
 sdh:S2-04 a brick:VAV ;
     bf:feeds sdh:ZoneS2-04 ;
     bf:hasPart sdh:S2-04damper ;
-    bf:hasPoint sdh:S2-04room_airflow,
+    bf:hasPoint sdh:S2-04_AI_3,
+        sdh:S2-04room_airflow,
         sdh:S2-04room_damper_position,
         sdh:S2-04room_heating,
         sdh:S2-04room_maximum_airflow,
@@ -5702,7 +6084,8 @@ sdh:S2-04room_damper_position a brick:Damper_Position_Sensor ;
 sdh:S2-05 a brick:VAV ;
     bf:feeds sdh:ZoneS2-05 ;
     bf:hasPart sdh:S2-05damper ;
-    bf:hasPoint sdh:S2-05room_airflow,
+    bf:hasPoint sdh:S2-05_AI_3,
+        sdh:S2-05room_airflow,
         sdh:S2-05room_damper_position,
         sdh:S2-05room_heating,
         sdh:S2-05room_maximum_airflow,
@@ -5717,7 +6100,8 @@ sdh:S2-05room_damper_position a brick:Damper_Position_Sensor ;
 sdh:S2-06 a brick:VAV ;
     bf:feeds sdh:ZoneS2-06 ;
     bf:hasPart sdh:S2-06damper ;
-    bf:hasPoint sdh:S2-06room_airflow,
+    bf:hasPoint sdh:S2-06_AI_3,
+        sdh:S2-06room_airflow,
         sdh:S2-06room_damper_position,
         sdh:S2-06room_heating,
         sdh:S2-06room_maximum_airflow,
@@ -5732,7 +6116,8 @@ sdh:S2-06room_damper_position a brick:Damper_Position_Sensor ;
 sdh:S2-07 a brick:VAV ;
     bf:feeds sdh:ZoneS2-07 ;
     bf:hasPart sdh:S2-07damper ;
-    bf:hasPoint sdh:S2-07room_airflow,
+    bf:hasPoint sdh:S2-07_AI_3,
+        sdh:S2-07room_airflow,
         sdh:S2-07room_damper_position,
         sdh:S2-07room_heating,
         sdh:S2-07room_maximum_airflow,
@@ -5773,7 +6158,8 @@ sdh:S2-09room_damper_position a brick:Damper_Position_Sensor ;
 sdh:S2-10 a brick:VAV ;
     bf:feeds sdh:ZoneS2-10 ;
     bf:hasPart sdh:S2-10damper ;
-    bf:hasPoint sdh:S2-10room_airflow,
+    bf:hasPoint sdh:S2-10_AI_3,
+        sdh:S2-10room_airflow,
         sdh:S2-10room_damper_position,
         sdh:S2-10room_heating,
         sdh:S2-10room_maximum_airflow,
@@ -5788,7 +6174,8 @@ sdh:S2-10room_damper_position a brick:Damper_Position_Sensor ;
 sdh:S2-11 a brick:VAV ;
     bf:feeds sdh:ZoneS2-11 ;
     bf:hasPart sdh:S2-11damper ;
-    bf:hasPoint sdh:S2-11room_airflow,
+    bf:hasPoint sdh:S2-11_AI_3,
+        sdh:S2-11room_airflow,
         sdh:S2-11room_damper_position,
         sdh:S2-11room_heating,
         sdh:S2-11room_maximum_airflow,
@@ -5803,7 +6190,8 @@ sdh:S2-11room_damper_position a brick:Damper_Position_Sensor ;
 sdh:S2-12 a brick:VAV ;
     bf:feeds sdh:ZoneS2-12 ;
     bf:hasPart sdh:S2-12damper ;
-    bf:hasPoint sdh:S2-12room_airflow,
+    bf:hasPoint sdh:S2-12_AI_3,
+        sdh:S2-12room_airflow,
         sdh:S2-12room_damper_position,
         sdh:S2-12room_heating,
         sdh:S2-12room_maximum_airflow,
@@ -5818,7 +6206,8 @@ sdh:S2-12room_damper_position a brick:Damper_Position_Sensor ;
 sdh:S2-13 a brick:VAV ;
     bf:feeds sdh:ZoneS2-13 ;
     bf:hasPart sdh:S2-13damper ;
-    bf:hasPoint sdh:S2-13room_airflow,
+    bf:hasPoint sdh:S2-13_AI_3,
+        sdh:S2-13room_airflow,
         sdh:S2-13room_damper_position,
         sdh:S2-13room_heating,
         sdh:S2-13room_maximum_airflow,
@@ -5833,7 +6222,8 @@ sdh:S2-13room_damper_position a brick:Damper_Position_Sensor ;
 sdh:S2-14 a brick:VAV ;
     bf:feeds sdh:ZoneS2-14 ;
     bf:hasPart sdh:S2-14damper ;
-    bf:hasPoint sdh:S2-14room_airflow,
+    bf:hasPoint sdh:S2-14_AI_3,
+        sdh:S2-14room_airflow,
         sdh:S2-14room_damper_position,
         sdh:S2-14room_heating,
         sdh:S2-14room_maximum_airflow,
@@ -5848,7 +6238,8 @@ sdh:S2-14room_damper_position a brick:Damper_Position_Sensor ;
 sdh:S2-15 a brick:VAV ;
     bf:feeds sdh:ZoneS2-15 ;
     bf:hasPart sdh:S2-15damper ;
-    bf:hasPoint sdh:S2-15room_airflow,
+    bf:hasPoint sdh:S2-15_AI_3,
+        sdh:S2-15room_airflow,
         sdh:S2-15room_damper_position,
         sdh:S2-15room_heating,
         sdh:S2-15room_maximum_airflow,
@@ -5863,7 +6254,8 @@ sdh:S2-15room_damper_position a brick:Damper_Position_Sensor ;
 sdh:S2-16 a brick:VAV ;
     bf:feeds sdh:ZoneS2-16 ;
     bf:hasPart sdh:S2-16damper ;
-    bf:hasPoint sdh:S2-16room_airflow,
+    bf:hasPoint sdh:S2-16_AI_3,
+        sdh:S2-16room_airflow,
         sdh:S2-16room_damper_position,
         sdh:S2-16room_heating,
         sdh:S2-16room_maximum_airflow,
@@ -5878,7 +6270,8 @@ sdh:S2-16room_damper_position a brick:Damper_Position_Sensor ;
 sdh:S2-17 a brick:VAV ;
     bf:feeds sdh:ZoneS2-17 ;
     bf:hasPart sdh:S2-17damper ;
-    bf:hasPoint sdh:S2-17room_airflow,
+    bf:hasPoint sdh:S2-17_AI_3,
+        sdh:S2-17room_airflow,
         sdh:S2-17room_damper_position,
         sdh:S2-17room_heating,
         sdh:S2-17room_maximum_airflow,
@@ -5893,7 +6286,8 @@ sdh:S2-17room_damper_position a brick:Damper_Position_Sensor ;
 sdh:S2-18 a brick:VAV ;
     bf:feeds sdh:ZoneS2-18 ;
     bf:hasPart sdh:S2-18damper ;
-    bf:hasPoint sdh:S2-18room_airflow,
+    bf:hasPoint sdh:S2-18_AI_3,
+        sdh:S2-18room_airflow,
         sdh:S2-18room_damper_position,
         sdh:S2-18room_heating,
         sdh:S2-18room_maximum_airflow,
@@ -5908,7 +6302,8 @@ sdh:S2-18room_damper_position a brick:Damper_Position_Sensor ;
 sdh:S2-19 a brick:VAV ;
     bf:feeds sdh:ZoneS2-19 ;
     bf:hasPart sdh:S2-19damper ;
-    bf:hasPoint sdh:S2-19room_airflow,
+    bf:hasPoint sdh:S2-19_AI_3,
+        sdh:S2-19room_airflow,
         sdh:S2-19room_damper_position,
         sdh:S2-19room_heating,
         sdh:S2-19room_maximum_airflow,
@@ -5923,7 +6318,8 @@ sdh:S2-19room_damper_position a brick:Damper_Position_Sensor ;
 sdh:S2-20 a brick:VAV ;
     bf:feeds sdh:ZoneS2-20 ;
     bf:hasPart sdh:S2-20damper ;
-    bf:hasPoint sdh:S2-20room_airflow,
+    bf:hasPoint sdh:S2-20_AI_3,
+        sdh:S2-20room_airflow,
         sdh:S2-20room_damper_position,
         sdh:S2-20room_heating,
         sdh:S2-20room_maximum_airflow,
@@ -5938,7 +6334,8 @@ sdh:S2-20room_damper_position a brick:Damper_Position_Sensor ;
 sdh:S2-21 a brick:VAV ;
     bf:feeds sdh:ZoneS2-21 ;
     bf:hasPart sdh:S2-21damper ;
-    bf:hasPoint sdh:S2-21room_airflow,
+    bf:hasPoint sdh:S2-21_AI_3,
+        sdh:S2-21room_airflow,
         sdh:S2-21room_damper_position,
         sdh:S2-21room_heating,
         sdh:S2-21room_maximum_airflow,
@@ -5953,7 +6350,8 @@ sdh:S2-21room_damper_position a brick:Damper_Position_Sensor ;
 sdh:S3-01 a brick:VAV ;
     bf:feeds sdh:ZoneS3-01 ;
     bf:hasPart sdh:S3-01damper ;
-    bf:hasPoint sdh:S3-01room_airflow,
+    bf:hasPoint sdh:S3-01_AI_3,
+        sdh:S3-01room_airflow,
         sdh:S3-01room_damper_position,
         sdh:S3-01room_heating,
         sdh:S3-01room_maximum_airflow,
@@ -5968,7 +6366,8 @@ sdh:S3-01room_damper_position a brick:Damper_Position_Sensor ;
 sdh:S3-02 a brick:VAV ;
     bf:feeds sdh:ZoneS3-02 ;
     bf:hasPart sdh:S3-02damper ;
-    bf:hasPoint sdh:S3-02room_airflow,
+    bf:hasPoint sdh:S3-02_AI_3,
+        sdh:S3-02room_airflow,
         sdh:S3-02room_damper_position,
         sdh:S3-02room_heating,
         sdh:S3-02room_maximum_airflow,
@@ -5983,7 +6382,8 @@ sdh:S3-02room_damper_position a brick:Damper_Position_Sensor ;
 sdh:S3-03 a brick:VAV ;
     bf:feeds sdh:ZoneS3-03 ;
     bf:hasPart sdh:S3-03damper ;
-    bf:hasPoint sdh:S3-03room_airflow,
+    bf:hasPoint sdh:S3-03_AI_3,
+        sdh:S3-03room_airflow,
         sdh:S3-03room_damper_position,
         sdh:S3-03room_heating,
         sdh:S3-03room_maximum_airflow,
@@ -5998,7 +6398,8 @@ sdh:S3-03room_damper_position a brick:Damper_Position_Sensor ;
 sdh:S3-04 a brick:VAV ;
     bf:feeds sdh:ZoneS3-04 ;
     bf:hasPart sdh:S3-04damper ;
-    bf:hasPoint sdh:S3-04room_airflow,
+    bf:hasPoint sdh:S3-04_AI_3,
+        sdh:S3-04room_airflow,
         sdh:S3-04room_damper_position,
         sdh:S3-04room_heating,
         sdh:S3-04room_maximum_airflow,
@@ -6013,7 +6414,8 @@ sdh:S3-04room_damper_position a brick:Damper_Position_Sensor ;
 sdh:S3-05 a brick:VAV ;
     bf:feeds sdh:ZoneS3-05 ;
     bf:hasPart sdh:S3-05damper ;
-    bf:hasPoint sdh:S3-05room_airflow,
+    bf:hasPoint sdh:S3-05_AI_3,
+        sdh:S3-05room_airflow,
         sdh:S3-05room_damper_position,
         sdh:S3-05room_heating,
         sdh:S3-05room_maximum_airflow,
@@ -6028,7 +6430,8 @@ sdh:S3-05room_damper_position a brick:Damper_Position_Sensor ;
 sdh:S3-06 a brick:VAV ;
     bf:feeds sdh:ZoneS3-06 ;
     bf:hasPart sdh:S3-06damper ;
-    bf:hasPoint sdh:S3-06room_airflow,
+    bf:hasPoint sdh:S3-06_AI_3,
+        sdh:S3-06room_airflow,
         sdh:S3-06room_damper_position,
         sdh:S3-06room_heating,
         sdh:S3-06room_maximum_airflow,
@@ -6043,7 +6446,8 @@ sdh:S3-06room_damper_position a brick:Damper_Position_Sensor ;
 sdh:S3-07 a brick:VAV ;
     bf:feeds sdh:ZoneS3-07 ;
     bf:hasPart sdh:S3-07damper ;
-    bf:hasPoint sdh:S3-07room_airflow,
+    bf:hasPoint sdh:S3-07_AI_3,
+        sdh:S3-07room_airflow,
         sdh:S3-07room_damper_position,
         sdh:S3-07room_heating,
         sdh:S3-07room_maximum_airflow,
@@ -6058,7 +6462,8 @@ sdh:S3-07room_damper_position a brick:Damper_Position_Sensor ;
 sdh:S3-08 a brick:VAV ;
     bf:feeds sdh:ZoneS3-08 ;
     bf:hasPart sdh:S3-08damper ;
-    bf:hasPoint sdh:S3-08room_airflow,
+    bf:hasPoint sdh:S3-08_AI_3,
+        sdh:S3-08room_airflow,
         sdh:S3-08room_damper_position,
         sdh:S3-08room_heating,
         sdh:S3-08room_maximum_airflow,
@@ -6073,7 +6478,8 @@ sdh:S3-08room_damper_position a brick:Damper_Position_Sensor ;
 sdh:S3-09 a brick:VAV ;
     bf:feeds sdh:ZoneS3-09 ;
     bf:hasPart sdh:S3-09damper ;
-    bf:hasPoint sdh:S3-09room_airflow,
+    bf:hasPoint sdh:S3-09_AI_3,
+        sdh:S3-09room_airflow,
         sdh:S3-09room_damper_position,
         sdh:S3-09room_heating,
         sdh:S3-09room_maximum_airflow,
@@ -6088,7 +6494,8 @@ sdh:S3-09room_damper_position a brick:Damper_Position_Sensor ;
 sdh:S3-10 a brick:VAV ;
     bf:feeds sdh:ZoneS3-10 ;
     bf:hasPart sdh:S3-10damper ;
-    bf:hasPoint sdh:S3-10room_airflow,
+    bf:hasPoint sdh:S3-10_AI_3,
+        sdh:S3-10room_airflow,
         sdh:S3-10room_damper_position,
         sdh:S3-10room_heating,
         sdh:S3-10room_maximum_airflow,
@@ -6103,7 +6510,8 @@ sdh:S3-10room_damper_position a brick:Damper_Position_Sensor ;
 sdh:S3-11 a brick:VAV ;
     bf:feeds sdh:ZoneS3-11 ;
     bf:hasPart sdh:S3-11damper ;
-    bf:hasPoint sdh:S3-11room_airflow,
+    bf:hasPoint sdh:S3-11_AI_3,
+        sdh:S3-11room_airflow,
         sdh:S3-11room_damper_position,
         sdh:S3-11room_heating,
         sdh:S3-11room_maximum_airflow,
@@ -6118,7 +6526,8 @@ sdh:S3-11room_damper_position a brick:Damper_Position_Sensor ;
 sdh:S3-12 a brick:VAV ;
     bf:feeds sdh:ZoneS3-12 ;
     bf:hasPart sdh:S3-12damper ;
-    bf:hasPoint sdh:S3-12room_airflow,
+    bf:hasPoint sdh:S3-12_AI_3,
+        sdh:S3-12room_airflow,
         sdh:S3-12room_damper_position,
         sdh:S3-12room_heating,
         sdh:S3-12room_maximum_airflow,
@@ -6159,7 +6568,8 @@ sdh:S3-14room_damper_position a brick:Damper_Position_Sensor ;
 sdh:S3-15 a brick:VAV ;
     bf:feeds sdh:ZoneS3-15 ;
     bf:hasPart sdh:S3-15damper ;
-    bf:hasPoint sdh:S3-15room_airflow,
+    bf:hasPoint sdh:S3-15_AI_3,
+        sdh:S3-15room_airflow,
         sdh:S3-15room_damper_position,
         sdh:S3-15room_heating,
         sdh:S3-15room_maximum_airflow,
@@ -6174,7 +6584,8 @@ sdh:S3-15room_damper_position a brick:Damper_Position_Sensor ;
 sdh:S3-16 a brick:VAV ;
     bf:feeds sdh:ZoneS3-16 ;
     bf:hasPart sdh:S3-16damper ;
-    bf:hasPoint sdh:S3-16room_airflow,
+    bf:hasPoint sdh:S3-16_AI_3,
+        sdh:S3-16room_airflow,
         sdh:S3-16room_damper_position,
         sdh:S3-16room_heating,
         sdh:S3-16room_maximum_airflow,
@@ -6189,7 +6600,8 @@ sdh:S3-16room_damper_position a brick:Damper_Position_Sensor ;
 sdh:S3-17 a brick:VAV ;
     bf:feeds sdh:ZoneS3-17 ;
     bf:hasPart sdh:S3-17damper ;
-    bf:hasPoint sdh:S3-17room_airflow,
+    bf:hasPoint sdh:S3-17_AI_3,
+        sdh:S3-17room_airflow,
         sdh:S3-17room_damper_position,
         sdh:S3-17room_heating,
         sdh:S3-17room_maximum_airflow,
@@ -6204,7 +6616,8 @@ sdh:S3-17room_damper_position a brick:Damper_Position_Sensor ;
 sdh:S3-18 a brick:VAV ;
     bf:feeds sdh:ZoneS3-18 ;
     bf:hasPart sdh:S3-18damper ;
-    bf:hasPoint sdh:S3-18room_airflow,
+    bf:hasPoint sdh:S3-18_AI_3,
+        sdh:S3-18room_airflow,
         sdh:S3-18room_damper_position,
         sdh:S3-18room_heating,
         sdh:S3-18room_maximum_airflow,
@@ -6219,7 +6632,8 @@ sdh:S3-18room_damper_position a brick:Damper_Position_Sensor ;
 sdh:S3-19 a brick:VAV ;
     bf:feeds sdh:ZoneS3-19 ;
     bf:hasPart sdh:S3-19damper ;
-    bf:hasPoint sdh:S3-19room_airflow,
+    bf:hasPoint sdh:S3-19_AI_3,
+        sdh:S3-19room_airflow,
         sdh:S3-19room_damper_position,
         sdh:S3-19room_heating,
         sdh:S3-19room_maximum_airflow,
@@ -6234,7 +6648,8 @@ sdh:S3-19room_damper_position a brick:Damper_Position_Sensor ;
 sdh:S3-20 a brick:VAV ;
     bf:feeds sdh:ZoneS3-20 ;
     bf:hasPart sdh:S3-20damper ;
-    bf:hasPoint sdh:S3-20room_airflow,
+    bf:hasPoint sdh:S3-20_AI_3,
+        sdh:S3-20room_airflow,
         sdh:S3-20room_damper_position,
         sdh:S3-20room_heating,
         sdh:S3-20room_maximum_airflow,
@@ -6249,7 +6664,8 @@ sdh:S3-20room_damper_position a brick:Damper_Position_Sensor ;
 sdh:S3-21 a brick:VAV ;
     bf:feeds sdh:ZoneS3-21 ;
     bf:hasPart sdh:S3-21damper ;
-    bf:hasPoint sdh:S3-21room_airflow,
+    bf:hasPoint sdh:S3-21_AI_3,
+        sdh:S3-21room_airflow,
         sdh:S3-21room_damper_position,
         sdh:S3-21room_heating,
         sdh:S3-21room_maximum_airflow,
@@ -6264,7 +6680,8 @@ sdh:S3-21room_damper_position a brick:Damper_Position_Sensor ;
 sdh:S4-01 a brick:VAV ;
     bf:feeds sdh:ZoneS4-01 ;
     bf:hasPart sdh:S4-01damper ;
-    bf:hasPoint sdh:S4-01room_airflow,
+    bf:hasPoint sdh:S4-01_AI_3,
+        sdh:S4-01room_airflow,
         sdh:S4-01room_damper_position,
         sdh:S4-01room_heating,
         sdh:S4-01room_maximum_airflow,
@@ -6279,7 +6696,8 @@ sdh:S4-01room_damper_position a brick:Damper_Position_Sensor ;
 sdh:S4-02 a brick:VAV ;
     bf:feeds sdh:ZoneS4-02 ;
     bf:hasPart sdh:S4-02damper ;
-    bf:hasPoint sdh:S4-02room_airflow,
+    bf:hasPoint sdh:S4-02_AI_3,
+        sdh:S4-02room_airflow,
         sdh:S4-02room_damper_position,
         sdh:S4-02room_heating,
         sdh:S4-02room_maximum_airflow,
@@ -6294,7 +6712,8 @@ sdh:S4-02room_damper_position a brick:Damper_Position_Sensor ;
 sdh:S4-03 a brick:VAV ;
     bf:feeds sdh:ZoneS4-03 ;
     bf:hasPart sdh:S4-03damper ;
-    bf:hasPoint sdh:S4-03room_airflow,
+    bf:hasPoint sdh:S4-03_AI_3,
+        sdh:S4-03room_airflow,
         sdh:S4-03room_damper_position,
         sdh:S4-03room_heating,
         sdh:S4-03room_maximum_airflow,
@@ -6309,7 +6728,8 @@ sdh:S4-03room_damper_position a brick:Damper_Position_Sensor ;
 sdh:S4-04 a brick:VAV ;
     bf:feeds sdh:ZoneS4-04 ;
     bf:hasPart sdh:S4-04damper ;
-    bf:hasPoint sdh:S4-04room_airflow,
+    bf:hasPoint sdh:S4-04_AI_3,
+        sdh:S4-04room_airflow,
         sdh:S4-04room_damper_position,
         sdh:S4-04room_heating,
         sdh:S4-04room_maximum_airflow,
@@ -6324,7 +6744,8 @@ sdh:S4-04room_damper_position a brick:Damper_Position_Sensor ;
 sdh:S4-05 a brick:VAV ;
     bf:feeds sdh:ZoneS4-05 ;
     bf:hasPart sdh:S4-05damper ;
-    bf:hasPoint sdh:S4-05room_airflow,
+    bf:hasPoint sdh:S4-05_AI_3,
+        sdh:S4-05room_airflow,
         sdh:S4-05room_damper_position,
         sdh:S4-05room_heating,
         sdh:S4-05room_maximum_airflow,
@@ -6339,7 +6760,8 @@ sdh:S4-05room_damper_position a brick:Damper_Position_Sensor ;
 sdh:S4-06 a brick:VAV ;
     bf:feeds sdh:ZoneS4-06 ;
     bf:hasPart sdh:S4-06damper ;
-    bf:hasPoint sdh:S4-06room_airflow,
+    bf:hasPoint sdh:S4-06_AI_3,
+        sdh:S4-06room_airflow,
         sdh:S4-06room_damper_position,
         sdh:S4-06room_heating,
         sdh:S4-06room_maximum_airflow,
@@ -6354,7 +6776,8 @@ sdh:S4-06room_damper_position a brick:Damper_Position_Sensor ;
 sdh:S4-07 a brick:VAV ;
     bf:feeds sdh:ZoneS4-07 ;
     bf:hasPart sdh:S4-07damper ;
-    bf:hasPoint sdh:S4-07room_airflow,
+    bf:hasPoint sdh:S4-07_AI_3,
+        sdh:S4-07room_airflow,
         sdh:S4-07room_damper_position,
         sdh:S4-07room_heating,
         sdh:S4-07room_maximum_airflow,
@@ -6369,7 +6792,8 @@ sdh:S4-07room_damper_position a brick:Damper_Position_Sensor ;
 sdh:S4-08 a brick:VAV ;
     bf:feeds sdh:ZoneS4-08 ;
     bf:hasPart sdh:S4-08damper ;
-    bf:hasPoint sdh:S4-08room_airflow,
+    bf:hasPoint sdh:S4-08_AI_3,
+        sdh:S4-08room_airflow,
         sdh:S4-08room_damper_position,
         sdh:S4-08room_heating,
         sdh:S4-08room_maximum_airflow,
@@ -6384,7 +6808,8 @@ sdh:S4-08room_damper_position a brick:Damper_Position_Sensor ;
 sdh:S4-09 a brick:VAV ;
     bf:feeds sdh:ZoneS4-09 ;
     bf:hasPart sdh:S4-09damper ;
-    bf:hasPoint sdh:S4-09room_airflow,
+    bf:hasPoint sdh:S4-09_AI_3,
+        sdh:S4-09room_airflow,
         sdh:S4-09room_damper_position,
         sdh:S4-09room_heating,
         sdh:S4-09room_maximum_airflow,
@@ -6412,7 +6837,8 @@ sdh:S4-10room_damper_position a brick:Damper_Position_Sensor ;
 sdh:S4-11 a brick:VAV ;
     bf:feeds sdh:ZoneS4-11 ;
     bf:hasPart sdh:S4-11damper ;
-    bf:hasPoint sdh:S4-11room_airflow,
+    bf:hasPoint sdh:S4-11_AI_3,
+        sdh:S4-11room_airflow,
         sdh:S4-11room_damper_position,
         sdh:S4-11room_heating,
         sdh:S4-11room_maximum_airflow,
@@ -6427,7 +6853,8 @@ sdh:S4-11room_damper_position a brick:Damper_Position_Sensor ;
 sdh:S4-12 a brick:VAV ;
     bf:feeds sdh:ZoneS4-12 ;
     bf:hasPart sdh:S4-12damper ;
-    bf:hasPoint sdh:S4-12room_airflow,
+    bf:hasPoint sdh:S4-12_AI_3,
+        sdh:S4-12room_airflow,
         sdh:S4-12room_damper_position,
         sdh:S4-12room_heating,
         sdh:S4-12room_maximum_airflow,
@@ -6442,7 +6869,8 @@ sdh:S4-12room_damper_position a brick:Damper_Position_Sensor ;
 sdh:S4-13 a brick:VAV ;
     bf:feeds sdh:ZoneS4-13 ;
     bf:hasPart sdh:S4-13damper ;
-    bf:hasPoint sdh:S4-13room_airflow,
+    bf:hasPoint sdh:S4-13_AI_3,
+        sdh:S4-13room_airflow,
         sdh:S4-13room_damper_position,
         sdh:S4-13room_heating,
         sdh:S4-13room_maximum_airflow,
@@ -6470,7 +6898,8 @@ sdh:S4-14room_damper_position a brick:Damper_Position_Sensor ;
 sdh:S4-15 a brick:VAV ;
     bf:feeds sdh:ZoneS4-15 ;
     bf:hasPart sdh:S4-15damper ;
-    bf:hasPoint sdh:S4-15room_airflow,
+    bf:hasPoint sdh:S4-15_AI_3,
+        sdh:S4-15room_airflow,
         sdh:S4-15room_damper_position,
         sdh:S4-15room_heating,
         sdh:S4-15room_maximum_airflow,
@@ -6485,7 +6914,8 @@ sdh:S4-15room_damper_position a brick:Damper_Position_Sensor ;
 sdh:S4-16 a brick:VAV ;
     bf:feeds sdh:ZoneS4-16 ;
     bf:hasPart sdh:S4-16damper ;
-    bf:hasPoint sdh:S4-16room_airflow,
+    bf:hasPoint sdh:S4-16_AI_3,
+        sdh:S4-16room_airflow,
         sdh:S4-16room_damper_position,
         sdh:S4-16room_heating,
         sdh:S4-16room_maximum_airflow,
@@ -6513,7 +6943,8 @@ sdh:S4-17room_damper_position a brick:Damper_Position_Sensor ;
 sdh:S4-18 a brick:VAV ;
     bf:feeds sdh:ZoneS4-18 ;
     bf:hasPart sdh:S4-18damper ;
-    bf:hasPoint sdh:S4-18room_airflow,
+    bf:hasPoint sdh:S4-18_AI_3,
+        sdh:S4-18room_airflow,
         sdh:S4-18room_damper_position,
         sdh:S4-18room_heating,
         sdh:S4-18room_maximum_airflow,
@@ -6528,7 +6959,8 @@ sdh:S4-18room_damper_position a brick:Damper_Position_Sensor ;
 sdh:S4-19 a brick:VAV ;
     bf:feeds sdh:ZoneS4-19 ;
     bf:hasPart sdh:S4-19damper ;
-    bf:hasPoint sdh:S4-19room_airflow,
+    bf:hasPoint sdh:S4-19_AI_3,
+        sdh:S4-19room_airflow,
         sdh:S4-19room_damper_position,
         sdh:S4-19room_heating,
         sdh:S4-19room_maximum_airflow,
@@ -6543,7 +6975,8 @@ sdh:S4-19room_damper_position a brick:Damper_Position_Sensor ;
 sdh:S4-20 a brick:VAV ;
     bf:feeds sdh:ZoneS4-20 ;
     bf:hasPart sdh:S4-20damper ;
-    bf:hasPoint sdh:S4-20room_airflow,
+    bf:hasPoint sdh:S4-20_AI_3,
+        sdh:S4-20room_airflow,
         sdh:S4-20room_damper_position,
         sdh:S4-20room_heating,
         sdh:S4-20room_maximum_airflow,
@@ -6558,7 +6991,8 @@ sdh:S4-20room_damper_position a brick:Damper_Position_Sensor ;
 sdh:S4-21 a brick:VAV ;
     bf:feeds sdh:ZoneS4-21 ;
     bf:hasPart sdh:S4-21damper ;
-    bf:hasPoint sdh:S4-21room_airflow,
+    bf:hasPoint sdh:S4-21_AI_3,
+        sdh:S4-21room_airflow,
         sdh:S4-21room_damper_position,
         sdh:S4-21room_heating,
         sdh:S4-21room_maximum_airflow,
@@ -6573,7 +7007,8 @@ sdh:S4-21room_damper_position a brick:Damper_Position_Sensor ;
 sdh:S5-01 a brick:VAV ;
     bf:feeds sdh:ZoneS5-01 ;
     bf:hasPart sdh:S5-01damper ;
-    bf:hasPoint sdh:S5-01room_airflow,
+    bf:hasPoint sdh:S5-01_AI_3,
+        sdh:S5-01room_airflow,
         sdh:S5-01room_damper_position,
         sdh:S5-01room_heating,
         sdh:S5-01room_maximum_airflow,
@@ -6588,7 +7023,8 @@ sdh:S5-01room_damper_position a brick:Damper_Position_Sensor ;
 sdh:S5-02 a brick:VAV ;
     bf:feeds sdh:ZoneS5-02 ;
     bf:hasPart sdh:S5-02damper ;
-    bf:hasPoint sdh:S5-02room_airflow,
+    bf:hasPoint sdh:S5-02_AI_3,
+        sdh:S5-02room_airflow,
         sdh:S5-02room_damper_position,
         sdh:S5-02room_heating,
         sdh:S5-02room_maximum_airflow,
@@ -6603,7 +7039,8 @@ sdh:S5-02room_damper_position a brick:Damper_Position_Sensor ;
 sdh:S5-03 a brick:VAV ;
     bf:feeds sdh:ZoneS5-03 ;
     bf:hasPart sdh:S5-03damper ;
-    bf:hasPoint sdh:S5-03room_airflow,
+    bf:hasPoint sdh:S5-03_AI_3,
+        sdh:S5-03room_airflow,
         sdh:S5-03room_damper_position,
         sdh:S5-03room_heating,
         sdh:S5-03room_maximum_airflow,
@@ -6618,7 +7055,8 @@ sdh:S5-03room_damper_position a brick:Damper_Position_Sensor ;
 sdh:S5-04 a brick:VAV ;
     bf:feeds sdh:ZoneS5-04 ;
     bf:hasPart sdh:S5-04damper ;
-    bf:hasPoint sdh:S5-04room_airflow,
+    bf:hasPoint sdh:S5-04_AI_3,
+        sdh:S5-04room_airflow,
         sdh:S5-04room_damper_position,
         sdh:S5-04room_heating,
         sdh:S5-04room_maximum_airflow,
@@ -6633,7 +7071,8 @@ sdh:S5-04room_damper_position a brick:Damper_Position_Sensor ;
 sdh:S5-05 a brick:VAV ;
     bf:feeds sdh:ZoneS5-05 ;
     bf:hasPart sdh:S5-05damper ;
-    bf:hasPoint sdh:S5-05room_airflow,
+    bf:hasPoint sdh:S5-05_AI_3,
+        sdh:S5-05room_airflow,
         sdh:S5-05room_damper_position,
         sdh:S5-05room_heating,
         sdh:S5-05room_maximum_airflow,
@@ -6648,7 +7087,8 @@ sdh:S5-05room_damper_position a brick:Damper_Position_Sensor ;
 sdh:S5-06 a brick:VAV ;
     bf:feeds sdh:ZoneS5-06 ;
     bf:hasPart sdh:S5-06damper ;
-    bf:hasPoint sdh:S5-06room_airflow,
+    bf:hasPoint sdh:S5-06_AI_3,
+        sdh:S5-06room_airflow,
         sdh:S5-06room_damper_position,
         sdh:S5-06room_heating,
         sdh:S5-06room_maximum_airflow,
@@ -6663,7 +7103,8 @@ sdh:S5-06room_damper_position a brick:Damper_Position_Sensor ;
 sdh:S5-07 a brick:VAV ;
     bf:feeds sdh:ZoneS5-07 ;
     bf:hasPart sdh:S5-07damper ;
-    bf:hasPoint sdh:S5-07room_airflow,
+    bf:hasPoint sdh:S5-07_AI_3,
+        sdh:S5-07room_airflow,
         sdh:S5-07room_damper_position,
         sdh:S5-07room_heating,
         sdh:S5-07room_maximum_airflow,
@@ -6678,7 +7119,8 @@ sdh:S5-07room_damper_position a brick:Damper_Position_Sensor ;
 sdh:S5-08 a brick:VAV ;
     bf:feeds sdh:ZoneS5-08 ;
     bf:hasPart sdh:S5-08damper ;
-    bf:hasPoint sdh:S5-08room_airflow,
+    bf:hasPoint sdh:S5-08_AI_3,
+        sdh:S5-08room_airflow,
         sdh:S5-08room_damper_position,
         sdh:S5-08room_heating,
         sdh:S5-08room_maximum_airflow,
@@ -6693,7 +7135,8 @@ sdh:S5-08room_damper_position a brick:Damper_Position_Sensor ;
 sdh:S5-09 a brick:VAV ;
     bf:feeds sdh:ZoneS5-09 ;
     bf:hasPart sdh:S5-09damper ;
-    bf:hasPoint sdh:S5-09room_airflow,
+    bf:hasPoint sdh:S5-09_AI_3,
+        sdh:S5-09room_airflow,
         sdh:S5-09room_damper_position,
         sdh:S5-09room_heating,
         sdh:S5-09room_maximum_airflow,
@@ -6708,7 +7151,8 @@ sdh:S5-09room_damper_position a brick:Damper_Position_Sensor ;
 sdh:S5-10 a brick:VAV ;
     bf:feeds sdh:ZoneS5-10 ;
     bf:hasPart sdh:S5-10damper ;
-    bf:hasPoint sdh:S5-10room_airflow,
+    bf:hasPoint sdh:S5-10_AI_3,
+        sdh:S5-10room_airflow,
         sdh:S5-10room_damper_position,
         sdh:S5-10room_heating,
         sdh:S5-10room_maximum_airflow,
@@ -6723,7 +7167,8 @@ sdh:S5-10room_damper_position a brick:Damper_Position_Sensor ;
 sdh:S5-11 a brick:VAV ;
     bf:feeds sdh:ZoneS5-11 ;
     bf:hasPart sdh:S5-11damper ;
-    bf:hasPoint sdh:S5-11room_airflow,
+    bf:hasPoint sdh:S5-11_AI_3,
+        sdh:S5-11room_airflow,
         sdh:S5-11room_damper_position,
         sdh:S5-11room_heating,
         sdh:S5-11room_maximum_airflow,
@@ -6738,7 +7183,8 @@ sdh:S5-11room_damper_position a brick:Damper_Position_Sensor ;
 sdh:S5-12 a brick:VAV ;
     bf:feeds sdh:ZoneS5-12 ;
     bf:hasPart sdh:S5-12damper ;
-    bf:hasPoint sdh:S5-12room_airflow,
+    bf:hasPoint sdh:S5-12_AI_3,
+        sdh:S5-12room_airflow,
         sdh:S5-12room_damper_position,
         sdh:S5-12room_heating,
         sdh:S5-12room_maximum_airflow,
@@ -6753,7 +7199,8 @@ sdh:S5-12room_damper_position a brick:Damper_Position_Sensor ;
 sdh:S5-13 a brick:VAV ;
     bf:feeds sdh:ZoneS5-13 ;
     bf:hasPart sdh:S5-13damper ;
-    bf:hasPoint sdh:S5-13room_airflow,
+    bf:hasPoint sdh:S5-13_AI_3,
+        sdh:S5-13room_airflow,
         sdh:S5-13room_damper_position,
         sdh:S5-13room_heating,
         sdh:S5-13room_maximum_airflow,
@@ -6768,7 +7215,8 @@ sdh:S5-13room_damper_position a brick:Damper_Position_Sensor ;
 sdh:S5-14 a brick:VAV ;
     bf:feeds sdh:ZoneS5-14 ;
     bf:hasPart sdh:S5-14damper ;
-    bf:hasPoint sdh:S5-14room_airflow,
+    bf:hasPoint sdh:S5-14_AI_3,
+        sdh:S5-14room_airflow,
         sdh:S5-14room_damper_position,
         sdh:S5-14room_heating,
         sdh:S5-14room_maximum_airflow,
@@ -6796,7 +7244,8 @@ sdh:S5-15room_damper_position a brick:Damper_Position_Sensor ;
 sdh:S5-16 a brick:VAV ;
     bf:feeds sdh:ZoneS5-16 ;
     bf:hasPart sdh:S5-16damper ;
-    bf:hasPoint sdh:S5-16room_airflow,
+    bf:hasPoint sdh:S5-16_AI_3,
+        sdh:S5-16room_airflow,
         sdh:S5-16room_damper_position,
         sdh:S5-16room_heating,
         sdh:S5-16room_maximum_airflow,
@@ -6824,7 +7273,8 @@ sdh:S5-17room_damper_position a brick:Damper_Position_Sensor ;
 sdh:S5-18 a brick:VAV ;
     bf:feeds sdh:ZoneS5-18 ;
     bf:hasPart sdh:S5-18damper ;
-    bf:hasPoint sdh:S5-18room_airflow,
+    bf:hasPoint sdh:S5-18_AI_3,
+        sdh:S5-18room_airflow,
         sdh:S5-18room_damper_position,
         sdh:S5-18room_heating,
         sdh:S5-18room_maximum_airflow,
@@ -6839,7 +7289,8 @@ sdh:S5-18room_damper_position a brick:Damper_Position_Sensor ;
 sdh:S5-19 a brick:VAV ;
     bf:feeds sdh:ZoneS5-19 ;
     bf:hasPart sdh:S5-19damper ;
-    bf:hasPoint sdh:S5-19room_airflow,
+    bf:hasPoint sdh:S5-19_AI_3,
+        sdh:S5-19room_airflow,
         sdh:S5-19room_damper_position,
         sdh:S5-19room_heating,
         sdh:S5-19room_maximum_airflow,
@@ -6854,7 +7305,8 @@ sdh:S5-19room_damper_position a brick:Damper_Position_Sensor ;
 sdh:S5-20 a brick:VAV ;
     bf:feeds sdh:ZoneS5-20 ;
     bf:hasPart sdh:S5-20damper ;
-    bf:hasPoint sdh:S5-20room_airflow,
+    bf:hasPoint sdh:S5-20_AI_3,
+        sdh:S5-20room_airflow,
         sdh:S5-20room_damper_position,
         sdh:S5-20room_heating,
         sdh:S5-20room_maximum_airflow,
@@ -6869,7 +7321,8 @@ sdh:S5-20room_damper_position a brick:Damper_Position_Sensor ;
 sdh:S5-21 a brick:VAV ;
     bf:feeds sdh:ZoneS5-21 ;
     bf:hasPart sdh:S5-21damper ;
-    bf:hasPoint sdh:S5-21room_airflow,
+    bf:hasPoint sdh:S5-21_AI_3,
+        sdh:S5-21room_airflow,
         sdh:S5-21room_damper_position,
         sdh:S5-21room_heating,
         sdh:S5-21room_maximum_airflow,
@@ -6884,7 +7337,8 @@ sdh:S5-21room_damper_position a brick:Damper_Position_Sensor ;
 sdh:S6-01 a brick:VAV ;
     bf:feeds sdh:ZoneS6-01 ;
     bf:hasPart sdh:S6-01damper ;
-    bf:hasPoint sdh:S6-01room_airflow,
+    bf:hasPoint sdh:S6-01_AI_3,
+        sdh:S6-01room_airflow,
         sdh:S6-01room_damper_position,
         sdh:S6-01room_heating,
         sdh:S6-01room_maximum_airflow,
@@ -6899,7 +7353,8 @@ sdh:S6-01room_damper_position a brick:Damper_Position_Sensor ;
 sdh:S6-02 a brick:VAV ;
     bf:feeds sdh:ZoneS6-02 ;
     bf:hasPart sdh:S6-02damper ;
-    bf:hasPoint sdh:S6-02room_airflow,
+    bf:hasPoint sdh:S6-02_AI_3,
+        sdh:S6-02room_airflow,
         sdh:S6-02room_damper_position,
         sdh:S6-02room_heating,
         sdh:S6-02room_maximum_airflow,
@@ -6914,7 +7369,8 @@ sdh:S6-02room_damper_position a brick:Damper_Position_Sensor ;
 sdh:S6-03 a brick:VAV ;
     bf:feeds sdh:ZoneS6-03 ;
     bf:hasPart sdh:S6-03damper ;
-    bf:hasPoint sdh:S6-03room_airflow,
+    bf:hasPoint sdh:S6-03_AI_3,
+        sdh:S6-03room_airflow,
         sdh:S6-03room_damper_position,
         sdh:S6-03room_heating,
         sdh:S6-03room_maximum_airflow,
@@ -6929,7 +7385,8 @@ sdh:S6-03room_damper_position a brick:Damper_Position_Sensor ;
 sdh:S6-04 a brick:VAV ;
     bf:feeds sdh:ZoneS6-04 ;
     bf:hasPart sdh:S6-04damper ;
-    bf:hasPoint sdh:S6-04room_airflow,
+    bf:hasPoint sdh:S6-04_AI_3,
+        sdh:S6-04room_airflow,
         sdh:S6-04room_damper_position,
         sdh:S6-04room_heating,
         sdh:S6-04room_maximum_airflow,
@@ -6944,7 +7401,8 @@ sdh:S6-04room_damper_position a brick:Damper_Position_Sensor ;
 sdh:S6-05 a brick:VAV ;
     bf:feeds sdh:ZoneS6-05 ;
     bf:hasPart sdh:S6-05damper ;
-    bf:hasPoint sdh:S6-05room_airflow,
+    bf:hasPoint sdh:S6-05_AI_3,
+        sdh:S6-05room_airflow,
         sdh:S6-05room_damper_position,
         sdh:S6-05room_heating,
         sdh:S6-05room_maximum_airflow,
@@ -6959,7 +7417,8 @@ sdh:S6-05room_damper_position a brick:Damper_Position_Sensor ;
 sdh:S6-06 a brick:VAV ;
     bf:feeds sdh:ZoneS6-06 ;
     bf:hasPart sdh:S6-06damper ;
-    bf:hasPoint sdh:S6-06room_airflow,
+    bf:hasPoint sdh:S6-06_AI_3,
+        sdh:S6-06room_airflow,
         sdh:S6-06room_damper_position,
         sdh:S6-06room_heating,
         sdh:S6-06room_maximum_airflow,
@@ -6974,7 +7433,8 @@ sdh:S6-06room_damper_position a brick:Damper_Position_Sensor ;
 sdh:S6-07 a brick:VAV ;
     bf:feeds sdh:ZoneS6-07 ;
     bf:hasPart sdh:S6-07damper ;
-    bf:hasPoint sdh:S6-07room_airflow,
+    bf:hasPoint sdh:S6-07_AI_3,
+        sdh:S6-07room_airflow,
         sdh:S6-07room_damper_position,
         sdh:S6-07room_heating,
         sdh:S6-07room_maximum_airflow,
@@ -6989,7 +7449,8 @@ sdh:S6-07room_damper_position a brick:Damper_Position_Sensor ;
 sdh:S6-08 a brick:VAV ;
     bf:feeds sdh:ZoneS6-08 ;
     bf:hasPart sdh:S6-08damper ;
-    bf:hasPoint sdh:S6-08room_airflow,
+    bf:hasPoint sdh:S6-08_AI_3,
+        sdh:S6-08room_airflow,
         sdh:S6-08room_damper_position,
         sdh:S6-08room_heating,
         sdh:S6-08room_maximum_airflow,
@@ -7017,7 +7478,8 @@ sdh:S6-09room_damper_position a brick:Damper_Position_Sensor ;
 sdh:S6-10 a brick:VAV ;
     bf:feeds sdh:ZoneS6-10 ;
     bf:hasPart sdh:S6-10damper ;
-    bf:hasPoint sdh:S6-10room_airflow,
+    bf:hasPoint sdh:S6-10_AI_3,
+        sdh:S6-10room_airflow,
         sdh:S6-10room_damper_position,
         sdh:S6-10room_heating,
         sdh:S6-10room_maximum_airflow,
@@ -7032,7 +7494,8 @@ sdh:S6-10room_damper_position a brick:Damper_Position_Sensor ;
 sdh:S6-11 a brick:VAV ;
     bf:feeds sdh:ZoneS6-11 ;
     bf:hasPart sdh:S6-11damper ;
-    bf:hasPoint sdh:S6-11room_airflow,
+    bf:hasPoint sdh:S6-11_AI_3,
+        sdh:S6-11room_airflow,
         sdh:S6-11room_damper_position,
         sdh:S6-11room_heating,
         sdh:S6-11room_maximum_airflow,
@@ -7047,7 +7510,8 @@ sdh:S6-11room_damper_position a brick:Damper_Position_Sensor ;
 sdh:S6-12 a brick:VAV ;
     bf:feeds sdh:ZoneS6-12 ;
     bf:hasPart sdh:S6-12damper ;
-    bf:hasPoint sdh:S6-12room_airflow,
+    bf:hasPoint sdh:S6-12_AI_3,
+        sdh:S6-12room_airflow,
         sdh:S6-12room_damper_position,
         sdh:S6-12room_heating,
         sdh:S6-12room_maximum_airflow,
@@ -7062,7 +7526,8 @@ sdh:S6-12room_damper_position a brick:Damper_Position_Sensor ;
 sdh:S6-13 a brick:VAV ;
     bf:feeds sdh:ZoneS6-13 ;
     bf:hasPart sdh:S6-13damper ;
-    bf:hasPoint sdh:S6-13room_airflow,
+    bf:hasPoint sdh:S6-13_AI_3,
+        sdh:S6-13room_airflow,
         sdh:S6-13room_damper_position,
         sdh:S6-13room_heating,
         sdh:S6-13room_maximum_airflow,
@@ -7090,7 +7555,8 @@ sdh:S6-14room_damper_position a brick:Damper_Position_Sensor ;
 sdh:S6-15 a brick:VAV ;
     bf:feeds sdh:ZoneS6-15 ;
     bf:hasPart sdh:S6-15damper ;
-    bf:hasPoint sdh:S6-15room_airflow,
+    bf:hasPoint sdh:S6-15_AI_3,
+        sdh:S6-15room_airflow,
         sdh:S6-15room_damper_position,
         sdh:S6-15room_heating,
         sdh:S6-15room_maximum_airflow,
@@ -7118,7 +7584,8 @@ sdh:S6-16room_damper_position a brick:Damper_Position_Sensor ;
 sdh:S6-17 a brick:VAV ;
     bf:feeds sdh:ZoneS6-17 ;
     bf:hasPart sdh:S6-17damper ;
-    bf:hasPoint sdh:S6-17room_airflow,
+    bf:hasPoint sdh:S6-17_AI_3,
+        sdh:S6-17room_airflow,
         sdh:S6-17room_damper_position,
         sdh:S6-17room_heating,
         sdh:S6-17room_maximum_airflow,
@@ -7133,7 +7600,8 @@ sdh:S6-17room_damper_position a brick:Damper_Position_Sensor ;
 sdh:S6-18 a brick:VAV ;
     bf:feeds sdh:ZoneS6-18 ;
     bf:hasPart sdh:S6-18damper ;
-    bf:hasPoint sdh:S6-18room_airflow,
+    bf:hasPoint sdh:S6-18_AI_3,
+        sdh:S6-18room_airflow,
         sdh:S6-18room_damper_position,
         sdh:S6-18room_heating,
         sdh:S6-18room_maximum_airflow,
@@ -7148,7 +7616,8 @@ sdh:S6-18room_damper_position a brick:Damper_Position_Sensor ;
 sdh:S6-19 a brick:VAV ;
     bf:feeds sdh:ZoneS6-19 ;
     bf:hasPart sdh:S6-19damper ;
-    bf:hasPoint sdh:S6-19room_airflow,
+    bf:hasPoint sdh:S6-19_AI_3,
+        sdh:S6-19room_airflow,
         sdh:S6-19room_damper_position,
         sdh:S6-19room_heating,
         sdh:S6-19room_maximum_airflow,
@@ -7163,7 +7632,8 @@ sdh:S6-19room_damper_position a brick:Damper_Position_Sensor ;
 sdh:S6-20 a brick:VAV ;
     bf:feeds sdh:ZoneS6-20 ;
     bf:hasPart sdh:S6-20damper ;
-    bf:hasPoint sdh:S6-20room_airflow,
+    bf:hasPoint sdh:S6-20_AI_3,
+        sdh:S6-20room_airflow,
         sdh:S6-20room_damper_position,
         sdh:S6-20room_heating,
         sdh:S6-20room_maximum_airflow,
@@ -7178,7 +7648,8 @@ sdh:S6-20room_damper_position a brick:Damper_Position_Sensor ;
 sdh:S7-01 a brick:VAV ;
     bf:feeds sdh:ZoneS7-01 ;
     bf:hasPart sdh:S7-01damper ;
-    bf:hasPoint sdh:S7-01room_airflow,
+    bf:hasPoint sdh:S7-01_AI_3,
+        sdh:S7-01room_airflow,
         sdh:S7-01room_damper_position,
         sdh:S7-01room_heating,
         sdh:S7-01room_maximum_airflow,
@@ -7193,7 +7664,8 @@ sdh:S7-01room_damper_position a brick:Damper_Position_Sensor ;
 sdh:S7-02 a brick:VAV ;
     bf:feeds sdh:ZoneS7-02 ;
     bf:hasPart sdh:S7-02damper ;
-    bf:hasPoint sdh:S7-02room_airflow,
+    bf:hasPoint sdh:S7-02_AI_3,
+        sdh:S7-02room_airflow,
         sdh:S7-02room_damper_position,
         sdh:S7-02room_heating,
         sdh:S7-02room_maximum_airflow,
@@ -7208,7 +7680,8 @@ sdh:S7-02room_damper_position a brick:Damper_Position_Sensor ;
 sdh:S7-03 a brick:VAV ;
     bf:feeds sdh:ZoneS7-03 ;
     bf:hasPart sdh:S7-03damper ;
-    bf:hasPoint sdh:S7-03room_airflow,
+    bf:hasPoint sdh:S7-03_AI_3,
+        sdh:S7-03room_airflow,
         sdh:S7-03room_damper_position,
         sdh:S7-03room_heating,
         sdh:S7-03room_maximum_airflow,
@@ -7223,7 +7696,8 @@ sdh:S7-03room_damper_position a brick:Damper_Position_Sensor ;
 sdh:S7-04 a brick:VAV ;
     bf:feeds sdh:ZoneS7-04 ;
     bf:hasPart sdh:S7-04damper ;
-    bf:hasPoint sdh:S7-04room_airflow,
+    bf:hasPoint sdh:S7-04_AI_3,
+        sdh:S7-04room_airflow,
         sdh:S7-04room_damper_position,
         sdh:S7-04room_heating,
         sdh:S7-04room_maximum_airflow,
@@ -7238,7 +7712,8 @@ sdh:S7-04room_damper_position a brick:Damper_Position_Sensor ;
 sdh:S7-05 a brick:VAV ;
     bf:feeds sdh:ZoneS7-05 ;
     bf:hasPart sdh:S7-05damper ;
-    bf:hasPoint sdh:S7-05room_airflow,
+    bf:hasPoint sdh:S7-05_AI_3,
+        sdh:S7-05room_airflow,
         sdh:S7-05room_damper_position,
         sdh:S7-05room_heating,
         sdh:S7-05room_maximum_airflow,
@@ -7253,7 +7728,8 @@ sdh:S7-05room_damper_position a brick:Damper_Position_Sensor ;
 sdh:S7-06 a brick:VAV ;
     bf:feeds sdh:ZoneS7-06 ;
     bf:hasPart sdh:S7-06damper ;
-    bf:hasPoint sdh:S7-06room_airflow,
+    bf:hasPoint sdh:S7-06_AI_3,
+        sdh:S7-06room_airflow,
         sdh:S7-06room_damper_position,
         sdh:S7-06room_heating,
         sdh:S7-06room_maximum_airflow,
@@ -7268,7 +7744,8 @@ sdh:S7-06room_damper_position a brick:Damper_Position_Sensor ;
 sdh:S7-07 a brick:VAV ;
     bf:feeds sdh:ZoneS7-07 ;
     bf:hasPart sdh:S7-07damper ;
-    bf:hasPoint sdh:S7-07room_airflow,
+    bf:hasPoint sdh:S7-07_AI_3,
+        sdh:S7-07room_airflow,
         sdh:S7-07room_damper_position,
         sdh:S7-07room_heating,
         sdh:S7-07room_maximum_airflow,
@@ -7283,7 +7760,8 @@ sdh:S7-07room_damper_position a brick:Damper_Position_Sensor ;
 sdh:S7-08 a brick:VAV ;
     bf:feeds sdh:ZoneS7-08 ;
     bf:hasPart sdh:S7-08damper ;
-    bf:hasPoint sdh:S7-08room_airflow,
+    bf:hasPoint sdh:S7-08_AI_3,
+        sdh:S7-08room_airflow,
         sdh:S7-08room_damper_position,
         sdh:S7-08room_heating,
         sdh:S7-08room_maximum_airflow,
@@ -7298,7 +7776,8 @@ sdh:S7-08room_damper_position a brick:Damper_Position_Sensor ;
 sdh:S7-09 a brick:VAV ;
     bf:feeds sdh:ZoneS7-09 ;
     bf:hasPart sdh:S7-09damper ;
-    bf:hasPoint sdh:S7-09room_airflow,
+    bf:hasPoint sdh:S7-09_AI_3,
+        sdh:S7-09room_airflow,
         sdh:S7-09room_damper_position,
         sdh:S7-09room_heating,
         sdh:S7-09room_maximum_airflow,
@@ -7313,7 +7792,8 @@ sdh:S7-09room_damper_position a brick:Damper_Position_Sensor ;
 sdh:S7-10 a brick:VAV ;
     bf:feeds sdh:ZoneS7-10 ;
     bf:hasPart sdh:S7-10damper ;
-    bf:hasPoint sdh:S7-10room_airflow,
+    bf:hasPoint sdh:S7-10_AI_3,
+        sdh:S7-10room_airflow,
         sdh:S7-10room_damper_position,
         sdh:S7-10room_heating,
         sdh:S7-10room_maximum_airflow,
@@ -7354,7 +7834,8 @@ sdh:S7-12room_damper_position a brick:Damper_Position_Sensor ;
 sdh:S7-13 a brick:VAV ;
     bf:feeds sdh:ZoneS7-13 ;
     bf:hasPart sdh:S7-13damper ;
-    bf:hasPoint sdh:S7-13room_airflow,
+    bf:hasPoint sdh:S7-13_AI_3,
+        sdh:S7-13room_airflow,
         sdh:S7-13room_damper_position,
         sdh:S7-13room_heating,
         sdh:S7-13room_maximum_airflow,
@@ -7369,7 +7850,8 @@ sdh:S7-13room_damper_position a brick:Damper_Position_Sensor ;
 sdh:S7-14 a brick:VAV ;
     bf:feeds sdh:ZoneS7-14 ;
     bf:hasPart sdh:S7-14damper ;
-    bf:hasPoint sdh:S7-14room_airflow,
+    bf:hasPoint sdh:S7-14_AI_3,
+        sdh:S7-14room_airflow,
         sdh:S7-14room_damper_position,
         sdh:S7-14room_heating,
         sdh:S7-14room_maximum_airflow,
@@ -7384,7 +7866,8 @@ sdh:S7-14room_damper_position a brick:Damper_Position_Sensor ;
 sdh:S7-15 a brick:VAV ;
     bf:feeds sdh:ZoneS7-15 ;
     bf:hasPart sdh:S7-15damper ;
-    bf:hasPoint sdh:S7-15room_airflow,
+    bf:hasPoint sdh:S7-15_AI_3,
+        sdh:S7-15room_airflow,
         sdh:S7-15room_damper_position,
         sdh:S7-15room_heating,
         sdh:S7-15room_maximum_airflow,
@@ -7399,7 +7882,8 @@ sdh:S7-15room_damper_position a brick:Damper_Position_Sensor ;
 sdh:S7-16 a brick:VAV ;
     bf:feeds sdh:ZoneS7-16 ;
     bf:hasPart sdh:S7-16damper ;
-    bf:hasPoint sdh:S7-16room_airflow,
+    bf:hasPoint sdh:S7-16_AI_3,
+        sdh:S7-16room_airflow,
         sdh:S7-16room_damper_position,
         sdh:S7-16room_heating,
         sdh:S7-16room_maximum_airflow,

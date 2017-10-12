@@ -84,9 +84,9 @@ feeds each VAV directly?
 
 ## VAVs
 
-TODO: room valve position is HEATING valve!!
+~~TODO: room valve position is HEATING valve!!~~
 
-`ai_3`: discharge air temperature
+~~`ai_3`: discharge air temperature~~
 
 ## AHU Notes
 

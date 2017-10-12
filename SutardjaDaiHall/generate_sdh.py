@@ -360,6 +360,20 @@ for sensor in vavsensors:
     g.add((SDH[pointname], RDF.type, klass))
     g.add((SDH[vav], BF.hasPoint, SDH[pointname]))
     g.add((SDH[pointname], BF.uuid, Literal(uuid)))
+# handle discharge air temperature sensors, which are represented differently
+# AI_3 means "additional input 3". These were later retrofits.
+md = json.load(open('metadata.json'))
+for doc in md:
+    if doc.get('Path','').endswith('AI_3'):
+        path = doc.get('Path')
+        uuid = doc.get('uuid')
+        groups = re.match(r'.*((S[0-9]+-[0-9]+)/AI_3)', path)
+        pointname = groups.groups()[0].replace('/','_')
+        vav = groups.groups()[1]
+        g.add((SDH[pointname], RDF.type, BRICK.Discharge_Air_Temperature_Sensor))
+        g.add((SDH[vav], BF.hasPoint, SDH[pointname]))
+        g.add((SDH[pointname], BF.uuid, Literal(uuid)))
+
 
 # associate the VAVs with the AH2A/B air handlers.
 # The 2 AHUs for the office space operate in parallel
