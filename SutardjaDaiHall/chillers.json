@@ -155,11 +155,6 @@
             "Path": "/Siemens/SDH.PXCM-03/SDH/CHW1/FL.METER.5",
             "uuid": "dd1a1137-8a8b-51a4-a5ca-a4f6fe2b503d"
         },
-        "Hot Water Bypass Valve": {
-            "PointName": "SDH.HW.BYP_VLV",
-            "Path": "/Siemens/SDH.PXCM-06/SDH/HW/BYP_VLV",
-            "uuid": "b2d9f5dc-a016-50a0-943d-27ac31dfec26"
-        },
         "Flow to secondary chilled water system": {
             "PointName": "SDH.CHW1.FL.METER.6",
             "Path": "/Siemens/SDH.PXCM-03/SDH/CHW1/FL.METER.6",

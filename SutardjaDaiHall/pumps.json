@@ -1,0 +1,48 @@
+{
+    "CH1": {
+        "CHP3": {
+            "Chiller": "CH1",
+            "Path": "/Siemens/SDH.PXCM-03/SDH/CHW1/CHP3_CT",
+            "PointName": "SDH.CHW1.CHP3_CT",
+            "uuid": "7aa3d7da-6d45-5205-92b2-4735cc25a6e6"
+        },
+        "CWP2": {
+            "Chiller": "CH1",
+            "Path": "/Siemens/SDH.PXCM-03/SDH/CHW1/CWP2_CT",
+            "PointName": "SDH.CHW1.CWP2_CT",
+            "uuid": "0badb49f-9a1d-5a83-93b6-2d8808813650"
+        },
+        "CWP4": {
+            "Chiller": "CH1",
+            "Path": "/Siemens/SDH.PXCM-03/SDH/CHW1/CWP4_CT",
+            "PointName": "SDH.CHW1.CWP4_CT",
+            "uuid": "7de19d34-f92a-53bf-a668-e73c66a9f046"
+        }
+    },
+    "CH2": {
+        "CHP4": {
+            "Chiller": "CH2",
+            "Path": "/Siemens/SDH.PXCM-04/SDH/CHW2/CHP4_CT",
+            "PointName": "SDH.CHW2.CHP4_CT",
+            "uuid": "63f59e1d-3daa-5fc1-ab95-17d0e8368b77"
+        },
+        "CHP5": {
+            "Chiller": "CH2",
+            "Path": "/Siemens/SDH.PXCM-04/SDH/CHW2/CHP5_CT",
+            "PointName": "SDH.CHW2.CHP5_CT",
+            "uuid": "d225da4a-34b7-5e7a-ac9d-05e89ebd2482"
+        },
+        "CWP5": {
+            "Chiller": "CH2",
+            "Path": "/Siemens/SDH.PXCM-04/SDH/CHW2/CWP5_CT",
+            "PointName": "SDH.CHW2.CWP5_CT",
+            "uuid": "a041c1f1-cd8a-5050-98a0-ac270d7e29f0"
+        },
+        "CWP6": {
+            "Chiller": "CH2",
+            "Path": "/Siemens/SDH.PXCM-04/SDH/CHW2/CWP6_CT",
+            "PointName": "SDH.CHW2.CWP6_CT",
+            "uuid": "1c63bbd9-b903-5a42-bb52-968e61be1bde"
+        }
+    }
+}

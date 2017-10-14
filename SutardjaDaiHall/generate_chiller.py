@@ -19,11 +19,14 @@ g.bind('btag', BRICKTAG)
 g.bind('sdh', SDH)
 
 chjson = json.load(open('chillers.json'))
+pjson = json.load(open('pumps.json'))
 
 g.add((BRICK.Absorption_Chiller, RDF.type, OWL.Class))
 g.add((BRICK.Absorption_Chiller, RDFS.subClassOf, BRICK.Chiller))
 g.add((BRICK.Centrifugal_Chiller, RDF.type, OWL.Class))
 g.add((BRICK.Centrifugal_Chiller, RDFS.subClassOf, BRICK.Chiller))
+g.add((BRICK.Current_Sensor, RDF.type, OWL.Class))
+g.add((BRICK.Current_Sensor, RDFS.subClassOf, BRICK.Sensor))
 g.add((SDH['CH1'], RDF.type, BRICK.Absorption_Chiller))
 g.add((SDH['CH2'], RDF.type, BRICK.Centrifugal_Chiller))
 
@@ -39,9 +42,10 @@ def make_point(chiller, pointdesc, pointclass):
         g.add((pointclass, RDFS.subClassOf, BRICK.Command))
     elif 'Setpoint' in pointclass:
         g.add((pointclass, RDFS.subClassOf, BRICK.Setpoint))
-    
+
     g.add((SDH[pointname], RDF.type, pointclass))
-    g.add((SDH[pointname], BF.uuid, Literal(pointdesc['uuid'])))
+    if 'uuid' in pointdesc:
+        g.add((SDH[pointname], BF.uuid, Literal(pointdesc['uuid'])))
     g.add((SDH[chiller], BF.hasPoint, SDH[pointname]))
 
 for chiller, points in chjson.items():
@@ -79,9 +83,18 @@ for chiller, points in chjson.items():
         ccv = "SDH.{0}_CCV".format(ahu) # this is part of ahu
         g.add((SDH[chiller], BF.feeds, SDH[ccv]))
 
-# pumps
+    # pumps
+    pumps = pjson[chiller]
 
-    
+    for pump, desc in pumps.items():
+        if pump.startswith('CHP'):
+            g.add((SDH[pump], RDF.type, BRICK.Chilled_Water_Pump))
+            g.add((SDH[chiller], BF.hasPart, SDH[pump]))
+        elif pump.startswith('CWP'):
+            g.add((SDH[pump], RDF.type, BRICK.Condenser_Water_Pump))
+            g.add((SDH[condenser], BF.hasPart, SDH[pump]))
+
+        make_point(pump, desc, BRICK.Current_Sensor)
 
 g.serialize(destination='chiller.ttl',format='turtle')
 print len(g)
