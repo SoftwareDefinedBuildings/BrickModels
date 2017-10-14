@@ -193,7 +193,8 @@ for floor, roomlist in flr2rm.items():
 #####################################
 
 # instantiate the AHUs themselves
-g.add((SDH['AH1'], RDF.type, BRICK.Air_Handler_Unit))
+g.add((SDH['AH1A'], RDF.type, BRICK.Air_Handler_Unit))
+g.add((SDH['AH1B'], RDF.type, BRICK.Air_Handler_Unit))
 g.add((SDH['AH2A'], RDF.type, BRICK.Air_Handler_Unit))
 g.add((SDH['AH2B'], RDF.type, BRICK.Air_Handler_Unit))
 
@@ -202,6 +203,7 @@ import generate_ahu
 for r in generate_ahu.g:
     g.add(r)
 
+
 #####################################
 ##
 ## Chillers
@@ -209,6 +211,9 @@ for r in generate_ahu.g:
 #####################################
 
 # We have 2 chillers: CH1, CH2.
+import generate_chiller
+for r in generate_chiller.g:
+    g.add(r)
 
 
 #####################################
@@ -278,7 +283,8 @@ for doc in rah_points:
 for i in range(1,10):
     rhc = 'RHC-{0}'.format(i)
     g.add((SDH[rhc], RDF.type, BRICK.Reheat_Coil))
-    g.add((SDH['AH1'], BF.hasPart, SDH[rhc]))
+    g.add((SDH['AH1A'], BF.hasPart, SDH[rhc]))
+    g.add((SDH['AH1B'], BF.hasPart, SDH[rhc]))
 
 rhc_points = json.load(open('rhc_point.json'))
 for pname, uuid in rhc_points.items():

@@ -1,10 +1,5 @@
 {
     "CH1": {
-        "Chilled Water Supply Temp": {
-            "PointName": "SDH.CHW1_CHWST",
-            "Path": "/Siemens/SDH.PXCM-03/SDH/CHW1/CHWST",
-            "uuid": "df97f066-2b75-54db-be82-d42625873f22"
-        },
         "Chilled Water Bypass Valve": {
             "PointName": "SDH.CHW1.BYP_VLV",
             "Path": "/Siemens/SDH.PXCM-03/SDH/CHW1/BYP_VLV",
@@ -20,7 +15,7 @@
             "Path": "/Siemens/SDH.PXCM-03/SDH/CH1/CHW.FLOW",
             "uuid": "c0db7e86-3f87-51ca-b3b1-62f23e97c868"
         },
-        "Chilled Water Supply Temp Reset": {
+        "Chilled Water Supply Temperature Reset": {
             "Desc": "The delta T for how to change the setpoint",
             "PointName": "SDH.CH1.CHWST.RESET",
             "Path": "/Siemens/SDH.PXCM-03/SDH/CH1/CHWST.RESET",
@@ -36,12 +31,12 @@
             "Path": "/Siemens/SDH.PXCM-03/SDH/CHW1/CHW.DP.STP",
             "uuid": "e486d482-2b93-5a76-bb0e-0dcdffb41575"
         },
-        "Chilled Water Return Temperature": {
+        "Chilled Water Return Temperature Sensor": {
             "PointName": "SDH.CHW1_CHWRT",
             "Path": "/Siemens/SDH.PXCM-03/SDH/CHW1/CHWRT",
             "uuid": "5a6fe739-7928-5c56-8b38-ae33f9052c71"
         },
-        "Chilled Water Supply Temperature": {
+        "Chilled Water Supply Temperature Sensor": {
             "PointName": "SDH.CHW1_CHWST",
             "Path": "/Siemens/SDH.PXCM-03/SDH/CHW1/CHWST",
             "uuid": "df97f066-2b75-54db-be82-d42625873f22"
@@ -59,7 +54,7 @@
             "Path": "/Siemens/SDH.PXCM-03/SDH/CH2/CHW.FLOW",
             "uuid": "54d2a517-918d-581b-9826-568e06b924e5"
         },
-        "Chilled Water Supply Temp Reset": {
+        "Chilled Water Supply Temperature Reset": {
             "PointName": "SDH.CH2.CHWST.RESET",
             "Path": "/Siemens/SDH.PXCM-03/SDH/CH2/CHWST.RESET",
             "uuid": "3d6d3782-02e2-53c2-b3a2-06b3cab8f20c"
@@ -69,17 +64,17 @@
             "Path": "/Siemens/SDH.PXCM-04/SDH/CHW2/CHW_BYP.VLV",
             "uuid": "ba127aab-f18d-5c27-abc5-6153a95e8594"
         },
-        "Chilled Water Differential Pressure": {
+        "Chilled Water Differential Pressure Sensor": {
             "PointName": "SDH.CHW2.CHW_DP",
             "Path": "/Siemens/SDH.PXCM-04/SDH/CHW2/CHW_DP",
             "uuid": "027c60f1-f1a1-59c3-8095-5734ca885645"
         },
-        "Chilled Water Return Temp": {
+        "Chilled Water Return Temperature Sensor": {
             "PointName": "SDH.CHW2_CHWRT",
             "Path": "/Siemens/SDH.PXCM-04/SDH/CHW2/CHWRT",
             "uuid": "894f8dff-945f-57d2-945e-5ef8a2469455"
         },
-        "Chilled Water Supply Temp": {
+        "Chilled Water Supply Temperature Sensor": {
             "PointName": "SDH.CHW2_CHWST",
             "Path": "/Siemens/SDH.PXCM-04/SDH/CHW2/CHWST",
             "uuid": "7cd5c92e-4c00-5718-b40d-cd25b194a6d9"

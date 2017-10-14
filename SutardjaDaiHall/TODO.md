@@ -75,6 +75,58 @@ In October 2012, variable frequency drives were added to one of the two chilled 
 
 [1] Note that each chiller has two chilled water pumps and two condenser water pumps that were designed to run in a lead-lag fashion (alternating one on for a week then the other). Because the resources to add VFDs were limited, only one of each pump were retrofitted with a VFD. This pump now runs nearly every day, but one day of the month the other pump is used.
 
+Structure:
+
+- Chiller 1 (absorption chiller):
+    - points: 
+        - chilled water supply temperature
+        - chilled water supply temperature reset command
+
+        - chilled water return temperature sensor
+
+        - chilled water flow sensor
+
+        - chilled water differential pressure sensor
+        - chilled water differential pressure setpoint
+    - hasPart:
+        - chilled water bypass valve
+        - condenser (heat exchanger subclass)
+            - feeds the cooling tower
+            - hasPoint condenser water flow sensor
+        - evaporator (heat exchanger subclass)
+            - feeds the CCV for AHU
+            - haspoint chilled water flow sensor
+
+    - feeds:
+        - cooling tower
+
+    - condenser water flow sensor
+
+
+- Chiller 2 (centrifugal chiller)
+    - points: 
+        - chilled water supply temperature
+        - chilled water supply temperature reset command
+
+        - chilled water return temperature sensor
+
+        - chilled water flow sensor
+
+        - chilled water differential pressure sensor
+        - chilled water differential pressure setpoint
+    - hasPart:
+        - chilled water bypass valve
+        - condenser (heat exchanger subclass)
+            - feeds the cooling tower
+            - hasPoint condenser water flow sensor
+        - evaporator (heat exchanger subclass)
+            - feeds the CCV for AHU
+            - haspoint chilled water flow sensor
+
+    - feeds:
+        - cooling tower
+
+    - condenser water flow sensor
 
 ## Hot Water System
 

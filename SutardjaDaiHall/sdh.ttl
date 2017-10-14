@@ -9,16 +9,13 @@
 
 sdh: a brick:VAV_With_Reheat .
 
-sdh:AH1 a brick:Air_Handler_Unit ;
-    bf:hasPart sdh:RHC-1,
-        sdh:RHC-2,
-        sdh:RHC-3,
-        sdh:RHC-4,
-        sdh:RHC-5,
-        sdh:RHC-6,
-        sdh:RHC-7,
-        sdh:RHC-8,
-        sdh:RHC-9 .
+sdh:CH1_CT a brick:Cooling_Tower ;
+    bf:feeds sdh:CH1 ;
+    bf:isFedBy sdh:CH1 .
+
+sdh:CH2_CT a brick:Cooling_Tower ;
+    bf:feeds sdh:CH2 ;
+    bf:isFedBy sdh:CH2 .
 
 sdh:RAH01 bf:hasPoint sdh:SDH.RAH01.SF_SPD,
         sdh:SDH.RAH01_CCV,
@@ -232,327 +229,15 @@ sdh:ZoneS6-00 bf:hasPart sdh:R621 .
 
 sdh:ZoneS7-00 bf:hasPart sdh:R750 .
 
-sdh:AH2A a brick:AHU,
-        brick:Air_Handler_Unit,
-        brick:Air_Handling_Unit ;
-    bf:feeds sdh:EAD_SDH.AH2A_EAD,
-        sdh:S1-01,
-        sdh:S1-02,
-        sdh:S1-03,
-        sdh:S1-04,
-        sdh:S1-05,
-        sdh:S1-06,
-        sdh:S1-07,
-        sdh:S1-08,
-        sdh:S1-09,
-        sdh:S1-10,
-        sdh:S1-11,
-        sdh:S1-12,
-        sdh:S1-13,
-        sdh:S1-14,
-        sdh:S1-15,
-        sdh:S1-16,
-        sdh:S1-17,
-        sdh:S1-18,
-        sdh:S1-19,
-        sdh:S1-20,
-        sdh:S2-01,
-        sdh:S2-02,
-        sdh:S2-03,
-        sdh:S2-04,
-        sdh:S2-05,
-        sdh:S2-06,
-        sdh:S2-07,
-        sdh:S2-08,
-        sdh:S2-09,
-        sdh:S2-10,
-        sdh:S2-11,
-        sdh:S2-12,
-        sdh:S2-13,
-        sdh:S2-14,
-        sdh:S2-15,
-        sdh:S2-16,
-        sdh:S2-17,
-        sdh:S2-18,
-        sdh:S2-19,
-        sdh:S2-20,
-        sdh:S2-21,
-        sdh:S3-01,
-        sdh:S3-02,
-        sdh:S3-03,
-        sdh:S3-04,
-        sdh:S3-05,
-        sdh:S3-06,
-        sdh:S3-07,
-        sdh:S3-08,
-        sdh:S3-09,
-        sdh:S3-10,
-        sdh:S3-11,
-        sdh:S3-12,
-        sdh:S3-13,
-        sdh:S3-14,
-        sdh:S3-15,
-        sdh:S3-16,
-        sdh:S3-17,
-        sdh:S3-18,
-        sdh:S3-19,
-        sdh:S3-20,
-        sdh:S3-21,
-        sdh:S4-01,
-        sdh:S4-02,
-        sdh:S4-03,
-        sdh:S4-04,
-        sdh:S4-05,
-        sdh:S4-06,
-        sdh:S4-07,
-        sdh:S4-08,
-        sdh:S4-09,
-        sdh:S4-10,
-        sdh:S4-11,
-        sdh:S4-12,
-        sdh:S4-13,
-        sdh:S4-14,
-        sdh:S4-15,
-        sdh:S4-16,
-        sdh:S4-17,
-        sdh:S4-18,
-        sdh:S4-19,
-        sdh:S4-20,
-        sdh:S4-21,
-        sdh:S5-01,
-        sdh:S5-02,
-        sdh:S5-03,
-        sdh:S5-04,
-        sdh:S5-05,
-        sdh:S5-06,
-        sdh:S5-07,
-        sdh:S5-08,
-        sdh:S5-09,
-        sdh:S5-10,
-        sdh:S5-11,
-        sdh:S5-12,
-        sdh:S5-13,
-        sdh:S5-14,
-        sdh:S5-15,
-        sdh:S5-16,
-        sdh:S5-17,
-        sdh:S5-18,
-        sdh:S5-19,
-        sdh:S5-20,
-        sdh:S5-21,
-        sdh:S6-01,
-        sdh:S6-02,
-        sdh:S6-03,
-        sdh:S6-04,
-        sdh:S6-05,
-        sdh:S6-06,
-        sdh:S6-07,
-        sdh:S6-08,
-        sdh:S6-09,
-        sdh:S6-10,
-        sdh:S6-11,
-        sdh:S6-12,
-        sdh:S6-13,
-        sdh:S6-14,
-        sdh:S6-15,
-        sdh:S6-16,
-        sdh:S6-17,
-        sdh:S6-18,
-        sdh:S6-19,
-        sdh:S6-20,
-        sdh:S7-01,
-        sdh:S7-02,
-        sdh:S7-03,
-        sdh:S7-04,
-        sdh:S7-05,
-        sdh:S7-06,
-        sdh:S7-07,
-        sdh:S7-08,
-        sdh:S7-09,
-        sdh:S7-10,
-        sdh:S7-11,
-        sdh:S7-12,
-        sdh:S7-13,
-        sdh:S7-14,
-        sdh:S7-15,
-        sdh:S7-16 ;
-    bf:hasPart sdh:EAD_SDH.AH2A_EAD,
-        sdh:ID_SDH.AH2A_ISO.DMPR,
-        sdh:OAD_SDH.AH2A_OAD,
-        sdh:RAD_SDH.AH2A_RAD,
-        sdh:SDH.AH2A.RF_VFD,
-        sdh:SDH.AH2A.SF_VFD,
-        sdh:SDH.AH2A_CCV ;
-    bf:hasPoint sdh:SDH.AH2A.AH2B.RF_CFM,
-        sdh:SDH.AH2A.SF_CFM,
-        sdh:SDH.AH2A_MAT,
-        sdh:SDH.AH2A_RAH,
-        sdh:SDH.AH2A_RAT,
-        sdh:SDH.AH2A_RDSP,
-        sdh:SDH.AH2A_SAT,
-        sdh:SDH.AH2A_SAT.STP,
-        sdh:SDH.AH2A_SDSP .
+sdh:CH1_condenser a brick:Condenser_Heat_Exchanger ;
+    bf:hasPoint sdh:SDH.CH1.CHW.FLOW .
 
-sdh:AH2B a brick:AHU,
-        brick:Air_Handler_Unit,
-        brick:Air_Handling_Unit ;
-    bf:feeds sdh:EAD_SDH.AH2B_EAD,
-        sdh:S1-01,
-        sdh:S1-02,
-        sdh:S1-03,
-        sdh:S1-04,
-        sdh:S1-05,
-        sdh:S1-06,
-        sdh:S1-07,
-        sdh:S1-08,
-        sdh:S1-09,
-        sdh:S1-10,
-        sdh:S1-11,
-        sdh:S1-12,
-        sdh:S1-13,
-        sdh:S1-14,
-        sdh:S1-15,
-        sdh:S1-16,
-        sdh:S1-17,
-        sdh:S1-18,
-        sdh:S1-19,
-        sdh:S1-20,
-        sdh:S2-01,
-        sdh:S2-02,
-        sdh:S2-03,
-        sdh:S2-04,
-        sdh:S2-05,
-        sdh:S2-06,
-        sdh:S2-07,
-        sdh:S2-08,
-        sdh:S2-09,
-        sdh:S2-10,
-        sdh:S2-11,
-        sdh:S2-12,
-        sdh:S2-13,
-        sdh:S2-14,
-        sdh:S2-15,
-        sdh:S2-16,
-        sdh:S2-17,
-        sdh:S2-18,
-        sdh:S2-19,
-        sdh:S2-20,
-        sdh:S2-21,
-        sdh:S3-01,
-        sdh:S3-02,
-        sdh:S3-03,
-        sdh:S3-04,
-        sdh:S3-05,
-        sdh:S3-06,
-        sdh:S3-07,
-        sdh:S3-08,
-        sdh:S3-09,
-        sdh:S3-10,
-        sdh:S3-11,
-        sdh:S3-12,
-        sdh:S3-13,
-        sdh:S3-14,
-        sdh:S3-15,
-        sdh:S3-16,
-        sdh:S3-17,
-        sdh:S3-18,
-        sdh:S3-19,
-        sdh:S3-20,
-        sdh:S3-21,
-        sdh:S4-01,
-        sdh:S4-02,
-        sdh:S4-03,
-        sdh:S4-04,
-        sdh:S4-05,
-        sdh:S4-06,
-        sdh:S4-07,
-        sdh:S4-08,
-        sdh:S4-09,
-        sdh:S4-10,
-        sdh:S4-11,
-        sdh:S4-12,
-        sdh:S4-13,
-        sdh:S4-14,
-        sdh:S4-15,
-        sdh:S4-16,
-        sdh:S4-17,
-        sdh:S4-18,
-        sdh:S4-19,
-        sdh:S4-20,
-        sdh:S4-21,
-        sdh:S5-01,
-        sdh:S5-02,
-        sdh:S5-03,
-        sdh:S5-04,
-        sdh:S5-05,
-        sdh:S5-06,
-        sdh:S5-07,
-        sdh:S5-08,
-        sdh:S5-09,
-        sdh:S5-10,
-        sdh:S5-11,
-        sdh:S5-12,
-        sdh:S5-13,
-        sdh:S5-14,
-        sdh:S5-15,
-        sdh:S5-16,
-        sdh:S5-17,
-        sdh:S5-18,
-        sdh:S5-19,
-        sdh:S5-20,
-        sdh:S5-21,
-        sdh:S6-01,
-        sdh:S6-02,
-        sdh:S6-03,
-        sdh:S6-04,
-        sdh:S6-05,
-        sdh:S6-06,
-        sdh:S6-07,
-        sdh:S6-08,
-        sdh:S6-09,
-        sdh:S6-10,
-        sdh:S6-11,
-        sdh:S6-12,
-        sdh:S6-13,
-        sdh:S6-14,
-        sdh:S6-15,
-        sdh:S6-16,
-        sdh:S6-17,
-        sdh:S6-18,
-        sdh:S6-19,
-        sdh:S6-20,
-        sdh:S7-01,
-        sdh:S7-02,
-        sdh:S7-03,
-        sdh:S7-04,
-        sdh:S7-05,
-        sdh:S7-06,
-        sdh:S7-07,
-        sdh:S7-08,
-        sdh:S7-09,
-        sdh:S7-10,
-        sdh:S7-11,
-        sdh:S7-12,
-        sdh:S7-13,
-        sdh:S7-14,
-        sdh:S7-15,
-        sdh:S7-16 ;
-    bf:hasPart sdh:EAD_SDH.AH2B_EAD,
-        sdh:ID_SDH.AH2B_ISO.DMPR,
-        sdh:OAD_SDH.AH2B_OAD,
-        sdh:RAD_SDH.AH2B_RAD,
-        sdh:SDH.AH2B.RF_VFD,
-        sdh:SDH.AH2B.SF_VFD,
-        sdh:SDH.AH2B_CCV ;
-    bf:hasPoint sdh:SDH.AH2A.AH2B.RF_CFM,
-        sdh:SDH.AH2B.SF_CFM,
-        sdh:SDH.AH2B_MAT,
-        sdh:SDH.AH2B_RAH,
-        sdh:SDH.AH2B_RAT,
-        sdh:SDH.AH2B_RDSP,
-        sdh:SDH.AH2B_SAT,
-        sdh:SDH.AH2B_SAT.STP,
-        sdh:SDH.AH2B_SDSP .
+sdh:CH1_evaporator a brick:Evaporator_Heat_Exchanger .
+
+sdh:CH2_condenser a brick:Condenser_Heat_Exchanger ;
+    bf:hasPoint sdh:SDH.CH2.CHW.FLOW .
+
+sdh:CH2_evaporator a brick:Evaporator_Heat_Exchanger .
 
 sdh:OAD_SDH.AH2A_OAD a brick:Outside_Air_Damper ;
     bf:feeds sdh:SDH.AH2A_CCV ;
@@ -700,11 +385,6 @@ sdh:RAD_SDH.AH2B_RAD a brick:Return_Air_Damper ;
     bf:feeds sdh:SDH.AH2B.RF_VFD ;
     bf:hasPoint sdh:SDH.AH2B_RAD .
 
-sdh:RHC-1 a brick:Reheat_Coil ;
-    bf:hasPoint sdh:RHC-1CTL_STPT,
-        sdh:RHC-1HEAT.COOL,
-        sdh:RHC-1ROOM_TEMP .
-
 sdh:RHC-1CTL_STPT a brick:Temperature_Setpoint ;
     bf:uuid "2b092471-3a18-5190-95f4-660cee55b2d7" .
 
@@ -713,11 +393,6 @@ sdh:RHC-1HEAT.COOL a brick:Heating_Command ;
 
 sdh:RHC-1ROOM_TEMP a brick:Zone_Air_Temperature_Sensor ;
     bf:uuid "7c78b877-ecec-583f-8bd4-0f70f86cbf43" .
-
-sdh:RHC-2 a brick:Reheat_Coil ;
-    bf:hasPoint sdh:RHC-2CTL_STPT,
-        sdh:RHC-2HEAT.COOL,
-        sdh:RHC-2ROOM_TEMP .
 
 sdh:RHC-2CTL_STPT a brick:Temperature_Setpoint ;
     bf:uuid "a182f449-3683-5b79-a031-ef6f71b6974a" .
@@ -728,11 +403,6 @@ sdh:RHC-2HEAT.COOL a brick:Heating_Command ;
 sdh:RHC-2ROOM_TEMP a brick:Zone_Air_Temperature_Sensor ;
     bf:uuid "66003294-ff46-5c21-80dc-9d5cf8b97fdf" .
 
-sdh:RHC-3 a brick:Reheat_Coil ;
-    bf:hasPoint sdh:RHC-3CTL_STPT,
-        sdh:RHC-3HEAT.COOL,
-        sdh:RHC-3ROOM_TEMP .
-
 sdh:RHC-3CTL_STPT a brick:Temperature_Setpoint ;
     bf:uuid "f26430f3-f74e-545f-84f0-7bdf0a945f79" .
 
@@ -741,11 +411,6 @@ sdh:RHC-3HEAT.COOL a brick:Heating_Command ;
 
 sdh:RHC-3ROOM_TEMP a brick:Zone_Air_Temperature_Sensor ;
     bf:uuid "956aad84-c2a7-5c70-ac7c-2e7dd439c113" .
-
-sdh:RHC-4 a brick:Reheat_Coil ;
-    bf:hasPoint sdh:RHC-4CTL_STPT,
-        sdh:RHC-4HEAT.COOL,
-        sdh:RHC-4ROOM_TEMP .
 
 sdh:RHC-4CTL_STPT a brick:Temperature_Setpoint ;
     bf:uuid "2bd7e35c-67b2-5ab6-a6b4-f498ea04c0cf" .
@@ -756,11 +421,6 @@ sdh:RHC-4HEAT.COOL a brick:Heating_Command ;
 sdh:RHC-4ROOM_TEMP a brick:Zone_Air_Temperature_Sensor ;
     bf:uuid "b1dc160d-cf8a-57c9-b509-183cea59cb83" .
 
-sdh:RHC-5 a brick:Reheat_Coil ;
-    bf:hasPoint sdh:RHC-5CTL_STPT,
-        sdh:RHC-5HEAT.COOL,
-        sdh:RHC-5ROOM_TEMP .
-
 sdh:RHC-5CTL_STPT a brick:Temperature_Setpoint ;
     bf:uuid "b5c7a6b6-1796-595c-8982-41f512f62824" .
 
@@ -769,11 +429,6 @@ sdh:RHC-5HEAT.COOL a brick:Heating_Command ;
 
 sdh:RHC-5ROOM_TEMP a brick:Zone_Air_Temperature_Sensor ;
     bf:uuid "723a9b42-2809-56f1-99bc-fd004343508e" .
-
-sdh:RHC-6 a brick:Reheat_Coil ;
-    bf:hasPoint sdh:RHC-6CTL_STPT,
-        sdh:RHC-6HEAT.COOL,
-        sdh:RHC-6ROOM_TEMP .
 
 sdh:RHC-6CTL_STPT a brick:Temperature_Setpoint ;
     bf:uuid "3291300a-b3eb-59cb-aec2-04312a52a20e" .
@@ -784,11 +439,6 @@ sdh:RHC-6HEAT.COOL a brick:Heating_Command ;
 sdh:RHC-6ROOM_TEMP a brick:Zone_Air_Temperature_Sensor ;
     bf:uuid "814b3148-9a6b-5906-8331-4b10df702d37" .
 
-sdh:RHC-7 a brick:Reheat_Coil ;
-    bf:hasPoint sdh:RHC-7CTL_STPT,
-        sdh:RHC-7HEAT.COOL,
-        sdh:RHC-7ROOM_TEMP .
-
 sdh:RHC-7CTL_STPT a brick:Temperature_Setpoint ;
     bf:uuid "c026e380-ad62-5b6a-a39a-a41c5dbfa67e" .
 
@@ -798,11 +448,6 @@ sdh:RHC-7HEAT.COOL a brick:Heating_Command ;
 sdh:RHC-7ROOM_TEMP a brick:Zone_Air_Temperature_Sensor ;
     bf:uuid "7e8fe849-bff7-5a48-af42-158bc89fff37" .
 
-sdh:RHC-8 a brick:Reheat_Coil ;
-    bf:hasPoint sdh:RHC-8CTL_STPT,
-        sdh:RHC-8HEAT.COOL,
-        sdh:RHC-8ROOM_TEMP .
-
 sdh:RHC-8CTL_STPT a brick:Temperature_Setpoint ;
     bf:uuid "e900786a-38c6-5b8d-b9fb-f6e77ccce745" .
 
@@ -811,11 +456,6 @@ sdh:RHC-8HEAT.COOL a brick:Heating_Command ;
 
 sdh:RHC-8ROOM_TEMP a brick:Zone_Air_Temperature_Sensor ;
     bf:uuid "223c3965-44b6-533f-8559-58f084b92f8c" .
-
-sdh:RHC-9 a brick:Reheat_Coil ;
-    bf:hasPoint sdh:RHC-9CTL_STPT,
-        sdh:RHC-9HEAT.COOL,
-        sdh:RHC-9ROOM_TEMP .
 
 sdh:RHC-9CTL_STPT a brick:Temperature_Setpoint ;
     bf:uuid "03c38a15-64d9-5c7f-a043-2ccd9c6557ec" .
@@ -4731,6 +4371,40 @@ sdh:SDH.AH2B_SAT.STP a brick:Supply_Air_Temperature_Setpoint ;
 sdh:SDH.AH2B_SDSP a brick:Supply_Air_Static_Pressure_Sensor ;
     bf:uuid "8212386e-d472-55de-b97e-55c3bfb45ee5" .
 
+sdh:SDH.CH1.CHWST.RESET a brick:Chilled_Water_Supply_Temperature_Reset_Command ;
+    bf:uuid "3c186ace-995c-540f-82bd-2fb6cd092998" .
+
+sdh:SDH.CH2.CHWST.RESET a brick:Chilled_Water_Supply_Temperature_Reset_Command ;
+    bf:uuid "3d6d3782-02e2-53c2-b3a2-06b3cab8f20c" .
+
+sdh:SDH.CHW1.BYP_VLV a brick:Chilled_Water_Bypass_Valve .
+
+sdh:SDH.CHW1_CHW.DP a brick:Chilled_Water_Differential_Pressure_Sensor ;
+    bf:uuid "f168471d-a251-52e6-8233-51e0eb743a48" .
+
+sdh:SDH.CHW1_CHW.DP.STP a brick:Chilled_Water_Differential_Pressure_Setpoint ;
+    bf:uuid "e486d482-2b93-5a76-bb0e-0dcdffb41575" .
+
+sdh:SDH.CHW1_CHWRT a brick:Chilled_Water_Return_Temperature_Sensor ;
+    bf:uuid "5a6fe739-7928-5c56-8b38-ae33f9052c71" .
+
+sdh:SDH.CHW1_CHWST a brick:Chilled_Water_Supply_Temperature_Sensor ;
+    bf:uuid "df97f066-2b75-54db-be82-d42625873f22" .
+
+sdh:SDH.CHW2.CHW_BYP.VLV a brick:Chilled_Water_Bypass_Valve .
+
+sdh:SDH.CHW2.CHW_DP a brick:Chilled_Water_Differential_Pressure_Sensor ;
+    bf:uuid "027c60f1-f1a1-59c3-8095-5734ca885645" .
+
+sdh:SDH.CHW2.CHW_DP.STP a brick:Chilled_Water_Differential_Pressure_Setpoint ;
+    bf:uuid "e738e23b-11ba-576f-bb7c-9d663dd74515" .
+
+sdh:SDH.CHW2_CHWRT a brick:Chilled_Water_Return_Temperature_Sensor ;
+    bf:uuid "894f8dff-945f-57d2-945e-5ef8a2469455" .
+
+sdh:SDH.CHW2_CHWST a brick:Chilled_Water_Supply_Temperature_Sensor ;
+    bf:uuid "7cd5c92e-4c00-5718-b40d-cd25b194a6d9" .
+
 sdh:SDH.RAH01.SF_SPD a brick:Supply_Fan_VFD_Speed ;
     bf:uuid "608895bb-e36f-5e84-bd7c-d1d64c33adca" .
 
@@ -5701,8 +5375,74 @@ sdh:Zone_RAH25 a brick:HVAC_Zone ;
 sdh:Zone_RAH26 a brick:HVAC_Zone ;
     bf:hasPart sdh:R584 .
 
+brick:Absorption_Chiller a <http://www.w3.org/2002/07/owl#Class> ;
+    rdfs:subClassOf brick:Chiller .
+
+brick:Centrifugal_Chiller a <http://www.w3.org/2002/07/owl#Class> ;
+    rdfs:subClassOf brick:Chiller .
+
 brick:VAV_With_Reheat a <http://www.w3.org/2002/07/owl#Class> ;
     rdfs:subClassOf brick:VAV .
+
+sdh:AH1A a brick:Air_Handler_Unit ;
+    bf:hasPart sdh:RHC-1,
+        sdh:RHC-2,
+        sdh:RHC-3,
+        sdh:RHC-4,
+        sdh:RHC-5,
+        sdh:RHC-6,
+        sdh:RHC-7,
+        sdh:RHC-8,
+        sdh:RHC-9 .
+
+sdh:AH1B a brick:Air_Handler_Unit ;
+    bf:hasPart sdh:RHC-1,
+        sdh:RHC-2,
+        sdh:RHC-3,
+        sdh:RHC-4,
+        sdh:RHC-5,
+        sdh:RHC-6,
+        sdh:RHC-7,
+        sdh:RHC-8,
+        sdh:RHC-9 .
+
+sdh:CH1 a brick:Absorption_Chiller ;
+    bf:feeds sdh:AH1A,
+        sdh:AH1B,
+        sdh:AH2A,
+        sdh:AH2B,
+        sdh:SDH.AH1A_CCV,
+        sdh:SDH.AH1B_CCV,
+        sdh:SDH.AH2A_CCV,
+        sdh:SDH.AH2B_CCV ;
+    bf:hasPart sdh:CH1_condenser,
+        sdh:CH1_evaporator,
+        sdh:SDH.CHW1.BYP_VLV ;
+    bf:hasPoint sdh:SDH.CH1.CHW.FLOW,
+        sdh:SDH.CH1.CHWST.RESET,
+        sdh:SDH.CHW1_CHW.DP,
+        sdh:SDH.CHW1_CHW.DP.STP,
+        sdh:SDH.CHW1_CHWRT,
+        sdh:SDH.CHW1_CHWST .
+
+sdh:CH2 a brick:Centrifugal_Chiller ;
+    bf:feeds sdh:AH1A,
+        sdh:AH1B,
+        sdh:AH2A,
+        sdh:AH2B,
+        sdh:SDH.AH1A_CCV,
+        sdh:SDH.AH1B_CCV,
+        sdh:SDH.AH2A_CCV,
+        sdh:SDH.AH2B_CCV ;
+    bf:hasPart sdh:CH2_condenser,
+        sdh:CH2_evaporator,
+        sdh:SDH.CHW2.CHW_BYP.VLV ;
+    bf:hasPoint sdh:SDH.CH2.CHW.FLOW,
+        sdh:SDH.CH2.CHWST.RESET,
+        sdh:SDH.CHW2.CHW_DP,
+        sdh:SDH.CHW2.CHW_DP.STP,
+        sdh:SDH.CHW2_CHWRT,
+        sdh:SDH.CHW2_CHWST .
 
 sdh:EAD_SDH.AH2A_EAD a brick:Exhaust_Air_Damper ;
     bf:hasPoint sdh:SDH.AH2A_EAD .
@@ -5731,6 +5471,51 @@ sdh:R584 a brick:Room .
 sdh:R586 a brick:Room .
 
 sdh:R587 a brick:Room .
+
+sdh:RHC-1 a brick:Reheat_Coil ;
+    bf:hasPoint sdh:RHC-1CTL_STPT,
+        sdh:RHC-1HEAT.COOL,
+        sdh:RHC-1ROOM_TEMP .
+
+sdh:RHC-2 a brick:Reheat_Coil ;
+    bf:hasPoint sdh:RHC-2CTL_STPT,
+        sdh:RHC-2HEAT.COOL,
+        sdh:RHC-2ROOM_TEMP .
+
+sdh:RHC-3 a brick:Reheat_Coil ;
+    bf:hasPoint sdh:RHC-3CTL_STPT,
+        sdh:RHC-3HEAT.COOL,
+        sdh:RHC-3ROOM_TEMP .
+
+sdh:RHC-4 a brick:Reheat_Coil ;
+    bf:hasPoint sdh:RHC-4CTL_STPT,
+        sdh:RHC-4HEAT.COOL,
+        sdh:RHC-4ROOM_TEMP .
+
+sdh:RHC-5 a brick:Reheat_Coil ;
+    bf:hasPoint sdh:RHC-5CTL_STPT,
+        sdh:RHC-5HEAT.COOL,
+        sdh:RHC-5ROOM_TEMP .
+
+sdh:RHC-6 a brick:Reheat_Coil ;
+    bf:hasPoint sdh:RHC-6CTL_STPT,
+        sdh:RHC-6HEAT.COOL,
+        sdh:RHC-6ROOM_TEMP .
+
+sdh:RHC-7 a brick:Reheat_Coil ;
+    bf:hasPoint sdh:RHC-7CTL_STPT,
+        sdh:RHC-7HEAT.COOL,
+        sdh:RHC-7ROOM_TEMP .
+
+sdh:RHC-8 a brick:Reheat_Coil ;
+    bf:hasPoint sdh:RHC-8CTL_STPT,
+        sdh:RHC-8HEAT.COOL,
+        sdh:RHC-8ROOM_TEMP .
+
+sdh:RHC-9 a brick:Reheat_Coil ;
+    bf:hasPoint sdh:RHC-9CTL_STPT,
+        sdh:RHC-9HEAT.COOL,
+        sdh:RHC-9ROOM_TEMP .
 
 sdh:S1-01 a brick:VAV ;
     bf:feeds sdh:ZoneS1-01 ;
@@ -7920,6 +7705,352 @@ sdh:SDH.AH2B.SF_VFD a brick:Supply_Fan ;
     bf:hasPoint <http://buildsys.org/ontologies/sutardja_dai_hall#SDH.AH2B.SF_VFD:INPUT_REF_1>,
         <http://buildsys.org/ontologies/sutardja_dai_hall#SDH.AH2B.SF_VFD:POWER> .
 
+sdh:SDH.CH1.CHW.FLOW a brick:Chilled_Water_Flow_Sensor ;
+    bf:uuid "c0db7e86-3f87-51ca-b3b1-62f23e97c868" .
+
+sdh:SDH.CH2.CHW.FLOW a brick:Chilled_Water_Flow_Sensor ;
+    bf:uuid "54d2a517-918d-581b-9826-568e06b924e5" .
+
+brick:Chilled_Water_Differential_Pressure_Sensor a <http://www.w3.org/2002/07/owl#Class> ;
+    rdfs:subClassOf brick:Sensor .
+
+brick:Chilled_Water_Differential_Pressure_Setpoint a <http://www.w3.org/2002/07/owl#Class> ;
+    rdfs:subClassOf brick:Setpoint .
+
+brick:Chilled_Water_Flow_Sensor a <http://www.w3.org/2002/07/owl#Class> ;
+    rdfs:subClassOf brick:Sensor .
+
+brick:Chilled_Water_Return_Temperature_Sensor a <http://www.w3.org/2002/07/owl#Class> ;
+    rdfs:subClassOf brick:Sensor .
+
+brick:Chilled_Water_Supply_Temperature_Reset_Command a <http://www.w3.org/2002/07/owl#Class> ;
+    rdfs:subClassOf brick:Command .
+
+brick:Chilled_Water_Supply_Temperature_Sensor a <http://www.w3.org/2002/07/owl#Class> ;
+    rdfs:subClassOf brick:Sensor .
+
+sdh:AH2A a brick:AHU,
+        brick:Air_Handler_Unit,
+        brick:Air_Handling_Unit ;
+    bf:feeds sdh:EAD_SDH.AH2A_EAD,
+        sdh:S1-01,
+        sdh:S1-02,
+        sdh:S1-03,
+        sdh:S1-04,
+        sdh:S1-05,
+        sdh:S1-06,
+        sdh:S1-07,
+        sdh:S1-08,
+        sdh:S1-09,
+        sdh:S1-10,
+        sdh:S1-11,
+        sdh:S1-12,
+        sdh:S1-13,
+        sdh:S1-14,
+        sdh:S1-15,
+        sdh:S1-16,
+        sdh:S1-17,
+        sdh:S1-18,
+        sdh:S1-19,
+        sdh:S1-20,
+        sdh:S2-01,
+        sdh:S2-02,
+        sdh:S2-03,
+        sdh:S2-04,
+        sdh:S2-05,
+        sdh:S2-06,
+        sdh:S2-07,
+        sdh:S2-08,
+        sdh:S2-09,
+        sdh:S2-10,
+        sdh:S2-11,
+        sdh:S2-12,
+        sdh:S2-13,
+        sdh:S2-14,
+        sdh:S2-15,
+        sdh:S2-16,
+        sdh:S2-17,
+        sdh:S2-18,
+        sdh:S2-19,
+        sdh:S2-20,
+        sdh:S2-21,
+        sdh:S3-01,
+        sdh:S3-02,
+        sdh:S3-03,
+        sdh:S3-04,
+        sdh:S3-05,
+        sdh:S3-06,
+        sdh:S3-07,
+        sdh:S3-08,
+        sdh:S3-09,
+        sdh:S3-10,
+        sdh:S3-11,
+        sdh:S3-12,
+        sdh:S3-13,
+        sdh:S3-14,
+        sdh:S3-15,
+        sdh:S3-16,
+        sdh:S3-17,
+        sdh:S3-18,
+        sdh:S3-19,
+        sdh:S3-20,
+        sdh:S3-21,
+        sdh:S4-01,
+        sdh:S4-02,
+        sdh:S4-03,
+        sdh:S4-04,
+        sdh:S4-05,
+        sdh:S4-06,
+        sdh:S4-07,
+        sdh:S4-08,
+        sdh:S4-09,
+        sdh:S4-10,
+        sdh:S4-11,
+        sdh:S4-12,
+        sdh:S4-13,
+        sdh:S4-14,
+        sdh:S4-15,
+        sdh:S4-16,
+        sdh:S4-17,
+        sdh:S4-18,
+        sdh:S4-19,
+        sdh:S4-20,
+        sdh:S4-21,
+        sdh:S5-01,
+        sdh:S5-02,
+        sdh:S5-03,
+        sdh:S5-04,
+        sdh:S5-05,
+        sdh:S5-06,
+        sdh:S5-07,
+        sdh:S5-08,
+        sdh:S5-09,
+        sdh:S5-10,
+        sdh:S5-11,
+        sdh:S5-12,
+        sdh:S5-13,
+        sdh:S5-14,
+        sdh:S5-15,
+        sdh:S5-16,
+        sdh:S5-17,
+        sdh:S5-18,
+        sdh:S5-19,
+        sdh:S5-20,
+        sdh:S5-21,
+        sdh:S6-01,
+        sdh:S6-02,
+        sdh:S6-03,
+        sdh:S6-04,
+        sdh:S6-05,
+        sdh:S6-06,
+        sdh:S6-07,
+        sdh:S6-08,
+        sdh:S6-09,
+        sdh:S6-10,
+        sdh:S6-11,
+        sdh:S6-12,
+        sdh:S6-13,
+        sdh:S6-14,
+        sdh:S6-15,
+        sdh:S6-16,
+        sdh:S6-17,
+        sdh:S6-18,
+        sdh:S6-19,
+        sdh:S6-20,
+        sdh:S7-01,
+        sdh:S7-02,
+        sdh:S7-03,
+        sdh:S7-04,
+        sdh:S7-05,
+        sdh:S7-06,
+        sdh:S7-07,
+        sdh:S7-08,
+        sdh:S7-09,
+        sdh:S7-10,
+        sdh:S7-11,
+        sdh:S7-12,
+        sdh:S7-13,
+        sdh:S7-14,
+        sdh:S7-15,
+        sdh:S7-16 ;
+    bf:hasPart sdh:EAD_SDH.AH2A_EAD,
+        sdh:ID_SDH.AH2A_ISO.DMPR,
+        sdh:OAD_SDH.AH2A_OAD,
+        sdh:RAD_SDH.AH2A_RAD,
+        sdh:SDH.AH2A.RF_VFD,
+        sdh:SDH.AH2A.SF_VFD,
+        sdh:SDH.AH2A_CCV ;
+    bf:hasPoint sdh:SDH.AH2A.AH2B.RF_CFM,
+        sdh:SDH.AH2A.SF_CFM,
+        sdh:SDH.AH2A_MAT,
+        sdh:SDH.AH2A_RAH,
+        sdh:SDH.AH2A_RAT,
+        sdh:SDH.AH2A_RDSP,
+        sdh:SDH.AH2A_SAT,
+        sdh:SDH.AH2A_SAT.STP,
+        sdh:SDH.AH2A_SDSP .
+
+sdh:AH2B a brick:AHU,
+        brick:Air_Handler_Unit,
+        brick:Air_Handling_Unit ;
+    bf:feeds sdh:EAD_SDH.AH2B_EAD,
+        sdh:S1-01,
+        sdh:S1-02,
+        sdh:S1-03,
+        sdh:S1-04,
+        sdh:S1-05,
+        sdh:S1-06,
+        sdh:S1-07,
+        sdh:S1-08,
+        sdh:S1-09,
+        sdh:S1-10,
+        sdh:S1-11,
+        sdh:S1-12,
+        sdh:S1-13,
+        sdh:S1-14,
+        sdh:S1-15,
+        sdh:S1-16,
+        sdh:S1-17,
+        sdh:S1-18,
+        sdh:S1-19,
+        sdh:S1-20,
+        sdh:S2-01,
+        sdh:S2-02,
+        sdh:S2-03,
+        sdh:S2-04,
+        sdh:S2-05,
+        sdh:S2-06,
+        sdh:S2-07,
+        sdh:S2-08,
+        sdh:S2-09,
+        sdh:S2-10,
+        sdh:S2-11,
+        sdh:S2-12,
+        sdh:S2-13,
+        sdh:S2-14,
+        sdh:S2-15,
+        sdh:S2-16,
+        sdh:S2-17,
+        sdh:S2-18,
+        sdh:S2-19,
+        sdh:S2-20,
+        sdh:S2-21,
+        sdh:S3-01,
+        sdh:S3-02,
+        sdh:S3-03,
+        sdh:S3-04,
+        sdh:S3-05,
+        sdh:S3-06,
+        sdh:S3-07,
+        sdh:S3-08,
+        sdh:S3-09,
+        sdh:S3-10,
+        sdh:S3-11,
+        sdh:S3-12,
+        sdh:S3-13,
+        sdh:S3-14,
+        sdh:S3-15,
+        sdh:S3-16,
+        sdh:S3-17,
+        sdh:S3-18,
+        sdh:S3-19,
+        sdh:S3-20,
+        sdh:S3-21,
+        sdh:S4-01,
+        sdh:S4-02,
+        sdh:S4-03,
+        sdh:S4-04,
+        sdh:S4-05,
+        sdh:S4-06,
+        sdh:S4-07,
+        sdh:S4-08,
+        sdh:S4-09,
+        sdh:S4-10,
+        sdh:S4-11,
+        sdh:S4-12,
+        sdh:S4-13,
+        sdh:S4-14,
+        sdh:S4-15,
+        sdh:S4-16,
+        sdh:S4-17,
+        sdh:S4-18,
+        sdh:S4-19,
+        sdh:S4-20,
+        sdh:S4-21,
+        sdh:S5-01,
+        sdh:S5-02,
+        sdh:S5-03,
+        sdh:S5-04,
+        sdh:S5-05,
+        sdh:S5-06,
+        sdh:S5-07,
+        sdh:S5-08,
+        sdh:S5-09,
+        sdh:S5-10,
+        sdh:S5-11,
+        sdh:S5-12,
+        sdh:S5-13,
+        sdh:S5-14,
+        sdh:S5-15,
+        sdh:S5-16,
+        sdh:S5-17,
+        sdh:S5-18,
+        sdh:S5-19,
+        sdh:S5-20,
+        sdh:S5-21,
+        sdh:S6-01,
+        sdh:S6-02,
+        sdh:S6-03,
+        sdh:S6-04,
+        sdh:S6-05,
+        sdh:S6-06,
+        sdh:S6-07,
+        sdh:S6-08,
+        sdh:S6-09,
+        sdh:S6-10,
+        sdh:S6-11,
+        sdh:S6-12,
+        sdh:S6-13,
+        sdh:S6-14,
+        sdh:S6-15,
+        sdh:S6-16,
+        sdh:S6-17,
+        sdh:S6-18,
+        sdh:S6-19,
+        sdh:S6-20,
+        sdh:S7-01,
+        sdh:S7-02,
+        sdh:S7-03,
+        sdh:S7-04,
+        sdh:S7-05,
+        sdh:S7-06,
+        sdh:S7-07,
+        sdh:S7-08,
+        sdh:S7-09,
+        sdh:S7-10,
+        sdh:S7-11,
+        sdh:S7-12,
+        sdh:S7-13,
+        sdh:S7-14,
+        sdh:S7-15,
+        sdh:S7-16 ;
+    bf:hasPart sdh:EAD_SDH.AH2B_EAD,
+        sdh:ID_SDH.AH2B_ISO.DMPR,
+        sdh:OAD_SDH.AH2B_OAD,
+        sdh:RAD_SDH.AH2B_RAD,
+        sdh:SDH.AH2B.RF_VFD,
+        sdh:SDH.AH2B.SF_VFD,
+        sdh:SDH.AH2B_CCV ;
+    bf:hasPoint sdh:SDH.AH2A.AH2B.RF_CFM,
+        sdh:SDH.AH2B.SF_CFM,
+        sdh:SDH.AH2B_MAT,
+        sdh:SDH.AH2B_RAH,
+        sdh:SDH.AH2B_RAT,
+        sdh:SDH.AH2B_RDSP,
+        sdh:SDH.AH2B_SAT,
+        sdh:SDH.AH2B_SAT.STP,
+        sdh:SDH.AH2B_SDSP .
+
 sdh:R132 a brick:Room ;
     rdfs:label "Mech Steam" ;
     bf:isPartOf sdh:Floor1 .
@@ -8252,14 +8383,6 @@ sdh:R777 a brick:Room ;
     rdfs:label "Womens Bath" ;
     bf:isPartOf sdh:Floor7 .
 
-sdh:SDH.AH2A_CCV a brick:Cooling_Valve ;
-    bf:feeds sdh:SDH.AH2A.SF_VFD ;
-    bf:hasPoint sdh:SDH.AH2A_CCV_valve .
-
-sdh:SDH.AH2B_CCV a brick:Cooling_Valve ;
-    bf:feeds sdh:SDH.AH2B.SF_VFD ;
-    bf:hasPoint sdh:SDH.AH2B_CCV_valve .
-
 sdh:R212 a brick:Room ;
     rdfs:label "Vestibule" ;
     bf:isPartOf sdh:Floor2 .
@@ -8273,6 +8396,14 @@ sdh:R432 a brick:Room ;
 sdh:R468 a brick:Room ;
     rdfs:label "Open Office" ;
     bf:isPartOf sdh:Floor4 .
+
+sdh:SDH.AH2A_CCV a brick:Cooling_Valve ;
+    bf:feeds sdh:SDH.AH2A.SF_VFD ;
+    bf:hasPoint sdh:SDH.AH2A_CCV_valve .
+
+sdh:SDH.AH2B_CCV a brick:Cooling_Valve ;
+    bf:feeds sdh:SDH.AH2B.SF_VFD ;
+    bf:hasPoint sdh:SDH.AH2B_CCV_valve .
 
 sdh:R148 a brick:Room ;
     rdfs:label "Laser Lab" ;
