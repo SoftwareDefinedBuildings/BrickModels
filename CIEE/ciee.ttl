@@ -1100,6 +1100,12 @@ bldg:north_west_open_office a brick:Lighting_Zone .
 
 bldg:south_west_open_office a brick:Lighting_Zone .
 
+brick:Thermostat_Mode_Command a <http://www.w3.org/2002/07/owl#Class> ;
+    rdfs:subClassOf brick:Command .
+
+brick:Thermostat_Status a <http://www.w3.org/2002/07/owl#Class> ;
+    rdfs:subClassOf brick:Status .
+
 bldg:R224 a brick:Room ;
     rdfs:label "Office" ;
     bf:adjacentTo bldg:R220,

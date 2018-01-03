@@ -105,9 +105,25 @@ for room, adjlist in adjacency.items():
 g.add((BRICK.Building_Electric_Meter, RDF.type, OWL.Class))
 g.add((BRICK.Building_Electric_Meter, RDFS.subClassOf, BRICK.Electric_Meter))
 
-g.add((CIEE.building_meter, RDF.type, BRICK.Building_Electric_Meter))
-g.add((CIEE.building_meter, BF.uri, Literal("ciee/devices/s.eagle/0xd8d5b9000000a110/i.meter")))
-g.add((CIEE.building_meter, BF.uuid, Literal("4d6e251a-48e1-3bc0-907d-7d5440c34bb9")))
+#g.add((CIEE.building_meter, RDF.type, BRICK.Building_Electric_Meter))
+#g.add((CIEE.building_meter, BF.uri, Literal("ciee/devices/s.eagle/0xd8d5b9000000a110/i.meter")))
+#g.add((CIEE.building_meter, BF.uuid, Literal("4d6e251a-48e1-3bc0-907d-7d5440c34bb9")))
+
+meters = {}
+result = client.query('select uuid, path where uri like "ciee" and originaluri like "eagle" and name = "demand";')
+for doc in result['metadata']:
+    print doc
+    path = doc['path']
+    meter_name = 'building_meter'
+    g.add((CIEE[meter_name], RDF.type, BRICK.Building_Electric_Meter))
+    g.add((CIEE[meter_name], BF.uuid, Literal(doc['uuid'])))
+    urisuffix = re.match(r'[^/]+(/.*/i.meter)', path)
+    if urisuffix is not None:
+        urisuffix = urisuffix.groups()[0]
+    else:
+        continue
+    print 'Tstat URI: ', urisuffix
+    g.add((CIEE[meter_name], BF.uri, Literal("ciee" + urisuffix)))
 
 sensors2rooms = {
     '0029': CIEE.R203,
