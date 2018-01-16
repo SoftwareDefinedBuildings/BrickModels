@@ -270,6 +270,7 @@ for doc in rah_points:
     g.add((SDH[pointname], RDF.type, klass))
     g.add((SDH[rah], BF.hasPoint, SDH[pointname]))
     g.add((SDH[pointname], BF.uuid, Literal(uuid)))
+    g.add((SDH[pointname], BF.pointname, Literal(pointname)))
 
 
 #####################################
@@ -305,6 +306,7 @@ for pname, uuid in rhc_points.items():
     g.add((SDH[name], RDF.type, klass))
     g.add((SDH[rhc], BF.hasPoint, SDH[name]))
     g.add((SDH[name], BF.uuid, Literal(uuid)))
+    g.add((SDH[name], BF.pointname, Literal(pname)))
 
 #####################################
 ##
@@ -334,6 +336,7 @@ vavsensors = json.load(open('vavsensors.json'))
 # TODO: where are the temperature sensors?
 for sensor in vavsensors:
     vav = sensor.pop('vav')
+    _pointname = sensor.pop('PointName')
     name = sensor.keys()[0]
     uuid = sensor.values()[0]
     pointname = vav+name.replace(' ','_')
@@ -366,6 +369,7 @@ for sensor in vavsensors:
     g.add((SDH[pointname], RDF.type, klass))
     g.add((SDH[vav], BF.hasPoint, SDH[pointname]))
     g.add((SDH[pointname], BF.uuid, Literal(uuid)))
+    g.add((SDH[pointname], BF.pointname, Literal(_pointname)))
 # handle discharge air temperature sensors, which are represented differently
 # AI_3 means "additional input 3". These were later retrofits.
 md = json.load(open('metadata.json'))
