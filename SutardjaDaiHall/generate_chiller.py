@@ -46,6 +46,7 @@ def make_point(chiller, pointdesc, pointclass):
     g.add((SDH[pointname], RDF.type, pointclass))
     if 'uuid' in pointdesc:
         g.add((SDH[pointname], BF.uuid, Literal(pointdesc['uuid'])))
+        g.add((SDH[pointname], BF.pointname, Literal(pointdesc['PointName'])))
     g.add((SDH[chiller], BF.hasPoint, SDH[pointname]))
 
 for chiller, points in chjson.items():

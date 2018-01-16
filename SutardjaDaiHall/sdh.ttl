@@ -230,14 +230,39 @@ sdh:ZoneS6-00 bf:hasPart sdh:R621 .
 sdh:ZoneS7-00 bf:hasPart sdh:R750 .
 
 sdh:CH1_condenser a brick:Condenser_Heat_Exchanger ;
+    bf:hasPart sdh:CWP2,
+        sdh:CWP4 ;
     bf:hasPoint sdh:SDH.CH1.CHW.FLOW .
 
 sdh:CH1_evaporator a brick:Evaporator_Heat_Exchanger .
 
 sdh:CH2_condenser a brick:Condenser_Heat_Exchanger ;
+    bf:hasPart sdh:CWP5,
+        sdh:CWP6 ;
     bf:hasPoint sdh:SDH.CH2.CHW.FLOW .
 
 sdh:CH2_evaporator a brick:Evaporator_Heat_Exchanger .
+
+sdh:CHP3 a brick:Chilled_Water_Pump ;
+    bf:hasPoint sdh:SDH.CHW1.CHP3_CT .
+
+sdh:CHP4 a brick:Chilled_Water_Pump ;
+    bf:hasPoint sdh:SDH.CHW2.CHP4_CT .
+
+sdh:CHP5 a brick:Chilled_Water_Pump ;
+    bf:hasPoint sdh:SDH.CHW2.CHP5_CT .
+
+sdh:CWP2 a brick:Condenser_Water_Pump ;
+    bf:hasPoint sdh:SDH.CHW1.CWP2_CT .
+
+sdh:CWP4 a brick:Condenser_Water_Pump ;
+    bf:hasPoint sdh:SDH.CHW1.CWP4_CT .
+
+sdh:CWP5 a brick:Condenser_Water_Pump ;
+    bf:hasPoint sdh:SDH.CHW2.CWP5_CT .
+
+sdh:CWP6 a brick:Condenser_Water_Pump ;
+    bf:hasPoint sdh:SDH.CHW2.CWP6_CT .
 
 sdh:OAD_SDH.AH2A_OAD a brick:Outside_Air_Damper ;
     bf:feeds sdh:SDH.AH2A_CCV ;
@@ -4264,145 +4289,219 @@ sdh:S7-16room_valve_position a brick:Heating_Valve_Command ;
     bf:uuid "6b392254-1cfc-5f71-8e55-889737104301" .
 
 <http://buildsys.org/ontologies/sutardja_dai_hall#SDH.AH2A.RF_VFD:INPUT_REF_1> a brick:Fan_Speed_Command ;
+    bf:pointname "SDH.AH2A.RF_VFD:INPUT_REF_1" ;
     bf:uuid "510977d9-3c1d-5f45-908a-3626e5c3b5eb" .
 
 <http://buildsys.org/ontologies/sutardja_dai_hall#SDH.AH2A.RF_VFD:POWER> a brick:Power_Meter ;
+    bf:pointname "SDH.AH2A.RF_VFD:POWER" ;
     bf:uuid "02110912-d75a-5f9b-b956-5e12813926ef" .
 
 sdh:SDH.AH2A.SF_CFM a brick:Supply_Air_Flow_Sensor ;
+    bf:pointname "SDH.AH2A.SF_CFM" ;
     bf:uuid "64aceef3-5034-574b-a803-f04ad1224d39" .
 
 <http://buildsys.org/ontologies/sutardja_dai_hall#SDH.AH2A.SF_VFD:INPUT_REF_1> a brick:Fan_Speed_Command ;
+    bf:pointname "SDH.AH2A.SF_VFD:INPUT_REF_1" ;
     bf:uuid "67b07607-576f-507d-b467-669c8d1da4be" .
 
 <http://buildsys.org/ontologies/sutardja_dai_hall#SDH.AH2A.SF_VFD:POWER> a brick:Power_Meter ;
+    bf:pointname "SDH.AH2A.SF_VFD:POWER" ;
     bf:uuid "a6fd8a56-7ab2-5f6b-95d5-e0e96cf3b271" .
 
 sdh:SDH.AH2A_CCV_valve a brick:Cooling_Valve_Command ;
+    bf:pointname "SDH.AH2A_CCV_valve" ;
     bf:uuid "a7653f02-7af6-5198-8e6a-ac734d4400de" .
 
 sdh:SDH.AH2A_EAD a brick:Exhaust_Air_Air_Flow_Sensor ;
+    bf:pointname "SDH.AH2A_EAD" ;
     bf:uuid "653a704a-527a-5c27-8129-a1d21583b1e5" .
 
 sdh:SDH.AH2A_ISO.DMPR a brick:Isolation_Air_Flow_Sensor ;
+    bf:pointname "SDH.AH2A_ISO.DMPR" ;
     bf:uuid "492b3017-7319-5674-9902-4c66d669bfda" .
 
 sdh:SDH.AH2A_MAT a brick:Mixed_Air_Temperature_Sensor ;
+    bf:pointname "SDH.AH2A_MAT" ;
     bf:uuid "275d6375-d407-53d2-a600-7dfb3ee544b2" .
 
 sdh:SDH.AH2A_MIN.OAD a brick:Minimum_Outside_Air_Damper_Position ;
+    bf:pointname "SDH.AH2A_MIN.OAD" ;
     bf:uuid "9554f7c8-b23b-5a28-a5ae-33d50144ee0c" .
 
 sdh:SDH.AH2A_OAD a brick:Outside_Air_Air_Flow_Sensor ;
+    bf:pointname "SDH.AH2A_OAD" ;
     bf:uuid "de3dd62e-1b4d-5cf6-9ce8-d3595b21ffbb" .
 
 sdh:SDH.AH2A_RAD a brick:Return_Air_Air_Flow_Sensor ;
+    bf:pointname "SDH.AH2A_RAD" ;
     bf:uuid "8beb0958-83d8-5301-b950-9300e24d9914" .
 
 sdh:SDH.AH2A_RAH a brick:Return_Air_Humidity_Sensor ;
+    bf:pointname "SDH.AH2A_RAH" ;
     bf:uuid "91df5682-6046-5614-b663-fe6715912f83" .
 
 sdh:SDH.AH2A_RAT a brick:Return_Air_Temperature_Sensor ;
+    bf:pointname "SDH.AH2A_RAT" ;
     bf:uuid "603c5e44-4bd7-5e5b-89ff-f314b939c63d" .
 
 sdh:SDH.AH2A_RDSP a brick:Return_Air_Static_Pressure_Sensor ;
+    bf:pointname "SDH.AH2A_RDSP" ;
     bf:uuid "5c52cb2c-59ee-5ad0-8e7a-3012c748675d" .
 
 sdh:SDH.AH2A_SAT a brick:Supply_Air_Temperature_Sensor ;
+    bf:pointname "SDH.AH2A_SAT" ;
     bf:uuid "a7aa36e6-10c4-5008-8a02-039988f284df" .
 
 sdh:SDH.AH2A_SAT.STP a brick:Supply_Air_Temperature_Setpoint ;
+    bf:pointname "SDH.AH2A_SAT.STP" ;
     bf:uuid "d20604b8-1c55-5e57-b13a-209f07bc9e0c" .
 
 sdh:SDH.AH2A_SDSP a brick:Supply_Air_Static_Pressure_Sensor ;
+    bf:pointname "SDH.AH2A_SDSP" ;
     bf:uuid "a13b3ae3-a4df-542c-8ce3-16c428305c45" .
 
 <http://buildsys.org/ontologies/sutardja_dai_hall#SDH.AH2B.RF_VFD:INPUT_REF_1> a brick:Fan_Speed_Command ;
+    bf:pointname "SDH.AH2B.RF_VFD:INPUT_REF_1" ;
     bf:uuid "6f12a313-4a81-5bfd-aae5-f8f8b2df54fa" .
 
 <http://buildsys.org/ontologies/sutardja_dai_hall#SDH.AH2B.RF_VFD:POWER> a brick:Power_Meter ;
+    bf:pointname "SDH.AH2B.RF_VFD:POWER" ;
     bf:uuid "d3d4e937-1d57-5a50-85b4-d67cf7b15731" .
 
 sdh:SDH.AH2B.SF_CFM a brick:Supply_Air_Flow_Sensor ;
+    bf:pointname "SDH.AH2B.SF_CFM" ;
     bf:uuid "e4d4df35-2b0d-562a-801c-8f588dcf803a" .
 
 <http://buildsys.org/ontologies/sutardja_dai_hall#SDH.AH2B.SF_VFD:INPUT_REF_1> a brick:Fan_Speed_Command ;
+    bf:pointname "SDH.AH2B.SF_VFD:INPUT_REF_1" ;
     bf:uuid "88764253-d926-5a27-8b8e-767382e765f8" .
 
 <http://buildsys.org/ontologies/sutardja_dai_hall#SDH.AH2B.SF_VFD:POWER> a brick:Power_Meter ;
+    bf:pointname "SDH.AH2B.SF_VFD:POWER" ;
     bf:uuid "78694dbf-fbb2-51b1-9174-5acfe38ceba6" .
 
 sdh:SDH.AH2B_CCV_valve a brick:Cooling_Valve_Command ;
+    bf:pointname "SDH.AH2B_CCV_valve" ;
     bf:uuid "a09b6130-4e66-59db-a9d8-f6a41ba84d63" .
 
 sdh:SDH.AH2B_EAD a brick:Exhaust_Air_Air_Flow_Sensor ;
+    bf:pointname "SDH.AH2B_EAD" ;
     bf:uuid "4435ba57-b2b9-5715-8bc7-a5133f5203c4" .
 
 sdh:SDH.AH2B_ISO.DMPR a brick:Isolation_Air_Flow_Sensor ;
+    bf:pointname "SDH.AH2B_ISO.DMPR" ;
     bf:uuid "f20dd546-5aa8-55ae-a6e8-a21c822fb59f" .
 
 sdh:SDH.AH2B_MAT a brick:Mixed_Air_Temperature_Sensor ;
+    bf:pointname "SDH.AH2B_MAT" ;
     bf:uuid "0133e620-fa49-5f03-86ba-762a4e318ea7" .
 
 sdh:SDH.AH2B_MIN.OAD a brick:Minimum_Outside_Air_Damper_Position ;
+    bf:pointname "SDH.AH2B_MIN.OAD" ;
     bf:uuid "ef2f8598-7482-55fc-ac27-51e76d93ad9f" .
 
 sdh:SDH.AH2B_OAD a brick:Outside_Air_Air_Flow_Sensor ;
+    bf:pointname "SDH.AH2B_OAD" ;
     bf:uuid "1e63f9b7-03d9-575c-ae63-c5b3491b681a" .
 
 sdh:SDH.AH2B_RAD a brick:Return_Air_Air_Flow_Sensor ;
+    bf:pointname "SDH.AH2B_RAD" ;
     bf:uuid "0ca90a18-9e0b-58d0-8637-636c092a8d77" .
 
 sdh:SDH.AH2B_RAH a brick:Return_Air_Humidity_Sensor ;
+    bf:pointname "SDH.AH2B_RAH" ;
     bf:uuid "18de5388-1f9a-538e-9cfe-c501151c179b" .
 
 sdh:SDH.AH2B_RAT a brick:Return_Air_Temperature_Sensor ;
+    bf:pointname "SDH.AH2B_RAT" ;
     bf:uuid "36d4e532-779e-50b2-b6ba-0a5f1703c787" .
 
 sdh:SDH.AH2B_RDSP a brick:Return_Air_Static_Pressure_Sensor ;
+    bf:pointname "SDH.AH2B_RDSP" ;
     bf:uuid "fc6a945d-0388-58e8-bcda-09be416f1f57" .
 
 sdh:SDH.AH2B_SAT a brick:Supply_Air_Temperature_Sensor ;
+    bf:pointname "SDH.AH2B_SAT" ;
     bf:uuid "a73a5e75-b6a0-50ca-acf2-303873876039" .
 
 sdh:SDH.AH2B_SAT.STP a brick:Supply_Air_Temperature_Setpoint ;
+    bf:pointname "SDH.AH2B_SAT.STP" ;
     bf:uuid "eb36ea17-cddb-573b-916d-9aed3e8cae97" .
 
 sdh:SDH.AH2B_SDSP a brick:Supply_Air_Static_Pressure_Sensor ;
+    bf:pointname "SDH.AH2B_SDSP" ;
     bf:uuid "8212386e-d472-55de-b97e-55c3bfb45ee5" .
 
 sdh:SDH.CH1.CHWST.RESET a brick:Chilled_Water_Supply_Temperature_Reset_Command ;
+    bf:pointname "SDH.CH1.CHWST.RESET" ;
     bf:uuid "3c186ace-995c-540f-82bd-2fb6cd092998" .
 
 sdh:SDH.CH2.CHWST.RESET a brick:Chilled_Water_Supply_Temperature_Reset_Command ;
+    bf:pointname "SDH.CH2.CHWST.RESET" ;
     bf:uuid "3d6d3782-02e2-53c2-b3a2-06b3cab8f20c" .
 
 sdh:SDH.CHW1.BYP_VLV a brick:Chilled_Water_Bypass_Valve .
 
+sdh:SDH.CHW1.CHP3_CT a brick:Current_Sensor ;
+    bf:pointname "SDH.CHW1.CHP3_CT" ;
+    bf:uuid "7aa3d7da-6d45-5205-92b2-4735cc25a6e6" .
+
+sdh:SDH.CHW1.CWP2_CT a brick:Current_Sensor ;
+    bf:pointname "SDH.CHW1.CWP2_CT" ;
+    bf:uuid "0badb49f-9a1d-5a83-93b6-2d8808813650" .
+
+sdh:SDH.CHW1.CWP4_CT a brick:Current_Sensor ;
+    bf:pointname "SDH.CHW1.CWP4_CT" ;
+    bf:uuid "7de19d34-f92a-53bf-a668-e73c66a9f046" .
+
 sdh:SDH.CHW1_CHW.DP a brick:Chilled_Water_Differential_Pressure_Sensor ;
+    bf:pointname "SDH.CHW1_CHW.DP" ;
     bf:uuid "f168471d-a251-52e6-8233-51e0eb743a48" .
 
 sdh:SDH.CHW1_CHW.DP.STP a brick:Chilled_Water_Differential_Pressure_Setpoint ;
+    bf:pointname "SDH.CHW1_CHW.DP.STP" ;
     bf:uuid "e486d482-2b93-5a76-bb0e-0dcdffb41575" .
 
 sdh:SDH.CHW1_CHWRT a brick:Chilled_Water_Return_Temperature_Sensor ;
+    bf:pointname "SDH.CHW1_CHWRT" ;
     bf:uuid "5a6fe739-7928-5c56-8b38-ae33f9052c71" .
 
 sdh:SDH.CHW1_CHWST a brick:Chilled_Water_Supply_Temperature_Sensor ;
+    bf:pointname "SDH.CHW1_CHWST" ;
     bf:uuid "df97f066-2b75-54db-be82-d42625873f22" .
+
+sdh:SDH.CHW2.CHP4_CT a brick:Current_Sensor ;
+    bf:pointname "SDH.CHW2.CHP4_CT" ;
+    bf:uuid "63f59e1d-3daa-5fc1-ab95-17d0e8368b77" .
+
+sdh:SDH.CHW2.CHP5_CT a brick:Current_Sensor ;
+    bf:pointname "SDH.CHW2.CHP5_CT" ;
+    bf:uuid "d225da4a-34b7-5e7a-ac9d-05e89ebd2482" .
 
 sdh:SDH.CHW2.CHW_BYP.VLV a brick:Chilled_Water_Bypass_Valve .
 
 sdh:SDH.CHW2.CHW_DP a brick:Chilled_Water_Differential_Pressure_Sensor ;
+    bf:pointname "SDH.CHW2.CHW_DP" ;
     bf:uuid "027c60f1-f1a1-59c3-8095-5734ca885645" .
 
 sdh:SDH.CHW2.CHW_DP.STP a brick:Chilled_Water_Differential_Pressure_Setpoint ;
+    bf:pointname "SDH.CHW2.CHW_DP.STP" ;
     bf:uuid "e738e23b-11ba-576f-bb7c-9d663dd74515" .
 
+sdh:SDH.CHW2.CWP5_CT a brick:Current_Sensor ;
+    bf:pointname "SDH.CHW2.CWP5_CT" ;
+    bf:uuid "a041c1f1-cd8a-5050-98a0-ac270d7e29f0" .
+
+sdh:SDH.CHW2.CWP6_CT a brick:Current_Sensor ;
+    bf:pointname "SDH.CHW2.CWP6_CT" ;
+    bf:uuid "1c63bbd9-b903-5a42-bb52-968e61be1bde" .
+
 sdh:SDH.CHW2_CHWRT a brick:Chilled_Water_Return_Temperature_Sensor ;
+    bf:pointname "SDH.CHW2_CHWRT" ;
     bf:uuid "894f8dff-945f-57d2-945e-5ef8a2469455" .
 
 sdh:SDH.CHW2_CHWST a brick:Chilled_Water_Supply_Temperature_Sensor ;
+    bf:pointname "SDH.CHW2_CHWST" ;
     bf:uuid "7cd5c92e-4c00-5718-b40d-cd25b194a6d9" .
 
 sdh:SDH.RAH01.SF_SPD a brick:Supply_Fan_VFD_Speed ;
@@ -5417,6 +5516,7 @@ sdh:CH1 a brick:Absorption_Chiller ;
         sdh:SDH.AH2B_CCV ;
     bf:hasPart sdh:CH1_condenser,
         sdh:CH1_evaporator,
+        sdh:CHP3,
         sdh:SDH.CHW1.BYP_VLV ;
     bf:hasPoint sdh:SDH.CH1.CHW.FLOW,
         sdh:SDH.CH1.CHWST.RESET,
@@ -5436,6 +5536,8 @@ sdh:CH2 a brick:Centrifugal_Chiller ;
         sdh:SDH.AH2B_CCV ;
     bf:hasPart sdh:CH2_condenser,
         sdh:CH2_evaporator,
+        sdh:CHP4,
+        sdh:CHP5,
         sdh:SDH.CHW2.CHW_BYP.VLV ;
     bf:hasPoint sdh:SDH.CH2.CHW.FLOW,
         sdh:SDH.CH2.CHWST.RESET,
@@ -7681,6 +7783,7 @@ sdh:S7-16room_damper_position a brick:Damper_Position_Sensor ;
     bf:uuid "0bd31506-7ebe-5b57-80fb-c1c6fd70a72e" .
 
 sdh:SDH.AH2A.AH2B.RF_CFM a brick:Return_Air_Flow_Sensor ;
+    bf:pointname "SDH.AH2A.AH2B.RF_CFM" ;
     bf:uuid "67afc70f-d9c3-55d6-adda-6d08afc68e54" .
 
 sdh:SDH.AH2A.RF_VFD a brick:Return_Fan ;
@@ -7706,9 +7809,11 @@ sdh:SDH.AH2B.SF_VFD a brick:Supply_Fan ;
         <http://buildsys.org/ontologies/sutardja_dai_hall#SDH.AH2B.SF_VFD:POWER> .
 
 sdh:SDH.CH1.CHW.FLOW a brick:Chilled_Water_Flow_Sensor ;
+    bf:pointname "SDH.CH1.CHW.FLOW" ;
     bf:uuid "c0db7e86-3f87-51ca-b3b1-62f23e97c868" .
 
 sdh:SDH.CH2.CHW.FLOW a brick:Chilled_Water_Flow_Sensor ;
+    bf:pointname "SDH.CH2.CHW.FLOW" ;
     bf:uuid "54d2a517-918d-581b-9826-568e06b924e5" .
 
 brick:Chilled_Water_Differential_Pressure_Sensor a <http://www.w3.org/2002/07/owl#Class> ;
@@ -8444,6 +8549,9 @@ sdh:R738 a brick:Room ;
 sdh:R750 a brick:Room ;
     rdfs:label "Open Office" ;
     bf:isPartOf sdh:Floor7 .
+
+brick:Current_Sensor a <http://www.w3.org/2002/07/owl#Class> ;
+    rdfs:subClassOf brick:Sensor .
 
 sdh:Floor1 a brick:Floor .
 
